@@ -3,24 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Ludus Mentis</title>
+  <title>Contact – Ludus Mentis</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="logo" />
-    <h1>Ludus Mentis</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="academie.html">Académie</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <!-- Header -->
+  <div id="header-container"></div>
 
   <main>
-    <section>
+    <section class="section">
       <h2>Nous contacter</h2>
       <p>Pour toute demande d'information ou inscription, contactez-nous via les moyens suivants :</p>
       <ul>
@@ -31,9 +23,18 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ludus Mentis. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
-  </footer>
+  <!-- Footer -->
+  <div id="footer-container"></div>
 
+  <!-- Inclusion dynamique header/footer -->
+  <script>
+    fetch("components/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    });
+
+    fetch("components/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+  </script>
 </body>
 </html>
