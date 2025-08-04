@@ -1,26 +1,52 @@
+/* BASE TYPO & RESET */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  color: #333333;
+  background-color: #ffffff;
 }
 
-header, footer {
-  background-color: #1f2937;
+h1, h2, h3 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+a {
+  color: #f59e0b;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER & NAVIGATION */
+header {
+  background-color: #014751;
   color: white;
   padding: 1rem 2rem;
 }
 
+header img {
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 nav a {
   color: white;
-  margin: 0 1rem;
-  text-decoration: none;
   font-weight: 600;
 }
 
+/* HERO SECTION */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: #f3f4f6;
+  background: #fefce8;
 }
 
 .hero h1 {
@@ -32,48 +58,85 @@ nav a {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-ul {
-  padding-left: 1.5rem;
-  line-height: 1.8;
-}
 
-li {
-  font-size: 1.1rem;
-}
 .cta {
-  background-color: #3b82f6;
+  background-color: #f59e0b;
   color: white;
   padding: 1rem 2rem;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+.cta:hover {
+  background-color: #d97706;
 }
 
+/* SECTIONS */
 .section {
   padding: 3rem 2rem;
 }
-
+.section:nth-child(even) {
+  background-color: #fefce8;
+}
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .section p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-
-a {
-  color: #3b82f6;
-  text-decoration: none;
+/* LISTES */
+ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+li {
+  font-size: 1.1rem;
 }
 
-a:hover {
-  text-decoration: underline;
+/* FOOTER */
+footer {
+  background-color: #014751;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
-footer p {
-  margin: 0.5rem 0;
+footer a {
+  color: #facc15;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
 }
