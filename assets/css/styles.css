@@ -32,7 +32,14 @@ nav a {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
 
+li {
+  font-size: 1.1rem;
+}
 .cta {
   background-color: #3b82f6;
   color: white;
