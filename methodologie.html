@@ -1,72 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Méthodologie – Ludus Mentis</title>
-  <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Méthodologie – Ludus Mentis</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div id="header-container"></div>
+    <!-- Header -->
+    <!--#include file="components/header.html" -->
 
-  <main>
-    
-<section class="piliers">
-  <div class="pilier">
-    <h2>🌀 Le cycle de Kolb</h2>
-    <p>Ludus Mentis utilise le <strong>cycle d’apprentissage expérientiel de Kolb</strong> pour structurer ses ateliers :</p>
-    <ul>
-      <li><strong>Expérience concrète</strong> (jeu coopératif en équipe)</li>
-      <li><strong>Observation et réflexion</strong> (débriefing)</li>
-      <li><strong>Conceptualisation</strong> (mise en lien avec les soft skills)</li>
-      <li><strong>Expérimentation active</strong> (nouveaux essais / défis)</li>
-    </ul>
-  </div>
+    <main class="container">
+        <section class="section">
+            <h1>Notre méthode pédagogique</h1>
+            <p>
+                Chez Ludus Mentis, chaque session est pensée comme une expérience éducative complète. Nous combinons le jeu, la réflexion et la pratique pour permettre aux jeunes de progresser dans un cadre sécurisant.
+            </p>
+        </section>
 
-  <div class="pilier">
-    <h2>🎯 Le modèle SAFE (CASEL)</h2>
-    <p>Nos modules suivent les principes du modèle <strong>SAFE</strong> reconnu par le CASEL pour le développement des compétences socio-émotionnelles :</p>
-    <ul>
-      <li><strong>Séquenté</strong> : progression structurée dans les apprentissages</li>
-      <li><strong>Actif</strong> : implication réelle des jeunes</li>
-      <li><strong>Focalisé</strong> : chaque module cible une compétence précise</li>
-      <li><strong>Explicite</strong> : liens clairs entre l’activité et les compétences développées</li>
-    </ul>
-  </div>
+        <section class="section card">
+            <h2>Un cycle en 4 étapes inspiré de Kolb</h2>
+            <ul>
+                <li>🎮 <strong>Vivre l’expérience</strong> – Une partie de jeu vidéo ou une activité coopérative</li>
+                <li>🔍 <strong>Observer</strong> – On analyse ce qui s’est passé, seul ou en groupe</li>
+                <li>🧠 <strong>Comprendre</strong> – On identifie ce qui a bien fonctionné ou moins bien, et pourquoi</li>
+                <li>🚀 <strong>Réutiliser</strong> – On s’entraîne à appliquer cela dans la vraie vie… ou dans le jeu suivant !</li>
+            </ul>
+        </section>
 
-  <div class="pilier">
-    <h2>📊 Appuyé par</h2>
-    <p>
-      <img src="assets/images/logo_besf.png" alt="Logo BESF" style="height:50px; vertical-align:middle; margin-right:1rem;">
-      <img src="assets/images/logo_walhain.png" alt="Logo Commune de Walhain" style="height:50px; vertical-align:middle;">
-    </p>
-    <p>Avec le soutien de la <strong>BESF</strong> et de la <strong>Commune de Walhain</strong></p>
-  </div>
+        <section class="section">
+            <h2>Un cadre bienveillant et stimulant</h2>
+            <p>
+                Chaque jeune est accompagné·e avec respect, écoute et valorisation. Nos animateurs veillent à ce que chacun·e trouve sa place, progresse à son rythme et vive une expérience positive.
+            </p>
+            <a href="academie.html" class="cta-button">Découvrir l’académie 2026</a>
+        </section>
+    </main>
 
-  <div class="pilier">
-    <h2>📚 Références scientifiques</h2>
-    <p>Notre approche s’appuie sur des études sérieuses :</p>
-    <ul>
-      <li><a href="https://megaskills.eu" target="_blank">Projet européen Megaskills</a> – Développement des soft skills via le jeu</li>
-      <li><a href="https://link.springer.com/book/10.1007/978-3-031-89557-9" target="_blank">Soft Skills for the 21st Century (Springer, 2024)</a> – Synthèse de recherches éducatives</li>
-      <li><a href="https://casel.org/" target="_blank">CASEL.org</a> – Référence mondiale sur les compétences socio-émotionnelles</li>
-    </ul>
-  </div>
-</section>
-
-  </main>
-
-  <div id="footer-container"></div>
-
-  <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-container').innerHTML = data);
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer-container').innerHTML = data);
-  </script>
+    <!-- Footer -->
+    <!--#include file="components/footer.html" -->
 </body>
 </html>

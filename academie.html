@@ -1,44 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L’académie – Ludus Mentis</title>
-  <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Académie 2026 – Ludus Mentis</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div id="header-container"></div>
+    <!-- Header -->
+    <!--#include file="components/header.html" -->
 
-  <main>
-    
-      <section class="piliers">
-        <div class="pilier">
-          <h2>Modules 2026</h2>
-          <p>4 modules par an · 7 séances de 2h · Thématiques : Communication, Stress, Coopération, Confiance.</p>
-        </div>
-        <div class="pilier">
-          <h2>Activités</h2>
-          <p>Jeux coopératifs sur Nintendo Switch, exergaming, ateliers créatifs, debriefings et défis en groupe.</p>
-        </div>
-        <div class="pilier">
-          <h2>Encadrement</h2>
-          <p>Facilitateurs formés à la méthode Ludus Mentis. Encadrement bienveillant et structurant.</p>
-        </div>
-      </section>
-    
-  </main>
+    <main class="container">
+        <section class="section">
+            <h1>L’Académie Ludus Mentis – 2026</h1>
+            <p>
+                En 2026, Ludus Mentis ouvrira son académie permanente pour les jeunes de 10 à 16 ans. Un lieu innovant où apprentissage, coopération et plaisir de jouer vont de pair.
+            </p>
+            <p>
+                Chaque semaine, les participants vivront un parcours composé de :
+            </p>
+            <ul>
+                <li>🎮 Sessions de jeu encadré (jeux collaboratifs, créatifs, compétitifs)</li>
+                <li>🧠 Ateliers de réflexion et d'expression (gestion des émotions, communication, etc.)</li>
+                <li>🤸 Activités physiques et jeux de coopération en plein air</li>
+            </ul>
+        </section>
 
-  <div id="footer-container"></div>
+        <section class="section card">
+            <h2>Un exemple de programme hebdomadaire</h2>
+            <p>Lundi – Découverte & cohésion</p>
+            <p>Mardi – Jeu collaboratif & feedback</p>
+            <p>Mercredi – Exergaming & détente active</p>
+            <p>Jeudi – Défi créatif en équipe</p>
+            <p>Vendredi – Valorisation & clôture</p>
+        </section>
 
-  <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-container').innerHTML = data);
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer-container').innerHTML = data);
-  </script>
+        <section class="section">
+            <h2>Une inscription, une transformation</h2>
+            <p>
+                L’académie est conçue pour accompagner les jeunes sur plusieurs semaines ou trimestres. Elle favorise le développement personnel, la confiance, et le lien social, dans un environnement bienveillant.
+            </p>
+            <a href="contact.html" class="cta-button">Préinscrire mon enfant</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!--#include file="components/footer.html" -->
 </body>
 </html>
