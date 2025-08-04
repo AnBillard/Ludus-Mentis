@@ -1,36 +1,65 @@
+<!-- Nouveau fichier: index.html (landing page modernisée) -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ludus Mentis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ludus Mentis – Accueil</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+    header, footer { background-color: #1f2937; color: white; padding: 1rem 2rem; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; }
+    .hero { text-align: center; padding: 4rem 2rem; background: #f3f4f6; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .cta { background-color: #3b82f6; color: white; padding: 1rem 2rem; border: none; font-size: 1rem; cursor: pointer; border-radius: 8px; }
+    .section { padding: 3rem 2rem; }
+    .section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    footer p { margin: 0.5rem 0; }
+  </style>
 </head>
 <body>
-
   <header>
-  <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="logo" />
-  <h1>Ludus Mentis</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="#">Académie</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" height="50">
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="concept.html">Concept</a>
+        <a href="academie.html">Académie</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="mentions.html">Mentions</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section>
-      <h2>Apprendre, Jouer, Grandir</h2>
-      <p>
-        Ludus Mentis propose une approche innovante mêlant jeu vidéo, développement personnel et apprentissage coopératif pour les jeunes.
-      </p>
-      <a href="#" class="cta-button">Découvrir nos programmes</a>
+    <section class="hero">
+      <h1>L'académie du jeu vidéo éducatif en Wallonie</h1>
+      <p>Encadrement positif, coopératif et bienveillant pour les jeunes de 10 à 15 ans.</p>
+      <a href="academie.html"><button class="cta">Découvrir l'académie</button></a>
+    </section>
+
+    <section class="section">
+      <h2>Pourquoi Ludus Mentis ?</h2>
+      <p>Une réponse structurée et locale aux enjeux du numérique chez les jeunes. Jeux coopératifs, défis physiques, journaux de bord : une approche complète et engageante.</p>
+    </section>
+
+    <section class="section">
+      <h2>Pour qui ?</h2>
+      <p>Jeunes de 10 à 15 ans, joueurs occasionnels ou réguliers, en quête de cadre stimulant. Adapté aussi aux profils sensibles ou peu attirés par le sport traditionnel.</p>
+    </section>
+
+    <section class="section">
+      <h2>Comment ça fonctionne ?</h2>
+      <p>Modules thématiques de 7 séances, encadrement bienveillant, jeux vidéo coopératifs, débriefings réguliers. Inspiré par le sport, la musique, et les sciences de l’éducation.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Ludus Mentis. Tous droits réservés. | <a href="#">Mentions légales</a></p>
+    <p>Contact : Antoine Billard &ndash; ludus.mentis.esport@gmail.com &ndash; 0474 25 40 37</p>
+    <p>&copy; 2025 Ludus Mentis. Tous droits réservés.</p>
   </footer>
-
 </body>
 </html>
