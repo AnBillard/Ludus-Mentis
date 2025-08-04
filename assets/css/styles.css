@@ -1,17 +1,36 @@
-/* Styles généraux */
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f9fafc;
-  line-height: 1.6;
+:root {
+  --primary: #007A80;
+  --primary-light: #00B0A8;
+  --accent: #FFA500;
+  --accent-light: #FFB84D;
+  --background: #f9fafc;
+  --white: #ffffff;
+  --text: #333333;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
 /* Header */
 header {
-  background-color: #008080;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--white);
   padding: 20px;
   text-align: center;
 }
@@ -25,17 +44,17 @@ header nav {
 }
 
 header nav a {
-  color: #ffffff;
+  color: var(--white);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 header nav a:hover {
-  color: #FFA500;
+  color: var(--accent);
 }
 
-/* Main content */
+/* Main */
 main {
   padding: 30px;
   max-width: 900px;
@@ -43,63 +62,63 @@ main {
 }
 
 section {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px var(--shadow);
   margin-bottom: 20px;
 }
 
 h2 {
-  color: #008080;
+  color: var(--primary);
   margin-top: 0;
 }
 
 /* Boutons */
 a {
-  color: #008080;
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  color: #FFA500;
+  color: var(--accent);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary);
 }
 
 /* Footer */
 footer {
-  background-color: #008080;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--white);
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
 }
 
 footer a {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: underline;
 }
 
 footer a:hover {
-  color: #FFA500;
+  color: var(--accent);
 }
 
-/* Boutons d'action spécifiques */
-.cta-button {
-  display: inline-block;
-  background-color: #FFA500;
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 15px;
-}
-
-.cta-button:hover {
-  background-color: #008080;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   header, main, footer {
     padding: 15px;
