@@ -2,33 +2,39 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mentions légales - Ludus Mentis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales – Ludus Mentis</title>
+  <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="logo" />
-    <h1>Ludus Mentis</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="academie.html">Académie</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="header-container"></div>
 
   <main>
-    <section>
-      <h2>Mentions légales</h2>
-      <p>Conformément aux lois belges et européennes (RGPD), retrouvez ici les informations légales de Ludus Mentis.</p>
-    </section>
+    
+      <section class="piliers">
+        <div class="pilier">
+          <h2>Éditeur</h2>
+          <p>Antoine Billard – Walhain, Belgique<br>Email : ludus.mentis.esport@gmail.com</p>
+        </div>
+        <div class="pilier">
+          <h2>Crédits</h2>
+          <p>Site développé pour l’académie Ludus Mentis. Contenus protégés – reproduction interdite sans autorisation.</p>
+        </div>
+      </section>
+    
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ludus Mentis. Tous droits réservés.</p>
-  </footer>
+  <div id="footer-container"></div>
 
+  <script>
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-container').innerHTML = data);
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-container').innerHTML = data);
+  </script>
 </body>
 </html>

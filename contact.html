@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos – Ludus Mentis</title>
+  <title>Contact – Ludus Mentis</title>
   <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -13,17 +13,25 @@
 
   <main>
     
-      <section class="piliers">
-        <div class="pilier">
-          <h2>Origine du projet</h2>
-          <p>Né à Walhain, Ludus Mentis répond au besoin d’encadrer de manière positive et éducative l’usage du jeu vidéo chez les jeunes.</p>
-        </div>
-        <div class="pilier">
-          <h2>Porté par</h2>
-          <p>Antoine Billard – Coordinateur pédagogique, avec le soutien de la Commune de Walhain, BESF, ADN, Digital Wallonia, etc.</p>
-        </div>
-      </section>
-    
+<section class="piliers">
+  <div class="pilier">
+    <h2>📬 Nous contacter</h2>
+    <p>Une question ? Une demande d’inscription ? Contactez-nous via ce formulaire ou directement par email.</p>
+    <form action="mailto:ludus.mentis.esport@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <label for="name">Nom :</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+  </div>
+</section>
+
   </main>
 
   <div id="footer-container"></div>

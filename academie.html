@@ -1,42 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Académie – Ludus Mentis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’académie – Ludus Mentis</title>
+  <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
   <div id="header-container"></div>
 
   <main>
-    <section class="section">
-      <h2>Nos programmes éducatifs</h2>
-      <p>Découvrez nos modules pédagogiques conçus pour développer les compétences essentielles à travers le jeu vidéo coopératif et les activités complémentaires.</p>
-      <ul>
-        <li>Communication & écoute active</li>
-        <li>Coopération & esprit d’équipe</li>
-        <li>Gestion du stress & résilience</li>
-        <li>Confiance en soi & valorisation des talents</li>
-      </ul>
-    </section>
+    
+      <section class="piliers">
+        <div class="pilier">
+          <h2>Modules 2026</h2>
+          <p>4 modules par an · 7 séances de 2h · Thématiques : Communication, Stress, Coopération, Confiance.</p>
+        </div>
+        <div class="pilier">
+          <h2>Activités</h2>
+          <p>Jeux coopératifs sur Nintendo Switch, exergaming, ateliers créatifs, debriefings et défis en groupe.</p>
+        </div>
+        <div class="pilier">
+          <h2>Encadrement</h2>
+          <p>Facilitateurs formés à la méthode Ludus Mentis. Encadrement bienveillant et structurant.</p>
+        </div>
+      </section>
+    
   </main>
 
-  <!-- Footer -->
   <div id="footer-container"></div>
 
-  <!-- Inclusion dynamique header/footer -->
   <script>
-    fetch("components/header.html").then(res => res.text()).then(data => {
-      document.getElementById("header-container").innerHTML = data;
-    });
-
-    fetch("components/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("footer-container").innerHTML = data;
-    });
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-container').innerHTML = data);
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-container').innerHTML = data);
   </script>
 </body>
 </html>

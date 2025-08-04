@@ -1,51 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ludus Mentis – Accueil</title>
+  <meta name="description" content="Ludus Mentis est une académie éducative par le jeu vidéo coopératif destinée aux jeunes de 10 à 15 ans." />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Inclusion du header -->
+
+  <!-- HEADER -->
   <div id="header-container"></div>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <h1>L'académie du jeu vidéo éducatif en Wallonie</h1>
-      <p>Encadrement positif, coopératif et bienveillant pour les jeunes de 10 à 15 ans.</p>
-      <a href="academie.html"><button class="cta">Découvrir l'académie</button></a>
+      <h1>L'académie du jeu vidéo coopératif</h1>
+      <p>Développer les compétences sociales, émotionnelles et cognitives des jeunes à travers une pratique encadrée et bienveillante du jeu vidéo.</p>
+      <a href="academie.html"><button class="cta-button">Découvrir l'académie</button></a>
     </section>
 
-    <section class="section">
-      <h2>Pourquoi Ludus Mentis ?</h2>
-      <p>Une réponse structurée et locale aux enjeux du numérique chez les jeunes. Jeux coopératifs, défis physiques, journaux de bord : une approche complète et engageante.</p>
+    <!-- PILIERS -->
+    <section class="piliers">
+      <div class="pilier">
+        <h2>🎮 Jeu coopératif</h2>
+        <p>Des jeux vidéo non violents, centrés sur la collaboration et l'écoute. Le numérique devient un outil d’apprentissage actif.</p>
+      </div>
+      <div class="pilier">
+        <h2>🧠 Développement personnel</h2>
+        <p>Communication, confiance en soi, gestion du stress... Autant de compétences cultivées à chaque séance.</p>
+      </div>
+      <div class="pilier">
+        <h2>👥 Encadrement bienveillant</h2>
+        <p>Facilitateurs formés, approche structurée et accompagnement non thérapeutique, mais profondément humain.</p>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Pour qui ?</h2>
-      <p>Jeunes de 10 à 15 ans, joueurs occasionnels ou réguliers, en quête de cadre stimulant. Adapté aussi aux profils sensibles ou peu attirés par le sport traditionnel.</p>
+    <!-- TEMOIGNAGES (Placeholder) -->
+    <section class="piliers">
+      <div class="pilier">
+        <h2>💬 Témoignages</h2>
+        <p><em>“Mon fils attendait chaque séance avec impatience. Il a retrouvé confiance en lui.”</em><br>– Parent, Walhain</p>
+        <p><em>“On joue ensemble, on parle, on fait des trucs qu’on n’a jamais fait à l’école.”</em><br>– Jeune participant</p>
+      </div>
     </section>
 
-    <section class="section">
-      <h2>Comment ça fonctionne ?</h2>
-      <p>Modules thématiques de 7 séances, encadrement bienveillant, jeux vidéo coopératifs, débriefings réguliers. Inspiré par le sport, la musique, et les sciences de l’éducation.</p>
+    <!-- FAQ (Placeholder) -->
+    <section class="piliers">
+      <div class="pilier">
+        <h2>❓ Questions fréquentes</h2>
+        <p><strong>Quels jeux utilisez-vous ?</strong><br>Des jeux coopératifs non violents (Nintendo Switch), adaptés aux jeunes.</p>
+        <p><strong>Est-ce que ça remplace le sport ?</strong><br>Non, c’est une alternative complémentaire pour les jeunes qui ne s’y retrouvent pas.</p>
+        <p><strong>Est-ce que les enfants sont encadrés ?</strong><br>Oui, par des animateurs formés à notre méthode pédagogique.</p>
+      </div>
     </section>
   </main>
 
-  <!-- Inclusion du footer -->
+  <!-- FOOTER -->
   <div id="footer-container"></div>
 
-  <!-- Script d’inclusion (à placer à la fin du body) -->
   <script>
-    fetch("components/header.html").then(res => res.text()).then(data => {
-      document.getElementById("header-container").innerHTML = data;
-    });
-
-    fetch("components/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("footer-container").innerHTML = data;
-    });
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-container').innerHTML = data);
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-container').innerHTML = data);
   </script>
 </body>
 </html>
