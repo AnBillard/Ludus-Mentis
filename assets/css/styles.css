@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333333;
-  background-color: #fdf7ee;
+  background-color: #fef8f2;
 }
 
 h1, h2, h3 {
@@ -22,7 +22,7 @@ a:hover {
 
 /* HEADER & NAVIGATION */
 header {
-  background-color: #fdf7ee;
+  background-color: #fef8f2;
   color: #014751; 
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
@@ -101,7 +101,7 @@ li {
 
 /* FOOTER */
 footer {
-  background-color: #fdf7ee;
+  background-color:#fef8f2;
   color: #014751;
   padding: 2rem;
   text-align: center;
