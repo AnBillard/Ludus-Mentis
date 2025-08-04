@@ -1,4 +1,3 @@
-<!-- Nouveau fichier: index.html (landing page modernisée) -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,32 +6,10 @@
   <title>Ludus Mentis – Accueil</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
-    header, footer { background-color: #1f2937; color: white; padding: 1rem 2rem; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: 600; }
-    .hero { text-align: center; padding: 4rem 2rem; background: #f3f4f6; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-    .cta { background-color: #3b82f6; color: white; padding: 1rem 2rem; border: none; font-size: 1rem; cursor: pointer; border-radius: 8px; }
-    .section { padding: 3rem 2rem; }
-    .section h2 { font-size: 2rem; margin-bottom: 1rem; }
-    footer p { margin: 0.5rem 0; }
-  </style>
 </head>
 <body>
-  <header>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" height="50">
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="concept.html">Concept</a>
-        <a href="academie.html">Académie</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="mentions.html">Mentions</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Inclusion du header -->
+  <div id="header-container"></div>
 
   <main>
     <section class="hero">
@@ -57,9 +34,18 @@
     </section>
   </main>
 
-  <footer>
-    <p>Contact : Antoine Billard &ndash; ludus.mentis.esport@gmail.com &ndash; 0474 25 40 37</p>
-    <p>&copy; 2025 Ludus Mentis. Tous droits réservés.</p>
-  </footer>
+  <!-- Inclusion du footer -->
+  <div id="footer-container"></div>
+
+  <!-- Script d’inclusion (à placer à la fin du body) -->
+  <script>
+    fetch("components/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    });
+
+    fetch("components/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+  </script>
 </body>
 </html>
