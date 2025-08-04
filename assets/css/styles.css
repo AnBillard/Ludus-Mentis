@@ -101,14 +101,20 @@ li {
 
 /* FOOTER */
 footer {
-  background-color: #014751;
-  color: white;
+  background-color: #fffdf5; /* même fond que le header */
+  color: #014751;
   padding: 2rem;
   text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid #e5e7eb;
 }
 
 footer a {
-  color: #facc15;
+  color: #f59e0b;
+  font-weight: 500;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* RESPONSIVE DESIGN */
