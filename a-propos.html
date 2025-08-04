@@ -3,31 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>À propos - Ludus Mentis</title>
+  <title>À propos – Ludus Mentis</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="logo" />
-    <h1>Ludus Mentis</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="#">Stages</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <!-- Header -->
+  <div id="header-container"></div>
 
   <main>
-    <section>
+    <section class="section">
       <h2>Notre vision</h2>
       <p>
         Ludus Mentis accompagne les jeunes dans leur développement personnel grâce à une pédagogie innovante basée sur le jeu vidéo coopératif, l’intelligence émotionnelle et la mise en mouvement.
       </p>
     </section>
 
-    <section>
+    <section class="section">
       <h2>Nos valeurs</h2>
       <ul>
         <li>Bienveillance</li>
@@ -38,9 +30,18 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ludus Mentis. Tous droits réservés. | <a href="#">Mentions légales</a></p>
-  </footer>
+  <!-- Footer -->
+  <div id="footer-container"></div>
 
+  <!-- Inclusion dynamique header/footer -->
+  <script>
+    fetch("components/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header-container").innerHTML = data;
+    });
+
+    fetch("components/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+  </script>
 </body>
 </html>
