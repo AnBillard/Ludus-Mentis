@@ -22,9 +22,10 @@ a:hover {
 
 /* HEADER & NAVIGATION */
 header {
-  background-color: #014751;
-  color: white;
+  background-color: #fffdf5; 
+  color: #014751; 
   padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 header img {
