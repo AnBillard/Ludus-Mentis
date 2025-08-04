@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Ludus Mentis</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="logo" />
+    <h1>Ludus Mentis</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="academie.html">Académie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nous contacter</h2>
+      <p>Pour toute demande d'information ou inscription, contactez-nous via les moyens suivants :</p>
+      <ul>
+        <li>Email : <a href="mailto:ludus.mentis.esport@gmail.com">ludus.mentis.esport@gmail.com</a></li>
+        <li>Téléphone : 0474 25 40 37</li>
+        <li>Adresse : Walhain, Belgique</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ludus Mentis. Tous droits réservés. | <a href="mentions.html">Mentions légales</a></p>
+  </footer>
+
+</body>
+</html>
