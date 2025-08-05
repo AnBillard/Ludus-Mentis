@@ -413,6 +413,41 @@ input[type="submit"]:focus {
     padding-left: 1.8rem;
   }
 }
+/* ======================================================================
+   7b. RESPONSIVE (mobile-first)
+   ======================================================================*/
+
+@media (max-width: 800px) {
+  /* On cache la navigation classique sur mobile */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* Juste en dessous du header */
+    left: 0;
+    width: 100%;
+    background: var(--clr-surface);
+    box-shadow: var(--shadow-lg);
+    flex-direction: column; /* On affiche les liens verticalement */
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  /* Le Javascript ajoutera cette classe pour afficher le menu */
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .main-nav > a,
+  .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* On affiche le bouton burger */
+  .menu-toggle {
+    display: block;
+  }
+}
 
 /* === 8. FOOTER === */
 #footer,
