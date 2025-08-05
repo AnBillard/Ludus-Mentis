@@ -611,3 +611,22 @@ tr:nth-child(even) {
     padding-left: 2rem;
   }
 }
+
+/* === Alignment fix for menu items and dropdowns === */
+.main-nav a,
+.dropbtn {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  line-height: 1.2;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  top: 100%;
+  left: 0;
+}
