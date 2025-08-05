@@ -472,3 +472,11 @@ tr:nth-child(even) {
     background: var(--clr-surface) !important;
   }
 }
+
+@media (max-width: 800px) {
+  /* Cache le bouton Plus sur mobile */
+  .dropdown {
+    display: none;
+  }
+}
+
