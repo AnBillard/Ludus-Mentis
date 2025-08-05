@@ -229,20 +229,41 @@ button:hover, input[type="submit"]:hover {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: 1.1em;
+  margin-top: 1.2em;
+  background: #fffdfa;
+  border-radius: 1.2em;
+  box-shadow: 0 2px 10px rgba(200,120,40,0.04);
+  padding: 2em 1em 1em 1em;
+}
+.contact-form label {
+  font-weight: 600;
+  color: #a15200;
+  margin-bottom: 0.25em;
 }
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 0.9em 1em;
+  border: 1.4px solid #f7c982;
+  border-radius: 0.9em;
+  font-size: 1.05em;
   font-family: 'Poppins', Arial, sans-serif;
-  font-size: 1rem;
+  background: #fffbf5;
+  color: #523a1c;
+  transition: border-color 0.18s, box-shadow 0.18s;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #a3512d;
-  box-shadow: 0 0 0 2px rgba(163, 81, 45, 0.2);
+  border-color: #d88b41;
+  box-shadow: 0 0 0 2px #ffecb3;
+}
+.form-success {
+  background: #e4ffd5;
+  padding: 0.7em 1.2em;
+  border-radius: 0.8em;
+  border: 1px solid #b8e0ac;
+  text-align: center;
+  font-size: 1.07em;
+  color: #357a3c;
 }
