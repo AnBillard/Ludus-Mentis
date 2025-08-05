@@ -1,25 +1,13 @@
 /* ======================================================================
    LUDUS MENTIS – styles.css
-   Version : 2025‑08‑05 (balanced)
+   Version : 2025‑08‑05 (balanced – responsive fixes)
    ----------------------------------------------------------------------
    Notes :
    • Palette & esprit original préservés (orange #d76f00, beige #fffdfa).
    • Variables CSS pour cohérence ; pas de changement drastique de contraste.
    • Footer repensé (alignement, couleurs, responsive).
+   • Ajustements mobile : header, menu, tableau, sources.
    • Duplication supprimée, mais les noms de classes d’origine sont conservés.
-   =====================================================================*/
-   ----------------------------------------------------------------------
-   0  Google Fonts (pré‑chargement dans le <head>)
-   1  Design tokens (CSS Variables + dark‑mode)
-   2  Base, reset & utilitaires
-   3  Layout – container / section / card / hero
-   4  Composants
-      4.1  Header & navigation
-      4.2  Boutons
-      4.3  Formulaires & feedback
-      4.4  Tableau comparatif
-   5  Animations (prefers‑reduced‑motion)
-   6  Media‑queries : 768 px / 600 px / 360 px
    =====================================================================*/
 
 /* === 0. GOOGLE FONTS & KEYFRAMES ======================= */
@@ -29,6 +17,7 @@
   from { opacity: 0; transform: translateY(-15px); }
   to   { opacity: 1; transform: translateY(0);   }
 }
+
 /* ---------------------------------------------------------------------
    1.  DESIGN TOKENS & DARK MODE
    ------------------------------------------------------------------- */
@@ -83,11 +72,23 @@ p{margin:0 0 1.1em}
 ul{padding-left:1.3em}
 strong{color:var(--clr-accent-dark)}
 
-a{color:var(--clr-accent-dark);text-decoration:underline;text-decoration-color:rgba(215,111,0,.4);text-underline-offset:4px;text-decoration-thickness:1.5px;transition:color var(--transition),text-decoration-color var(--transition)}
-a:hover,a:focus{color:var(--clr-accent);text-decoration-color:rgba(215,111,0,1)}
+a{
+  color:var(--clr-accent-dark);
+  text-decoration:underline;
+  text-decoration-color:rgba(215,111,0,.4);
+  text-underline-offset:4px;
+  text-decoration-thickness:1.5px;
+  transition:color var(--transition),text-decoration-color var(--transition)
+}
+a:hover,a:focus{
+  color:var(--clr-accent);
+  text-decoration-color:rgba(215,111,0,1)
+}
 
 :focus-visible{outline:3px dashed var(--clr-accent);outline-offset:3px}
-.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0;white-space:nowrap}
+.sr-only{
+  position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0;white-space:nowrap
+}
 
 /* ---------------------------------------------------------------------
    3.  LAYOUT GÉNÉRAL
@@ -125,76 +126,143 @@ a:hover,a:focus{color:var(--clr-accent);text-decoration-color:rgba(215,111,0,1)}
 /* ---------------------------------------------------------------------
    4.  NAVIGATION & HEADER
    ------------------------------------------------------------------- */
-.site-header{position:sticky;top:0;z-index:100;width:100%;background:var(--clr-surface);box-shadow:0 2px 8px rgba(160,95,20,0.06)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:970px;margin-inline:auto;padding:.6rem 1.2rem}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  width:100%;
+  background:var(--clr-surface);
+  box-shadow:0 2px 8px rgba(160,95,20,0.06)
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:970px;
+  margin-inline:auto;
+  padding:.6rem 1.2rem;
+}
 .site-logo{height:48px;width:auto;max-width:110px}
 
-.main-nav{display:flex;align-items:center;gap:1.3rem;font-weight:500}
-.main-nav>a{color:var(--clr-accent-dark);padding:.3rem .8rem;border-radius:1em;transition:background .15s;text-decoration:none}
-.main-nav>a:hover,.main-nav>a:focus{background:var(--clr-accent-light);text-decoration:none}
+.main-nav{
+  display:flex;
+  align-items:center;
+  gap:1.3rem;
+  font-weight:500
+}
+.main-nav>a{
+  color:var(--clr-accent-dark);
+  padding:.3rem .8rem;
+  border-radius:1em;
+  transition:background .15s;
+  text-decoration:none
+}
+.main-nav>a:hover,.main-nav>a:focus{
+  background:var(--clr-accent-light);
+  text-decoration:none
+}
 
 .dropdown{position:relative;display:flex;align-items:center}
-.dropbtn{background:none;border:none;font:inherit;cursor:pointer;color:var(--clr-accent-dark);padding:.3rem .8rem;border-radius:1em;font-weight:500;transition:background .15s}
+.dropbtn{
+  background:none;
+  border:none;
+  font:inherit;
+  cursor:pointer;
+  color:var(--clr-accent-dark);
+  padding:.3rem .8rem;
+  border-radius:1em;
+  font-weight:500;
+  transition:background .15s
+}
 .dropbtn:hover,.dropbtn:focus{background:var(--clr-accent-light)}
-.dropdown-content{display:none;position:absolute;right:0;top:100%;background:var(--clr-surface);min-width:200px;box-shadow:0 2px 12px rgba(160,95,20,.1);border-radius:1.2em;z-index:200;margin-top:8px;padding:.5em 0}
+.dropdown-content{
+  display:none;
+  position:absolute;
+  right:0;
+  top:100%;
+  background:var(--clr-surface);
+  min-width:200px;
+  box-shadow:0 2px 12px rgba(160,95,20,.1);
+  border-radius:1.2em;
+  z-index:200;
+  margin-top:8px;
+  padding:.5em 0
+}
 .dropdown-content.show{display:block}
-.dropdown-content a{color:var(--clr-text);padding:.75rem 1.3rem;text-decoration:none;display:block;border-radius:.8em;font-weight:500;transition:background .14s;font-size:1em}
+.dropdown-content a{
+  color:var(--clr-text);
+  padding:.75rem 1.3rem;
+  text-decoration:none;
+  display:block;
+  border-radius:.8em;
+  font-weight:500;
+  transition:background .14s;
+  font-size:1em
+}
 .dropdown-content a:hover{background:#f6ecd8;color:var(--clr-accent)}
 
-.menu-toggle{display:none;background:none;border:none;font-size:2rem;color:var(--clr-accent);cursor:pointer;margin-left:1.1em}
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:2rem;
+  color:var(--clr-accent);
+  cursor:pointer;
+  margin-left:1.1em
+}
 
 /* ---------------------------------------------------------------------
    5.  BOUTONS
    ------------------------------------------------------------------- */
-.btn,.cta-button,button,input[type="submit"]{display:inline-block;background:var(--clr-accent);color:#fff;padding:.9em 2em;border-radius:2em;font-size:1.08em;font-weight:600;margin-top:1.3em;border:none;box-shadow:var(--shadow-sm);letter-spacing:.03em;cursor:pointer;transition:background var(--transition),transform var(--transition)}
-.btn:hover,.btn:focus,.cta-button:hover,button:hover,input[type="submit"]:hover{background:#e65100;transform:translateY(-2px) scale(1.04)}
+.btn,.cta-button,button,input[type="submit"]{
+  display:inline-block;
+  background:var(--clr-accent);
+  color:#fff;
+  padding:.9em 2em;
+  border-radius:2em;
+  font-size:1.08em;
+  font-weight:600;
+  margin-top:1.3em;
+  border:none;
+  box-shadow:var(--shadow-sm);
+  letter-spacing:.03em;
+  cursor:pointer;
+  transition:background var(--transition),transform var(--transition)
+}
+.btn:hover,.btn:focus,
+.cta-button:hover,
+button:hover,
+input[type="submit"]:hover{
+  background:#e65100;
+  transform:translateY(-2px) scale(1.04)
+}
 
 /* ---------------------------------------------------------------------
    6.  FORMULAIRES
    ------------------------------------------------------------------- */
-.contact-form{display:flex;flex-direction:column;gap:1.1em;margin-top:1.2em;background:var(--clr-surface);border-radius:1.2em;box-shadow:var(--shadow-sm);padding:2rem 1rem 1rem}
-.contact-form label{font-weight:600;color:var(--clr-accent-dark);margin-bottom:-.5em}
-.contact-form input,.contact-form textarea{padding:.9em 1em;border:1.4px solid #f7c982;border-radius:.9em;font-size:1.05em;background:#fffbf5;color:#523a1c;transition:border-color .18s,box-shadow .18s}
-.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#d88b41;box-shadow:0 0 0 3px #ffecb3}
-.contact-form input:valid:not(:placeholder-shown),.contact-form textarea:valid:not(:placeholder-shown){border-color:#4caf50}
-.contact-form input:invalid:not(:placeholder-shown):not(:focus),.contact-form textarea:invalid:not(:placeholder-shown):not(:focus){border-color:#f44336}
-.form-success{display:none;background:#e4ffd5;padding:1em 1.2em;border-radius:.8em;border:1px solid #b8e0ac;text-align:center;font-size:1.07em;color:#357a3c;font-weight:600;margin-top:1em}
-.form-success.show{display:block;animation:fadeInDown .5s ease-out forwards}
-
-/* ---------------------------------------------------------------------
-   7.  FOOTER (révisé)
-   ------------------------------------------------------------------- */
-.site-footer{background:var(--clr-surface);border-top:1px solid #ffe0b2;margin-top:3rem;padding:2rem 0 .7rem;font-size:1rem;color:var(--clr-accent-dark);box-shadow:0 -2px 8px rgba(160,95,20,.05)}
-.footer-content{max-width:970px;margin-inline:auto;text-align:center;padding-inline:1rem}
-.site-footer a{color:var(--clr-accent);font-weight:600;text-decoration:none;transition:color var(--transition)}
-.site-footer a:hover,.site-footer a:focus{color:var(--clr-accent-dark)}
-.site-footer p{margin:.7em 0;line-height:1.5}
-
-/* ---------------------------------------------------------------------
-   8.  COMPARISON TABLE
-   ------------------------------------------------------------------- */
-.compare-table{width:100%;border-collapse:collapse;margin:1.6em 0;font-size:.97em}
-.compare-table thead th{background:var(--clr-accent-light);color:var(--clr-accent-dark);text-align:left;padding:1.1em 1em;font-weight:600;border-bottom:2px solid #ffc27e}
-.compare-table tbody td{padding:.85em 1em;border-bottom:1px solid #ffecb3}
-.compare-table tbody tr:nth-child(even){background:var(--clr-surface)}
-
-/* ---------------------------------------------------------------------
-   9.  ANIMATIONS & MOTION-SAFE
---------------------------------------------------------------------- */
-@keyframes fadeInDown{from{opacity:0;transform:translateY(-15px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
-
-/* ---------------------------------------------------------------------
-   10.  MEDIA-QUERIES
-   ------------------------------------------------------------------- */
-/* ≤800 px : burger
-   ----------------------------------------------------------------- */
-@media(max-width:800px){
-  .menu-toggle{display:block}
-  .site-logo{height:40px;max-width:85px}
-
-  .main-nav{display:none;position:absolute;top:100%;right:0;background:var(--clr-surface);flex-direction:column;align-items:flex-start;width:67vw;max-width:260px;min-width:160px;box-shadow:var(--shadow-lg);border-radius:0 0 0 1.1em;padding:1.6rem 1.1rem;gap:.7rem;z-index:100}
-  .main-nav.nav-open{display:flex}
-  .main-nav>a,.dropdown{width:100%}
-  .dropbtn{text-align:left;width:100%}
-  .dropdown-content{position:static;box-shadow:none;min-width:100%;margin:0;padding:.5rem 0 0 1rem;border-radius:0;background
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:1.1em;
+  margin-top:1.2em;
+  background:var(--clr-surface);
+  border-radius:1.2em;
+  box-shadow:var(--shadow-sm);
+  padding:2rem 1rem 1rem
+}
+.contact-form label{
+  font-weight:600;
+  color:var(--clr-accent-dark);
+  margin-bottom:-.5em
+}
+.contact-form input,
+.contact-form textarea{
+  padding:.9em 1em;
+  border:1.4px solid #f7c982;
+  border-radius:.9em;
+  font-size:1.05em;
+  background:#fffbf5;
+  color:#523a1c;
+  transition:border-color .18s,box-shadow .18s
+}
+.contact-form input:focus,
