@@ -157,7 +157,7 @@ button:hover, input[type="submit"]:hover {
 .dropdown {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center; /* Règle clé pour l'alignement vertical */
 }
 .dropbtn {
   background: none;
@@ -178,13 +178,13 @@ button:hover, input[type="submit"]:hover {
   display: none;
   position: absolute;
   right: 0;
-  top: 100%; /* Positionne le dropdown juste en dessous du bouton */
+  top: 100%;
   background: #fffdfa;
   min-width: 200px;
   box-shadow: 0 2px 12px rgba(160,95,20,0.10);
   border-radius: 1.2em;
   z-index: 200;
-  margin-top: 8px; /* Petit espace entre le bouton et le menu */
+  margin-top: 8px;
   padding: 0.5em 0;
 }
 .dropdown-content.show {
@@ -228,13 +228,13 @@ button:hover, input[type="submit"]:hover {
     max-width: 85px;
   }
   .main-nav {
-    display: none; /* Caché par défaut en mobile */
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
     background: #fffdfa;
     flex-direction: column;
-    align-items: flex-start; /* Aligne les items à gauche */
+    align-items: flex-start;
     width: 67vw;
     max-width: 260px;
     min-width: 160px;
