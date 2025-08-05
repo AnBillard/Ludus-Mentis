@@ -135,7 +135,20 @@ button:hover, input[type="submit"]:hover {
   cursor: pointer;
   margin-left: 1.1em;
 }
-
+.nav-main .dropdown { position: relative; }
+.nav-main .dropdown-content {
+  display: none; 
+  position: absolute; 
+  background: #fff; 
+  min-width: 180px; 
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 12px;
+}
+.nav-main .dropdown:hover .dropdown-content {
+  display: block;
+}
+.nav-main .dropdown-content li { display: block; }
 /* --- Responsive header/burger menu --- */
 @media (max-width: 800px) {
   .header-inner {
