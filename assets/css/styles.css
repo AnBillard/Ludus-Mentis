@@ -1,13 +1,11 @@
 /* ======================================================================
    LUDUS MENTIS – styles.css
-   Version : 2025‑08‑05 (balanced – responsive fixes)
+   Version : 2025‑08‑05 (balanced – footer & CTA hover fixes)
    ----------------------------------------------------------------------
    Notes :
    • Palette & esprit original préservés (orange #d76f00, beige #fffdfa).
-   • Variables CSS pour cohérence ; pas de changement drastique de contraste.
-   • Footer repensé (alignement, couleurs, responsive).
-   • Ajustements mobile : header, menu, tableau, sources.
-   • Duplication supprimée, mais les noms de classes d’origine sont conservés.
+   • Footer ajouté / corrigé, hover des CTA rendu accessible.
+   • Section « Sources principales » stylisée et responsive.
    =====================================================================*/
 
 /* === 0. GOOGLE FONTS & KEYFRAMES ======================= */
@@ -212,7 +210,7 @@ a:hover,a:focus{
 }
 
 /* ---------------------------------------------------------------------
-   5.  BOUTONS
+   5.  BOUTONS & CTA
    ------------------------------------------------------------------- */
 .btn,.cta-button,button,input[type="submit"]{
   display:inline-block;
@@ -229,11 +227,13 @@ a:hover,a:focus{
   cursor:pointer;
   transition:background var(--transition),transform var(--transition)
 }
+/* Hover réhaussé pour lisibilité */
 .btn:hover,.btn:focus,
-.cta-button:hover,
-button:hover,
-input[type="submit"]:hover{
-  background:#e65100;
+.cta-button:hover,.cta-button:focus,
+button:hover,button:focus,
+input[type="submit"]:hover,input[type="submit"]:focus{
+  background:var(--clr-accent-dark);
+  color:#fff;
   transform:translateY(-2px) scale(1.04)
 }
 
@@ -266,3 +266,98 @@ input[type="submit"]:hover{
   transition:border-color .18s,box-shadow .18s
 }
 .contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:var(--clr-accent);
+  box-shadow:0 0 0 3px rgba(215,111,0,.25)
+}
+
+/* ---------------------------------------------------------------------
+   7.  SECTION « SOURCES PRINCIPALES »
+   ------------------------------------------------------------------- */
+.section.sources{
+  background:var(--clr-surface);
+  border-left:4px solid var(--clr-accent);
+  padding:2rem 1.6rem 1.8rem;
+}
+.section.sources ol{
+  counter-reset:source-counter;
+  margin-left:0;
+  padding-left:0;
+  list-style:none;
+}
+.section.sources li{
+  counter-increment:source-counter;
+  margin-bottom:.8em;
+  padding-left:2.2rem;
+  position:relative;
+  line-height:1.6;
+}
+.section.sources li::before{
+  content:counter(source-counter) ".";
+  position:absolute;
+  left:0;
+  top:0;
+  font-weight:600;
+  color:var(--clr-accent-dark);
+}
+.section.sources a{
+  color:var(--clr-accent-dark);
+  word-break:break-all;
+}
+.section.sources a:hover{
+  color:var(--clr-accent);
+}
+@media(max-width:480px){
+  .section.sources li{padding-left:1.8rem}
+}
+
+/* ---------------------------------------------------------------------
+   8.  FOOTER
+   ------------------------------------------------------------------- */
+#footer,.site-footer{
+  background:var(--clr-accent-dark);
+  color:var(--clr-accent-light);
+  text-align:center;
+  padding:1.8rem 1.2rem;
+  font-size:.95em;
+  line-height:1.6;
+  box-shadow:0 -2px 8px rgba(90,47,0,.07);
+}
+#footer a,.site-footer a{
+  color:var(--clr-accent-light);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+#footer a:hover,#footer a:focus,
+.site-footer a:hover,.site-footer a:focus{
+  color:var(--clr-accent);
+}
+@media(min-width:600px){
+  #footer .footer-inner,.site-footer .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:970px;
+    margin-inline:auto;
+    gap:1.4rem;
+  }
+}
+@media(prefers-color-scheme: dark){
+  #footer,.site-footer{
+    background:#2b2212;
+    color:#f9f7f3;
+  }
+  #footer a,.site-footer a{color:#ffae70}
+  #footer a:hover,.site-footer a:hover{color:#ff8a3c}
+}
+
+/* ---------------------------------------------------------------------
+   9.  UTILITAIRES
+   ------------------------------------------------------------------- */
+.hide{display:none!important}
+
+@media(max-width:768px){
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+  .dropdown-content{right:auto;left:0}
+}
