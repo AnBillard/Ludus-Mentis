@@ -223,4 +223,77 @@ footer {
   border-color: #a3512d;
   box-shadow: 0 0 0 2px rgba(163, 81, 45, 0.2);
 }
+/* Bouton principal CTA */
+.cta-button {
+  display: inline-block;
+  background: #f57c00;
+  color: #fff;
+  padding: 0.9em 2.2em;
+  border-radius: 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 1.3em;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(245,124,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.03em;
+}
 
+.cta-button:hover, .cta-button:focus {
+  background: #e65100;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Style sections et cards */
+.section {
+  background: #fffdfa;
+  margin: 2.5em auto 1.7em auto;
+  padding: 2.5em 1.7em 2em 1.7em;
+  border-radius: 2em;
+  box-shadow: 0 4px 16px rgba(90,47,0,0.06);
+  max-width: 580px;
+}
+
+.card {
+  border: 1.5px solid #ffecb3;
+  background: #fffbf0;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(130deg, #ffe0b2 0%, #fff3e0 90%);
+  box-shadow: 0 6px 24px rgba(245,124,0,0.09);
+  margin-bottom: 2.2em;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 1.3em 0.6em 1em 0.6em;
+    border-radius: 1.1em;
+    font-size: 1em;
+  }
+  .hero img {
+    max-width: 85px;
+  }
+  .cta-button {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+  }
+}
+
+/* Divers */
+body {
+  background: #f9f7f3;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  color: #4b3200;
+}
+h1, h2 {
+  color: #d76f00;
+}
+ul {
+  padding-left: 1.3em;
+}
+strong {
+  color: #a15200;
+}
