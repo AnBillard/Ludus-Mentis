@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact – Ludus Mentis</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <title>Ludus Mentis – Contact</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <div id="header"></div>
   <main class="container">
-<section>
-    
-<section class="piliers">
-  <div class="pilier">
-    <h2>📬 Nous contacter</h2>
-    <p>Une question ? Une demande d’inscription ? Contactez-nous via ce formulaire ou directement par email.</p>
-    <form action="mailto:info@ludusmentis.com" method="post" enctype="text/plain" class="contact-form">
-      <label for="name">Nom :</label><br>
-      <input type="text" id="name" name="name" required><br><br>
 
-      <label for="email">Email :</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <section class="section card">
+      <h1>Contactez-nous</h1>
+      <p>
+        Une question, une demande d’inscription ou d’information ? <br>
+        L’équipe Ludus Mentis vous répond rapidement.
+      </p>
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdkdwzoy" method="POST">
+        <label for="nom">Votre nom *</label>
+        <input type="text" id="nom" name="nom" required>
 
-      <label for="message">Message :</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <label for="email">Votre email *</label>
+        <input type="email" id="email" name="email" required>
 
-      <button type="submit" class="cta-button">Envoyer</button>
-    </form>
-  </div>
-</section>
+        <label for="message">Votre message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-  </section>
+        <button type="submit" class="cta-button">Envoyer</button>
+        <p id="form-success" class="form-success" style="display:none; color: #357a3c; font-weight: 600; margin-top: 1em;">
+          Merci, votre message a bien été envoyé !
+        </p>
+      </form>
+      <p style="margin-top: 2em; color: #876b4c;">
+        Ou contactez-nous par email : <a href="mailto:info@ludusmentis.be">info@ludusmentis.be</a>
+      </p>
+    </section>
+
   </main>
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
+  <script>
+    // Gestion feedback formulaire (Formspree)
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('contactForm');
+      var successMsg = document.getElementById('form-success');
+      if(form){
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          var data = new FormData(form);
+          fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(response) {
+            if (response.ok) {
+              form.reset();
+              successMsg.style.display = "block";
+            } else {
+              response.json().then(function(data){
+                alert(data.errors ? data.errors.map(e=>e.message).join("\n") : "Erreur, réessayez plus tard.");
+              });
+            }
+          }).catch(function(){
+            alert("Erreur d'envoi, vérifiez votre connexion.");
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
