@@ -225,6 +225,7 @@ a:focus {
   align-items: center;
 }
 
+
 .dropbtn {
   background: none;
   border: none;
@@ -235,7 +236,12 @@ a:focus {
   border-radius: 1em;
   font-weight: 500;
   transition: background .15s;
-}
+
+  /* Ajout pour centrer parfaitement texte + icône ▼ */
+  display: inline-flex;     /* passe en inline-flex */
+  align-items: center;      /* centre verticalement le contenu */
+  justify-content: center;  /* centre horizontalement */
+  vertical-align: middle;   /* aligne la boîte sur la même baseline que les <a> */
 
 .dropbtn:hover,
 .dropbtn:focus {
