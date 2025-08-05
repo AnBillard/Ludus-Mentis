@@ -630,3 +630,13 @@ tr:nth-child(even) {
   top: 100%;
   left: 0;
 }
+
+.main-nav a,
+.dropbtn {
+  display: inline-flex;       /* même mode pour tous */
+  align-items: center;        /* centrage vertical */
+  height: 48px;               /* hauteur fixe uniforme */
+  padding: 0 1rem;
+  line-height: 1;             /* supprime les décalages */
+}
+
