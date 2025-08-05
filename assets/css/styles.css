@@ -240,18 +240,23 @@ a:hover, a:focus {
 .dropdown-content.show {
   display: block;
 }
-.dropdown-content a {
-  color: var(--clr-text);
-  padding: .75rem 1.3rem;
-  display: block;
-  border-radius: .8em;
-  font-weight: 500;
-  transition: background .14s;
-  font-size: 1em;
+/* Animation du dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.dropdown-content a:hover {
-  background: #f6ecd8;
-  color: var(--clr-accent);
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-toggle {
