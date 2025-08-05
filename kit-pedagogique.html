@@ -5,11 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kit pédagogique | Ludus Mentis</title>
   <meta name="description" content="Découvrez notre kit pédagogique pour les éducateurs, détaillant notre méthodologie et les compétences développées.">
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
   <style>
+    /* ======================================================================
+       STYLES.CSS INTÉGRÉ
+       ====================================================================== */
+    
+    /* --- Importation de la police Google Fonts --- */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    /* --- Variables CSS (Design Tokens) --- */
+    :root {
+      /* Couleurs */
+      --clr-bg:           #f9f7f3;
+      --clr-surface:      #fffdfa;
+      --clr-text:         #4b3200;
+      --clr-accent:       #d76f00;
+      --clr-accent-dark:  #a15200;
+      --clr-accent-light: #fff3e0;
+
+      /* Dimensions & Ombres */
+      --radius:     0.5rem;
+      --shadow-sm:  0 2px 6px rgba(90, 47, 0, 0.06);
+      --shadow-lg:  0 8px 20px rgba(90, 47, 0, 0.12);
+
+      /* Transitions */
+      --transition: 0.25s ease-out;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.7;
+      font-size: clamp(16px, 1.5vw, 18px);
+    }
+    h1, h2, h3, h4 { font-weight: 600; color: var(--clr-accent); line-height: 1.25; margin-bottom: 0.5em; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.25rem); }
+    p { margin-bottom: 1.1em; }
+    ul { padding-left: 1.3em; }
+    strong { color: var(--clr-accent-dark); }
+    a {
+      color: var(--clr-accent-dark);
+      text-decoration: underline;
+      text-decoration-color: rgba(215, 111, 0, 0.4);
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1.5px;
+      transition: color var(--transition), text-decoration-color var(--transition);
+    }
+    a:hover, a:focus { color: var(--clr-accent); text-decoration-color: rgba(215, 111, 0, 1); }
+    .container { max-width: 1100px; margin-inline: auto; padding-inline: 1.2rem; }
+    .section { background: var(--clr-surface); border-radius: calc(2 * var(--radius)); padding: 2.2rem 1.4rem 1.7rem; margin: 2.2rem auto 1.7rem; box-shadow: var(--shadow-sm); }
+    .card { background: #fffbf0; border: 1.5px solid #ffecb3; border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform var(--transition), box-shadow var(--transition); }
+    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
     /* ============================================= */
-    /* STYLES POUR LE KIT PÉDAGOGIQUE FINAL          */
+    /* STYLES POUR LE KIT PÉDAGOGIQUE                */
     /* ============================================= */
 
     /* --- Corps du document --- */
