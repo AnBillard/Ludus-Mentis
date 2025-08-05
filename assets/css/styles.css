@@ -297,3 +297,126 @@ ul {
 strong {
   color: #a15200;
 }
+
+/* --- HEADER --- */
+.site-header {
+  width: 100%;
+  background: #fffdfa;
+  box-shadow: 0 2px 8px rgba(160,95,20,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0.6em 1.2em;
+}
+.site-logo {
+  height: 48px;
+  width: auto;
+  max-width: 110px;
+}
+.main-nav {
+  display: flex;
+  gap: 1.3em;
+  font-weight: 500;
+}
+.main-nav a {
+  color: #a15200;
+  text-decoration: none;
+  padding: 0.3em 0.8em;
+  border-radius: 1em;
+  transition: background 0.15s;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #fff3e0;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #d76f00;
+  cursor: pointer;
+  margin-left: 1.1em;
+}
+
+/* --- Responsive header/burger menu --- */
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: row;
+    padding: 0.5em 0.7em;
+  }
+  .site-logo {
+    height: 40px;
+    max-width: 85px;
+  }
+  .main-nav {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    background: #fffdfa;
+    flex-direction: column;
+    width: 67vw;
+    max-width: 260px;
+    min-width: 160px;
+    box-shadow: 0 8px 28px rgba(180,100,40,0.13);
+    border-radius: 1.1em 0 0 1.1em;
+    padding: 1.6em 1.1em;
+    gap: 0.7em;
+    display: none;
+    z-index: 100;
+  }
+  .main-nav.nav-open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  width: 100%;
+  background: #fffdfa;
+  border-top: 1px solid #ffe0b2;
+  margin-top: 3em;
+  padding: 2em 0 0.7em 0;
+  font-size: 1em;
+  color: #a15200;
+  box-shadow: 0 -2px 8px rgba(160,95,20,0.05);
+}
+.footer-content {
+  max-width: 970px;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-footer a {
+  color: #d76f00;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #a15200;
+  text-decoration: none;
+}
+.site-footer p {
+  margin: 0.7em 0;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 0 0.4em;
+    font-size: 0.97em;
+  }
+  .site-footer {
+    padding: 1.1em 0 0.4em 0;
+  }
+}
+
