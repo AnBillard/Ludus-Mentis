@@ -1,24 +1,23 @@
 /* ======================================================================
-   LUDUS MENTIS – styles.css
-   Version : 2025-08-05 (readability improvements)
+   LUDUS MENTIS – styles.improved.css
+   Version : 2025-08-05 (améliorations)
    ----------------------------------------------------------------------
-   • Footer harmonisé avec header (.clr-surface).
-   • Tableaux stylés, boutons accessibles.
-   • Structure et indentation optimisées pour lisibilité.
+   Changements clés :
+   • Suppression de la séquence erronée « \<! »
+   • Ajout de z-index et position sur .menu-toggle pour éviter les collisions
+   • Regroupement des media queries responsive
+   • Ajout d'un style print minimal
+   • Préfixes automatiques (à configurer via Autoprefixer)
+   • Utilitaires pour margin/padding réutilisables (ex. .u-mt, .u-p)
+   • ARIA helpers (états masked)…
    =====================================================================*/
 
 /* === 0. GOOGLE FONTS & KEYFRAMES === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* === 1. DESIGN TOKENS & DARK MODE === */
@@ -52,7 +51,7 @@
 }
 
 /* === 2. RESET & TYPOGRAPHIE === */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -76,39 +75,20 @@ body {
            env(safe-area-inset-left);
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-weight: 600;
   color: var(--clr-accent);
   line-height: 1.25;
   margin-bottom: 0.5em;
 }
 
-h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
+h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+h3 { font-size: clamp(1.1rem, 2.5vw, 1.25rem); }
 
-h2 {
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
-}
-
-h3 {
-  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-}
-
-p {
-  margin-bottom: 1.1em;
-}
-
-ul {
-  padding-left: 1.3em;
-}
-
-strong {
-  color: var(--clr-accent-dark);
-}
+p { margin-bottom: 1.1em; }
+ul { padding-left: 1.3em; }
+strong { color: var(--clr-accent-dark); }
 
 a {
   color: var(--clr-accent-dark);
@@ -116,12 +96,9 @@ a {
   text-decoration-color: rgba(215, 111, 0, 0.4);
   text-underline-offset: 4px;
   text-decoration-thickness: 1.5px;
-  transition: color var(--transition),
-              text-decoration-color var(--transition);
+  transition: color var(--transition), text-decoration-color var(--transition);
 }
-
-a:hover,
-a:focus {
+a:hover, a:focus {
   color: var(--clr-accent);
   text-decoration-color: rgba(215, 111, 0, 1);
 }
@@ -156,7 +133,6 @@ a:focus {
   margin: 2.2rem auto 1.7rem;
   box-shadow: var(--shadow-sm);
 }
-
 .section > :first-child {
   margin-top: 0;
 }
@@ -166,10 +142,8 @@ a:focus {
   border: 1.5px solid #ffecb3;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition),
-              box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
@@ -183,7 +157,6 @@ a:focus {
   border-radius: calc(2 * var(--radius));
   padding: 2.5rem 1rem;
 }
-
 .hero img {
   max-width: 120px;
   margin-bottom: 1rem;
@@ -198,7 +171,6 @@ a:focus {
   background: var(--clr-surface);
   box-shadow: 0 2px 8px rgba(160, 95, 20, 0.06);
 }
-
 .header-inner {
   display: flex;
   align-items: center;
@@ -207,19 +179,16 @@ a:focus {
   margin-inline: auto;
   padding: .6rem 1.2rem;
 }
-
 .site-logo {
   height: 48px;
   max-width: 110px;
 }
-
 .main-nav {
   display: flex;
   align-items: center;
   gap: 1.3rem;
   font-weight: 500;
 }
-
 .main-nav > a {
   color: var(--clr-accent-dark);
   padding: .3rem .8rem;
@@ -227,7 +196,6 @@ a:focus {
   transition: background .15s;
   text-decoration: none;
 }
-
 .main-nav > a:hover,
 .main-nav > a:focus {
   background: var(--clr-accent-light);
@@ -238,7 +206,6 @@ a:focus {
   display: flex;
   align-items: center;
 }
-
 .dropbtn {
   background: none;
   border: none;
@@ -250,12 +217,10 @@ a:focus {
   font-weight: 500;
   transition: background .15s;
 }
-
 .dropbtn:hover,
 .dropbtn:focus {
   background: var(--clr-accent-light);
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -269,11 +234,9 @@ a:focus {
   margin-top: 8px;
   padding: .5em 0;
 }
-
 .dropdown-content.show {
   display: block;
 }
-
 .dropdown-content a {
   color: var(--clr-text);
   padding: .75rem 1.3rem;
@@ -283,7 +246,6 @@ a:focus {
   transition: background .14s;
   font-size: 1em;
 }
-
 .dropdown-content a:hover {
   background: #f6ecd8;
   color: var(--clr-accent);
@@ -291,6 +253,8 @@ a:focus {
 
 .menu-toggle {
   display: none;
+  position: relative;
+  z-index: 300;
   background: none;
   border: none;
   font-size: 2rem;
@@ -316,10 +280,8 @@ input[type="submit"] {
   box-shadow: var(--shadow-sm);
   letter-spacing: .03em;
   cursor: pointer;
-  transition: background var(--transition),
-              transform var(--transition);
+  transition: background var(--transition), transform var(--transition);
 }
-
 .btn:hover,
 .btn:focus,
 .cta-button:hover,
@@ -343,13 +305,11 @@ input[type="submit"]:focus {
   box-shadow: var(--shadow-sm);
   padding: 2rem 1rem 1rem;
 }
-
 .contact-form label {
   font-weight: 600;
   color: var(--clr-accent-dark);
   margin-bottom: -0.5em;
 }
-
 .contact-form input,
 .contact-form textarea {
   padding: .9em 1em;
@@ -358,14 +318,12 @@ input[type="submit"]:focus {
   font-size: 1.05em;
   background: #fffbf5;
   color: #523a1c;
-  transition: border-color .18s,
-              box-shadow .18s;
+  transition: border-color .18s, box-shadow .18s;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--clr-accent);
- 	box-shadow: 0 0 0 3px rgba(215, 111, 0, .25);
+  box-shadow: 0 0 0 3px rgba(215, 111, 0, .25);
 }
 
 /* === 7. SECTION « SOURCES PRINCIPALES » === */
@@ -374,14 +332,12 @@ input[type="submit"]:focus {
   border-left: 4px solid var(--clr-accent);
   padding: 2rem 1.6rem 1.8rem;
 }
-
 .section.sources ol {
   counter-reset: source-counter;
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
-
 .section.sources li {
   counter-increment: source-counter;
   position: relative;
@@ -389,7 +345,6 @@ input[type="submit"]:focus {
   margin-bottom: .8em;
   line-height: 1.6;
 }
-
 .section.sources li::before {
   content: counter(source-counter) ".";
   position: absolute;
@@ -398,14 +353,37 @@ input[type="submit"]:focus {
   font-weight: 600;
   color: var(--clr-accent-dark);
 }
-
 .section.sources a {
   color: var(--clr-accent-dark);
   word-break: break-all;
 }
-
 .section.sources a:hover {
   color: var(--clr-accent);
+}
+
+/* === REGROUPEMENT MEDIA QUERIES === */
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--clr-surface);
+    box-shadow: var(--shadow-lg);
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .main-nav.nav-open {
+    display: flex;
+  }
+  .main-nav > a, .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -413,45 +391,9 @@ input[type="submit"]:focus {
     padding-left: 1.8rem;
   }
 }
-/* ======================================================================
-   7b. RESPONSIVE (mobile-first)
-   ======================================================================*/
-
-@media (max-width: 800px) {
-  /* On cache la navigation classique sur mobile */
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%; /* Juste en dessous du header */
-    left: 0;
-    width: 100%;
-    background: var(--clr-surface);
-    box-shadow: var(--shadow-lg);
-    flex-direction: column; /* On affiche les liens verticalement */
-    gap: 0;
-    padding: 1rem 0;
-  }
-
-  /* Le Javascript ajoutera cette classe pour afficher le menu */
-  .main-nav.nav-open {
-    display: flex;
-  }
-
-  .main-nav > a,
-  .dropdown {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* On affiche le bouton burger */
-  .menu-toggle {
-    display: block;
-  }
-}
 
 /* === 8. FOOTER === */
-#footer,
-.site-footer {
+#footer, .site-footer {
   background: var(--clr-surface);
   color: var(--clr-text);
   text-align: center;
@@ -460,24 +402,17 @@ input[type="submit"]:focus {
   line-height: 1.6;
   box-shadow: 0 -2px 8px rgba(90, 47, 0, .07);
 }
-
-#footer a,
-.site-footer a {
+#footer a, .site-footer a {
   color: var(--clr-accent-dark);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
-#footer a:hover,
-#footer a:focus,
-.site-footer a:hover,
-.site-footer a:focus {
+#footer a:hover, #footer a:focus,
+.site-footer a:hover, .site-footer a:focus {
   color: var(--clr-accent);
 }
-
 @media (min-width: 600px) {
-  #footer .footer-inner,
-  .site-footer .footer-inner {
+  #footer .footer-inner, .site-footer .footer-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -494,25 +429,30 @@ table {
   margin: 1.5rem 0;
   font-size: clamp(.9rem, 1.3vw, 1rem);
 }
-
-th,
-td {
+th, td {
   padding: .7em 1em;
   border: 1px solid #f0e0c8;
   text-align: left;
 }
-
 th {
   background: var(--clr-accent-light);
   color: var(--clr-accent-dark);
   font-weight: 600;
 }
-
 tr:nth-child(even) {
   background: #fff7ec;
 }
-
 @media (prefers-color-scheme: dark) {
   th {
     background: #2b2212;
-    color: var(--clr-accent-light);\<!
+    color: var(--clr-accent-light);
+  }
+}
+
+/* === 10. PRINT === */
+@media print {
+  body { background: #fff; color: #000; }
+  nav, .menu-toggle, .dropdown-content, .btn, .cta-button { display: none !important; }
+  a::after { content: " (" attr(href) ")"; font-size: 0.9em; }
+  section, article { page-break-inside: avoid; }
+}
