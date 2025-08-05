@@ -1,6 +1,18 @@
 /* --- GOOGLE FONTS --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* --- KEYFRAMES FOR ANIMATIONS --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* --- BASE TYPO --- */
 body {
   font-family: 'Poppins', Arial, sans-serif;
@@ -8,7 +20,8 @@ body {
   color: #4b3200;
   margin: 0;
   line-height: 1.7;
-  font-size: 16px;
+  /* Utilisation de clamp pour une taille de police fluide */
+  font-size: clamp(16px, 1.5vw, 18px);
 }
 h1, h2, h3, h4 {
   font-family: 'Poppins', Arial, sans-serif;
@@ -17,24 +30,22 @@ h1, h2, h3, h4 {
   margin-top: 1.3em;
   margin-bottom: 0.5em;
 }
-h1 { font-size: 2.1em; margin-top: 0.5em; }
-h2 { font-size: 1.45em; }
-h3 { font-size: 1.17em; }
-ul { padding-left: 1.3em; }
-strong { color: #a15200; }
-p { margin-bottom: 1.1em; }
 
 /* Tailles de titres fluides */
 h1 { font-size: clamp(1.8em, 4vw, 2.5em); margin-top: 0.5em; }
 h2 { font-size: clamp(1.3em, 3vw, 1.7em); }
 h3 { font-size: clamp(1.1em, 2.5vw, 1.25em); }
 
+ul { padding-left: 1.3em; }
+strong { color: #a15200; }
+p { margin-bottom: 1.1em; }
+
 a {
   color: #a3512d;
   /* Soulignement plus subtil et positionné */
   text-decoration: underline;
   text-decoration-color: rgba(215, 111, 0, 0.4);
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   text-decoration-thickness: 1.5px;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
@@ -43,9 +54,8 @@ a:hover, a:focus {
   color: #d76f00;
   /* Le soulignement devient opaque au survol */
   text-decoration-color: rgba(215, 111, 0, 1);
-  /* On enlève le soulignement par défaut du navigateur */
-  text-decoration: underline; 
 }
+
 /* --- LAYOUT CONTAINER --- */
 .container {
   max-width: 1100px;
@@ -63,7 +73,16 @@ a:hover, a:focus {
 .card {
   border: 1.5px solid #ffecb3;
   background: #fffbf0;
+  /* Ajout d'une transition pour l'effet de survol */
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
 }
+
+/* Effet au survol sur les cartes */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(90,47,0,0.1);
+}
+
 .hero {
   text-align: center;
   background: linear-gradient(130deg, #ffe0b2 0%, #fff3e0 90%);
@@ -137,11 +156,13 @@ button:hover, input[type="submit"]:hover {
   padding: 0.3em 0.8em;
   border-radius: 1em;
   transition: background 0.15s;
+  text-decoration: none; /* On retire le soulignement standard ici */
 }
 
-.main-nav > a:hover, 
+.main-nav > a:hover,
 .main-nav > a:focus {
   background: #fff3e0;
+  text-decoration: none;
 }
 
 /* --- DROPDOWN “PLUS” --- */
@@ -165,7 +186,7 @@ button:hover, input[type="submit"]:hover {
   background: #fff3e0;
 }
 .dropdown-content {
-  display: none;
+  display: none; /* Caché par défaut */
   position: absolute;
   right: 0;
   background: #fffdfa;
@@ -176,6 +197,12 @@ button:hover, input[type="submit"]:hover {
   margin-top: 2px;
   padding: 0.5em 0;
 }
+
+/* Classe pour afficher le menu déroulant via JS */
+.dropdown-content.show {
+  display: block;
+}
+
 .dropdown-content a {
   color: #352E18;
   padding: 0.75em 1.3em;
@@ -190,10 +217,6 @@ button:hover, input[type="submit"]:hover {
   background: #f6ecd8;
   color: #d76f00;
 }
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block;
-}
 
 /* --- Responsive header/burger menu --- */
 .menu-toggle {
@@ -207,6 +230,9 @@ button:hover, input[type="submit"]:hover {
 }
 
 @media (max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
   .header-inner {
     flex-direction: row;
     padding: 0.5em 0.7em;
@@ -297,12 +323,10 @@ button:hover, input[type="submit"]:hover {
 }
 .site-footer a {
   color: #d76f00;
-  text-decoration: underline;
   font-weight: 500;
 }
 .site-footer a:hover, .site-footer a:focus {
   color: #a15200;
-  text-decoration: none;
 }
 .site-footer p {
   margin: 0.7em 0;
@@ -323,7 +347,7 @@ button:hover, input[type="submit"]:hover {
 .contact-form label {
   font-weight: 600;
   color: #a15200;
-  margin-bottom: 0.25em;
+  margin-bottom: -0.5em; /* Rapproche le label de son champ */
 }
 .contact-form input,
 .contact-form textarea {
@@ -340,14 +364,36 @@ button:hover, input[type="submit"]:hover {
 .contact-form textarea:focus {
   outline: none;
   border-color: #d88b41;
-  box-shadow: 0 0 0 2px #ffecb3;
+  box-shadow: 0 0 0 3px #ffecb3;
 }
+
+/* Style pour les champs valides (après une première saisie) */
+.contact-form input:valid:not(:placeholder-shown),
+.contact-form textarea:valid:not(:placeholder-shown) {
+    border-color: #4CAF50; /* Vert pour valide */
+}
+
+/* Style pour les champs invalides pendant la saisie */
+.contact-form input:invalid:not(:placeholder-shown):not(:focus),
+.contact-form textarea:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #F44336; /* Rouge pour invalide */
+}
+
 .form-success {
+  display: none; /* Caché par défaut */
   background: #e4ffd5;
-  padding: 0.7em 1.2em;
+  padding: 1em 1.2em;
   border-radius: 0.8em;
   border: 1px solid #b8e0ac;
   text-align: center;
   font-size: 1.07em;
   color: #357a3c;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+/* Classe pour afficher le message avec animation */
+.form-success.show {
+    display: block;
+    animation: fadeInDown 0.5s ease-out forwards;
 }
