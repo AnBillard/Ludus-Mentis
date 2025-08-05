@@ -174,22 +174,21 @@ a:hover, a:focus {
   font-weight: 500;
 }
 /* Common style for all navigation items (links and buttons) */
-
 .main-nav > a,
 .dropbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px; /* Sets a consistent height for all items */
-  padding: 0 1rem;
+  height: 44px;
+  padding: 0 0.8rem; /* <-- Padding corrigé pour retrouver la largeur originale */
   border-radius: 1em;
   font-weight: 500;
   color: var(--clr-accent-dark);
   text-decoration: none;
   background: none;
   border: none;
-  font-family: inherit; /* Fait hériter la police (Poppins) */
-  font-size: inherit;   /* Fait hériter la taille de la police du body */
+  font-family: inherit;
+  font-size: inherit;
   cursor: pointer;
   transition: background .15s ease-in-out, color .15s ease-in-out;
 }
