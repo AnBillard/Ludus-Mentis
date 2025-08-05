@@ -1,301 +1,93 @@
 
-/* === TYPOGRAPHY === */
+
+/* --- GOOGLE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* --- BASE TYPO --- */
 body {
-    font-family: 'Poppins', sans-serif !important; 'Open Sans', sans-serif;
-    background-color: #f8f5f0;
-    color: #333;
-    line-height: 1.7;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif !important; 'Raleway', sans-serif;
-    color: #5a3e2b;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 2.2em;
-}
-
-h2 {
-    font-size: 1.8em;
-}
-
-h3 {
-    font-size: 1.4em;
-}
-
-/* === BUTTONS === */
-button, .cta-button, input[type="submit"] {
-    background-color: #d88b41;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, .cta-button:hover, input[type="submit"]:hover {
-    background-color: #c7792f;
-}
-
-/* === LINKS === */
-a {
-    color: #8b572a;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* === CONTAINERS & LAYOUT === */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.section {
-    margin-bottom: 40px;
-}
-
-/* === SPACING === */
-p {
-    margin-bottom: 1.2em;
-}
-
-/* === HEADER/FOOTER COLORS === */
-header, footer {
-    background-color: #e6d3b3;
-    color: #3a2d1f;
-    padding: 20px 0;
-}
-
-/* === CARD ELEMENTS FOR BLOCKS === */
-
-
-/* === IMPORT GOOGLE FONTS === */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap');
-
-
-
-/* BASE TYPO & RESET */
-body {
-  font-family: 'Poppins', sans-serif !important; 'Poppins', sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f9f7f3;
+  color: #4b3200;
   margin: 0;
-  padding: 0;
-  color: #2e2e2e;
-  background-color: #fdfaf5; /* beige naturel */
+  line-height: 1.7;
+  font-size: 16px;
 }
-
-h1, h2, h3 {
+h1, h2, h3, h4 {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #d76f00;
   font-weight: 600;
-  margin-top: 0;
-  color: #4e3629; /* brun doux */
+  margin-top: 1.3em;
+  margin-bottom: 0.5em;
 }
+h1 { font-size: 2.1em; margin-top: 0.5em; }
+h2 { font-size: 1.45em; }
+h3 { font-size: 1.17em; }
+ul { padding-left: 1.3em; }
+strong { color: #a15200; }
+p { margin-bottom: 1.1em; }
 
 a {
-  color: #a3512d; /* terracotta */
+  color: #a3512d;
   text-decoration: none;
+  transition: color 0.15s;
 }
-a:hover {
+a:hover, a:focus {
+  color: #d76f00;
   text-decoration: underline;
 }
 
-/* HEADER & NAVIGATION */
-header {
-  background-color: #fdfaf5;
-  color: #014751;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+/* --- LAYOUT CONTAINER --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
 }
-
-header img {
-  height: 50px;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  margin: 0 1rem;
-  font-weight: 500;
-}
-
-/* HERO SECTION */
-
-.hero h1 {
-  font-size: 2.5rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-.hero .cta-button {
-  background-color: #a3512d;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.hero .cta-button:hover {
-  background-color: #7e3e21;
-}
-
-/* PILIERS */
-.piliers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-.pilier {
-  flex: 1 1 300px;
-  background-color: #fffaf3;
-  border: 1px solid #e6ddcc;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.piliers h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 2rem 0 1rem;
-  color: #222;
-  text-align: left;
-  padding-left: 0.5rem;
-  border-left: 4px solid #E77C54;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .piliers {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav {
-    flex-direction: column;
-  }
-}
-
-/* FOOTER */
-footer {
-  background-color: #fdfaf5;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* FORMULAIRE DE CONTACT */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif !important; 'Poppins', sans-serif;
-  font-size: 1rem;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #a3512d;
-  box-shadow: 0 0 0 2px rgba(163, 81, 45, 0.2);
-}
-/* Bouton principal CTA */
-.cta-button {
-  display: inline-block;
-  background: #f57c00;
-  color: #fff;
-  padding: 0.9em 2.2em;
-  border-radius: 2em;
-  font-size: 1.1em;
-  font-weight: 600;
-  margin-top: 1.3em;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(245,124,0,0.08);
-  transition: background 0.2s, transform 0.2s;
-  letter-spacing: 0.03em;
-}
-
-.cta-button:hover, .cta-button:focus {
-  background: #e65100;
-  transform: translateY(-2px) scale(1.04);
-}
-
-/* Style sections et cards */
 .section {
   background: #fffdfa;
-  margin: 2.5em auto 1.7em auto;
-  padding: 2.5em 1.7em 2em 1.7em;
+  margin: 2.2em auto 1.7em auto;
+  padding: 2.2em 1.4em 1.7em 1.4em;
   border-radius: 2em;
   box-shadow: 0 4px 16px rgba(90,47,0,0.06);
   max-width: 580px;
 }
-
 .card {
   border: 1.5px solid #ffecb3;
   background: #fffbf0;
 }
-
 .hero {
   text-align: center;
   background: linear-gradient(130deg, #ffe0b2 0%, #fff3e0 90%);
   box-shadow: 0 6px 24px rgba(245,124,0,0.09);
   margin-bottom: 2.2em;
 }
-
-@media (max-width: 600px) {
-  .section {
-    padding: 1.3em 0.6em 1em 0.6em;
-    border-radius: 1.1em;
-    font-size: 1em;
-  }
-  .hero img {
-    max-width: 85px;
-  }
-  .cta-button {
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-  }
+.hero img {
+  max-width: 120px;
+  margin-bottom: 1em;
 }
 
-/* Divers */
-body {
-  background: #f9f7f3;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  margin: 0;
-  color: #4b3200;
+/* --- BUTTONS --- */
+.cta-button,
+button,
+input[type="submit"] {
+  display: inline-block;
+  background: #f57c00;
+  color: #fff;
+  padding: 0.9em 2em;
+  border-radius: 2em;
+  font-size: 1.08em;
+  font-weight: 600;
+  margin-top: 1.3em;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 18px rgba(245,124,0,0.08);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
-h1, h2 {
-  color: #d76f00;
-}
-ul {
-  padding-left: 1.3em;
-}
-strong {
-  color: #a15200;
+.cta-button:hover, .cta-button:focus,
+button:hover, input[type="submit"]:hover {
+  background: #e65100;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* --- HEADER --- */
@@ -327,13 +119,11 @@ strong {
 }
 .main-nav a {
   color: #a15200;
-  text-decoration: none;
   padding: 0.3em 0.8em;
   border-radius: 1em;
   transition: background 0.15s;
 }
-.main-nav a:hover,
-.main-nav a:focus {
+.main-nav a:hover, .main-nav a:focus {
   background: #fff3e0;
 }
 .menu-toggle {
@@ -401,8 +191,7 @@ strong {
   text-decoration: underline;
   font-weight: 500;
 }
-.site-footer a:hover,
-.site-footer a:focus {
+.site-footer a:hover, .site-footer a:focus {
   color: #a15200;
   text-decoration: none;
 }
@@ -410,7 +199,23 @@ strong {
   margin: 0.7em 0;
   line-height: 1.5;
 }
+
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 600px) {
+  .section {
+    padding: 1.3em 0.6em 1em 0.6em;
+    border-radius: 1.1em;
+    font-size: 1em;
+  }
+  .hero img {
+    max-width: 85px;
+  }
+  .cta-button,
+  button,
+  input[type="submit"] {
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+  }
   .footer-content {
     padding: 0 0.4em;
     font-size: 0.97em;
@@ -420,3 +225,24 @@ strong {
   }
 }
 
+/* --- FORMULAIRE --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #a3512d;
+  box-shadow: 0 0 0 2px rgba(163, 81, 45, 0.2);
+}
