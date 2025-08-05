@@ -146,7 +146,7 @@ a:hover, a:focus {
   margin-bottom: 1rem;
 }
 
-/* === 4. NAVIGATION & HEADER === */
+/* === 4. NAVIGATION & HEADER (Corrected for Alignment) === */
 .site-header {
   position: sticky;
   top: 0;
@@ -169,42 +169,91 @@ a:hover, a:focus {
 }
 .main-nav {
   display: flex;
-  align-items: center;
-  gap: 1.3rem;
+  align-items: center; /* This is the key for vertical alignment */
+  gap: 0.5rem;
   font-weight: 500;
-}
-.main-nav > a {
-  color: var(--clr-accent-dark);
-  padding: .3rem .8rem;
-  border-radius: 1em;
-  transition: background .15s;
-  text-decoration: none;
-}
-.main-nav > a:hover,
-.main-nav > a:focus {
-  background: var(--clr-accent-light);
 }
 
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+/* Common style for all navigation items (links and buttons) */
+.main-nav > a,
 .dropbtn {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  color: var(--clr-accent-dark);
-  padding: .3rem .8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px; /* Sets a consistent height for all items */
+  padding: 0 1rem;
   border-radius: 1em;
   font-weight: 500;
-  transition: background .15s;
+  color: var(--clr-accent-dark);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: inherit; /* Ensures button font matches the rest */
+  font-size: inherit; /* Ensures button font size matches links */
+  cursor: pointer;
+  transition: background .15s ease-in-out, color .15s ease-in-out;
 }
+
+/* Hover/focus effect for all items */
+.main-nav > a:hover,
+.main-nav > a:focus-visible,
 .dropbtn:hover,
-.dropbtn:focus {
+.dropbtn:focus-visible {
   background: var(--clr-accent-light);
+  color: var(--clr-accent);
+  outline: none;
 }
+
+/* Dropdown specific container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown content box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 105%; /* Small gap between button and dropdown */
+  left: 0;
+  background-color: var(--clr-surface);
+  min-width: 190px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  border-radius: var(--radius);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: .5rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dropdown-content {
+    border-color: rgba(255,255,255,0.1);
+  }
+}
+
+/* Show dropdown content on hover or when its .show class is added by JS */
+.dropdown-content.show,
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown-content a {
+  color: var(--clr-text);
+  padding: 0.75rem 1.2rem;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.dropdown-content a:hover {
+  background: var(--clr-accent-light);
+  color: var(--clr-accent);
+}
+
+
 /* === 5. BOUTONS & CTA === */
 .btn,
 .cta-button,
@@ -306,7 +355,8 @@ input[type="submit"]:focus {
 /* === REGROUPEMENT MEDIA QUERIES === */
 @media (max-width: 800px) {
   .header-inner {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
   }
   .main-nav {
@@ -314,10 +364,11 @@ input[type="submit"]:focus {
     align-items: center;
     gap: 0.5rem;
     width: 100%;
+    order: 3; /* Place nav below logo */
   }
   .main-nav > a, .dropdown {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -365,6 +416,7 @@ input[type="submit"]:focus {
   section, article { page-break-inside: avoid; }
 }
 
+/* === 10. DARK MODE SPECIFICS === */
 @media (prefers-color-scheme: dark) {
   .card {
     background: var(--clr-surface) !important;
@@ -377,65 +429,3 @@ input[type="submit"]:focus {
     background: var(--clr-surface) !important;
   }
 }
-
-@media (max-width: 800px) {
-  /* Cache le bouton Plus sur mobile */
-  .dropdown {
-    display: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .menu-toggle {
-    color: #ffffff; /* blanc pur pour contraste maximum */
-  }
-}
-
-/* === Unified final menu styles === */
-.main-nav a,
-.dropbtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 1rem;
-  line-height: 1;
-  color: var(--clr-accent-dark);
-  border-radius: 1em;
-  font-weight: 500;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: background .15s;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--clr-surface);
-  min-width: 180px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-  border-radius: 1.2em;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  padding: .5em 0;
-}
-.dropdown-content.show,
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-.dropdown-content a {
-  color: #333;
-  padding: 0.75rem 1rem;
-  display: block;
-  text-decoration: none;
-  border-radius: .8em;
-  font-weight: 500;
-}
-.dropdown-content a:hover { background: #f5f5f5; color: var(--clr-accent); }
