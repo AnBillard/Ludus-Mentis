@@ -8,18 +8,17 @@
       <a href="concept.html">Concept</a>
       <a href="academie.html">Académie</a>
       <a href="faq.html">FAQ</a>
-      <!-- Catégorie Plus -->
-     <div class="dropdown">
-  <button class="dropbtn" id="dropdownBtn" aria-haspopup="true" aria-expanded="false">
-    Plus ▼
-  </button>
-  <div class="dropdown-content" id="dropdownContent" aria-label="submenu">
-    <a href="a-propos.html">À propos</a>
-    <a href="methodologie.html">Méthodologie</a>
-    <a href="enjeux.html">Enjeux & Sources</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
+      <div class="dropdown">
+        <button class="dropbtn" id="dropdownBtn" aria-haspopup="true" aria-expanded="false">
+          Plus ▼
+        </button>
+        <div class="dropdown-content" id="dropdownContent" aria-label="submenu">
+          <a href="a-propos.html">À propos</a>
+          <a href="methodologie.html">Méthodologie</a>
+          <a href="enjeux.html">Enjeux & Sources</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
     </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
       &#9776;
@@ -27,37 +26,43 @@
   </div>
 </header>
 
-<!-- Burger menu logic -->
 <script>
-  const toggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('mainNav');
-  if(toggle && nav){
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
-      toggle.classList.toggle('open');
-    });
-  }
-   // Logique pour le menu déroulant au clic
-  const dropdownBtn = document.getElementById('dropdownBtn');
-  const dropdownContent = document.getElementById('dropdownContent');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    const dropdownBtn = document.getElementById('dropdownBtn');
+    const dropdownContent = document.getElementById('dropdownContent');
 
-  if(dropdownBtn && dropdownContent) {
-    dropdownBtn.addEventListener('click', (event) => {
-      const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
-      dropdownBtn.setAttribute('aria-expanded', !isExpanded);
-      dropdownContent.classList.toggle('show');
-      event.stopPropagation(); // Empêche la fermeture immédiate
-    });
+    // 1. Logique pour le menu Burger (mobile)
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+        // On s'assure que le dropdown est fermé si on ferme le menu principal
+        if (!mainNav.classList.contains('nav-open') && dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+            dropdownBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
 
-    // Fermer le dropdown si on clique ailleurs
+    // 2. Logique pour le menu déroulant "Plus" au clic
+    if (dropdownBtn && dropdownContent) {
+      dropdownBtn.addEventListener('click', (event) => {
+        event.stopPropagation(); // Empêche le clic de se propager au document
+        const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
+        dropdownBtn.setAttribute('aria-expanded', !isExpanded);
+        dropdownContent.classList.toggle('show');
+      });
+    }
+
+    // 3. Fermer le menu déroulant si on clique n'importe où ailleurs
     document.addEventListener('click', (event) => {
-      if (!dropdownBtn.contains(event.target)) {
-        if (dropdownContent.classList.contains('show')) {
+      if (dropdownContent && dropdownContent.classList.contains('show')) {
+        if (!dropdownBtn.contains(event.target)) {
           dropdownContent.classList.remove('show');
           dropdownBtn.setAttribute('aria-expanded', 'false');
         }
       }
     });
-  }
-</script>
+  });
 </script>
