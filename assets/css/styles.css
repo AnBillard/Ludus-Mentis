@@ -20,7 +20,6 @@ body {
   color: #4b3200;
   margin: 0;
   line-height: 1.7;
-  /* Utilisation de clamp pour une taille de police fluide */
   font-size: clamp(16px, 1.5vw, 18px);
 }
 h1, h2, h3, h4 {
@@ -30,8 +29,6 @@ h1, h2, h3, h4 {
   margin-top: 1.3em;
   margin-bottom: 0.5em;
 }
-
-/* Tailles de titres fluides */
 h1 { font-size: clamp(1.8em, 4vw, 2.5em); margin-top: 0.5em; }
 h2 { font-size: clamp(1.3em, 3vw, 1.7em); }
 h3 { font-size: clamp(1.1em, 2.5vw, 1.25em); }
@@ -42,17 +39,14 @@ p { margin-bottom: 1.1em; }
 
 a {
   color: #a3512d;
-  /* Soulignement plus subtil et positionné */
   text-decoration: underline;
   text-decoration-color: rgba(215, 111, 0, 0.4);
   text-underline-offset: 4px;
   text-decoration-thickness: 1.5px;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
-
 a:hover, a:focus {
   color: #d76f00;
-  /* Le soulignement devient opaque au survol */
   text-decoration-color: rgba(215, 111, 0, 1);
 }
 
@@ -73,16 +67,12 @@ a:hover, a:focus {
 .card {
   border: 1.5px solid #ffecb3;
   background: #fffbf0;
-  /* Ajout d'une transition pour l'effet de survol */
   transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
 }
-
-/* Effet au survol sur les cartes */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(90,47,0,0.1);
 }
-
 .hero {
   text-align: center;
   background: linear-gradient(130deg, #ffe0b2 0%, #fff3e0 90%);
@@ -150,15 +140,13 @@ button:hover, input[type="submit"]:hover {
   font-weight: 500;
   position: relative;
 }
-
 .main-nav > a {
   color: #a15200;
   padding: 0.3em 0.8em;
   border-radius: 1em;
   transition: background 0.15s;
-  text-decoration: none; /* On retire le soulignement standard ici */
+  text-decoration: none;
 }
-
 .main-nav > a:hover,
 .main-nav > a:focus {
   background: #fff3e0;
@@ -168,7 +156,8 @@ button:hover, input[type="submit"]:hover {
 /* --- DROPDOWN “PLUS” --- */
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .dropbtn {
   background: none;
@@ -186,23 +175,21 @@ button:hover, input[type="submit"]:hover {
   background: #fff3e0;
 }
 .dropdown-content {
-  display: none; /* Caché par défaut */
+  display: none;
   position: absolute;
   right: 0;
+  top: 100%; /* Positionne le dropdown juste en dessous du bouton */
   background: #fffdfa;
   min-width: 200px;
   box-shadow: 0 2px 12px rgba(160,95,20,0.10);
   border-radius: 1.2em;
   z-index: 200;
-  margin-top: 2px;
+  margin-top: 8px; /* Petit espace entre le bouton et le menu */
   padding: 0.5em 0;
 }
-
-/* Classe pour afficher le menu déroulant via JS */
 .dropdown-content.show {
   display: block;
 }
-
 .dropdown-content a {
   color: #352E18;
   padding: 0.75em 1.3em;
@@ -230,11 +217,10 @@ button:hover, input[type="submit"]:hover {
 }
 
 @media (max-width: 800px) {
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
   .header-inner {
-    flex-direction: row;
     padding: 0.5em 0.7em;
   }
   .site-logo {
@@ -242,42 +228,43 @@ button:hover, input[type="submit"]:hover {
     max-width: 85px;
   }
   .main-nav {
+    display: none; /* Caché par défaut en mobile */
     position: absolute;
-    top: 58px;
+    top: 100%;
     right: 0;
     background: #fffdfa;
     flex-direction: column;
+    align-items: flex-start; /* Aligne les items à gauche */
     width: 67vw;
     max-width: 260px;
     min-width: 160px;
     box-shadow: 0 8px 28px rgba(180,100,40,0.13);
-    border-radius: 1.1em 0 0 1.1em;
+    border-radius: 0 0 0 1.1em;
     padding: 1.6em 1.1em;
     gap: 0.7em;
-    display: none;
     z-index: 100;
   }
   .main-nav.nav-open {
     display: flex;
   }
-  .main-nav > a, .dropbtn {
+  .main-nav > a, .dropdown {
     width: 100%;
+  }
+  .dropbtn {
     text-align: left;
-    margin-bottom: 0.5em;
+    width: 100%;
+    margin-left: 0;
   }
   .dropdown-content {
     position: static;
     box-shadow: none;
     min-width: 100%;
     margin: 0;
-    padding: 0 0 0 1em;
+    padding: 0.5em 0 0 1em;
     border-radius: 0;
     background: none;
-  }
-  .dropdown-content a {
-    padding-left: 1.2em;
-    border-radius: 0.7em;
-    background: none;
+    border-top: 1px solid #ffe0b2;
+    margin-top: 0.5em;
   }
 }
 
@@ -347,7 +334,7 @@ button:hover, input[type="submit"]:hover {
 .contact-form label {
   font-weight: 600;
   color: #a15200;
-  margin-bottom: -0.5em; /* Rapproche le label de son champ */
+  margin-bottom: -0.5em;
 }
 .contact-form input,
 .contact-form textarea {
@@ -366,21 +353,16 @@ button:hover, input[type="submit"]:hover {
   border-color: #d88b41;
   box-shadow: 0 0 0 3px #ffecb3;
 }
-
-/* Style pour les champs valides (après une première saisie) */
 .contact-form input:valid:not(:placeholder-shown),
 .contact-form textarea:valid:not(:placeholder-shown) {
-    border-color: #4CAF50; /* Vert pour valide */
+    border-color: #4CAF50;
 }
-
-/* Style pour les champs invalides pendant la saisie */
 .contact-form input:invalid:not(:placeholder-shown):not(:focus),
 .contact-form textarea:invalid:not(:placeholder-shown):not(:focus) {
-    border-color: #F44336; /* Rouge pour invalide */
+    border-color: #F44336;
 }
-
 .form-success {
-  display: none; /* Caché par défaut */
+  display: none;
   background: #e4ffd5;
   padding: 1em 1.2em;
   border-radius: 0.8em;
@@ -391,8 +373,6 @@ button:hover, input[type="submit"]:hover {
   font-weight: 600;
   margin-top: 1em;
 }
-
-/* Classe pour afficher le message avec animation */
 .form-success.show {
     display: block;
     animation: fadeInDown 0.5s ease-out forwards;
