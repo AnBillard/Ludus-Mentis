@@ -40,7 +40,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  @media (prefers-color-scheme: dark) {
+:root {
     --clr-bg:           #1c1b18;
     --clr-surface:      #352916;
     --clr-text:         #f9f7f3;
@@ -48,6 +49,8 @@
     --clr-accent-dark:  #ffae70;
     --clr-accent-light: #2b2212;
   }
+}
+
 }
 
 /* === 2. RESET & TYPOGRAPHIE === */
@@ -455,4 +458,17 @@ tr:nth-child(even) {
   nav, .menu-toggle, .dropdown-content, .btn, .cta-button { display: none !important; }
   a::after { content: " (" attr(href) ")"; font-size: 0.9em; }
   section, article { page-break-inside: avoid; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--clr-surface) !important;
+    border-color: var(--clr-accent-light) !important;
+  }
+  .hero, .section-hero {
+    background: var(--clr-surface) !important;
+  }
+  .site-header {
+    background: var(--clr-surface) !important;
+  }
 }
