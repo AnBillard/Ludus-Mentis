@@ -1,13 +1,27 @@
-/* --- GOOGLE FONTS --- */
+/* ==========================================================
+   LUDUS MENTIS – styles.css
+   Version : 2025‑04‑28 (full)
+   ----------------------------------------------------------
+   1  Google Fonts & Keyframes
+   2  Base typography & links
+   3  Layout – container / section / card / hero
+   4  Buttons
+   5  Header + navigation (desktop / mobile)
+   6  Footer
+   7  Forms
+   8  Comparison table (.compare-table)
+   9  Media‑queries small screens
+   ==========================================================*/
+
+/* === 1. GOOGLE FONTS & KEYFRAMES ======================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* --- KEYFRAMES FOR ANIMATIONS --- */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-15px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0);   }
 }
 
-/* --- BASE TYPO --- */
+/* === 2. BASE TYPOGRAPHY & LINKS ======================== */
 body {
   font-family: 'Poppins', Arial, sans-serif;
   background-color: #f9f7f3;
@@ -36,18 +50,17 @@ p { margin-bottom: 1.1em; }
 a {
   color: #a3512d;
   text-decoration: underline;
-  text-decoration-color: rgba(215, 111, 0, 0.4);
+  text-decoration-color: rgba(215,111,0,0.4);
   text-underline-offset: 4px;
   text-decoration-thickness: 1.5px;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
-
 a:hover, a:focus {
   color: #d76f00;
-  text-decoration-color: rgba(215, 111, 0, 1);
+  text-decoration-color: rgba(215,111,0,1);
 }
 
-/* --- LAYOUT CONTAINER --- */
+/* === 3. LAYOUT CONTAINERS & CARDS ====================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -62,8 +75,7 @@ a:hover, a:focus {
   box-shadow: 0 4px 16px rgba(90,47,0,0.06);
   max-width: 580px;
 }
-
-/* Supprime la marge haute du premier enfant pour éviter de gros blancs */
+/* Enlève la marge haute du premier enfant (titre) */
 .section > :first-child { margin-top: 0; }
 
 .card {
@@ -84,7 +96,7 @@ a:hover, a:focus {
 }
 .hero img { max-width: 120px; margin-bottom: 1em; }
 
-/* --- BUTTONS --- */
+/* === 4. BUTTONS ======================================== */
 .cta-button,
 button,
 input[type="submit"] {
@@ -109,7 +121,7 @@ button:hover, input[type="submit"]:hover {
   transform: translateY(-2px) scale(1.04);
 }
 
-/* --- HEADER --- */
+/* === 5. HEADER & NAVIGATION ============================ */
 .site-header {
   width: 100%;
   background: #fffdfa;
@@ -128,7 +140,6 @@ button:hover, input[type="submit"]:hover {
 }
 .site-logo { height: 48px; width: auto; max-width: 110px; }
 
-/* --- NAVIGATION --- */
 .main-nav {
   display: flex;
   align-items: center;
@@ -146,7 +157,7 @@ button:hover, input[type="submit"]:hover {
 .main-nav > a:hover,
 .main-nav > a:focus { background: #fff3e0; text-decoration: none; }
 
-/* --- DROPDOWN “PLUS” --- */
+/* Dropdown */
 .dropdown { position: relative; display: flex; align-items: center; }
 .dropbtn {
   background: none; border: none; color: #a15200; font: inherit; cursor: pointer;
@@ -164,53 +175,33 @@ button:hover, input[type="submit"]:hover {
 }
 .dropdown-content a:hover { background: #f6ecd8; color: #d76f00; }
 
-/* --- Responsive header/burger menu --- */
-.menu-toggle { display: none; background: none; border: none; font-size: 2em; color: #d76f00; cursor: pointer; margin-left: 1.1em; }
+/* Burger ‑ mobile */
+.menu-toggle {
+  display: none; background: none; border: none; font-size: 2em; color: #d76f00; cursor: pointer; margin-left: 1.1em;
+}
 
 @media (max-width: 800px) {
   .menu-toggle { display: block; }
   .header-inner { padding: 0.5em 0.7em; }
-  .site-logo { height: 40px; max-width: 85px; }
+  .site-logo   { height: 40px; max-width: 85px; }
+
   .main-nav {
     display: none; position: absolute; top: 100%; right: 0; background: #fffdfa; flex-direction: column; align-items: flex-start;
-    width: 67vw; max-width: 260px; min-width: 160px; box-shadow: 0 8px 28px rgba(180,100,40,0.13); border-radius: 0 0 0 1.1em;
-    padding: 1.6em 1.1em; gap: 0.7em; z-index: 100;
+    width: 67vw; max-width: 260px; min-width: 160px; box-shadow: 0 8px 28px rgba(180,100,40,0.13);
+    border-radius: 0 0 0 1.1em; padding: 1.6em 1.1em; gap: 0.7em; z-index: 100;
   }
   .main-nav.nav-open { display: flex; }
   .main-nav > a, .dropdown { width: 100%; }
   .dropbtn { text-align: left; width: 100%; margin-left: 0; }
   .dropdown-content {
-    position: static; box-shadow: none; min-width: 100%; margin: 0; padding: 0.5em 0 0 1em; border-radius: 0;
-    background: none; border-top: 1px solid #ffe0b2; margin-top: 0.5em;
+    position: static; box-shadow: none; min-width: 100%; margin: 0; padding: 0.5em 0 0 1em; border-radius: 0; background: none;
+    border-top: 1px solid #ffe0b2; margin-top: 0.5em;
   }
 }
 
-@media (max-width: 600px) {
-  .section { padding: 1.3em 0.6em 1em 0.6em; border-radius: 1.1em; font-size: 1em; }
-  .hero img { max-width: 85px; }
-  .cta-button,
-  button,
-  input[type="submit"] { padding: 0.8em 1.2em; font-size: 1em; }
-  .footer-content { padding: 0 0.4em; font-size: 0.97em; }
-  .site-footer { padding: 1.1em 0 0.4em 0; }
-}
-
-/* --- FOOTER --- */
+/* === 6. FOOTER ========================================= */
 .site-footer {
-  width: 100%; background: #fffdfa; border-top: 1px solid #ffe0b2; margin-top: 3em; padding: 2em 0 0.7em 0;
-  font-size: 1em; color: #a15200; box-shadow: 0 -2px 8px rgba(160,95,20,0.05);
+  width: 100%; background: #fffdfa; border-top: 1px solid #ffe0b2; margin-top: 3em;
+  padding: 2em 0 0.7em 0; font-size: 1em; color: #a15200; box-shadow: 0 -2px 8px rgba(160,95,20,0.05);
 }
-.footer-content { max-width: 970px; margin: 0 auto; text-align: center; }
-.site-footer a { color: #d76f00; font-weight: 500; }
-.site-footer a:hover, .site-footer a:focus { color: #a15200; }
-.site-footer p { margin: 0.7em 0; line-height: 1.5; }
-
-/* --- FORMULAIRE --- */
-.contact-form {
-  display: flex; flex-direction: column; gap: 1.1em; margin-top: 1.2em; background: #fffdfa; border-radius: 1.2em;
-  box-shadow: 0 2px 10px rgba(200,120,40,0.04); padding: 2em 1em 1em 1em;
-}
-.contact-form label { font-weight: 600; color: #a15200; margin-bottom: -0.5em; }
-.contact-form input,
-.contact-form textarea {
-  padding: 0.9em 1em; border: 1.4px solid #f7c982; border-radius: 0.9em;\
+.footer-content { max
