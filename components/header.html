@@ -1,17 +1,29 @@
-
-<header>
-  <div style="display: flex; align-items: center; justify-content: space-between;">
-    <a href="index.html"><img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" /></a>
-    <nav>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="site-logo" />
+    </a>
+    <nav class="main-nav" id="mainNav">
       <a href="index.html">Accueil</a>
       <a href="concept.html">Concept</a>
       <a href="academie.html">Académie</a>
       <a href="a-propos.html">À propos</a>
       <a href="methodologie.html">Méthodologie</a>
       <a href="contact.html">Contact</a>
-      
-      <a href="faq.html">FAQ</a>
-  <a href="mentions.html">Mentions légales</a>
-</nav>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+      &#9776;
+    </button>
   </div>
 </header>
+<script>
+  // Burger menu logic
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      toggle.classList.toggle('open');
+    });
+  }
+</script>
