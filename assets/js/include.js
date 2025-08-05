@@ -15,21 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header", "components/header.html");
   loadComponent("footer", "components/footer.html");
 
-  // --- Initialize header menu logic (dropdowns) ---
+  // --- Initialize header menu logic (burger + dropdowns) ---
   function initHeaderMenus() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
     const dropdownButtons = document.querySelectorAll('.dropbtn');
 
-    // Dropdown logic
+    // Burger menu logic (mobile)
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const isMenuOpen = mainNav.classList.toggle('nav-open');
+        menuToggle.setAttribute('aria-expanded', isMenuOpen);
+        // Change l'icône du bouton
+        menuToggle.innerHTML = isMenuOpen ? '✕' : '☰'; 
+      });
+    }
+
+    // Dropdown logic (desktop)
     dropdownButtons.forEach(btn => {
       const dropdownContent = btn.nextElementSibling;
       btn.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
         const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        // Close all dropdowns first
         document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
         dropdownButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
-        // If it wasn't open, open it
         if (!isExpanded) {
           dropdownContent.classList.add('show');
           btn.setAttribute('aria-expanded', 'true');
