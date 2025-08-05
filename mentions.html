@@ -2,14 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Notre concept – Ludus Mentis</title>
+    <title>Mentions – Ludus Mentis</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<div id="header"></div>
-  <div id="header-container"></div>
-
-  <main>
+  <div id="header"></div>
+  <main class="container">
+<section>
     
       <section class="piliers">
         <div class="pilier">
@@ -22,19 +21,9 @@
         </div>
       </section>
     
+  </section>
   </main>
-<div id="footer"></div>
-
-  <div id="footer-container"></div>
-
-  <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-container').innerHTML = data);
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer-container').innerHTML = data);
-  </script>
+  <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
 </html>

@@ -1,16 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Charger le header
   fetch("components/header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    });
+    .then(r => r.text())
+    .then(d => document.getElementById("header").innerHTML = d);
 
-  // Charger le footer
   fetch("components/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
+    .then(r => r.text())
+    .then(d => document.getElementById("footer").innerHTML = d);
 });
