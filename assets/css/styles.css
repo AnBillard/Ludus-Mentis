@@ -64,6 +64,9 @@ a:hover, a:focus {
   box-shadow: 0 4px 16px rgba(90,47,0,0.06);
   max-width: 580px;
 }
+.section > :first-child {
+  margin-top: 0;
+}
 .card {
   border: 1.5px solid #ffecb3;
   background: #fffbf0;
