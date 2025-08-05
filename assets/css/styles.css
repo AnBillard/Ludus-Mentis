@@ -15,11 +15,6 @@
 /* === 0. GOOGLE FONTS & KEYFRAMES === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-15px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 /* === 1. DESIGN TOKENS & DARK MODE === */
 :root {
   /* Couleurs principales */
@@ -106,17 +101,6 @@ a:hover, a:focus {
 :focus-visible {
   outline: 3px dashed var(--clr-accent);
   outline-offset: 3px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  white-space: nowrap;
 }
 
 /* === 3. LAYOUT GÉNÉRAL === */
@@ -321,26 +305,19 @@ input[type="submit"]:focus {
 
 /* === REGROUPEMENT MEDIA QUERIES === */
 @media (max-width: 800px) {
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--clr-surface);
-    box-shadow: var(--shadow-lg);
+  .header-inner {
     flex-direction: column;
-    padding: 1rem 0;
+    gap: 1rem;
   }
-  .main-nav.nav-open {
-    display: flex;
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
   }
   .main-nav > a, .dropdown {
     width: 100%;
     text-align: center;
-  }
-  .menu-toggle {
-    display: block;
   }
 }
 
@@ -380,34 +357,7 @@ input[type="submit"]:focus {
   }
 }
 
-/* === 9. TABLEAU === */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: clamp(.9rem, 1.3vw, 1rem);
-}
-th, td {
-  padding: .7em 1em;
-  border: 1px solid #f0e0c8;
-  text-align: left;
-}
-th {
-  background: var(--clr-accent-light);
-  color: var(--clr-accent-dark);
-  font-weight: 600;
-}
-tr:nth-child(even) {
-  background: #fff7ec;
-}
-@media (prefers-color-scheme: dark) {
-  th {
-    background: #2b2212;
-    color: var(--clr-accent-light);
-  }
-}
-
-/* === 10. PRINT === */
+/* === 9. PRINT === */
 @media print {
   body { background: #fff; color: #000; }
   nav, .menu-toggle, .dropdown-content, .btn, .cta-button { display: none !important; }
