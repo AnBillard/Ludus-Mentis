@@ -479,4 +479,9 @@ tr:nth-child(even) {
     display: none;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .menu-toggle {
+    color: #ffffff; /* blanc pur pour contraste maximum */
+  }
+}
 
