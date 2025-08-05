@@ -1,15 +1,38 @@
-<ul class="nav-main">
-  <li><a href="index.html">Accueil</a></li>
-  <li><a href="concept.html">Notre approche</a></li>
-  <li><a href="academie.html">Académie</a></li>
-  <li><a href="faq.html">FAQ</a></li>
-  <li class="dropdown">
-    <a href="#">Plus ▼</a>
-    <ul class="dropdown-content">
-      <li><a href="enjeux.html">Enjeux & Sources</a></li>
-      <li><a href="methodologie.html">Méthodologie</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="mentions.html">Mentions légales</a></li>
-    </ul>
-  </li>
-</ul>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/Ludus_Mentis_Logo_Transparent.png" alt="Logo Ludus Mentis" class="site-logo" />
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="concept.html">Concept</a>
+      <a href="academie.html">Académie</a>
+      <a href="faq.html">FAQ</a>
+      <!-- Catégorie Plus -->
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Plus ▼</button>
+        <div class="dropdown-content" aria-label="submenu">
+          <a href="a-propos.html">À propos</a>
+          <a href="methodologie.html">Méthodologie</a>
+          <a href="enjeux.html">Enjeux & Sources</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+      &#9776;
+    </button>
+  </div>
+</header>
+
+<!-- Burger menu logic -->
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      toggle.classList.toggle('open');
+    });
+  }
+</script>
