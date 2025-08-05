@@ -381,25 +381,35 @@ input[type="submit"]:focus {
    5. FOOTER
    ====================================================================== */
 
-#footer,
 .site-footer {
   background: var(--clr-surface);
   color: var(--clr-text);
   text-align: center;
-  padding: 1.5rem 1.2rem; /* Padding vertical légèrement réduit pour un rendu plus fin */
-  font-size: 0.9em;      /* Taille de police subtilement diminuée */
-  line-height: 1.6;
-  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Ajout d'une ligne fine pour une meilleure séparation */
-  box-shadow: 0 -2px 8px rgba(90, 47, 0, .04); /* Ombre adoucie */
+  padding: 1.2rem 1rem; /* Padding vertical encore réduit */
+  font-size: 0.9em;
+  line-height: 1.5;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-#footer a,
+/* On gère les nouvelles lignes du footer */
+.footer-line {
+  margin: 0.2rem 0; /* Très peu de marge entre les deux lignes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Permet de passer à la ligne sur très petits écrans */
+}
+
+/* On ajoute un espace autour des séparateurs */
+.footer-line .separator {
+  margin: 0 0.6em;
+}
+
+/* Style des liens dans le footer */
 .site-footer a {
   color: var(--clr-accent-dark);
 }
 
-#footer a:hover,
-#footer a:focus,
 .site-footer a:hover,
 .site-footer a:focus {
   color: var(--clr-accent);
@@ -407,12 +417,10 @@ input[type="submit"]:focus {
 
 /* En mode sombre, on ajuste la couleur de la bordure */
 @media (prefers-color-scheme: dark) {
-  #footer,
   .site-footer {
     border-top-color: rgba(255, 255, 255, 0.08);
   }
 }
-
 /* ======================================================================
    6. RESPONSIVE (MEDIA QUERIES)
    ====================================================================== */
