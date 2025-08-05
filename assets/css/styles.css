@@ -169,11 +169,10 @@ a:hover, a:focus {
 }
 .main-nav {
   display: flex;
-  align-items: center; /* This is the key for vertical alignment */
+  align-items: baseline; /* CHANGEMENT ICI : de 'center' à 'baseline' */
   gap: 0.5rem;
   font-weight: 500;
 }
-
 /* Common style for all navigation items (links and buttons) */
 .main-nav > a,
 .dropbtn {
