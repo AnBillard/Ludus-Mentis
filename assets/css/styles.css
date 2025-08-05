@@ -188,7 +188,7 @@ a:hover, a:focus {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: inherit;
+  font-size:  1em;
   cursor: pointer;
   transition: background .15s ease-in-out, color .15s ease-in-out;
 }
