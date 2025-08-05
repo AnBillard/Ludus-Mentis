@@ -1,76 +1,49 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Fonction pour initialiser les menus du header ---
-  const setupHeaderMenus = () => {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const dropdownBtn = document.getElementById('dropdownBtn');
-    const dropdownContent = document.getElementById('dropdownContent');
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const dropdownButtons = document.querySelectorAll('.dropbtn');
 
-    // 1. Logique pour le menu Burger (mobile)
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('nav-open');
-        // S'assurer que le dropdown se ferme si on ferme le menu principal
-        if (!mainNav.classList.contains('nav-open') && dropdownContent && dropdownContent.classList.contains('show')) {
-          dropdownContent.classList.remove('show');
-          if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
+  // --- 1. Burger menu logic ---
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('nav-open');
 
-    // 2. Logique pour le menu déroulant "Plus" au clic (desktop)
-    if (dropdownBtn && dropdownContent) {
-      dropdownBtn.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
-        dropdownBtn.setAttribute('aria-expanded', String(!isExpanded));
-        dropdownContent.classList.toggle('show');
-      });
-    }
-
-    // 3. Fermer le menu déroulant si on clique ailleurs
-    document.addEventListener('click', (event) => {
-      if (dropdownContent && dropdownContent.classList.contains('show')) {
-        if (!event.target.closest('.dropdown')) {
-          dropdownContent.classList.remove('show');
-          if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
-        }
+      // Close all dropdowns when closing burger
+      if (!mainNav.classList.contains('nav-open')) {
+        document.querySelectorAll('.dropdown-content').forEach(dc => {
+          dc.classList.remove('show');
+        });
+        dropdownButtons.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
       }
     });
-  };
+  }
 
-  // --- Fonction pour injecter les liens du "Plus" dans le menu mobile ---
-  const injectDropdownLinksIntoMobile = () => {
-    const mainNav = document.getElementById('mainNav');
-    const dropdownContent = document.getElementById('dropdownContent');
+  // --- 2. Dropdown logic (mobile: click, desktop: hover via CSS) ---
+  dropdownButtons.forEach(btn => {
+    const dropdownContent = btn.nextElementSibling;
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
 
-    if (mainNav && dropdownContent) {
-      const clonedLinks = dropdownContent.querySelectorAll('a');
-      clonedLinks.forEach(link => {
-        const cloned = link.cloneNode(true);
-        cloned.classList.add('mobile-extra'); // Classe spécifique pour cibler si besoin
-        mainNav.appendChild(cloned);
-      });
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      // Close all dropdowns first
+      document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
+      dropdownButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      // Toggle current
+      if (!isExpanded) {
+        dropdownContent.classList.add('show');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // --- 3. Close dropdown if clicking outside ---
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
+      dropdownButtons.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
     }
-  };
-
-  // --- Chargement du Header et initialisation des menus ---
-  const headerDiv = document.getElementById("header");
-  if (headerDiv) {
-    fetch("components/header.html")
-      .then(r => r.text())
-      .then(d => {
-        headerDiv.innerHTML = d;
-        setupHeaderMenus();
-        injectDropdownLinksIntoMobile(); // Intégration des liens "Plus" dans mobile
-      });
-  }
-
-  // --- Chargement du Footer ---
-  const footerDiv = document.getElementById("footer");
-  if (footerDiv) {
-    fetch("components/footer.html")
-      .then(r => r.text())
-      .then(d => footerDiv.innerHTML = d);
-  }
+  });
 });
