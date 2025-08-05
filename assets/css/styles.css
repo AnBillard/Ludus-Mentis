@@ -1,25 +1,11 @@
 /* ======================================================================
    LUDUS MENTIS – styles.css
-   Version : 2025-08-05 (readability improvements)
+   Version : 2025-08-05 (readability & mobile fix)
    ----------------------------------------------------------------------
-   • Footer harmonisé avec header (.clr-surface).
-   • Tableaux stylés, boutons accessibles.
-   • Structure et indentation optimisées pour lisibilité.
+   • Correction du menu mobile, harmonisation des polices et du header.
+   • Correction du tableau en mode sombre.
+   • Optimisation du chargement des polices (suppression de @import).
    =====================================================================*/
-
-/* === 0. GOOGLE FONTS & KEYFRAMES === */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* === 1. DESIGN TOKENS & DARK MODE === */
 :root {
@@ -316,6 +302,7 @@ input[type="submit"] {
   box-shadow: var(--shadow-sm);
   letter-spacing: .03em;
   cursor: pointer;
+  text-decoration: none; /* Pour les liens stylés en bouton */
   transition: background var(--transition),
               transform var(--transition);
 }
@@ -330,6 +317,7 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
   background: var(--clr-accent-dark);
   transform: translateY(-2px) scale(1.04);
+  color: #fff;
 }
 
 /* === 6. FORMULAIRES === */
@@ -413,10 +401,8 @@ input[type="submit"]:focus {
     padding-left: 1.8rem;
   }
 }
-/* ======================================================================
-   7b. RESPONSIVE (mobile-first)
-   ======================================================================*/
 
+/* === 7b. RESPONSIVE (mobile) === */
 @media (max-width: 800px) {
   /* On cache la navigation classique sur mobile */
   .main-nav {
@@ -446,6 +432,30 @@ input[type="submit"]:focus {
   /* On affiche le bouton burger */
   .menu-toggle {
     display: block;
+  }
+  
+  /* On fixe la taille du texte pour un meilleur contrôle sur mobile */
+  body {
+    font-size: 16px; /* Taille standard et confortable pour la lecture */
+    line-height: 1.6; /* On ajuste l'interligne pour le confort */
+  }
+
+  h1 {
+    font-size: 1.7rem; /* On réduit la taille du titre principal */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* On réduit la taille des sous-titres */
+  }
+
+  /* On augmente la taille du header pour un meilleur équilibre */
+  .header-inner {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+  
+  .site-logo {
+    height: 42px; /* On ajuste le logo à la nouvelle taille du header */
   }
 }
 
@@ -515,4 +525,15 @@ tr:nth-child(even) {
 @media (prefers-color-scheme: dark) {
   th {
     background: #2b2212;
-    color: var(--clr-accent-light);\<!
+    color: var(--clr-accent);
+  }
+
+  tr:nth-child(even) {
+    background: #251d0f;
+  }
+  
+  .card {
+     background: #2b2212;
+     border-color: #4b3a20;
+  }
+}
