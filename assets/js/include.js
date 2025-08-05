@@ -12,31 +12,46 @@ document.addEventListener("DOMContentLoaded", () => {
         mainNav.classList.toggle('nav-open');
         // S'assurer que le dropdown se ferme si on ferme le menu principal
         if (!mainNav.classList.contains('nav-open') && dropdownContent && dropdownContent.classList.contains('show')) {
-            dropdownContent.classList.remove('show');
-            if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
+          dropdownContent.classList.remove('show');
+          if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
         }
       });
     }
 
-    // 2. Logique pour le menu déroulant "Plus" au clic
+    // 2. Logique pour le menu déroulant "Plus" au clic (desktop)
     if (dropdownBtn && dropdownContent) {
       dropdownBtn.addEventListener('click', (event) => {
-        event.stopPropagation(); // Empêche le clic de se propager au document
+        event.stopPropagation();
         const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
         dropdownBtn.setAttribute('aria-expanded', String(!isExpanded));
         dropdownContent.classList.toggle('show');
       });
     }
 
-    // 3. Fermer le menu déroulant si on clique n'importe où ailleurs
+    // 3. Fermer le menu déroulant si on clique ailleurs
     document.addEventListener('click', (event) => {
       if (dropdownContent && dropdownContent.classList.contains('show')) {
-          if (!event.target.closest('.dropdown')) {
-              dropdownContent.classList.remove('show');
-              if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
-          }
+        if (!event.target.closest('.dropdown')) {
+          dropdownContent.classList.remove('show');
+          if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
+        }
       }
     });
+  };
+
+  // --- Fonction pour injecter les liens du "Plus" dans le menu mobile ---
+  const injectDropdownLinksIntoMobile = () => {
+    const mainNav = document.getElementById('mainNav');
+    const dropdownContent = document.getElementById('dropdownContent');
+
+    if (mainNav && dropdownContent) {
+      const clonedLinks = dropdownContent.querySelectorAll('a');
+      clonedLinks.forEach(link => {
+        const cloned = link.cloneNode(true);
+        cloned.classList.add('mobile-extra'); // Classe spécifique pour cibler si besoin
+        mainNav.appendChild(cloned);
+      });
+    }
   };
 
   // --- Chargement du Header et initialisation des menus ---
@@ -46,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(r => r.text())
       .then(d => {
         headerDiv.innerHTML = d;
-        // !! IMPORTANT: On lance l'initialisation des menus APRÈS que le HTML soit inséré
         setupHeaderMenus();
+        injectDropdownLinksIntoMobile(); // Intégration des liens "Plus" dans mobile
       });
   }
 
