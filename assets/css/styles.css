@@ -396,70 +396,70 @@ input[type="submit"]:focus {
 .site-footer a:hover, .site-footer a:focus {
   color: var(--clr-accent);
 }
+/* === REGROUPEMENT MEDIA QUERIES === */
 @media (max-width: 800px) {
-  /* Fait en sorte que le logo et la nav s'empilent proprement */
-  .header-inner {
-    flex-direction: column;
-    gap: 0;
+  /* Style du bouton burger (☰) */
+  .menu-toggle {
+    display: block; /* Affiche le bouton sur mobile */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--clr-text);
+    cursor: pointer;
+    z-index: 1001; /* Doit être au-dessus du menu */
   }
 
-  /* Transforme la nav en une liste verticale */
+  /* Cache la navigation par défaut sur mobile */
   .main-nav {
-    flex-direction: column;
-    align-items: stretch; /* Les éléments prennent toute la largeur */
+    display: none;
+    
+    /* Style du menu quand il est ouvert */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    gap: 0;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    padding-top: 6rem; /* Espace pour le logo et le bouton fermer */
+    background: var(--clr-surface);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+  }
+  
+  /* Classe ajoutée par JS pour afficher le menu */
+  .main-nav.nav-open {
+    display: flex;
   }
 
-  /* Style pour les liens principaux */
-  .main-nav > a {
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid rgba(130, 80, 0, 0.15);
-  }
-
-  /* On cache les boutons ▼ qui ne servent à rien sur mobile */
-  .dropbtn {
+  /* Cache les boutons dropdown dans le menu mobile ouvert */
+  .main-nav.nav-open .dropbtn {
     display: none;
   }
   
-  /* On s'assure que le conteneur du dropdown se comporte normalement */
-  .main-nav > .dropdown {
-    height: auto;
+  /* Affiche le contenu des dropdowns en permanence dans le menu mobile */
+  .main-nav.nav-open .dropdown-content {
     display: block;
-  }
-
-  /* On force l'affichage des liens qui étaient dans le menu déroulant */
-  .dropdown-content {
-    display: block;
-    position: static; /* N'est plus un menu flottant */
+    position: static;
     opacity: 1;
     transform: none;
     box-shadow: none;
     background: none;
-    min-width: 0;
-    padding: 0;
-  }
-
-  /* Style pour les sous-liens (ceux des dropdowns) */
-  .dropdown-content a {
-    padding: 0.8rem 1rem 0.8rem 2.5rem; /* On ajoute une marge à gauche pour les décaler */
-    background-color: var(--clr-accent-light);
-    color: var(--clr-text);
-    text-align: left;
-    border-bottom: 1px solid rgba(130, 80, 0, 0.1);
+    min-width: auto;
+    text-align: center;
+    padding-top: 0.5rem;
   }
   
+  /* Liens de sous-menu (légèrement moins importants) */
+  .main-nav.nav-open .dropdown-content a {
+    font-size: 0.9em;
+    color: var(--clr-text);
+  }
+
   .section.sources li {
     padding-left: 1.8rem;
   }
-
-  /* Amélioration du footer sur mobile */
-  #footer .footer-inner, .site-footer .footer-inner {
-    flex-direction: column;
-  }
 }
-
 @media (prefers-color-scheme: dark) {
   @media (max-width: 800px) {
     .dropdown-content a {
