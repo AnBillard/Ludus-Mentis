@@ -1,54 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>À propos – Ludus Mentis</title>
-  <meta name="description" content="Ludus Mentis – académie éducative par le jeu coopératif" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<div id="header"></div>
-  <div id="header-container"></div>
-
+  <div id="header"></div>
   <main>
-    
-      <section class="piliers">
-        <div class="pilier">
-          <h2>Origine du projet</h2>
-          <p>Né à Walhain, Ludus Mentis répond au besoin d’encadrer de manière positive et éducative l’usage du jeu vidéo chez les jeunes.</p>
-        </div>
-        <div class="pilier">
-          <h2>Porté par</h2>
-          <p>Antoine Billard – Coordinateur pédagogique, avec le soutien de la Commune de Walhain, BESF, ADN, Digital Wallonia, etc.</p>
-        </div>
-      </section>
-    
-  
-<section id="biographie">
-  <h2>Qui est Antoine Billard ?</h2>
-  <p>Antoine Billard </p>
-</section>
-
-<section id="partenaires">
-  <h2>Nos partenaires</h2>
-  <p>La Commune de Walhain soutient activement Ludus Mentis par la mise à disposition de locaux et une aide logistique. La BESF (Fédération belge d’esport) .</p>
-</section>
-</main>
-<div id="footer"></div>
-
-
-  <div id="footer-container"></div>
-
-  <script>
-    fetch('components/header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header-container').innerHTML = data);
-    fetch('components/footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer-container').innerHTML = data);
-  </script>
+    <h1>À propos de Ludus Mentis</h1>
+    <section>
+      <h2>Antoine Billard, fondateur</h2>
+      <p>Scout, musicien, sportif, ingénieur de gestion et aujourd’hui project manager en IT : mon parcours m’a appris la valeur de la coopération, de la discipline et de la passion. Depuis mon enfance, les jeux vidéo ont toujours fait partie de ma vie, entre activités réelles et expériences virtuelles. Aujourd’hui manager de l’équipe nationale belge de Dota 2, je suis convaincu que le jeu vidéo, bien encadré, est un formidable outil d’apprentissage.</p>
+    </section>
+    <section>
+      <h2>Notre vision</h2>
+      <p>Ludus Mentis est né à Walhain, avec l’ambition de transformer la pratique vidéoludique en un espace éducatif structuré, inclusif et citoyen. Inspirés des modèles pédagogiques du sport et de la musique, nous proposons une offre pérenne qui valorise la coopération, la communication et la confiance en soi.</p>
+    </section>
+    <section>
+      <h2>Partenaires</h2>
+      <p>La <strong>Commune de Walhain</strong> nous soutient par la mise à disposition de locaux et un accompagnement logistique. La <strong>BESF</strong> (Belgian Esports Federation) nous apporte sa caution éthique et un accompagnement sur le choix des jeux et la professionnalisation de l’encadrement.</p>
+    </section>
+    <section>
+      <h2>Frise chronologique</h2>
+      <ul>
+        <li>2024 – Idée du projet</li>
+        <li>2025 – Stage pilote à Walhain</li>
+        <li>2026 – Lancement de l’Académie Ludus Mentis</li>
+      </ul>
+    </section>
+  </main>
+  <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
 </html>
