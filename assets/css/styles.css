@@ -396,14 +396,79 @@ input[type="submit"]:focus {
 .site-footer a:hover, .site-footer a:focus {
   color: var(--clr-accent);
 }
-@media (min-width: 600px) {
+@media (max-width: 800px) {
+  /* Fait en sorte que le logo et la nav s'empilent proprement */
+  .header-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Transforme la nav en une liste verticale */
+  .main-nav {
+    flex-direction: column;
+    align-items: stretch; /* Les éléments prennent toute la largeur */
+    width: 100%;
+    gap: 0;
+  }
+
+  /* Style pour les liens principaux */
+  .main-nav > a {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(130, 80, 0, 0.15);
+  }
+
+  /* On cache les boutons ▼ qui ne servent à rien sur mobile */
+  .dropbtn {
+    display: none;
+  }
+  
+  /* On s'assure que le conteneur du dropdown se comporte normalement */
+  .main-nav > .dropdown {
+    height: auto;
+    display: block;
+  }
+
+  /* On force l'affichage des liens qui étaient dans le menu déroulant */
+  .dropdown-content {
+    display: block;
+    position: static; /* N'est plus un menu flottant */
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    min-width: 0;
+    padding: 0;
+  }
+
+  /* Style pour les sous-liens (ceux des dropdowns) */
+  .dropdown-content a {
+    padding: 0.8rem 1rem 0.8rem 2.5rem; /* On ajoute une marge à gauche pour les décaler */
+    background-color: var(--clr-accent-light);
+    color: var(--clr-text);
+    text-align: left;
+    border-bottom: 1px solid rgba(130, 80, 0, 0.1);
+  }
+  
+  .section.sources li {
+    padding-left: 1.8rem;
+  }
+
+  /* Amélioration du footer sur mobile */
   #footer .footer-inner, .site-footer .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 970px;
-    margin-inline: auto;
-    gap: 1.4rem;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @media (max-width: 800px) {
+    .dropdown-content a {
+      background-color: #2b2212; /* Fond plus foncé pour les sous-liens en mode sombre */
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    .main-nav > a {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 
