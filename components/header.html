@@ -1,3 +1,4 @@
+
 <header class="site-header">
   <div class="header-inner">
 
@@ -11,40 +12,34 @@
     <!-- Navigation principale -->
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Accueil</a>
-      <a href="concept.html">Concept</a>
-      <a href="academie.html">Académie</a>
-      <a href="faq.html">FAQ</a>
 
-      <!-- Dropdown « Plus » -->
+      <!-- À propos dropdown -->
       <div class="dropdown">
-        <button class="dropbtn"
-                id="dropdownBtn"
-                aria-haspopup="true"
-                aria-controls="dropdownContent"
-                aria-expanded="false">Plus ▼</button>
-        <div class="dropdown-content"
-             id="dropdownContent"
-             aria-label="Sous‑menu">
-          <a href="a-propos.html">À propos</a>
+        <button class="dropbtn" aria-haspopup="true" aria-controls="aproposMenu" aria-expanded="false">À propos ▼</button>
+        <div class="dropdown-content" id="aproposMenu">
+          <a href="concept.html">Concept</a>
           <a href="methodologie.html">Méthodologie</a>
-          <a href="enjeux.html">Enjeux &amp; Sources</a>
+          <a href="enjeux.html">Enjeux</a>
+        </div>
+      </div>
+
+      <!-- Académie dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-controls="academieMenu" aria-expanded="false">Académie ▼</button>
+        <div class="dropdown-content" id="academieMenu">
+          <a href="academie.html">Programme</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+
+      <!-- Contact dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-controls="contactMenu" aria-expanded="false">Contact ▼</button>
+        <div class="dropdown-content" id="contactMenu">
           <a href="contact.html">Contact</a>
+          <a href="mentions.html">Mentions légales</a>
         </div>
       </div>
     </nav>
-
-    <!-- Bouton burger -->
-    <button class="menu-toggle"
-            id="menuToggle"
-            aria-label="Ouvrir / fermer le menu"
-            aria-controls="mainNav"
-            aria-expanded="false"><!-- icône burger en svg -->
-      <svg width="24" height="24" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="m3 6h18m3 12h18m3 18h18"
-              stroke="currentcolor"
-              stroke-width="2"
-              stroke-linecap="round" />
-      </svg></button>
-
   </div>
 </header>
