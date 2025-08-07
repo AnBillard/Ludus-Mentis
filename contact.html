@@ -2,19 +2,16 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact et Inscription | Ludus Mentis à Walhain</title>
   <meta name="description" content="Posez vos questions ou demandez une présentation personnalisée de notre programme. L'équipe Ludus Mentis vous répond rapidement pour préparer la rentrée 2026.">
   <meta name="keywords" content="contact, inscription, information, email, formulaire, Walhain, académie esport, rentrée 2026">
   
-  <!-- Structured Data for Local Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -228,12 +225,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
-  <div id="header"></div>
+<div id="header"></div>
   
   <main class="container">
     <section class="section hero">
@@ -334,7 +328,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
   </main>
   
-  <!-- Floating CTA for mobile -->
   <div class="floating-cta">
     <a href="#contactForm" class="quick-contact">
       <span>📞</span>
@@ -472,25 +465,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               });
             }
             
-           <!-- Google tag (gtag.js) event - delayed navigation helper -->
-<script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
-  function gtagSendEvent(url) {
-    var callback = function () {
-      if (typeof url === 'string') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion_event_submit_lead_form', {
-      'event_callback': callback,
-      'event_timeout': 2000,
-      // <event_parameters>
-    });
-    return false;
-  }
-</script>
-
+            // Google Ads Conversion Event
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-111111111/AAAAAAAAAAAAAAAA',
+              });
+            }
             
           } else {
             throw new Error('Network response was not ok');
