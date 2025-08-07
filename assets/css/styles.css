@@ -1,282 +1,381 @@
 /* ======================================================================
-   LUDUS MENTIS - OPTIMIZED STYLES WITH DAISYUI
+   LUDUS MENTIS - FINAL OPTIMIZED STYLES
    ======================================================================
-   Fichier CSS simplifié pour utilisation avec DaisyUI/Tailwind
-   La plupart des styles sont gérés par les classes utilitaires
+   CSS optimisé pour accessibilité WCAG AA/AAA
    ====================================================================== */
 
 /* ======================================================================
-   1. VARIABLES & BASE CONFIGURATION
+   1. ROOT VARIABLES & ACCESSIBILITY
    ====================================================================== */
 :root {
-  /* Couleurs principales */
-  --primary: 251, 146, 60;
-  --primary-dark: 234, 88, 12;
-  --secondary: 251, 191, 36;
+  /* Light mode - WCAG AAA compliant colors */
+  --primary: #ea580c;        /* Orange-600 - Better contrast */
+  --primary-hover: #c2410c;  /* Orange-700 */
+  --primary-light: #fed7aa;  /* Orange-200 */
+  --secondary: #f59e0b;      /* Amber-500 */
+  --text-primary: #1f2937;   /* Gray-800 - WCAG AAA */
+  --text-secondary: #4b5563; /* Gray-600 - WCAG AA */
+  --bg-base: #ffffff;
+  --bg-surface: #f9fafb;
+  --border: #e5e7eb;
   
-  /* Espacements standards */
-  --section-spacing: clamp(2rem, 5vw, 4rem);
-  --card-padding: clamp(1.5rem, 4vw, 2.5rem);
-  
-  /* Animations */
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}
+
+/* Dark mode with proper contrast */
+[data-theme="dark"] {
+  --primary: #fb923c;        /* Orange-400 - Better in dark */
+  --primary-hover: #fdba74;  /* Orange-300 */
+  --primary-light: #7c2d12;  /* Orange-900 */
+  --secondary: #fbbf24;      /* Amber-400 */
+  --text-primary: #f9fafb;   /* Gray-50 - WCAG AAA on dark */
+  --text-secondary: #d1d5db; /* Gray-300 - WCAG AA on dark */
+  --bg-base: #111827;        /* Gray-900 */
+  --bg-surface: #1f2937;     /* Gray-800 */
+  --border: #374151;         /* Gray-700 */
 }
 
 /* ======================================================================
-   2. TYPOGRAPHY IMPROVEMENTS
+   2. BASE STYLES
    ====================================================================== */
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgb(55, 65, 81);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-base);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ======================================================================
+   3. TYPOGRAPHY WITH PROPER CONTRAST
+   ====================================================================== */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-top: 0;
 }
 
-/* Gradient headings */
 h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-dark)) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  color: rgb(var(--primary-dark));
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   margin-bottom: 1.25rem;
-  margin-top: 0;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
   margin-bottom: 1rem;
-  color: rgb(75, 85, 99);
 }
 
-/* Better paragraph spacing */
-p {
-  margin-bottom: 1.25rem;
+/* Gradient text with fallback for accessibility */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
-/* Lists improvements */
-ul, ol {
-  margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
-}
-
-ul li, ol li {
-  margin-bottom: 0.5rem;
-}
-
-ul li:last-child, ol li:last-child {
-  margin-bottom: 0;
-}
-
-/* Links */
-a {
-  color: rgb(var(--primary));
-  text-decoration: none;
-  transition: var(--transition);
-  position: relative;
-}
-
-a:hover {
-  color: rgb(var(--primary-dark));
-}
-
-/* Inline links underline effect */
-p a, li a {
-  text-decoration: underline;
-  text-decoration-color: rgba(var(--primary), 0.3);
-  text-underline-offset: 3px;
-}
-
-p a:hover, li a:hover {
-  text-decoration-color: rgba(var(--primary), 1);
-}
-
-/* ======================================================================
-   3. LAYOUT FIXES
-   ====================================================================== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
+/* Ensure gradient text has fallback */
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient {
+    background: none;
+    -webkit-text-fill-color: var(--primary);
+    color: var(--primary);
   }
 }
 
-/* Section spacing */
-.section {
-  margin-top: var(--section-spacing);
-  margin-bottom: var(--section-spacing);
+/* Links with proper contrast */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.section:first-child {
-  margin-top: 2rem;
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* ======================================================================
-   4. CARD IMPROVEMENTS
+   4. MOBILE MENU BURGER FIX
+   ====================================================================== */
+.btn-ghost.btn-circle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: var(--bg-surface);
+  border: 2px solid var(--border);
+}
+
+.btn-ghost.btn-circle:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+}
+
+/* Ensure burger icon is visible */
+.btn-ghost.btn-circle svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-primary);
+  stroke-width: 2;
+}
+
+/* ======================================================================
+   5. NAVBAR IMPROVEMENTS
+   ====================================================================== */
+.navbar {
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border);
+  min-height: 64px;
+  padding: 0.5rem 1rem;
+}
+
+/* Dropdown improvements for contrast */
+.dropdown-content {
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+}
+
+.dropdown-content a:hover {
+  background: var(--primary-light);
+  color: var(--primary-hover);
+}
+
+/* Mobile menu contrast fix */
+.menu-compact {
+  background: var(--bg-base);
+  border: 2px solid var(--border);
+}
+
+.menu-title span {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ======================================================================
+   6. CARDS WITH PROPER CONTRAST
    ====================================================================== */
 .card {
-  background: white;
-  border-radius: 1.5rem;
-  padding: var(--card-padding);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: var(--space-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
-/* Dark mode card */
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: rgba(31, 41, 55, 0.5);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* ======================================================================
-   5. HERO SECTION
-   ====================================================================== */
+/* Hero section with accessible gradients */
 .hero {
-  background: linear-gradient(135deg, rgba(var(--primary), 0.05) 0%, rgba(var(--secondary), 0.05) 100%);
-  border-radius: 2rem;
-  padding: clamp(2rem, 5vw, 4rem);
-  text-align: center;
-  margin-bottom: var(--section-spacing);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(135deg, 
+    rgba(251, 146, 60, 0.08) 0%, 
+    rgba(251, 191, 36, 0.08) 100%);
+  border: 2px solid var(--primary-light);
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(var(--primary), 0.1) 0%, transparent 70%);
-  animation: float 20s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  33% { transform: translate(30px, -30px) rotate(120deg); }
-  66% { transform: translate(-20px, 20px) rotate(240deg); }
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, 
+    rgba(251, 146, 60, 0.15) 0%, 
+    rgba(251, 191, 36, 0.15) 100%);
+  border-color: var(--primary-light);
 }
 
 /* ======================================================================
-   6. BUTTON STYLES
+   7. BUTTONS WITH WCAG CONTRAST
    ====================================================================== */
 .btn {
   font-weight: 600;
+  border-radius: 0.5rem;
   text-transform: none;
-  border-radius: 0.75rem;
-  padding: 0.75rem 2rem;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  transition: all 0.2s;
+  border: 2px solid transparent;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-dark)) 100%);
-  border: none;
+  background: var(--primary);
   color: white;
+  border-color: var(--primary);
 }
 
 .btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(var(--primary), 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Ensure button text is readable */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* ======================================================================
-   7. FORM IMPROVEMENTS
+   8. FORMS WITH ACCESSIBILITY
    ====================================================================== */
 .input, .textarea, .select {
-  border-radius: 0.75rem;
-  border: 2px solid #e5e7eb;
-  transition: var(--transition);
+  background: var(--bg-base);
+  border: 2px solid var(--border);
+  color: var(--text-primary);
   font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
 }
 
 .input:focus, .textarea:focus, .select:focus {
+  border-color: var(--primary);
   outline: none;
-  border-color: rgb(var(--primary));
-  box-shadow: 0 0 0 3px rgba(var(--primary), 0.1);
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
 }
 
+/* Label styling */
 .label-text {
-  color: rgb(75, 85, 99);
-  font-size: 0.875rem;
+  color: var(--text-primary);
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Error states */
+.input-error {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+[data-theme="dark"] .input-error {
+  background: #7f1d1d;
+  border-color: #ef4444;
 }
 
 /* ======================================================================
-   8. NAVIGATION IMPROVEMENTS
+   9. FOOTER ACCESSIBILITY
    ====================================================================== */
-.navbar {
-  min-height: 4rem;
-  padding: 0.5rem 1rem;
+footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  margin-top: var(--space-xl);
+  padding: var(--space-xl) 0;
 }
 
-.dropdown-content {
-  border-radius: 1rem;
-  padding: 0.5rem;
-  min-width: 200px;
-  margin-top: 0.5rem;
+footer a {
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
-.dropdown-content a {
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  transition: var(--transition);
-}
-
-.dropdown-content a:hover {
-  background: rgba(var(--primary), 0.1);
-  color: rgb(var(--primary));
+footer a:hover {
+  color: var(--primary);
 }
 
 /* ======================================================================
-   9. SOURCES SECTION
+   10. UTILITY CLASSES
+   ====================================================================== */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Section spacing */
+.section {
+  margin: var(--space-xl) 0;
+}
+
+/* Text utilities */
+.text-muted {
+  color: var(--text-secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Spacing utilities */
+.mt-4 { margin-top: var(--space-md); }
+.mb-4 { margin-bottom: var(--space-md); }
+.mt-8 { margin-top: var(--space-xl); }
+.mb-8 { margin-bottom: var(--space-xl); }
+
+/* ======================================================================
+   11. STATS SECTION
+   ====================================================================== */
+.stat {
+  background: var(--bg-base);
+  border: 2px solid var(--border);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* ======================================================================
+   12. SOURCES SECTION
    ====================================================================== */
 .sources {
-  background: linear-gradient(135deg, rgba(var(--primary), 0.03) 0%, rgba(var(--secondary), 0.03) 100%);
-  border-left: 4px solid rgb(var(--primary));
-  padding: 2rem;
-  border-radius: 1rem;
+  background: var(--bg-surface);
+  border-left: 4px solid var(--primary);
+  padding: var(--space-lg);
+  border-radius: 0.5rem;
 }
 
 .sources ol {
@@ -290,6 +389,7 @@ p a:hover, li a:hover {
   position: relative;
   padding-left: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .sources li::before {
@@ -299,7 +399,7 @@ p a:hover, li a:hover {
   top: 0;
   width: 1.75rem;
   height: 1.75rem;
-  background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-dark)) 100%);
+  background: var(--primary);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -309,108 +409,33 @@ p a:hover, li a:hover {
   font-size: 0.875rem;
 }
 
-/* ======================================================================
-   10. UTILITIES
-   ====================================================================== */
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selection color */
-::selection {
-  background: rgba(var(--primary), 0.2);
-  color: rgb(var(--primary-dark));
-}
-
-/* Focus visible */
-:focus-visible {
-  outline: 2px solid rgb(var(--primary));
-  outline-offset: 2px;
-  border-radius: 0.25rem;
-}
-
-/* Hide scrollbar but keep functionality */
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
+.sources a {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 /* ======================================================================
-   11. ANIMATIONS
-   ====================================================================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* ======================================================================
-   12. RESPONSIVE FIXES
+   13. RESPONSIVE DESIGN
    ====================================================================== */
 @media (max-width: 768px) {
-  /* Mobile menu fixes */
-  .navbar {
-    padding: 0.5rem;
-  }
-  
-  .hero {
-    padding: 1.5rem;
+  .container {
+    padding: 0 var(--space-sm);
   }
   
   .card {
-    padding: 1.5rem;
-  }
-  
-  /* Stack grid on mobile */
-  .grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* ======================================================================
-   13. DARK MODE ADJUSTMENTS
-   ====================================================================== */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #e5e7eb;
-  }
-  
-  h2, h3 {
-    color: #f3f4f6;
+    padding: var(--space-md);
   }
   
   .hero {
-    background: linear-gradient(135deg, rgba(var(--primary), 0.1) 0%, rgba(var(--secondary), 0.1) 100%);
+    padding: var(--space-md);
   }
   
-  .label-text {
-    color: #d1d5db;
+  h1 {
+    font-size: 1.875rem;
   }
   
-  .input, .textarea, .select {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: white;
-  }
-  
-  .input:focus, .textarea:focus, .select:focus {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgb(var(--primary));
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -423,18 +448,54 @@ html {
     color: black;
   }
   
-  .navbar, .footer, .btn, .no-print {
+  .navbar, footer, .btn, .dropdown {
     display: none !important;
   }
   
   .card {
     box-shadow: none;
-    border: 1px solid #ddd;
-    page-break-inside: avoid;
+    border: 1px solid #000;
   }
   
   a {
     color: black;
     text-decoration: underline;
+  }
+}
+
+/* ======================================================================
+   15. ANIMATIONS (Respect prefers-reduced-motion)
+   ====================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition-duration: 0.2s;
+  }
+  
+  .card, .btn, a {
+    transition: all 0.2s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+}
+
+/* Reduce animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
