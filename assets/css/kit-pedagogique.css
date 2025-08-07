@@ -1,0 +1,126 @@
+/* Styles spécifiques au kit pédagogique */
+.document-body {
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-accent-light);
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.document-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--clr-accent-light);
+}
+
+.document-header img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.document-header h1 {
+  color: var(--clr-accent-dark);
+}
+
+.document-section h3 {
+  color: var(--clr-accent-dark);
+  border-bottom: 1px solid var(--clr-accent-light);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.kolb-cycle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  counter-reset: kolb-counter;
+}
+
+.kolb-step {
+  background-color: var(--clr-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  position: relative;
+  border: 1px solid var(--clr-accent-light);
+  border-top: 4px solid var(--clr-accent);
+}
+
+.kolb-step::before {
+  counter-increment: kolb-counter;
+  content: counter(kolb-counter);
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  background: var(--clr-accent);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.kolb-step h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-accent-dark);
+}
+
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.competence-card {
+  background-color: var(--clr-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--clr-accent-light);
+  text-align: center;
+}
+
+.competence-card .icon {
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+.competence-card h4 {
+  margin-top: 0;
+  color: var(--clr-accent-dark);
+}
+
+.document-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--clr-accent-light);
+}
+
+.partner-logos img {
+  max-height: 60px;
+  margin: 0 1rem;
+  opacity: 0.8;
+  transition: opacity var(--transition);
+}
+
+.partner-logos img:hover {
+  opacity: 1;
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .site-header, .site-footer, .no-print { display: none !important; }
+  .container { max-width: 100%; padding: 0; margin: 0; }
+  .document-body { border: none; box-shadow: none; margin: 0; }
+  .document-header { margin: 0; padding: 0; background: none; border-bottom: 2px solid #ccc; }
+  .competence-card, .kolb-step { background-color: #f9f9f9 !important; border: 1px solid #ddd; }
+  .kolb-step::before { border-color: #fff; }
+
+  .page-break-before {
+    page-break-before: always;
+  }
+}
