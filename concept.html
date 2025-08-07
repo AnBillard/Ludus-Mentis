@@ -1,49 +1,82 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre Concept : Du Jeu Vidéo aux Compétences de Vie | Ludus Mentis</title>
+  <title>Notre concept : du jeu vidéo aux compétences de vie | Ludus Mentis</title>
   <meta name="description" content="Découvrez notre concept unique : utiliser des jeux vidéo populaires comme Overcooked ou Rocket League pour développer la communication, la collaboration et la gestion des émotions chez les jeunes.">
   <meta name="keywords" content="concept pédagogique, jeu vidéo éducatif, soft skills, compétences humaines, esport, apprentissage par le jeu">
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fb923c',
+            'primary-focus': '#ea580c',
+            secondary: '#fbbf24',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
 
   <main class="container">
-
     <section class="section hero">
       <h1>Transformer le plaisir de jouer en compétences pour la vie</h1>
-      <p>Chez Ludus Mentis, nous partons d'une conviction simple : la passion des jeunes pour le jeu vidéo est une énergie formidable. plutôt que de la freiner, nous la canalisons. nous avons créé un espace où le jeu devient un puissant levier d'apprentissage, encadré par des professionnels bienveillants.</p>
+      <p>Chez Ludus Mentis, nous partons d'une conviction simple : la passion des jeunes pour le jeu vidéo est une énergie formidable. Plutôt que de la freiner, nous la canalisons. Nous avons créé un espace où le jeu devient un puissant levier d'apprentissage, encadré par des professionnels bienveillants.</p>
     </section>
 
     <section class="section card">
       <h2>Des pixels aux compétences humaines</h2>
-      <p>Au-delà des scores et des classements, chaque partie est une occasion de développer des savoir-être essentiels. voici ce que votre enfant apprend concrètement avec nous :</p>
+      <p>Au-delà des scores et des classements, chaque partie est une occasion de développer des savoir-être essentiels. Voici ce que votre enfant apprend concrètement avec nous :</p>
       <ul>
         <li>💬 <strong>Mieux communiquer :</strong> Exprimer ses idées clairement, écouter activement et se coordonner avec ses coéquipiers.</li>
         <li>🧘 <strong>Gérer ses émotions :</strong> Apprendre à gérer la pression d'un défi, la frustration de l'échec et la joie du succès collectif.</li>
         <li>🎯 <strong>Développer sa persévérance :</strong> Se fixer des objectifs en équipe, élaborer une stratégie et persévérer pour l'atteindre.</li>
-        <li>🫱 <strong>Renforcer l'esprit d'équipe :</strong> S’intégrer à un groupe, faire confiance et mériter la confiance des autres, avec respect et empathie.</li>
+        <li>🫱 <strong>Renforcer l'esprit d'équipe :</strong> S'intégrer à un groupe, faire confiance et mériter la confiance des autres, avec respect et empathie.</li>
       </ul>
     </section>
 
     <section class="section card">
       <h2>Nos outils pédagogiques : des jeux triés sur le volet</h2>
-      <p>Tous les jeux ne se valent pas. nous sélectionnons rigoureusement des titres reconnus pour leur potentiel coopératif et éducatif. ce ne sont pas des "jeux éducatifs" classiques, mais de vrais jeux populaires, utilisés comme supports d'apprentissage :</p>
+      <p>Tous les jeux ne se valent pas. Nous sélectionnons rigoureusement des titres reconnus pour leur potentiel coopératif et éducatif. Ce ne sont pas des "jeux éducatifs" classiques, mais de vrais jeux populaires, utilisés comme supports d'apprentissage :</p>
       <ul>
         <li>
           <strong>Overcooked :</strong> Un jeu de cuisine frénétique qui est une véritable masterclass en communication et en gestion du stress sous pression. Impossible de réussir sans s'entraider.
@@ -51,28 +84,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>
           <strong>Keep Talking and Nobody Explodes :</strong> Le jeu de communication par excellence. Un joueur a la bombe, les autres ont le manuel. L'écoute et la clarté sont une question de survie (virtuelle) !
         </li>
-      
       </ul>
     </section>
 
     <section class="section card">
         <h2>Comment le jeu devient-il apprentissage ?</h2>
-        <p>C'est là que réside notre secret : <strong>l'accompagnement humain</strong>. le jeu n'est que la première étape.</p>
-        <p>Chaque session de jeu est suivie d'un <strong>débriefing en groupe</strong>, mené par nos animateurs formés. c'est un moment d'échange où l'on met des mots sur ce qui a été vécu : "comment aurions-nous pu mieux nous organiser ?", "qu'as-tu ressenti à ce moment précis ?". c'est en reliant l'action (le jeu) à la réflexion (le débrief) que les compétences s'ancrent durablement.</p>
+        <p>C'est là que réside notre secret : <strong>l'accompagnement humain</strong>. Le jeu n'est que la première étape.</p>
+        <p>Chaque session de jeu est suivie d'un <strong>débriefing en groupe</strong>, mené par nos animateurs formés. C'est un moment d'échange où l'on met des mots sur ce qui a été vécu : "Comment aurions-nous pu mieux nous organiser ?", "Qu'as-tu ressenti à ce moment précis ?". C'est en reliant l'action (le jeu) à la réflexion (le débrief) que les compétences s'ancrent durablement.</p>
     </section>
 
     <section class="section card">
       <h2>Notre vision : bâtir des champions de la vie, puis de l'esport</h2>
-      <p>Notre première mission est de construire des bases solides : bien-être, confiance en soi et intelligence collective. c'est la vocation de notre académie.</p>
-      <p>Dans un second temps, Ludus Mentis ambitionne d'ouvrir une filière esport plus compétitive. mais l'accès à cette filière sera sélectif, non pas sur le niveau de jeu, mais sur les qualités humaines : seuls les jeunes ayant démontré un fair-play exemplaire, une grande maturité et une bonne gestion de leurs émotions pourront y accéder. pour nous, la santé et l'équilibre primeront toujours sur la performance.</p>
+      <p>Notre première mission est de construire des bases solides : bien-être, confiance en soi et intelligence collective. C'est la vocation de notre académie.</p>
+      <p>Dans un second temps, Ludus Mentis ambitionne d'ouvrir une filière esport plus compétitive. Mais l'accès à cette filière sera sélectif, non pas sur le niveau de jeu, mais sur les qualités humaines : seuls les jeunes ayant démontré un fair-play exemplaire, une grande maturité et une bonne gestion de leurs émotions pourront y accéder. Pour nous, la santé et l'équilibre primeront toujours sur la performance.</p>
     </section>
     
     <section class="section card" style="text-align:center;">
         <h2>Curieux de voir notre programme en action ?</h2>
         <p>Découvrez en détail comment se déroule un atelier au sein de notre académie.</p>
-        <a href="academie.html" class="btn">Explorer l'Académie</a>
+        <a href="academie.html" class="btn">Explorer l'académie</a>
     </section>
-
   </main>
 
   <div id="footer"></div>
