@@ -1,42 +1,39 @@
-<header class="site-header">
-  <div class="header-inner">
-
-    <a href="index.html" class="logo-link">
+<header class="site-header navbar bg-base-100/80 backdrop-blur-xl border-b border-base-200 sticky top-0 z-50">
+  <div class="navbar-start">
+    <a href="index.html" class="btn btn-ghost normal-case">
       <img src="assets/images/Ludus-Mentis-transparent.png"
-           alt="Logo Ludus Mentis"
-           class="site-logo" />
+           alt="Logo Ludus Mentis"
+           class="h-10 hover:scale-105 transition-transform" />
     </a>
-
-    <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mainNav" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Accueil</a>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="aproposMenu" aria-expanded="false">À propos ▼</button>
-        <div class="dropdown-content" id="aproposMenu">
-          <a href="a-propos.html">Notre histoire</a>
-          <a href="concept.html">Concept</a>
-          <a href="methodologie.html">Méthodologie</a>
-          <a href="enjeux.html">Enjeux</a>
-           <a href="educateurs.html">Espace éducateurs</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="academieMenu" aria-expanded="false">Académie ▼</button>
-        <div class="dropdown-content" id="academieMenu">
-          <a href="academie.html">Programme</a>
-          <a href="infos-tarifs.html">Infos & Tarifs</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-         
-       
-    </nav>
   </div>
-</header>
+
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 gap-2">
+      <li><a href="index.html" class="hover:text-primary transition-colors font-medium">Accueil</a></li>
+      
+      <li class="dropdown dropdown-hover">
+        <label tabindex="0" class="hover:text-primary transition-colors font-medium cursor-pointer">
+          À propos
+          <svg class="fill-current w-4 h-4 ml-1 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+          </svg>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow-xl bg-base-100 rounded-box w-56 mt-3 border border-base-200">
+          <li><a href="a-propos.html" class="hover:bg-primary/10 hover:text-primary">Notre histoire</a></li>
+          <li><a href="concept.html" class="hover:bg-primary/10 hover:text-primary">Concept</a></li>
+          <li><a href="methodologie.html" class="hover:bg-primary/10 hover:text-primary">Méthodologie</a></li>
+          <li><a href="enjeux.html" class="hover:bg-primary/10 hover:text-primary">Enjeux</a></li>
+          <li><a href="educateurs.html" class="hover:bg-primary/10 hover:text-primary">Espace éducateurs</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown dropdown-hover">
+        <label tabindex="0" class="hover:text-primary transition-colors font-medium cursor-pointer">
+          Académie
+          <svg class="fill-current w-4 h-4 ml-1 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+          </svg>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow-xl bg-base-100 rounded-box w-56 mt-3 border border-base-200">
+          <li><a href="academie.html" class="hover:bg-primary/10 hover:text-primary">Programme</a></li>
+          
