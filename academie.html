@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L'Académie Ludus Mentis : Programme des Ateliers Jeux Vidéo</title>
+  <title>L'académie Ludus Mentis : programme des ateliers jeux vidéo</title>
   <meta name="description" content="Découvrez le programme de notre académie pour jeunes de 10 à 15 ans. Déroulement d'une séance, piliers pédagogiques et développement de l'intelligence collective.">
   <meta name="keywords" content="programme académie, atelier jeu vidéo, déroulement séance, pédagogie active, bienveillance, intelligence collective">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,17 +33,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "serviceType": "Formation et coaching esport éducatif"
   }
   </script>
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fb923c',
+            'primary-focus': '#ea580c',
+            secondary: '#fbbf24',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
+  
   <main class="container">
-
     <section class="section hero">
       <h1>L'académie : bien plus que du jeu vidéo</h1>
       <p>Notre académie est un espace d'exploration où le jeu devient un prétexte pour grandir. Conçu pour les <strong>jeunes de 10 à 15 ans</strong>, notre programme unique tisse ensemble jeu coopératif, ateliers de développement personnel et activités créatives pour une expérience riche et équilibrée.</p>
@@ -51,12 +86,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Le déroulé d'une séance en 4 temps (2 heures)</h2>
       <p>Pour être efficace, notre pédagogie s'appuie sur une structure claire qui complète le cycle d'apprentissage par l'expérience. Voici le déroulé précis de nos sessions de 120 minutes :</p>
       
-      <p><strong>Temps 1 : Accueil et mise en condition (10 min)</strong></p>
+      <p><strong>Temps 1 : accueil et mise en condition (10 min)</strong></p>
       <ul>
           <li>Accueil des participants et présentation de l'objectif de la séance (ex: "Aujourd'hui, on travaille la clarté des consignes").</li>
       </ul>
 
-      <p><strong>Temps 2 : Le cycle "Jeu - Analyse - Application" (80 min)</strong></p>
+      <p><strong>Temps 2 : le cycle "jeu - analyse - application" (80 min)</strong></p>
       <ul>
           <li><strong>Session de jeu n°1 (25 min) :</strong> L'équipe se lance dans une première partie. C'est l'expérience concrète où les dynamiques naturelles apparaissent.</li>
           <li><strong>Débriefing guidé (20 min) :</strong> L'animateur mène la discussion sur base de ses observations. Qu'est-ce qui a fonctionné ? Qu'est-ce qui a posé problème ? Ensemble, le groupe définit une nouvelle stratégie ou une règle de communication à tester.</li>
@@ -64,12 +99,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><strong>Mini-débriefing (10 min) :</strong> Un rapide échange pour comparer les deux sessions. "Quelle a été la différence ? Qu'avez-vous ressenti en réussissant grâce à la nouvelle méthode ?". Cela ancre la réussite et la compétence.</li>
       </ul>
       
-      <p><strong>Temps 3 : Pause active et créative (20 min)</strong></p>
+      <p><strong>Temps 3 : pause active et créative (20 min)</strong></p>
       <ul>
           <li>On quitte les écrans pour une activité physique (exergaming, jeux de ballon) ou un atelier créatif pour stimuler le corps et l'esprit différemment.</li>
       </ul>
       
-      <p><strong>Temps 4 : Clôture et valorisation (10 min)</strong></p>
+      <p><strong>Temps 4 : clôture et valorisation (10 min)</strong></p>
       <ul>
           <li>Cercle de clôture où chaque jeune exprime ce qu'il a appris. C'est le moment de valoriser les efforts et les progrès de chacun avant de se quitter.</li>
       </ul>
@@ -100,8 +135,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Contactez-nous pour toute question ou pour procéder à une demande d'inscription.</p>
         <a href="contact.html" class="btn">Je veux plus d'infos</a>
     </section>
-
   </main>
+  
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
