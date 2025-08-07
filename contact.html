@@ -378,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // Form validation
       function validateField(field, errorId, customMessage) {
         const errorElement = document.getElementById(errorId);
-        const isValid = field.checkValidity() && field.value.trim();
+        const isValid = field.checkValidity() && field.value.trim() !== '';
         
         if (!isValid) {
           field.classList.add('error');
