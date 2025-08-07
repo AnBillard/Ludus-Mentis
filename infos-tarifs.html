@@ -1,31 +1,65 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infos & Tarifs de l'Académie de Jeux Vidéo | Ludus Mentis</title>
+  <title>Infos & tarifs de l'académie de jeux vidéo | Ludus Mentis</title>
   <meta name="description" content="Consultez les informations pratiques de nos modules de 7 semaines pour jeunes de 10 à 15 ans. Tarif, structure des ateliers et inscription à Walhain.">
   <meta name="keywords" content="tarif stage jeu vidéo, prix académie esport, inscription, informations pratiques, module 7 semaines">
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fb923c',
+            'primary-focus': '#ea580c',
+            secondary: '#fbbf24',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
+  
   <main class="container">
-
     <section class="section hero">
-      <h1>Académie : Informations et Tarifs</h1>
+      <h1>Académie : informations et tarifs</h1>
       <p>Découvrez notre programme de modules thématiques conçus pour transformer la pratique du jeu vidéo en une véritable compétence de vie. Pour toute autre question, <a href="contact.html">n'hésitez pas à nous contacter</a>.</p>
     </section>
 
@@ -54,13 +88,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section class="section card" style="text-align:center;">
-        <h2>Tarif et Inscription</h2>
+        <h2>Tarif et inscription</h2>
         <p style="font-size: 1.5em; font-weight: 600; color: var(--clr-accent-dark); margin-bottom: 0.5em;">230 € par module</p>
         <p>Ce tarif unique comprend les 7 ateliers de 2 heures, l'encadrement, l'accès à tout le matériel et l'assurance.</p>
         <a href="contact.html" class="btn" style="margin-top: 1.5em;">Demander les dates du prochain module</a>
     </section>
-
   </main>
+  
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
