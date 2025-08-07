@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+    <!-- End Google Tag Manager -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludus Mentis | Ateliers Jeux Vidéo pour Ados à Walhain</title>
+    <title>Ludus Mentis | Ateliers jeux vidéo pour ados à Walhain</title>
     <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie (communication, gestion du stress, esprit d'équipe). Découvrez nos ateliers éducatifs à Walhain.">
     <meta name="keywords" content="stage jeux vidéo, coaching esport, adolescent, Walhain, activité extra-scolaire, développement personnel, compétences socio-émotionnelles">
 
@@ -31,79 +32,106 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "areaServed": "Belgique"
     }
     </script>
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration Tailwind -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#fb923c',
+              'primary-focus': '#ea580c',
+              secondary: '#fbbf24',
+              accent: '#ef4444',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div id="header"></div>
-  <main class="container">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="header"></div>
+    
+    <main class="container">
+        <section class="section hero">
+            <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" style="max-width:120px; margin-bottom:1em" />
+            <h1>Et si le jeu vidéo aidait votre enfant à grandir ?</h1>
+            <p>Chez Ludus Mentis, nous transformons la passion du jeu vidéo en un puissant outil de développement personnel. Grâce à notre approche pédagogique unique, votre enfant apprend la communication, la gestion des émotions et l'esprit d'équipe. Pour s'épanouir à l'écran, comme dans la vie de tous les jours.</p>
+        </section>
+        
+        <section class="section card" id="concept">
+            <h2>Des compétences humaines pour le 21<sup>e</sup> siècle</h2>
+            <p>Notre programme est conçu pour développer les compétences les plus recherchées aujourd'hui&nbsp;: <strong>collaboration, communication, créativité, et résolution de problèmes</strong>.</p>
+            <p>Grâce à des ateliers concrets, des jeux coopératifs et des moments d'échange en groupe, nous travaillons toutes ces aptitudes essentielles pour leur avenir.</p>
+        </section>
 
-  <section class="section hero">
-  <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" style="max-width:120px; margin-bottom:1em" />
- <h1>Et si le jeu vidéo aidait votre enfant à grandir ?</h1>
-<p>Chez Ludus Mentis, nous transformons la passion du jeu vidéo en un puissant outil de développement personnel. Grâce à notre approche pédagogique unique, votre enfant apprend la communication, la gestion des émotions et l'esprit d’équipe. Pour s'épanouir à l'écran, comme dans la vie de tous les jours.</p>
-</section>
-  <section class="section card" id="concept">
-      <h2>Des compétences humaines pour le 21<sup>e</sup> siècle</h2>
-      <p>Notre programme est conçu pour développer les compétences les plus recherchées aujourd’hui&nbsp;: <strong>collaboration, communication, créativité, et résolution de problèmes</strong>.</p>
-      <p>Grâce à des ateliers concrets, des jeux coopératifs et des moments d’échange en groupe, nous travaillons toutes ces aptitudes essentielles pour leur avenir.</p>
-    </section>
+        <section class="section card">
+            <h2>Les bénéfices pour votre enfant</h2>
+            <ul>
+                <li><strong>Communication&nbsp;:</strong> Exprimer ses idées clairement et écouter les autres.</li>
+                <li><strong>Esprit d'équipe&nbsp;:</strong> Travailler ensemble vers un objectif commun.</li>
+                <li><strong>Gestion du stress&nbsp;:</strong> Rester concentré et calme dans les moments clés.</li>
+                <li><strong>Confiance en soi&nbsp;:</strong> Valoriser ses talents et oser prendre des initiatives.</li>
+            </ul>
+        </section>
+        
+        <section class="section card">
+            <h2>Pourquoi un accompagnement est-il essentiel&nbsp;?</h2>
+            <p>Si le jeu vidéo est une passion pour des millions de jeunes, une pratique non encadrée présente des risques. Les chiffres parlent d'eux-mêmes&nbsp;:</p>
+            <ul>
+                <li><strong>Plus d'un tiers des adolescents jouent tous les jours</strong>, parfois au détriment d'autres activités.</li>
+                <li><strong>12&nbsp;% des jeunes sont considérés à risque de développer une pratique problématique</strong> (gaming disorder) selon l'OMS.</li>
+            </ul>
+            <p style="margin-top: 1.5em;">Notre mission est de transformer ce temps d'écran en une expérience constructive.</p>
+            <p style="text-align:center; margin-top:2em;"><a href="enjeux.html" class="btn">Voir les chiffres &amp; sources détaillés</a></p>
+        </section>
 
-    <section class="section card">
-      <h2>Les bénéfices pour votre enfant</h2>
-      <ul>
-        <li><strong>Communication&nbsp;:</strong> Exprimer ses idées clairement et écouter les autres.</li>
-        <li><strong>Esprit d’équipe&nbsp;:</strong> Travailler ensemble vers un objectif commun.</li>
-        <li><strong>Gestion du stress&nbsp;:</strong> Rester concentré et calme dans les moments clés.</li>
-        <li><strong>Confiance en soi&nbsp;:</strong> Valoriser ses talents et oser prendre des initiatives.</li>
-      </ul>
-    </section>
- 
-      <section class="section card">
-      <h2>Pourquoi un accompagnement est-il essentiel&nbsp;?</h2>
-        <p>Si le jeu vidéo est une passion pour des millions de jeunes, une pratique non encadrée présente des risques. les chiffres parlent d'eux-mêmes&nbsp;:</p>
-      <ul>
-        <li>
-          <strong>Plus d'un tiers des adolescents jouent tous les jours</strong>, parfois au détriment d'autres activités.
-        </li>
-        <li>
-          <strong>12&nbsp;% des jeunes sont considérés à risque de développer une pratique problématique</strong> (gaming disorder) selon l'OMS.
-        </li>
-      </ul>
-      <p style="margin-top: 1.5em;">Notre mission est de transformer ce temps d'écran en une expérience constructive.</p>
-      <p style="text-align:center; margin-top:2em;"><a href="enjeux.html" class="btn">Voir les chiffres &amp; sources détaillés</a></p>
-    </section>
+        <section class="section card">
+            <h2>Un projet soutenu localement</h2>
+            <p>Ludus Mentis est une initiative locale soutenue par la <strong>commune de Walhain</strong> et la <strong>fédération belge d'esport</strong>, portée par des acteurs engagés dans l'éducation, la prévention et l'innovation pédagogique.</p>
+            
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <a href="https://www.walhain.be/" target="_blank" rel="noopener">
+                    <img src="assets/images/logo_walhain.png" alt="Logo de la commune de Walhain" style="max-height: 70px; object-fit: contain;">
+                </a>
+                <a href="https://besf.be/" target="_blank" rel="noopener">
+                    <img src="assets/images/logo_besf.png" alt="Logo de la fédération belge d'esport" style="max-height: 70px; object-fit: contain;">
+                </a>
+            </div>
+            <p style="text-align:center; margin-top:2em;"><a href="academie.html" class="btn">Découvrir notre académie</a></p>
+        </section>
 
-
-
-    <section class="section card">
-      <h2>Un projet soutenu localement</h2>
-      <p>Ludus Mentis est une initiative locale soutenue par la <strong>commune de walhain</strong> et la <strong>fédération belge d’esport</strong>, portée par des acteurs engagés dans l’éducation, la prévention et l’innovation pédagogique.</p>
-      
-      <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
-        <a href="https://www.walhain.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_walhain.png" alt="Logo de la commune de Walhain" style="max-height: 70px; object-fit: contain;">
-        </a>
-        <a href="https://besf.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_besf.png" alt="Logo de la Fédération Belge d'Esport" style="max-height: 70px; object-fit: contain;">
-        </a>
-      </div>
-      <p style="text-align:center; margin-top:2em;"><a href="academie.html" class="btn">Découvrir notre académie</a></p>
-    </section>
-
-      <section class="section card" style="text-align:center;">
-  <h2>Des questions ? parlons-en !</h2>
-  <p><a href="faq.html">consultez notre faq</a> ou <a href="contact.html">contactez-nous directement</a>.<br>
-    nous répondons à toutes vos préoccupations de parent.</p>
-</section>
-
-
-  </main>
-  <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
+        <section class="section card" style="text-align:center;">
+            <h2>Des questions ? Parlons-en !</h2>
+            <p><a href="faq.html">Consultez notre FAQ</a> ou <a href="contact.html">contactez-nous directement</a>.<br>
+            Nous répondons à toutes vos préoccupations de parent.</p>
+        </section>
+    </main>
+    
+    <div id="footer"></div>
+    <script src="assets/js/include.js"></script>
 </body>
 </html>
