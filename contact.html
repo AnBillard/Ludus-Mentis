@@ -310,7 +310,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label for="message">Votre message *</label>
           <textarea id="message" name="message" rows="4" required placeholder="Parlez-nous de vos attentes, questions spécifiques, disponibilités..."></textarea>
           <div class="error-message" id="messageError">Veuillez saisir votre message</div>
-        </div>
+        </div>
+
+        <div class="field-group">
+          <label>
+            <input type="checkbox" name="newsletter" id="newsletter" value="oui"> 
+            Je souhaite recevoir des nouvelles du projet (maximum 1 email par mois)
+          </label>
+        </div>
 
         <button type="submit" class="btn-primary" id="submitBtn">
           <span class="spinner"></span>
@@ -348,7 +355,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const submitBtn = document.getElementById('submitBtn');
       const btnText = submitBtn.querySelector('.btn-text');
       const successMsg = document.getElementById('successMessage');
-      const messageField = document.getElementById('message'); // Ligne ajoutée pour le pré-remplissage
+      const messageField = document.getElementById('message');
+      
+      // Contenu pré-écrit pour chaque type de contact
+      const predefinedMessages = {
+        'info': `Bonjour l'équipe Ludus Mentis,
+
+Je vous contacte pour en savoir plus sur vos ateliers et votre programme pédagogique. J'ai un enfant de [âge de l'enfant] ans et je souhaite mieux comprendre comment vous alliez jeux vidéo et éducation.
+
+Pourriez-vous me fournir plus de détails sur les sujets abordés, le planning et les tarifs ?
+
+J'attends votre retour avec impatience.
+
+Cordialement,`,
+        'presentation': `Bonjour,
+
+Je souhaite découvrir votre approche de plus près et rencontrer les membres de votre équipe. L'idée d'un accompagnement personnalisé pour mon enfant de [âge de l'enfant] ans m'intéresse beaucoup.
+
+Quelles sont vos disponibilités pour une présentation, que ce soit en personne à Walhain ou en visioconférence ?
+
+Je vous remercie pour votre attention.
+
+Bien à vous,`,
+        'reservation': `Bonjour l'équipe Ludus Mentis,
+
+Mon enfant, âgé de [âge de l'enfant] ans, et moi sommes très intéressés par votre académie. Je souhaite confirmer son inscription pour le premier module qui commencera en 2026.
+
+Veuillez me faire savoir la procédure à suivre pour la pré-inscription et les documents nécessaires.
+
+Merci d'avance pour votre aide.
+
+Cordialement,`
+      };
       
       // Contact type selection
       contactCards.forEach(card => {
@@ -358,38 +396,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           const type = this.dataset.type;
           contactTypeInput.value = type;
           
-          // ----- DÉBUT : Code pour pré-remplir le champ de message  -----
-          const predefinedMessages = {
-            'info': `Bonjour l'équipe Ludus Mentis,
-
-Je vous contacte pour en savoir plus sur vos ateliers et votre programme pédagogique. J'ai un enfant de [âge de l'enfant] ans et je souhaite mieux comprendre comment vous alliez jeux vidéo et éducation.
-
-Pourriez-vous me fournir plus de détails sur les sujets abordés, le planning et les tarifs ?
-
-J'attends votre retour avec impatience.
-
-Cordialement,`,
-            'presentation': `Bonjour,
-
-Je souhaite découvrir votre approche de plus près et rencontrer les membres de votre équipe. L'idée d'un accompagnement personnalisé pour mon enfant de [âge de l'enfant] ans m'intéresse beaucoup.
-
-Quelles sont vos disponibilités pour une présentation, que ce soit en personne à Walhain ou en visioconférence ?
-
-Je vous remercie pour votre attention.
-
-Bien à vous,`,
-            'reservation': `Bonjour l'équipe Ludus Mentis,
-
-Mon enfant, âgé de [âge de l'enfant] ans, et moi sommes très intéressés par votre académie. Je souhaite confirmer son inscription pour le premier module qui commencera en 2026.
-
-Veuillez me faire savoir la procédure à suivre pour la pré-inscription et les documents nécessaires.
-
-Merci d'avance pour votre aide.
-
-Cordialement,`
-          };
+          // Pré-remplissage du champ de message
           messageField.value = predefinedMessages[type] || '';
-          // ----- FIN : Code pour pré-remplir le champ de message -----
           
           // Analytics tracking
           if (typeof gtag !== 'undefined') {
