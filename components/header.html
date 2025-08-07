@@ -1,42 +1,71 @@
-<header class="site-header">
-  <div class="header-inner">
-
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/Ludus-Mentis-transparent.png"
-           alt="Logo Ludus Mentis"
-           class="site-logo" />
-    </a>
-
-    <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mainNav" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Accueil</a>
-
+<header class="bg-base-200">
+  <div class="navbar container mx-auto">
+    <div class="navbar-start">
       <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="aproposMenu" aria-expanded="false">À propos ▼</button>
-        <div class="dropdown-content" id="aproposMenu">
-          <a href="a-propos.html">Notre histoire</a>
-          <a href="concept.html">Concept</a>
-          <a href="methodologie.html">Méthodologie</a>
-          <a href="enjeux.html">Enjeux</a>
-           <a href="educateurs.html">Espace éducateurs</a>
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Ouvrir le menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a>À propos</a>
+            <ul class="p-2">
+              <li><a href="a-propos.html">Notre histoire</a></li>
+              <li><a href="concept.html">Concept</a></li>
+              <li><a href="methodologie.html">Méthodologie</a></li>
+              <li><a href="enjeux.html">Enjeux</a></li>
+              <li><a href="educateurs.html">Espace éducateurs</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Académie</a>
+            <ul class="p-2">
+              <li><a href="academie.html">Programme</a></li>
+              <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="academieMenu" aria-expanded="false">Académie ▼</button>
-        <div class="dropdown-content" id="academieMenu">
-          <a href="academie.html">Programme</a>
-          <a href="infos-tarifs.html">Infos & Tarifs</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-         
-       
-    </nav>
+      <a href="index.html" class="btn btn-ghost normal-case text-xl">
+        <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" class="h-10 w-auto" />
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html">Accueil</a></li>
+        <li>
+          <details>
+            <summary>À propos</summary>
+            <ul class="p-2 bg-base-100 rounded-t-none">
+              <li><a href="a-propos.html">Notre histoire</a></li>
+              <li><a href="concept.html">Concept</a></li>
+              <li><a href="methodologie.html">Méthodologie</a></li>
+              <li><a href="enjeux.html">Enjeux</a></li>
+              <li><a href="educateurs.html">Espace éducateurs</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Académie</summary>
+            <ul class="p-2 bg-base-100 rounded-t-none">
+              <li><a href="academie.html">Programme</a></li>
+              <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <label class="swap swap-rotate">
+        <input id="themeToggle" type="checkbox" aria-label="Activer le mode sombre" />
+        <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64 17.66A9 9 0 1 1 12 21a9 9 0 0 1-6.36-3.34z"/></svg>
+        <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      </label>
+    </div>
   </div>
 </header>

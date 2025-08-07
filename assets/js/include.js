@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Load header and footer components dynamically ---
   const loadComponent = (id, file) => {
     fetch(file)
       .then(response => response.text())
-      .then(data => {
-        document.getElementById(id).innerHTML = data;
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
         if (id === "header") {
-          initHeaderMenus(); // Initialize menus after header is loaded
+          initThemeToggle();
         }
       })
       .catch(err => console.error("Erreur chargement composant:", file, err));
@@ -15,44 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("header", "components/header.html");
   loadComponent("footer", "components/footer.html");
 
-  // --- Initialize header menu logic (burger + dropdowns) ---
-  function initHeaderMenus() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    const dropdownButtons = document.querySelectorAll('.dropbtn');
+  function initThemeToggle() {
+    const toggle = document.getElementById("themeToggle");
+    if (!toggle) return;
 
-    // Burger menu logic (mobile)
-    if (menuToggle && mainNav) {
-      menuToggle.addEventListener('click', () => {
-        const isMenuOpen = mainNav.classList.toggle('nav-open');
-        menuToggle.setAttribute('aria-expanded', isMenuOpen);
-        // Change l'icône du bouton
-        menuToggle.innerHTML = isMenuOpen ? '✕' : '☰'; 
-      });
-    }
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = storedTheme || (prefersDark ? "synthwave" : "retro");
+    document.documentElement.setAttribute("data-theme", theme);
+    toggle.checked = theme === "synthwave";
 
-    // Dropdown logic (desktop)
-    dropdownButtons.forEach(btn => {
-      const dropdownContent = btn.nextElementSibling;
-      btn.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-        document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
-        dropdownButtons.forEach(b => b.setAttribute('aria-expanded', 'false'));
-        if (!isExpanded) {
-          dropdownContent.classList.add('show');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-
-    // Close dropdown if clicking outside
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
-        dropdownButtons.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
-      }
+    toggle.addEventListener("change", (e) => {
+      const newTheme = e.target.checked ? "synthwave" : "retro";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
     });
   }
 });
