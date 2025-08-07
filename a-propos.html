@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre Histoire : Du Scoutisme à l'Esport Éducatif | Ludus Mentis</title>
+  <title>Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis</title>
   <meta name="description" content="L'histoire d'Antoine Billard, fondateur de Ludus Mentis. Un parcours alliant passion pour le jeu vidéo et conviction que l'esport peut être une véritable école de vie.">
   <meta name="keywords" content="fondateur, histoire, antoine billard, esport, éducation, scoutisme, valeurs">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,84 +32,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "areaServed": "Belgique"
   }
   </script>
-  <!-- DaisyUI + Tailwind CSS via CDN -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Configuration Tailwind personnalisée -->
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-    theme: {
-      extend: {
-        colors: {
-          primary: '#fb923c',     // Orange-400
-          'primary-focus': '#ea580c', // Orange-600
-          secondary: '#fbbf24',   // Amber-400
-          accent: '#ef4444',      // Red-500
-          neutral: '#1f2937',     // Gray-800
-          'base-100': '#f9fafb',  // Gray-50
-          'base-200': '#f3f4f6',  // Gray-100
-          'base-300': '#e5e7eb',  // Gray-200
-        },
-        fontFamily: {
-          'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-          'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-        },
-        animation: {
-          'fade-in': 'fadeIn 0.6s ease-out',
-          'slide-up': 'slideUp 0.5s ease-out',
-          'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        },
-        backdropBlur: {
-          xs: '2px',
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fb923c',
+            'primary-focus': '#ea580c',
+            secondary: '#fbbf24',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
         }
       }
-    },
-    daisyui: {
-      themes: [
-        {
-          light: {
-            ...require("daisyui/src/theming/themes")["light"],
-            primary: "#fb923c",
-            secondary: "#fbbf24",
-            accent: "#ef4444",
-            neutral: "#1f2937",
-            "base-100": "#f9fafb",
-          },
-          dark: {
-            ...require("daisyui/src/theming/themes")["dark"],
-            primary: "#fb923c",
-            secondary: "#fbbf24",
-            accent: "#ef4444",
-            neutral: "#f3f4f6",
-            "base-100": "#111827",
-            "base-200": "#1f2937",
-            "base-300": "#374151",
-          },
-        },
-      ],
-    },
-  }
-</script>
-
-<!-- Custom styles (nouveau fichier styles.css simplifié) -->
-<link rel="stylesheet" href="assets/css/styles.css">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
+  
   <main class="container">
-
     <section class="section card">
       <h1>Notre histoire : du scoutisme à l'esport</h1>
       <p><strong>Je m'appelle Antoine Billard, et Ludus Mentis est le projet qui rassemble toutes mes passions.</strong> Enfant, mon parcours a été un grand mélange : les valeurs de partage et de nature des scouts, la rigueur et la créativité de l'académie de musique, et l'esprit d'équipe du football. Et au milieu de tout ça, une constante : le jeu vidéo.</p>
@@ -120,19 +88,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>En parallèle de mon travail actuel, je suis aussi manager (bénévole) de l'équipe nationale belge de Dota 2. Je vois de près ce qui fait la différence au plus haut niveau : non pas la technique seule, mais la communication, la gestion du stress et la cohésion du groupe. C'est exactement ce qui manque dans l'approche grand public du jeu vidéo.</p>
     </section>
 
-   <section class="section card">
+    <section class="section card">
       <h2>Réconcilier les mondes</h2>
       <p>Je suis convaincu que les jeux vidéo, si souvent diabolisés, sont en réalité un formidable outil de développement personnel. Loin des clichés, la recherche scientifique, notamment dans des domaines comme la psychologie du sport appliquée à l'esport, confirme aujourd'hui cette vision. Bien encadrée, la pratique du jeu vidéo permet de cultiver des compétences essentielles comme la résilience, la communication et la résolution de problèmes, des atouts pour s'épanouir à l'écran comme dans la vie.</p>
       <p>Ludus Mentis est né de cette certitude : créer le cadre qui n'existait pas pour moi. Un lieu qui s'inspire de la rigueur d'une académie de musique, de la bienveillance d'un mouvement de jeunesse et de la passion de l'esport. Un espace pour prouver que l'on peut passer des heures à jouer, et en ressortir plus grand.</p>
-      <p>Aujourd'hui, ce projet est soutenu par des partenaires clés comme la <strong>commune de Walhain</strong> et la <strong>fédération belge d’esport</strong>, qui croient en notre approche innovante.</p>
+      <p>Aujourd'hui, ce projet est soutenu par des partenaires clés comme la <strong>commune de Walhain</strong> et la <strong>fédération belge d'esport</strong>, qui croient en notre approche innovante.</p>
     </section>
     
     <section class="section card">
-      <h2>Envie d’en savoir plus ou de rejoindre l’aventure ?</h2>
+      <h2>Envie d'en savoir plus ou de rejoindre l'aventure ?</h2>
       <p>Contactez-moi sans hésiter. Ensemble, nous pouvons faire du jeu vidéo une véritable école de vie.</p>
     </section>
-
   </main>
+  
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
