@@ -1,42 +1,57 @@
-<header class="site-header">
-  <div class="header-inner">
+<header class="border-b">
+  <div class="navbar max-w-6xl mx-auto">
+    <div class="navbar-start">
+      <a href="/index.html" class="btn btn-ghost text-xl">Ludus Mentis</a>
+    </div>
 
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/Ludus-Mentis-transparent.png"
-           alt="Logo Ludus Mentis"
-           class="site-logo" />
-    </a>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/academie.html">Académie</a></li>
+        <li>
+          <details>
+            <summary>À&nbsp;propos</summary>
+            <ul class="p-2 bg-base-100 rounded-box shadow">
+              <li><a href="/a-propos.html">Notre histoire</a></li>
+              <li><a href="/concept.html">Concept</a></li>
+              <li><a href="/methodologie.html">Méthodologie</a></li>
+              <li><a href="/enjeux.html">Enjeux</a></li>
+              <li><a href="/educateurs.html">Espace éducateurs</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/infos-tarifs.html">Infos &amp; Tarifs</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a class="btn btn-primary btn-sm" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
 
-    <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mainNav" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Accueil</a>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="aproposMenu" aria-expanded="false">À propos ▼</button>
-        <div class="dropdown-content" id="aproposMenu">
-          <a href="a-propos.html">Notre histoire</a>
-          <a href="concept.html">Concept</a>
-          <a href="methodologie.html">Méthodologie</a>
-          <a href="enjeux.html">Enjeux</a>
-           <a href="educateurs.html">Espace éducateurs</a>
-        </div>
+    <div class="navbar-end gap-2">
+      <label class="swap swap-rotate">
+        <input id="theme-toggle" type="checkbox" aria-label="Basculer le thème">
+        <svg class="swap-off fill-current w-6 h-6" viewBox="0 0 24 24"><path d="M5.64 17.66A9 9 0 1 0 12 3a9 9 0 0 0-6.36 14.66Z"/></svg>
+        <svg class="swap-on fill-current w-6 h-6" viewBox="0 0 24 24"><path d="M21.64 13A9 9 0 1 1 11 2a7 7 0 0 0 10.64 11Z"/></svg>
+      </label>
+      <div class="dropdown dropdown-end lg:hidden">
+        <div tabindex="0" role="button" class="btn btn-ghost">Menu</div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="/academie.html">Académie</a></li>
+          <li>
+            <details>
+              <summary>À&nbsp;propos</summary>
+              <ul class="p-2 bg-base-100 rounded-box shadow">
+                <li><a href="/a-propos.html">Notre histoire</a></li>
+                <li><a href="/concept.html">Concept</a></li>
+                <li><a href="/methodologie.html">Méthodologie</a></li>
+                <li><a href="/enjeux.html">Enjeux</a></li>
+                <li><a href="/educateurs.html">Espace éducateurs</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="/infos-tarifs.html">Infos &amp; Tarifs</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
       </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="academieMenu" aria-expanded="false">Académie ▼</button>
-        <div class="dropdown-content" id="academieMenu">
-          <a href="academie.html">Programme</a>
-          <a href="infos-tarifs.html">Infos & Tarifs</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-         
-       
-    </nav>
+    </div>
   </div>
 </header>

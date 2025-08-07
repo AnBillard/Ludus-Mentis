@@ -1,0 +1,14 @@
+{
+  "name": "ludus-mentis",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./tailwind.input.css -o ./assets/tailwind.css --watch",
+    "build": "tailwindcss -i ./tailwind.input.css -o ./assets/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10",
+    "daisyui": "^4.12.10",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41"
+  }
+}
