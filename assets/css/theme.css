@@ -1,0 +1,22 @@
+
+/* DaisyUI custom theme for Ludus Mentis (derived from logo + legacy accents) */
+[data-theme="ludus"] {
+  --p: 188 100% 22%;
+  --pc: 0 0% 100%;
+  --s: 31 100% 42%;
+  --sc: 0 0% 100%;
+  --a: 24 100% 62%;
+  --ac: 0 0% 100%;
+  --n: 45 8% 10%;
+  --nc: 0 0% 100%;
+  --b1: 40 33% 96%;
+  --b2: 40 33% 92%;
+  --b3: 40 33% 88%;
+  --bc: 28 8% 15%;
+
+  /* rounded corners & transitions */
+  --rounded-box: 1.25rem;
+  --rounded-btn: 0.9rem;
+}
+/* Utilities for spacing normalization */
+.section { margin-top: 0; }
