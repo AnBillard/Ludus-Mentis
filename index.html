@@ -1,109 +1,118 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludus Mentis | Ateliers Jeux Vidéo pour Ados à Walhain</title>
-    <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie (communication, gestion du stress, esprit d'équipe). Découvrez nos ateliers éducatifs à Walhain.">
-    <meta name="keywords" content="stage jeux vidéo, coaching esport, adolescent, Walhain, activité extra-scolaire, développement personnel, compétences socio-émotionnelles">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ludus Mentis",
-      "description": "Programme d'ateliers de jeux vidéo éducatifs pour adolescents de 10 à 15 ans à Walhain",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Walhain",
-        "addressRegion": "Wallonie",
-        "addressCountry": "BE"
-      },
-      "url": "https://ludusmentis.be/",
-      "email": "info@ludusmentis.be",
-      "areaServed": "Belgique"
-    }
-    </script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludus Mentis | Ateliers Jeux Vidéo pour Ados à Walhain</title>
+  <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie (communication, gestion du stress, esprit d'équipe). Découvrez nos ateliers éducatifs à Walhain.">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div id="header"></div>
-  <main class="container">
 
-  <section class="section hero">
-  <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" style="max-width:120px; margin-bottom:1em" />
- <h1>Et si le jeu vidéo aidait votre enfant à grandir ?</h1>
-<p>Chez Ludus Mentis, nous transformons la passion du jeu vidéo en un puissant outil de développement personnel. Grâce à notre approche pédagogique unique, votre enfant apprend la communication, la gestion des émotions et l'esprit d’équipe. Pour s'épanouir à l'écran, comme dans la vie de tous les jours.</p>
+<!-- Header -->
+<header class="navbar bg-base-200 shadow-lg">
+  <div class="flex-1 px-2 mx-2 text-xl font-bold">Ludus Mentis</div>
+  <div class="flex-none hidden lg:block">
+    <ul class="menu menu-horizontal">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="flex-none lg:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-square">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="concept.html">Concept</a></li>
+        <li><a href="methodologie.html">Méthodologie</a></li>
+        <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero min-h-[80vh]" style="background-image: url('https://images.unsplash.com/photo-1617957748687-d58a6d4e8b30?auto=format&fit=crop&w=1400&q=80');">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-lg">
+      <h1 class="mb-5 text-5xl font-bold">Jeu vidéo & développement personnel</h1>
+      <p class="mb-5">Un stage unique à Walhain pour transformer la passion de votre ado en compétences de vie : communication, gestion du stress, esprit d'équipe.</p>
+      <a href="infos-tarifs.html" class="btn btn-primary">Découvrir & S'inscrire</a>
+    </div>
+  </div>
 </section>
-  <section class="section card" id="concept">
-      <h2>Des compétences humaines pour le 21<sup>e</sup> siècle</h2>
-      <p>Notre programme est conçu pour développer les compétences les plus recherchées aujourd’hui&nbsp;: <strong>collaboration, communication, créativité, et résolution de problèmes</strong>.</p>
-      <p>Grâce à des ateliers concrets, des jeux coopératifs et des moments d’échange en groupe, nous travaillons toutes ces aptitudes essentielles pour leur avenir.</p>
-    </section>
 
-    <section class="section card">
-      <h2>Les bénéfices pour votre enfant</h2>
-      <ul>
-        <li><strong>Communication&nbsp;:</strong> Exprimer ses idées clairement et écouter les autres.</li>
-        <li><strong>Esprit d’équipe&nbsp;:</strong> Travailler ensemble vers un objectif commun.</li>
-        <li><strong>Gestion du stress&nbsp;:</strong> Rester concentré et calme dans les moments clés.</li>
-        <li><strong>Confiance en soi&nbsp;:</strong> Valoriser ses talents et oser prendre des initiatives.</li>
-      </ul>
-    </section>
- 
-      <section class="section card">
-      <h2>Pourquoi un accompagnement est-il essentiel&nbsp;?</h2>
-        <p>Si le jeu vidéo est une passion pour des millions de jeunes, une pratique non encadrée présente des risques. les chiffres parlent d'eux-mêmes&nbsp;:</p>
-      <ul>
-        <li>
-          <strong>Plus d'un tiers des adolescents jouent tous les jours</strong>, parfois au détriment d'autres activités.
-        </li>
-        <li>
-          <strong>12&nbsp;% des jeunes sont considérés à risque de développer une pratique problématique</strong> (gaming disorder) selon l'OMS.
-        </li>
-      </ul>
-      <p style="margin-top: 1.5em;">Notre mission est de transformer ce temps d'écran en une expérience constructive.</p>
-      <p style="text-align:center; margin-top:2em;"><a href="enjeux.html" class="btn">Voir les chiffres &amp; sources détaillés</a></p>
-    </section>
-
-
-
-    <section class="section card">
-      <h2>Un projet soutenu localement</h2>
-      <p>Ludus Mentis est une initiative locale soutenue par la <strong>commune de walhain</strong> et la <strong>fédération belge d’esport</strong>, portée par des acteurs engagés dans l’éducation, la prévention et l’innovation pédagogique.</p>
-      
-      <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
-        <a href="https://www.walhain.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_walhain.png" alt="Logo de la commune de Walhain" style="max-height: 70px; object-fit: contain;">
-        </a>
-        <a href="https://besf.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_besf.png" alt="Logo de la Fédération Belge d'Esport" style="max-height: 70px; object-fit: contain;">
-        </a>
+<!-- Points clés -->
+<section class="py-16 bg-base-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Pourquoi Ludus Mentis ?</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="card bg-base-200 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title">Soft Skills</h3>
+          <p>Développez des compétences transversales comme la communication, la collaboration et l'esprit critique grâce à des activités ludiques et encadrées.</p>
+        </div>
       </div>
-      <p style="text-align:center; margin-top:2em;"><a href="academie.html" class="btn">Découvrir notre académie</a></p>
-    </section>
-
-      <section class="section card" style="text-align:center;">
-  <h2>Des questions ? parlons-en !</h2>
-  <p><a href="faq.html">consultez notre faq</a> ou <a href="contact.html">contactez-nous directement</a>.<br>
-    nous répondons à toutes vos préoccupations de parent.</p>
+      <div class="card bg-base-200 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title">Encadrement Pro</h3>
+          <p>Nos éducateurs combinent expertise pédagogique et connaissance approfondie du jeu vidéo pour offrir un accompagnement personnalisé.</p>
+        </div>
+      </div>
+      <div class="card bg-base-200 shadow-md">
+        <div class="card-body">
+          <h3 class="card-title">Méthodologie Innovante</h3>
+          <p>Nous utilisons le cycle de Kolb et l'exergaming pour lier apprentissage et plaisir, garantissant une expérience engageante et enrichissante.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Bloc scientifique -->
+<section class="py-16 bg-base-200">
+  <div class="container mx-auto px-4 max-w-4xl text-center">
+    <h2 class="text-3xl font-bold mb-6">Un appui scientifique</h2>
+    <p class="mb-4">Des études montrent que les jeux vidéo, lorsqu'ils sont bien encadrés, peuvent améliorer la coordination, la mémoire de travail, et les compétences sociales (<a href="https://www.apa.org/news/press/releases/2013/11/video-games" class="link">American Psychological Association, 2013</a>).</p>
+    <p>Chez Ludus Mentis, nous nous appuyons sur ces recherches pour créer des activités qui stimulent la réflexion, favorisent la collaboration et renforcent la confiance en soi.</p>
+  </div>
+</section>
 
-  </main>
-  <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
+<!-- Footer -->
+<footer class="footer p-10 bg-neutral text-neutral-content">
+  <div>
+    <span class="footer-title">Navigation</span>
+    <a class="link link-hover" href="concept.html">Concept</a>
+    <a class="link link-hover" href="methodologie.html">Méthodologie</a>
+    <a class="link link-hover" href="infos-tarifs.html">Infos & Tarifs</a>
+    <a class="link link-hover" href="contact.html">Contact</a>
+  </div>
+  <div>
+    <span class="footer-title">Contact</span>
+    <p>Walhain, Belgique</p>
+    <p>Email : contact@ludusmentis.be</p>
+  </div>
+  <div>
+    <span class="footer-title">Suivez-nous</span>
+    <div class="grid grid-flow-col gap-4">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="fill-current"><path d="M24 4.5a9.9..."/></svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="fill-current"><path d="M19.6 3H4.4..."/></svg></a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
