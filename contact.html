@@ -26,198 +26,8 @@
     "serviceType": "Formation et coaching esport éducatif"
   }
   </script>
-
 <link href="assets/images/Ludus-Mentis-transparent.png" rel="icon" type="image/png"/>
-<style>
-    /* Enhanced form styles */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    
-    .contact-card {
-      background: var(--clr-surface);
-      border: 2px solid var(--clr-accent-light);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .contact-card:hover {
-      border-color: var(--clr-accent);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .contact-card.selected {
-      border-color: var(--clr-accent);
-      background: var(--clr-accent-light);
-    }
-    
-    .contact-card h3 {
-      color: var(--clr-accent);
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-    
-    .contact-card .icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .field-group {
-      position: relative;
-    }
-    
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 2px solid #f7c982;
-      border-radius: 0.8rem;
-      font-size: 1rem;
-      background: #fffbf5;
-      color: #523a1c;
-      transition: all 0.3s ease;
-    }
-    
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      border-color: var(--clr-accent);
-      box-shadow: 0 0 0 3px rgba(215, 111, 0, 0.15);
-      outline: none;
-    }
-    
-    .contact-form input.error,
-    .contact-form select.error,
-    .contact-form textarea.error {
-      border-color: #dc3545;
-      background-color: #fff5f5;
-    }
-    
-    .error-message {
-      color: #dc3545;
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
-      display: none;
-    }
-    
-    .error-message.show {
-      display: block;
-    }
-    
-    .success-message {
-      background: #d4edda;
-      border: 1px solid #c3e6cb;
-      color: #155724;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-      display: none;
-    }
-    
-    .success-message.show {
-      display: block;
-    }
-    
-    .btn-primary {
-      background: var(--clr-accent);
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .btn-primary:hover:not(:disabled) {
-      background: var(--clr-accent-dark);
-      transform: translateY(-2px);
-    }
-    
-    .btn-primary:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none;
-    }
-    
-    .btn-primary .spinner {
-      display: none;
-      width: 20px;
-      height: 20px;
-      border: 2px solid transparent;
-      border-top: 2px solid white;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-right: 0.5rem;
-    }
-    
-    .btn-primary.loading .spinner {
-      display: inline-block;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      display: none;
-    }
-    
-    @media (max-width: 768px) {
-      .floating-cta {
-        display: block;
-      }
-    }
-    
-    .quick-contact {
-      background: var(--clr-accent);
-      color: white;
-      padding: 1rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-    }
-    
-    .quick-contact:hover {
-      background: var(--clr-accent-dark);
-      transform: scale(1.05);
-    }
-  </style>
-<script src="https://cdn.tailwindcss.com"></script><link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/><script defer="True" src="assets/js/i18n.js"></script></head>
+<script src="https://cdn.tailwindcss.com"></script><link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/><script defer="True" src="assets/js/i18n.js"></script><style>.contact-card.selected{ outline: 2px solid currentColor; outline-offset: 2px; }</style></head>
 <body><a class="sr-only focus:not-sr-only focus:btn focus:btn-primary m-2" href="#main">Aller au contenu principal</a>
 <noscript><iframe class="" height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <div id="header"></div>
@@ -229,52 +39,52 @@
 <section class="section card"><div class="card-body prose max-w-none">
 <h2 class="text-3xl font-bold mt-2">Comment souhaitez-vous être contacté ?</h2>
 <div class="contact-options">
-<div class="contact-card" data-type="info">
+<div class="contact-card card bg-base-100 border border-base-200 hover:shadow-md transition cursor-pointer" data-type="info" role="button" tabindex="0"><div class="card-body">
 <span class="icon">📋</span>
-<h3 class="text-xl font-semibold mt-2">Demande d'informations</h3>
+<h3 class="text-xl font-semibold mt-2 card-title">Demande d'informations</h3>
 <p>Questions générales sur le programme, la pédagogie, les horaires...</p>
-</div>
-<div class="contact-card" data-type="presentation">
+</div></div>
+<div class="contact-card card bg-base-100 border border-base-200 hover:shadow-md transition cursor-pointer" data-type="presentation" role="button" tabindex="0"><div class="card-body">
 <span class="icon">👥</span>
-<h3 class="text-xl font-semibold mt-2">Présentation personnalisée</h3>
+<h3 class="text-xl font-semibold mt-2 card-title">Présentation personnalisée</h3>
 <p>Rencontre pour découvrir notre approche et rencontrer l'équipe</p>
-</div>
-<div class="contact-card" data-type="reservation">
+</div></div>
+<div class="contact-card card bg-base-100 border border-base-200 hover:shadow-md transition cursor-pointer" data-type="reservation" role="button" tabindex="0"><div class="card-body">
 <span class="icon">🎯</span>
-<h3 class="text-xl font-semibold mt-2">Pré-inscription</h3>
+<h3 class="text-xl font-semibold mt-2 card-title">Pré-inscription</h3>
 <p>Réserver une place pour votre enfant (ouverture janvier 2026)</p>
+</div></div>
 </div>
-</div>
-<form action="https://formspree.io/f/mdkdwzoy" class="contact-form" id="contactForm" method="POST">
+<form action="https://formspree.io/f/mdkdwzoy" class="contact-form space-y-6" id="contactForm" method="POST">
 <input id="contactType" name="contact_type" type="hidden" value=""/>
 <input name="form_version" type="hidden" value="enhanced_v2"/>
 <div class="form-row">
-<div class="field-group">
-<label for="prenom">Prénom du parent *</label>
-<input id="prenom" name="prenom" required="" type="text"/>
-<div class="error-message" id="prenomError">Veuillez saisir votre prénom</div>
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="prenom"><span class="label-text">Prénom du parent *</span></label>
+<input aria-describedby="prenomError" class="input input-bordered w-full" id="prenom" name="prenom" required="" type="text"/>
+<div class="error-message text-error text-sm mt-1 hidden" id="prenomError" role="alert">Veuillez saisir votre prénom</div>
 </div>
-<div class="field-group">
-<label for="nom">Nom de famille *</label>
-<input id="nom" name="nom" required="" type="text"/>
-<div class="error-message" id="nomError">Veuillez saisir votre nom</div>
-</div>
-</div>
-<div class="form-row">
-<div class="field-group">
-<label for="email">Votre email *</label>
-<input id="email" name="email" required="" type="email"/>
-<div class="error-message" id="emailError">Veuillez saisir un email valide</div>
-</div>
-<div class="field-group">
-<label for="telephone">Téléphone (optionnel)</label>
-<input id="telephone" name="telephone" placeholder="+32..." type="tel"/>
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="nom"><span class="label-text">Nom de famille *</span></label>
+<input aria-describedby="nomError" class="input input-bordered w-full" id="nom" name="nom" required="" type="text"/>
+<div class="error-message text-error text-sm mt-1 hidden" id="nomError" role="alert">Veuillez saisir votre nom</div>
 </div>
 </div>
 <div class="form-row">
-<div class="field-group">
-<label for="enfant_age">Âge de votre enfant *</label>
-<select id="enfant_age" name="enfant_age" required="">
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="email"><span class="label-text">Votre email *</span></label>
+<input aria-describedby="emailError" class="input input-bordered w-full" id="email" name="email" required="" type="email"/>
+<div class="error-message text-error text-sm mt-1 hidden" id="emailError" role="alert">Veuillez saisir un email valide</div>
+</div>
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="telephone"><span class="label-text">Téléphone (optionnel)</span></label>
+<input class="input input-bordered w-full" id="telephone" name="telephone" placeholder="+32..." type="tel"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="enfant_age"><span class="label-text">Âge de votre enfant *</span></label>
+<select aria-describedby="enfantAgeError" class="select select-bordered w-full" id="enfant_age" name="enfant_age" required="">
 <option value="">Sélectionnez...</option>
 <option value="10">10 ans</option>
 <option value="11">11 ans</option>
@@ -284,23 +94,23 @@
 <option value="15">15 ans</option>
 <option value="autre">Autre âge</option>
 </select>
-<div class="error-message" id="enfantAgeError">Veuillez sélectionner l'âge</div>
+<div class="error-message text-error text-sm mt-1 hidden" id="enfantAgeError" role="alert">Veuillez sélectionner l'âge</div>
 </div>
-<div class="field-group">
-<label for="commune">Votre commune</label>
-<input id="commune" name="commune" placeholder="Ex: Walhain, Wavre..." type="text"/>
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="commune"><span class="label-text">Votre commune</span></label>
+<input class="input input-bordered w-full" id="commune" name="commune" placeholder="Ex: Walhain, Wavre..." type="text"/>
 </div>
 </div>
-<div class="field-group">
-<label for="message">Votre message *</label>
-<textarea id="message" name="message" placeholder="Parlez-nous de vos attentes, questions spécifiques, disponibilités..." required="" rows="4"></textarea>
-<div class="error-message" id="messageError">Veuillez saisir votre message</div>
+<div class="form-control w-full max-w-2xl">
+<label class="label" for="message"><span class="label-text">Votre message *</span></label>
+<textarea aria-describedby="messageError" class="textarea textarea-bordered w-full" id="message" name="message" placeholder="Parlez-nous de vos attentes, questions spécifiques, disponibilités..." required="" rows="4"></textarea>
+<div class="error-message text-error text-sm mt-1 hidden" id="messageError" role="alert">Veuillez saisir votre message</div>
 </div>
-<button class="btn-primary" id="submitBtn" type="submit">
+<button class="btn-primary btn" id="submitBtn" type="submit">
 <span class="spinner"></span>
 <span class="btn-text">Envoyer ma demande</span>
 </button>
-<div class="success-message" id="successMessage">
+<div class="alert alert-success mt-4 hidden" id="successMessage">
 <strong>Merci !</strong> Votre message a bien été envoyé. Nous vous répondrons dans les 48h.
         </div>
 </form>
