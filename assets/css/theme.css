@@ -1,22 +1,23 @@
 
 /* DaisyUI custom theme for Ludus Mentis (derived from logo + legacy accents) */
+/* --- Refined Ludus theme (teal + warm terracotta) --- */
 [data-theme="ludus"] {
-  --p: 188 100% 22%;
+  --p: 186 70% 32%;  /* teal primary */
   --pc: 0 0% 100%;
-  --s: 31 100% 42%;
+  --s: 27 85% 45%;   /* warm orange secondary */
   --sc: 0 0% 100%;
-  --a: 24 100% 62%;
+  --a: 22 92% 55%;   /* terracotta accent */
   --ac: 0 0% 100%;
-  --n: 45 8% 10%;
-  --nc: 0 0% 100%;
-  --b1: 40 33% 96%;
-  --b2: 40 33% 92%;
-  --b3: 40 33% 88%;
-  --bc: 28 8% 15%;
+  --n: 28 10% 16%;   /* neutral text */
+  --nc: 0 0% 98%;
+  --b1: 43 45% 97%;  /* background close to #F9F7F3 */
+  --b2: 43 45% 94%;
+  --b3: 43 45% 90%;
+  --bc: 28 10% 16%;
 
-  /* rounded corners & transitions */
-  --rounded-box: 1.25rem;
+  --rounded-box: 1.2rem;
   --rounded-btn: 0.9rem;
+  --animation-btn: 0.15s;
 }
 /* Utilities for spacing normalization */
 .section { margin-top: 0; }
