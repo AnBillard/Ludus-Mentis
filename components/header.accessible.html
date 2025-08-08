@@ -1,0 +1,70 @@
+
+<!-- Accessible header (menu clavier/ARIA) -->
+<header class="navbar bg-base-100 border-b">
+  <div class="navbar-start">
+    <a class="btn btn-ghost text-xl" href="/">Ludus Mentis</a>
+  </div>
+  <div class="navbar-center hidden lg:flex" aria-label="Navigation principale">
+    <ul class="menu menu-horizontal px-1">
+      <li class="relative">
+        <button class="btn btn-ghost" aria-expanded="false" aria-controls="m-apropos">À propos</button>
+        <ul id="m-apropos" class="dropdown-content menu p-2 shadow-xl bg-base-100 rounded-xl w-56 mt-3 border" hidden>
+          <li><a href="/a-propos.html">Notre histoire</a></li>
+          <li><a href="/concept.html">Concept</a></li>
+          <li><a href="/methodologie.html">Méthodologie</a></li>
+          <li><a href="/enjeux.html">Enjeux</a></li>
+        </ul>
+      </li>
+      <li><a href="/academie.html">Académie</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end lg:hidden">
+    <button class="btn btn-square btn-ghost" aria-controls="mobile-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+<nav id="mobile-menu" hidden aria-label="Navigation mobile" class="p-3 border-b lg:hidden">
+  <ul class="menu">
+    <li><details><summary>À propos</summary>
+      <ul>
+        <li><a href="/a-propos.html">Notre histoire</a></li>
+        <li><a href="/concept.html">Concept</a></li>
+        <li><a href="/methodologie.html">Méthodologie</a></li>
+        <li><a href="/enjeux.html">Enjeux</a></li>
+      </ul>
+    </details></li>
+    <li><a href="/academie.html">Académie</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+(function(){
+  // Desktop dropdown toggle (button + ul[hidden])
+  document.querySelectorAll('header [aria-controls]').forEach(function(btn){
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if(!panel) return;
+    function open(){ panel.hidden=false; btn.setAttribute('aria-expanded','true'); }
+    function close(){ panel.hidden=true; btn.setAttribute('aria-expanded','false'); }
+    btn.addEventListener('click', function(){ panel.hidden ? open() : close(); });
+    btn.addEventListener('keydown', function(e){ if(e.key==='ArrowDown'){ open(); panel.querySelector('a')?.focus(); } });
+    panel.addEventListener('keydown', function(e){ if(e.key==='Escape'){ close(); btn.focus(); }});
+    document.addEventListener('click', function(e){ if(!btn.contains(e.target) && !panel.contains(e.target)) close(); });
+  });
+
+  // Mobile menu toggle
+  var mBtn = document.querySelector('[aria-controls="mobile-menu"]');
+  var mPanel = document.getElementById('mobile-menu');
+  if (mBtn && mPanel){
+    mBtn.addEventListener('click', function(){
+      var open = mPanel.hasAttribute('hidden');
+      mPanel.toggleAttribute('hidden');
+      mBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+})();
+</script>
