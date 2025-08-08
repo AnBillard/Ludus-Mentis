@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="Compétences humaines">
+  <rect x="10" y="20" width="220" height="160" rx="12" fill="#FFF3E0"/>
+  <g fill="#0D9488">
+    <circle cx="60" cy="80" r="20"/>
+    <circle cx="120" cy="60" r="20"/>
+    <circle cx="160" cy="110" r="20"/>
+  </g>
+  <path d="M60 80 L120 60 L160 110" stroke="#F97316" stroke-width="6" fill="none"/>
+</svg>

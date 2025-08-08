@@ -20,3 +20,21 @@
 }
 /* Utilities for spacing normalization */
 .section { margin-top: 0; }
+
+/* Dark theme tuned for contrast (WCAG AA) */
+[data-theme="ludus-dark"] {
+  --p: 189 100% 46%;
+  --pc: 0 0% 100%;
+  --s: 27 100% 45%;
+  --sc: 0 0% 100%;
+  --a: 22 100% 58%;
+  --ac: 0 0% 100%;
+  --n: 0 0% 12%;
+  --nc: 0 0% 96%;
+  --b1: 0 0% 9%;
+  --b2: 0 0% 12%;
+  --b3: 0 0% 16%;
+  --bc: 0 0% 96%;
+  --rounded-box: 1.25rem;
+  --rounded-btn: 0.9rem;
+}
