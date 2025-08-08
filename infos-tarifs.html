@@ -334,21 +334,7 @@
     </section>
   </main>
   
-    <div id="footer"></div>
-
-  <script>
-    // Optionnel : inclure des partials header/footer
-    (async () => {
-      const include = async (id, url) => {
-        try {
-          const res = await fetch(url);
-          document.getElementById(id).innerHTML = await res.text();
-        } catch (e) { console.error('Include error:', e); }
-      };
-      // adapte les chemins si besoin
-      await include('header', 'partials/header.html');
-      await include('footer', 'partials/footer.html');
-    })();
-  </script>
+   <div id="footer"></div>
+  <script src="assets/js/include.js"></script>
 </body>
 </html>
