@@ -508,3 +508,30 @@ input[type="submit"]:focus {
   .site-header { background: var(--clr-surface) !important; }
   .dropdown-content { border-color: rgba(255,255,255,0.1); }
 }
+
+/* styles.css - Compléments Tailwind + daisyUI */
+
+/* Typographie harmonisée */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Conteneur global */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Accessibilité : focus visible amélioré */
+:focus {
+  outline: 2px dashed #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Liens dans le footer */
+.footer .link-hover:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
