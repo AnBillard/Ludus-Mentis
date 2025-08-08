@@ -1,42 +1,32 @@
-<header class="site-header">
-  <div class="header-inner">
-
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/Ludus-Mentis-transparent.png"
-           alt="Logo Ludus Mentis"
-           class="site-logo" />
-    </a>
-
-    <button id="menuToggle" class="menu-toggle" aria-label="Menu" aria-controls="mainNav" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html">Accueil</a>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="aproposMenu" aria-expanded="false">À propos ▼</button>
-        <div class="dropdown-content" id="aproposMenu">
-          <a href="a-propos.html">Notre histoire</a>
-          <a href="concept.html">Concept</a>
-          <a href="methodologie.html">Méthodologie</a>
-          <a href="enjeux.html">Enjeux</a>
-           <a href="educateurs.html">Espace éducateurs</a>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-controls="academieMenu" aria-expanded="false">Académie ▼</button>
-        <div class="dropdown-content" id="academieMenu">
-          <a href="academie.html">Programme</a>
-          <a href="infos-tarifs.html">Infos & Tarifs</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-         
-       
-    </nav>
+<header class="navbar bg-base-200 shadow-lg" role="banner">
+  <div class="flex-1 px-2 mx-2">
+    <a href="index.html" class="text-xl font-bold tracking-wide">Ludus Mentis</a>
+  </div>
+  <nav class="hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="methodologie.html">Méthodologie</a></li>
+      <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="lg:hidden">
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-square" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="concept.html">Concept</a></li>
+        <li><a href="methodologie.html">Méthodologie</a></li>
+        <li><a href="infos-tarifs.html">Infos & Tarifs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </header>
