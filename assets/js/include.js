@@ -174,3 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   images.forEach(img => imageObserver.observe(img));
 });
+
+
+function setActiveNav() {
+  try {
+    const path = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const nav = document.querySelector('header');
+    if (!nav) return;
+    nav.querySelectorAll('a[href]').forEach(a => {
+      const href = (a.getAttribute('href')||'').toLowerCase();
+      if (href === path || (path === '' && href === 'index.html')) {
+        a.classList.add('nav-active');
+      }
+    });
+  } catch(e){}
+}
+document.addEventListener('DOMContentLoaded', setActiveNav);
