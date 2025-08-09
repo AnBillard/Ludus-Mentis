@@ -985,3 +985,32 @@ html.dark, :root[data-theme="dark"] {
 .subtitle, .lead {
   color: var(--lm-text-secondary);
 }
+
+
+
+/* Navbar layout refinements */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.navbar-start,
+.navbar-center,
+.navbar-end {
+  display: flex;
+  align-items: center;
+}
+.navbar-center { flex: 1 1 auto; justify-content: center; }
+.navbar-end { gap: 0.75rem; }
+
+
+
+/* Responsive shims for used utility classes */
+.hidden { display: none !important; }
+@media (min-width: 1024px) { .lg\:flex { display: flex !important; } }
+
+
+.btn-square { width: 42px; height: 42px; padding: 0; }
+
+.btn[aria-label*="Thème"], #theme-toggle { cursor: pointer; }
