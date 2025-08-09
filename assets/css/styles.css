@@ -62,38 +62,8 @@
   --lm-z-tooltip: 70;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    /* Fallback dark theme vars (no-JS) */
-    --lm-primary: #fb923c;
-    --lm-primary-hover: #fdba74;
-    --lm-primary-light: #431407;
-    --lm-primary-dark: #fed7aa;
-    --lm-secondary: #fbbf24;
-    --lm-secondary-light: #451a03;
-    --lm-success: #4ade80;
-    --lm-info: #60a5fa;
-    --lm-warning: #fbbf24;
-    --lm-error: #f87171;
-    --lm-text-primary: #f9fafb;
-    --lm-text-secondary: #e5e7eb;
-    --lm-text-muted: #9ca3af;
-    --lm-bg-base: #0b0f14;
-    --lm-bg-surface: #111827;
-    --lm-bg-elevated: #1f2937;
-    --lm-border: #1f2937;
-    --lm-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
-    --lm-shadow-md: 0 6px 16px rgb(0 0 0 / 0.35);
-    --lm-shadow-lg: 0 12px 24px rgb(0 0 0 / 0.4);
-    --lm-shadow-xl: 0 20px 40px rgb(0 0 0 / 0.5);
-  }
-}
-
-
-
 /* Dark mode - WCAG AAA sur fonds sombres */
-html.dark, :root[data-theme="dark"] {
+.dark {
   --lm-primary: #fb923c;           /* Orange-400 */
   --lm-primary-hover: #fdba74;     /* Orange-300 */
   --lm-primary-light: #431407;     /* Orange-950 */
@@ -703,7 +673,9 @@ a:hover {
   header,
   footer,
   .btn,
-  /* .navbar default display restored */
+  .navbar {
+    display: none !important;
+  }
   
   .card {
     box-shadow: none;
@@ -730,6 +702,14 @@ a:hover {
     --lm-bg-base: #ffffff;
     --lm-border: #000000;
   }
+  
+  .dark {
+    --lm-primary: #ffaa00;
+    --lm-text-primary: #ffffff;
+    --lm-bg-base: #000000;
+    --lm-border: #ffffff;
+  }
+  
   .btn,
   .card,
   .input,
@@ -880,168 +860,4 @@ a:hover {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
-}
-
-
-
-/* Header / Navbar */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: var(--lm-z-sticky, 20);
-  background: var(--lm-bg-elevated);
-  color: var(--lm-text-primary);
-  border-bottom: 1px solid var(--lm-border);
-  backdrop-filter: saturate(120%) blur(6px);
-  -webkit-backdrop-filter: saturate(120%) blur(6px);
-  transition: background-color var(--lm-transition), border-color var(--lm-transition), color var(--lm-transition);
-}
-.navbar a {
-  color: var(--lm-text-secondary);
-  transition: color var(--lm-transition), background-color var(--lm-transition), border-color var(--lm-transition), transform var(--lm-transition);
-}
-.navbar a:hover {
-  color: var(--lm-primary);
-}
-
-
-
-/* Buttons utilities */
-.btn-ghost {
-  background: transparent;
-  color: var(--lm-text-secondary);
-  border-color: transparent;
-}
-.btn-ghost:hover {
-  background: rgb(255 255 255 / 0.06);
-}
-html.dark .btn-ghost, :root[data-theme="dark"] .btn-ghost {
-  color: var(--lm-text-secondary);
-}
-.btn-circle {
-  border-radius: 999px;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-}
-.btn-block {
-  display: inline-flex;
-  width: 100%;
-}
-/* Header CTA */
-.btn-cta {
-  background: linear-gradient(135deg, var(--lm-primary) 0%, var(--lm-secondary) 100%);
-  border-color: var(--lm-primary);
-  color: #fff;
-  box-shadow: var(--lm-shadow-md);
-}
-.btn-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--lm-shadow-lg);
-}
-.btn-cta:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgb(251 146 60 / 0.35);
-}
-
-
-
-/* === Utility shim (lightweight) to support used classes === */
-.text-gray-800 { color: var(--lm-text-primary); }
-.text-gray-700, .text-gray-600 { color: var(--lm-text-secondary); }
-.text-gray-500, .text-gray-400 { color: var(--lm-text-muted); }
-.text-white { color: #fff; }
-
-.bg-base-100 { background: var(--lm-bg-base); }
-.bg-white { background: var(--lm-bg-surface); }
-
-.border-2 { border-width: 2px; }
-.border-gray-200 { border-color: var(--lm-border); }
-
-/* Dark variants */
-html.dark .text-gray-100, :root[data-theme="dark"] .text-gray-100 { color: var(--lm-text-primary); }
-html.dark .text-gray-300, :root[data-theme="dark"] .text-gray-300 { color: var(--lm-text-secondary); }
-html.dark .text-gray-400, :root[data-theme="dark"] .text-gray-400 { color: var(--lm-text-muted); }
-html.dark .border-gray-700, :root[data-theme="dark"] .border-gray-700 { border-color: var(--lm-border); }
-html.dark .bg-gray-800, :root[data-theme="dark"] .bg-gray-800 { background: var(--lm-bg-surface); }
-
-/* Gradients used */
-.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--lm-grad-from, rgb(251 146 60 / 0.08)), var(--lm-grad-to, rgb(251 191 36 / 0.08))); }
-html.dark .bg-gradient-to-br, :root[data-theme="dark"] .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--lm-grad-from-dark, rgb(251 146 60 / 0.15)), var(--lm-grad-to-dark, rgb(251 191 36 / 0.15))); }
-
-/* Optional tokens for gradients */
-:root {
-  --lm-grad-from: rgb(251 146 60 / 0.08);
-  --lm-grad-to:   rgb(251 191 36 / 0.08);
-}
-html.dark, :root[data-theme="dark"] {
-  --lm-grad-from-dark: rgb(251 146 60 / 0.15);
-  --lm-grad-to-dark:   rgb(251 191 36 / 0.15);
-}
-
-
-
-/* Headings refinements */
-.subtitle, .lead {
-  color: var(--lm-text-secondary);
-}
-
-
-
-/* Navbar layout refinements */
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.navbar-start,
-.navbar-center,
-.navbar-end {
-  display: flex;
-  align-items: center;
-}
-.navbar-center { flex: 1 1 auto; justify-content: center; }
-.navbar-end { gap: 0.75rem; }
-
-
-
-/* Responsive shims for used utility classes */
-.hidden { display: none !important; }
-@media (min-width: 1024px) { .lg\:flex { display: flex !important; } }
-
-
-.btn-square { width: 42px; height: 42px; padding: 0; }
-
-.btn[aria-label*="Thème"], #theme-toggle { cursor: pointer; }
-
-
-/* Ensure single-line header and horizontal menu */
-.navbar .container { flex-wrap: nowrap; }
-.navbar-start, .navbar-end { flex: 0 0 auto; }
-.navbar-center { flex: 1 1 auto; min-width: 0; }
-.menu { display: flex; align-items: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
-.menu-horizontal { flex-direction: row; }
-.menu a { display: inline-flex; align-items: center; padding: 0.5rem 0.75rem; border-radius: 0.5rem; }
-
-
-
-/* Keep header in one line with safe horizontal scroll if needed */
-.navbar .container { flex-wrap: nowrap; overflow-x: auto; }
-.menu { display: flex; align-items: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
-.menu-horizontal { flex-direction: row; flex-wrap: nowrap; white-space: nowrap; }
-
-/* Dark-mode readable CTA */
-.btn-cta { color: #fff; }
-html.dark .btn-cta, :root[data-theme="dark"] .btn-cta {
-  color: #fff;
-  border-color: var(--lm-primary-hover);
-  background: linear-gradient(135deg, var(--lm-primary) 0%, var(--lm-secondary) 100%);
-}
-
-/* Better focus visibility */
-.btn-cta:focus-visible, #theme-toggle:focus-visible, .menu a:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgb(251 146 60 / 0.45);
-  border-radius: 0.5rem;
 }
