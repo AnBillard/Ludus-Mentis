@@ -62,8 +62,38 @@
   --lm-z-tooltip: 70;
 }
 
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    /* Fallback dark theme vars (no-JS) */
+    --lm-primary: #fb923c;
+    --lm-primary-hover: #fdba74;
+    --lm-primary-light: #431407;
+    --lm-primary-dark: #fed7aa;
+    --lm-secondary: #fbbf24;
+    --lm-secondary-light: #451a03;
+    --lm-success: #4ade80;
+    --lm-info: #60a5fa;
+    --lm-warning: #fbbf24;
+    --lm-error: #f87171;
+    --lm-text-primary: #f9fafb;
+    --lm-text-secondary: #e5e7eb;
+    --lm-text-muted: #9ca3af;
+    --lm-bg-base: #0b0f14;
+    --lm-bg-surface: #111827;
+    --lm-bg-elevated: #1f2937;
+    --lm-border: #1f2937;
+    --lm-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+    --lm-shadow-md: 0 6px 16px rgb(0 0 0 / 0.35);
+    --lm-shadow-lg: 0 12px 24px rgb(0 0 0 / 0.4);
+    --lm-shadow-xl: 0 20px 40px rgb(0 0 0 / 0.5);
+  }
+}
+
+
+
 /* Dark mode - WCAG AAA sur fonds sombres */
-.dark {
+html.dark, :root[data-theme="dark"] {
   --lm-primary: #fb923c;           /* Orange-400 */
   --lm-primary-hover: #fdba74;     /* Orange-300 */
   --lm-primary-light: #431407;     /* Orange-950 */
@@ -702,14 +732,6 @@ a:hover {
     --lm-bg-base: #ffffff;
     --lm-border: #000000;
   }
-  
-  .dark {
-    --lm-primary: #ffaa00;
-    --lm-text-primary: #ffffff;
-    --lm-bg-base: #000000;
-    --lm-border: #ffffff;
-  }
-  
   .btn,
   .card,
   .input,
