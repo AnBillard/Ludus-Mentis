@@ -1,30 +1,65 @@
 <!doctype html>
-<html lang="fr-BE">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Enjeux du jeu vidéo & éducation | Ludus Mentis</title>
+  <title>Enjeux du jeu vidéo &amp; éducation | Ludus Mentis</title>
   <meta name="description" content="Comprendre les enjeux éducatifs, sociaux et de santé liés au jeu vidéo, et la réponse pédagogique de Ludus Mentis." />
-
   <link rel="canonical" href="https://ludusmentis.be/enjeux.html" />
-  <!-- OG/Twitter minimal -->
+
+  <!-- Open Graph / Twitter (inchangé) -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/enjeux.html" />
-  <meta property="og:title" content="Enjeux du jeu vidéo & éducation | Ludus Mentis" />
+  <meta property="og:title" content="Enjeux du jeu vidéo &amp; éducation | Ludus Mentis" />
   <meta property="og:description" content="Comprendre les enjeux éducatifs, sociaux et de santé liés au jeu vidéo, et la réponse pédagogique de Ludus Mentis." />
   <meta property="og:image" content="https://ludusmentis.be/assets/images/og-enjeux.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Enjeux du jeu vidéo & éducation | Ludus Mentis" />
+  <meta name="twitter:title" content="Enjeux du jeu vidéo &amp; éducation | Ludus Mentis" />
   <meta name="twitter:description" content="Comprendre les enjeux éducatifs, sociaux et de santé liés au jeu vidéo, et la réponse pédagogique de Ludus Mentis." />
   <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-enjeux.jpg" />
 
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
   <!-- CMP -->
   <script src="/assets/js/consent-default.js"></script>
   <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
   <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Config Tailwind (même palette que ta page OK) -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ea580c',
+            'primary-focus': '#c2410c',
+            secondary: '#f59e0b',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            sans: ['Inter','system-ui','-apple-system','sans-serif'],
+            display: ['Space Grotesk','system-ui','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tes styles (la grosse feuille que tu m’as envoyée) -->
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+  <!-- Si tu as un styles.css avec .btn-white, charge-le après -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body class="bg-base-100 text-base-content">
   <a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
 
