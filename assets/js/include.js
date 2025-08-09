@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.setAttribute('aria-label', btn.title);
     btn.setAttribute('data-theme-mode', mode);
   }
+  // a11y state for tri-state: true(dark), false(light), mixed(auto)
+  if (mode === 'dark') btn.setAttribute('aria-pressed', 'true');
+  else if (mode === 'light') btn.setAttribute('aria-pressed', 'false');
+  else btn.setAttribute('aria-pressed', 'mixed');
+
 
 function initThemeToggle() {
     // Check for saved theme preference or default to 'auto'
@@ -255,12 +260,4 @@ function initThemeToggle() {
   }, imageOptions);
 
   images.forEach(img => imageObserver.observe(img));
-
-  // Fallback: delegated click for theme toggle (in case of late binding)
-  document.addEventListener('click', function(e) {
-    const btn = e.target && (e.target.id === 'theme-toggle' ? e.target : e.target.closest && e.target.closest('#theme-toggle'));
-    if (!btn) return;
-    const ev = new Event('click', {bubbles: true});
-    btn.dispatchEvent(ev);
-  });
 });
