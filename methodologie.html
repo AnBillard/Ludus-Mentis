@@ -1,79 +1,320 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/methodologie.html" />
+  <meta property="og:title" content="Méthodologie pédagogique innovante | Ludus Mentis" />
+  <meta property="og:description" content="Méthodologie pédagogique innovante | Ludus Mentis" />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Méthodologie pédagogique innovante | Ludus Mentis" />
+  <meta name="twitter:description" content="Méthodologie pédagogique innovante | Ludus Mentis" />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+
+
+  <link rel="canonical" href="https://ludusmentis.be/methodologie.html" />
+
+
+  <!-- A11Y helpers -->
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+
+  <!-- CMP + Consent Mode v2 -->
+  <script src="/assets/js/consent-default.js"></script>
+  <!-- tarteaucitron at site root per user's structure -->
+  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
+  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Méthodologie Pédagogique : Le Cycle de Kolb appliqué au Jeu | Ludus Mentis</title>
-  <meta name="description" content="Notre méthodologie s'appuie sur le cycle de Kolb pour transformer chaque partie en apprentissage durable. Découvrez notre cadre structuré pour développer les compétences.">
-  <meta name="keywords" content="méthodologie, pédagogie, cycle de kolb, apprentissage par l'expérience, encadrement, bienveillance">
+  <title>Méthodologie pédagogique innovante | Ludus Mentis</title>
+  <meta name="description" content="Notre méthodologie basée sur le cycle de Kolb transforme chaque partie en apprentissage durable. Découvrez notre approche scientifique du gaming éducatif.">
+  <meta name="keywords" content="méthodologie, pédagogie, cycle de kolb, apprentissage expérientiel, gaming éducatif">
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ea580c',
+            'primary-focus': '#c2410c',
+            secondary: '#f59e0b',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
+
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
-  <main class="container">
-
-    <section class="section card">
-      <h1>Notre méthodologie : du jeu à la compétence</h1>
-      <p>
-        Chez Ludus Mentis, nous ne nous contentons pas de faire jouer les jeunes. Nous transformons chaque partie en une opportunité d'apprentissage grâce à un cadre structuré et bienveillant, inspiré des meilleures pratiques pédagogiques.
-      </p>
-      <p>
-        Notre approche répond à quatre enjeux majeurs : 
-        <strong>santé publique</strong> (lutter contre la sédentarité), 
-        <strong>développement social</strong> (favoriser l'empathie), 
-        <strong>harmonie familiale</strong> (apaiser les tensions liées aux écrans) 
-        et <strong>vide structurel</strong> (offrir une alternative éducative numérique en Wallonie).
-      </p>
+  
+  <main class="container mx-auto px-4 py-8" id="main">
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+          Notre méthodologie : du jeu à la compétence
+        </h1>
+        <p class="text-lg text-gray-700">
+          Nous transformons chaque partie en opportunité d'apprentissage grâce à un cadre 
+          structuré et bienveillant, inspiré des meilleures pratiques pédagogiques.
+        </p>
+      </div>
     </section>
 
-    <section class="section card">
-      <h2>Le cycle de Kolb : comment le jeu devient apprentissage</h2>
-      <p>
-        Notre secret réside dans l'application du <strong>cycle de Kolb</strong>, une méthode d'apprentissage en 4 étapes qui transforme une expérience concrète en compétence durable. Voici comment cela fonctionne lors d'une session de jeu :
+    <!-- Les 4 enjeux avec icônes -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Notre approche répond à 4 enjeux majeurs
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card bg-white shadow-lg border-2 border-gray-200 text-center">
+          <div class="card-body p-6">
+            <div class="text-4xl mb-3">🏃‍♂️</div>
+            <h3 class="font-bold text-gray-800">Santé publique</h3>
+            <p class="text-sm text-gray-600">Lutter contre la sédentarité</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow-lg border-2 border-gray-200 text-center">
+          <div class="card-body p-6">
+            <div class="text-4xl mb-3">🤝</div>
+            <h3 class="font-bold text-gray-800">Développement social</h3>
+            <p class="text-sm text-gray-600">Favoriser l'empathie</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow-lg border-2 border-gray-200 text-center">
+          <div class="card-body p-6">
+            <div class="text-4xl mb-3">🏠</div>
+            <h3 class="font-bold text-gray-800">Harmonie familiale</h3>
+            <p class="text-sm text-gray-600">Apaiser les tensions écrans</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow-lg border-2 border-gray-200 text-center">
+          <div class="card-body p-6">
+            <div class="text-4xl mb-3">🎓</div>
+            <h3 class="font-bold text-gray-800">Vide structurel</h3>
+            <p class="text-sm text-gray-600">Alternative éducative unique</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cycle de Kolb détaillé avec exemple -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl border-2 border-gray-200">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">
+            Le cycle de Kolb : notre secret pédagogique
+          </h2>
+          
+          <!-- Visualisation du cycle -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center mb-8">
+            <div>
+              <p class="text-gray-700 mb-4">
+                Le <strong class="text-orange-600">cycle de Kolb</strong> est une méthode d'apprentissage 
+                expérientiel en 4 étapes qui transforme une expérience concrète en compétence durable.
+              </p>
+              <p class="text-gray-700">
+                Voici comment nous l'appliquons concrètement lors d'une session de jeu :
+              </p>
+            </div>
+            
+            <!-- Diagramme circulaire -->
+            <div class="flex justify-center">
+              <div class="relative">
+                <svg viewBox="0 0 200 200" class="w-48 h-48">
+                  <!-- Cercles -->
+                  <circle cx="100" cy="30" r="25" fill="#3b82f6" opacity="0.8"/>
+                  <circle cx="170" cy="100" r="25" fill="#10b981" opacity="0.8"/>
+                  <circle cx="100" cy="170" r="25" fill="#8b5cf6" opacity="0.8"/>
+                  <circle cx="30" cy="100" r="25" fill="#f59e0b" opacity="0.8"/>
+                  
+                  <!-- Flèches -->
+                  <path d="M 120 45 Q 150 65 155 85" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+                  <path d="M 155 115 Q 150 145 120 155" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+                  <path d="M 80 155 Q 50 145 45 115" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+                  <path d="M 45 85 Q 50 65 80 45" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+                  
+                  <!-- Marqueur flèche -->
+                  <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+                    </marker>
+                  </defs>
+                  
+                  <!-- Textes -->
+                  <text x="100" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">1</text>
+                  <text x="170" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">2</text>
+                  <text x="100" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">3</text>
+                  <text x="30" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">4</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Les 4 étapes détaillées -->
+          <div class="space-y-4">
+            <div class="collapse collapse-arrow bg-blue-50 border-2 border-blue-200">
+              <input type="radio" name="kolb-accordion" checked="checked" />
+              <div class="collapse-title font-bold text-blue-700">
+                1️⃣ Expérience concrète (l'action)
+              </div>
+              <div class="collapse-content">
+                <p class="text-gray-700 pt-2">
+                  <strong>En pratique :</strong> L'équipe joue à Overcooked. Le chaos s'installe rapidement : 
+                  commandes qui se croisent, plats qui brûlent. C'est l'expérience brute, riche en émotions 
+                  et en apprentissages potentiels.
+                </p>
+              </div>
+            </div>
+            
+            <div class="collapse collapse-arrow bg-green-50 border-2 border-green-200">
+              <input type="radio" name="kolb-accordion" />
+              <div class="collapse-title font-bold text-green-700">
+                2️⃣ Observation réfléchie (le débriefing)
+              </div>
+              <div class="collapse-content">
+                <p class="text-gray-700 pt-2">
+                  <strong>En pratique :</strong> L'animateur guide : "Que s'est-il passé ? Qu'avez-vous ressenti ?"
+                  Les jeunes prennent du recul : "J'ai crié parce que personne ne m'écoutait", 
+                  "On ne savait pas qui faisait quoi".
+                </p>
+              </div>
+            </div>
+            
+            <div class="collapse collapse-arrow bg-purple-50 border-2 border-purple-200">
+              <input type="radio" name="kolb-accordion" />
+              <div class="collapse-title font-bold text-purple-700">
+                3️⃣ Conceptualisation abstraite (la leçon)
+              </div>
+              <div class="collapse-content">
+                <p class="text-gray-700 pt-2">
+                  <strong>En pratique :</strong> Ensemble, on tire une leçon : "Pour réussir, il faut une 
+                  communication claire et une répartition des rôles". On fait le lien avec la vie : 
+                  travail de groupe à l'école, projet en famille...
+                </p>
+              </div>
+            </div>
+            
+            <div class="collapse collapse-arrow bg-amber-50 border-2 border-amber-200">
+              <input type="radio" name="kolb-accordion" />
+              <div class="collapse-title font-bold text-amber-700">
+                4️⃣ Expérimentation active (la mise en pratique)
+              </div>
+              <div class="collapse-content">
+                <p class="text-gray-700 pt-2">
+                  <strong>En pratique :</strong> Nouvelle partie avec stratégie : "Toi les cuissons, 
+                  moi les découpes, on s'annonce les commandes". Ils testent et constatent immédiatement 
+                  leur progression.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements concrets avec progress bars -->
+    <section class="mb-12">
+      <div class="card bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-200">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+            Nos engagements concrets
+          </h2>
+          
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-bold text-gray-800">🎮 Sessions actives</span>
+                <span class="text-sm text-gray-600">Jeux + Exergaming + Bien-être</span>
+              </div>
+              <progress class="progress progress-primary w-full" value="100" max="100"></progress>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-bold text-gray-800">📚 Pédagogie structurée</span>
+                <span class="text-sm text-gray-600">Cycle de Kolb appliqué</span>
+              </div>
+              <progress class="progress progress-secondary w-full" value="100" max="100"></progress>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-bold text-gray-800">🤝 Charte éthique</span>
+                <span class="text-sm text-gray-600">Co-construite avec les jeunes</span>
+              </div>
+              <progress class="progress progress-accent w-full" value="100" max="100"></progress>
+            </div>
+            
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-bold text-gray-800">👨‍👩‍👧 Implication parentale</span>
+                <span class="text-sm text-gray-600">Rencontres et bilans réguliers</span>
+              </div>
+              <progress class="progress progress-success w-full" value="100" max="100"></progress>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">Une méthode qui fait ses preuves</h2>
+      <p class="text-xl mb-6 opacity-95">
+        Découvrez comment nous appliquons cette méthodologie au quotidien.
       </p>
-      <ol>
-        <li>
-            <strong>L'expérience concrète (l'action) :</strong><br>
-            L'équipe joue une partie sur un jeu comme <em>Overcooked</em>. Rapidement, le chaos s'installe : les commandes se croisent, des plats brûlent. L'équipe fait face à un échec concret, riche en émotions et en informations.
-        </li>
-        <li>
-            <strong>L'observation réfléchie (le débriefing) :</strong><br>
-            L'animateur arrête le jeu et lance le débriefing : "Que s'est-il passé ? Qu'avez-vous ressenti à ce moment-là ?". Les jeunes sont amenés à prendre du recul sur leurs actions, sans jugement. "J'ai crié parce que personne ne m'écoutait", "On ne savait pas qui faisait quoi".
-        </li>
-        <li>
-            <strong>La conceptualisation abstraite (la leçon) :</strong><br>
-            Guidés par l'animateur, les jeunes tirent une leçon générale de l'expérience : "Pour réussir, il faut une communication claire et une bonne répartition des rôles". On établit alors des liens avec la vie de tous les jours : un travail de groupe à l'école, un projet en famille, etc.
-        </li>
-        <li>
-            <strong>L'expérimentation active (la mise en pratique) :</strong><br>
-            L'équipe relance une partie, mais avec une nouvelle stratégie, basée sur la leçon apprise : "Ok, pour cette manche, toi tu gères les cuissons, moi les découpes et on s'annonce les commandes à voix haute". Ils testent leur nouvelle compétence en conditions réelles et constatent leur progression.
-      </ol>
-      <p>Ce cycle, répété à chaque séance, est la clé pour ancrer durablement les compétences de communication, de collaboration et de gestion des émotions.</p>
+      <a href="academie.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
+        Voir le programme détaillé
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
     </section>
-
-    <section class="section card">
-      <h2>Nos engagements concrets</h2>
-      <ul>
-        <li><strong>Sessions actives :</strong> Alternance de jeux coopératifs, d'exergaming (<em>Ring Fit</em>, <em>Just Dance</em>…) et d'ateliers bien-être (sommeil, nutrition, gestion du stress).</li>
-        <li><strong>Pédagogie structurée :</strong> Débriefings guidés en groupe pour transformer chaque partie en apprentissage (cycle de Kolb).</li>
-        <li><strong>Charte d’éthique :</strong> Co-construite avec les jeunes, pour ancrer le respect et l’empathie dans chaque interaction.</li>
-        <li><strong>Implication parentale :</strong> Rencontres, ateliers, et bilans de progression en fin de module avec les familles.</li>
-      </ul>
-    </section>
-
   </main>
+  
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>

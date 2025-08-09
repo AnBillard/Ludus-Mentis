@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/contact.html" />
+  <meta property="og:title" content="Contact et inscription | Ludus Mentis à Walhain" />
+  <meta property="og:description" content="Contact et inscription | Ludus Mentis à Walhain" />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact et inscription | Ludus Mentis à Walhain" />
+  <meta name="twitter:description" content="Contact et inscription | Ludus Mentis à Walhain" />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+
+
+  <link rel="canonical" href="https://ludusmentis.be/contact.html" />
+
+
+  <!-- A11Y helpers -->
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+
+  <!-- CMP + Consent Mode v2 -->
+  <script src="/assets/js/consent-default.js"></script>
+  <!-- tarteaucitron at site root per user's structure -->
+  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
+  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+
   <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact et Inscription | Ludus Mentis à Walhain</title>
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact et inscription | Ludus Mentis à Walhain</title>
   <meta name="description" content="Posez vos questions ou demandez une présentation personnalisée de notre programme. L'équipe Ludus Mentis vous répond rapidement pour préparer la rentrée 2026.">
   <meta name="keywords" content="contact, inscription, information, email, formulaire, Walhain, académie esport, rentrée 2026">
   
@@ -31,475 +60,274 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   </script>
   
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fb923c',
+            'primary-focus': '#ea580c',
+            secondary: '#fbbf24',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
-  
-  <style>
-    /* Enhanced form styles */
-    .contact-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    
-    .contact-card {
-      background: var(--clr-surface);
-      border: 2px solid var(--clr-accent-light);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .contact-card:hover {
-      border-color: var(--clr-accent);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .contact-card.selected {
-      border-color: var(--clr-accent);
-      background: var(--clr-accent-light);
-    }
-    
-    .contact-card h3 {
-      color: var(--clr-accent);
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-    
-    .contact-card .icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .field-group {
-      position: relative;
-    }
-    
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      border: 2px solid #f7c982;
-      border-radius: 0.8rem;
-      font-size: 1rem;
-      background: #fffbf5;
-      color: #523a1c;
-      transition: all 0.3s ease;
-    }
-    
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      border-color: var(--clr-accent);
-      box-shadow: 0 0 0 3px rgba(215, 111, 0, 0.15);
-      outline: none;
-    }
-    
-    .contact-form input.error,
-    .contact-form select.error,
-    .contact-form textarea.error {
-      border-color: #dc3545;
-      background-color: #fff5f5;
-    }
-    
-    .error-message {
-      color: #dc3545;
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
-      display: none;
-    }
-    
-    .error-message.show {
-      display: block;
-    }
-    
-    .success-message {
-      background: #d4edda;
-      border: 1px solid #c3e6cb;
-      color: #155724;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-      display: none;
-    }
-    
-    .success-message.show {
-      display: block;
-    }
-    
-    .btn-primary {
-      background: var(--clr-accent);
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .btn-primary:hover:not(:disabled) {
-      background: var(--clr-accent-dark);
-      transform: translateY(-2px);
-    }
-    
-    .btn-primary:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none;
-    }
-    
-    .btn-primary .spinner {
-      display: none;
-      width: 20px;
-      height: 20px;
-      border: 2px solid transparent;
-      border-top: 2px solid white;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-right: 0.5rem;
-    }
-    
-    .btn-primary.loading .spinner {
-      display: inline-block;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    .floating-cta {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      display: none;
-    }
-    
-    @media (max-width: 768px) {
-      .floating-cta {
-        display: block;
-      }
-    }
-    
-    .quick-contact {
-      background: var(--clr-accent);
-      color: white;
-      padding: 1rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-weight: 600;
-    }
-    
-    .quick-contact:hover {
-      background: var(--clr-accent-dark);
-      transform: scale(1.05);
-    }
-  </style>
 </head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div id="header"></div>
-  
-  <main class="container">
-    <section class="section hero">
-      <h1>Préparez dès maintenant la rentrée 2026 !</h1>
-      <p>Notre académie ouvrira ses portes en <strong>janvier 2026</strong>. Posez vos questions, demandez une présentation ou réservez votre place dès maintenant.</p>
-    </section>
+<body class="min-h-screen bg-base-100">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
 
-    <section class="section card">
-      <h2>Comment souhaitez-vous être contacté ?</h2>
-      <div class="contact-options">
-        <div class="contact-card" data-type="info">
-          <span class="icon">📋</span>
-          <h3>Demande d'informations</h3>
-          <p>Questions générales sur le programme, la pédagogie, les horaires...</p>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8 max-w-6xl" id="main">
+    <!-- Hero Section -->
+    <div class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 mb-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+          Préparez dès maintenant la rentrée 2026 !
+        </h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          Notre académie ouvrira ses portes en <strong class="text-orange-600">janvier 2026</strong>. 
+          Posez vos questions, demandez une présentation ou réservez votre place dès maintenant.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Options Cards -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Comment souhaitez-vous être contacté ?</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-orange-400" onclick="selectContactType('info')">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">📋</div>
+            <h3 class="card-title justify-center text-orange-600">Demande d'informations</h3>
+            <p class="text-sm text-gray-600">Questions générales sur le programme, la pédagogie, les horaires...</p>
+          </div>
         </div>
-        <div class="contact-card" data-type="presentation">
-          <span class="icon">👥</span>
-          <h3>Présentation personnalisée</h3>
-          <p>Rencontre pour découvrir notre approche et rencontrer l'équipe</p>
+        
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-orange-400" onclick="selectContactType('presentation')">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">👥</div>
+            <h3 class="card-title justify-center text-orange-600">Présentation personnalisée</h3>
+            <p class="text-sm text-gray-600">Rencontre pour découvrir notre approche et rencontrer l'équipe</p>
+          </div>
         </div>
-        <div class="contact-card" data-type="reservation">
-          <span class="icon">🎯</span>
-          <h3>Pré-inscription</h3>
-          <p>Réserver une place pour votre enfant (ouverture janvier 2026)</p>
+        
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-all cursor-pointer border-2 border-transparent hover:border-orange-400" onclick="selectContactType('reservation')">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">🎯</div>
+            <h3 class="card-title justify-center text-orange-600">Pré-inscription</h3>
+            <p class="text-sm text-gray-600">Réserver une place pour votre enfant (ouverture janvier 2026)</p>
+          </div>
         </div>
       </div>
+    </div>
 
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mdkdwzoy" method="POST">
-        <input type="hidden" name="contact_type" id="contactType" value="">
-        <input type="hidden" name="form_version" value="enhanced_v2">
+    <!-- Contact Form -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <form id="contactForm" action="https://formspree.io/f/mdkdwzoy" method="POST" class="space-y-6">
+          <input type="hidden" name="contact_type" id="contactType" value="">
+          
+          <!-- Parent Info -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Prénom du parent *</span>
+              </label>
+              <input type="text" name="prenom" required class="input input-bordered focus:input-primary" />
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Nom de famille *</span>
+              </label>
+              <input type="text" name="nom" required class="input input-bordered focus:input-primary" />
+            </div>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Email *</span>
+              </label>
+              <input type="email" name="email" required class="input input-bordered focus:input-primary" />
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Téléphone</span>
+              </label>
+              <input type="tel" name="telephone" placeholder="+32..." class="input input-bordered focus:input-primary" />
+            </div>
+          </div>
+          
+          <!-- Child Info -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Âge de votre enfant *</span>
+              </label>
+              <select name="enfant_age" required class="select select-bordered focus:select-primary">
+                <option value="">Sélectionnez...</option>
+                <option value="10">10 ans</option>
+                <option value="11">11 ans</option>
+                <option value="12">12 ans</option>
+                <option value="13">13 ans</option>
+                <option value="14">14 ans</option>
+                <option value="15">15 ans</option>
+                <option value="autre">Autre âge</option>
+              </select>
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Votre commune</span>
+              </label>
+              <input type="text" name="commune" placeholder="Ex: Walhain, Wavre..." class="input input-bordered focus:input-primary" />
+            </div>
+          </div>
+          
+          <!-- Message -->
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-semibold">Votre message *</span>
+            </label>
+            <textarea name="message" rows="4" required class="textarea textarea-bordered focus:textarea-primary" 
+                      placeholder="Parlez-nous de vos attentes, questions spécifiques, disponibilités..."></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-8">
+              Envoyer ma demande
+            </button>
+          </div>
+        </form>
         
-        <div class="form-row">
-          <div class="field-group">
-            <label for="prenom">Prénom du parent *</label>
-            <input type="text" id="prenom" name="prenom" required>
-            <div class="error-message" id="prenomError">Veuillez saisir votre prénom</div>
-          </div>
-          <div class="field-group">
-            <label for="nom">Nom de famille *</label>
-            <input type="text" id="nom" name="nom" required>
-            <div class="error-message" id="nomError">Veuillez saisir votre nom</div>
-          </div>
-        </div>
+        <!-- Alternative Contact -->
+        <div class="divider my-8">OU</div>
         
-        <div class="form-row">
-          <div class="field-group">
-            <label for="email">Votre email *</label>
-            <input type="email" id="email" name="email" required>
-            <div class="error-message" id="emailError">Veuillez saisir un email valide</div>
-          </div>
-          <div class="field-group">
-            <label for="telephone">Téléphone (optionnel)</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="+32...">
-          </div>
+        <div class="text-center">
+          <p class="text-gray-600 mb-4">Vous préférez nous écrire directement ?</p>
+          <a href="mailto:info@ludusmentis.be" class="btn btn-outline btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            info@ludusmentis.be
+          </a>
         </div>
-        
-        <div class="form-row">
-          <div class="field-group">
-            <label for="enfant_age">Âge de votre enfant *</label>
-            <select id="enfant_age" name="enfant_age" required>
-              <option value="">Sélectionnez...</option>
-              <option value="10">10 ans</option>
-              <option value="11">11 ans</option>
-              <option value="12">12 ans</option>
-              <option value="13">13 ans</option>
-              <option value="14">14 ans</option>
-              <option value="15">15 ans</option>
-              <option value="autre">Autre âge</option>
-            </select>
-            <div class="error-message" id="enfantAgeError">Veuillez sélectionner l'âge</div>
-          </div>
-          <div class="field-group">
-            <label for="commune">Votre commune</label>
-            <input type="text" id="commune" name="commune" placeholder="Ex: Walhain, Wavre...">
-          </div>
-        </div>
-
-        <div class="field-group">
-          <label for="message">Votre message *</label>
-          <textarea id="message" name="message" rows="4" required placeholder="Parlez-nous de vos attentes, questions spécifiques, disponibilités..."></textarea>
-          <div class="error-message" id="messageError">Veuillez saisir votre message</div>
-        </div>
-
-        <button type="submit" class="btn-primary" id="submitBtn">
-          <span class="spinner"></span>
-          <span class="btn-text">Envoyer ma demande</span>
-        </button>
-        
-        <div class="success-message" id="successMessage">
-          <strong>Merci !</strong> Votre message a bien été envoyé. Nous vous répondrons dans les 48h.
-        </div>
-      </form>
-      
-      <p style="margin-top: 2em; color: #876b4c; text-align: center;">
-        Vous préférez nous écrire directement ? 
-        <a href="mailto:info@ludusmentis.be">info@ludusmentis.be</a>
-      </p>
-    </section>
+      </div>
+    </div>
   </main>
-  
-  <div class="floating-cta">
-    <a href="#contactForm" class="quick-contact">
-      <span>📞</span>
-      <span>Contact</span>
-    </a>
-  </div>
   
   <div id="footer"></div>
   
   <script src="assets/js/include.js"></script>
   <script>
-    // Enhanced form handling with validation and analytics
-    document.addEventListener('DOMContentLoaded', function() {
-      const contactCards = document.querySelectorAll('.contact-card');
-      const contactTypeInput = document.getElementById('contactType');
-      const form = document.getElementById('contactForm');
-      const submitBtn = document.getElementById('submitBtn');
-      const btnText = submitBtn.querySelector('.btn-text');
-      const successMsg = document.getElementById('successMessage');
+    function selectContactType(type) {
+      // Update hidden field
+      document.getElementById('contactType').value = type;
       
-      // Contact type selection
-      contactCards.forEach(card => {
-        card.addEventListener('click', function() {
-          contactCards.forEach(c => c.classList.remove('selected'));
-          this.classList.add('selected');
-          const type = this.dataset.type;
-          contactTypeInput.value = type;
-          
-          // Update message placeholder based on selection
-          const messageField = document.getElementById('message');
-          const placeholders = {
-            'info': 'Quelles sont vos questions sur le programme ? Souhaitez-vous connaître les horaires, la pédagogie, les tarifs ?',
-            'presentation': 'Quand seriez-vous disponible pour une présentation ? Préférez-vous un rendez-vous en personne ou en visioconférence ?',
-            'reservation': 'Confirmez-vous votre souhait de pré-inscrire votre enfant pour janvier 2026 ? Avez-vous des questions spécifiques ?'
-          };
-          messageField.placeholder = placeholders[type] || messageField.placeholder;
-          
-          // Analytics tracking
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'contact_type_selected', {
-              'contact_type': type,
-              'event_category': 'engagement'
-            });
-          }
-        });
+      // Update visual selection
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.classList.remove('border-orange-400', 'bg-orange-50');
       });
+      event.currentTarget.classList.add('border-orange-400', 'bg-orange-50');
       
-      // Form validation
-      function validateField(field, errorId, customMessage) {
-        const errorElement = document.getElementById(errorId);
-        const isValid = field.checkValidity() && field.value.trim() !== '';
-        
-        if (!isValid) {
-          field.classList.add('error');
-          errorElement.textContent = customMessage || 'Ce champ est requis';
-          errorElement.classList.add('show');
-          return false;
-        } else {
-          field.classList.remove('error');
-          errorElement.classList.remove('show');
-          return true;
-        }
+      // Update message placeholder
+      const messageField = document.querySelector('textarea[name="message"]');
+      const placeholders = {
+        'info': 'Quelles sont vos questions sur le programme ? Souhaitez-vous connaître les horaires, la pédagogie, les tarifs ?',
+        'presentation': 'Quand seriez-vous disponible pour une présentation ? Préférez-vous un rendez-vous en personne ou en visioconférence ?',
+        'reservation': 'Confirmez-vous votre souhait de pré-inscrire votre enfant pour janvier 2026 ? Avez-vous des questions spécifiques ?'
+      };
+      if (placeholders[type]) {
+        messageField.placeholder = placeholders[type];
       }
+    }
+    
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
       
-      // Real-time validation
-      const fields = [
-        { field: document.getElementById('prenom'), error: 'prenomError' },
-        { field: document.getElementById('nom'), error: 'nomError' },
-        { field: document.getElementById('email'), error: 'emailError', message: 'Veuillez saisir un email valide' },
-        { field: document.getElementById('enfant_age'), error: 'enfantAgeError' },
-        { field: document.getElementById('message'), error: 'messageError' }
-      ];
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
       
-      fields.forEach(({field, error, message}) => {
-        field.addEventListener('blur', () => validateField(field, error, message));
-        field.addEventListener('input', () => {
-          if (field.classList.contains('error')) {
-            validateField(field, error, message);
-          }
-        });
-      });
+      // Show loading state
+      submitBtn.innerHTML = '<span class="loading loading-spinner"></span> Envoi en cours...';
+      submitBtn.disabled = true;
       
-      // Form submission
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validate all fields
-        let isFormValid = true;
-        fields.forEach(({field, error, message}) => {
-          if (!validateField(field, error, message)) {
-            isFormValid = false;
-          }
-        });
-        
-        if (!isFormValid) {
-          // Analytics tracking for form errors
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_validation_error', {
-              'event_category': 'form_interaction'
-            });
-          }
-          return;
+      // Submit form
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+          'Accept': 'application/json'
         }
-        
-        // Show loading state
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-        btnText.textContent = 'Envoi en cours...';
-        
-        // Prepare form data
-        const formData = new FormData(form);
-        
-        // Submit form
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        }).then(response => {
-          if (response.ok) {
-            // Success
-            form.reset();
-            contactCards.forEach(c => c.classList.remove('selected'));
-            successMsg.classList.add('show');
-            
-            // Scroll to success message
-            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Analytics tracking
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'form_submit_success', {
-                'contact_type': contactTypeInput.value,
-                'event_category': 'conversion'
-              });
-            }
-            
-            // Google Ads Conversion Event
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'conversion', {
-                'send_to': 'AW-111111111/AAAAAAAAAAAAAAAA',
-              });
-            }
-            
-          } else {
-            throw new Error('Network response was not ok');
-          }
-        }).catch(error => {
-          console.error('Form submission error:', error);
-          alert('Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement par email.');
+      }).then(response => {
+        if (response.ok) {
+          // Success
+          this.reset();
+          submitBtn.innerHTML = '✓ Message envoyé !';
+          submitBtn.classList.remove('btn-primary');
+          submitBtn.classList.add('btn-success');
           
-          // Analytics tracking for errors
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_submit_error', {
-              'error': error.message,
-              'event_category': 'form_interaction'
-            });
-          }
-        }).finally(() => {
-          // Reset loading state
-          submitBtn.classList.remove('loading');
-          submitBtn.disabled = false;
-          btnText.textContent = 'Envoyer ma demande';
-        });
-      });
-      
-      // Smooth scroll for floating CTA
-      document.querySelector('.quick-contact')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('contactForm').scrollIntoView({
-          behavior: 'smooth'
-        });
+          // Show success alert
+          const alert = document.createElement('div');
+          alert.className = 'alert alert-success mt-4';
+          alert.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Merci ! Nous vous répondrons dans les 48h.</span>
+          `;
+          this.appendChild(alert);
+          
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }).catch(error => {
+        // Error
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-error mt-4';
+        alert.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement par email.</span>
+        `;
+        this.appendChild(alert);
       });
     });
   </script>

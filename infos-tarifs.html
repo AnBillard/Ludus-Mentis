@@ -1,67 +1,368 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/infos-tarifs.html" />
+  <meta property="og:title" content="Tarifs et informations pratiques | Ludus Mentis" />
+  <meta property="og:description" content="Tarifs et informations pratiques | Ludus Mentis" />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tarifs et informations pratiques | Ludus Mentis" />
+  <meta name="twitter:description" content="Tarifs et informations pratiques | Ludus Mentis" />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+
+
+  <link rel="canonical" href="https://ludusmentis.be/infos-tarifs.html" />
+
+
+  <!-- A11Y helpers -->
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+
+  <!-- CMP + Consent Mode v2 -->
+  <script src="/assets/js/consent-default.js"></script>
+  <!-- tarteaucitron at site root per user's structure -->
+  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
+  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+
   <meta charset="UTF-8">
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infos & Tarifs de l'Académie de Jeux Vidéo | Ludus Mentis</title>
-  <meta name="description" content="Consultez les informations pratiques de nos modules de 7 semaines pour jeunes de 10 à 15 ans. Tarif, structure des ateliers et inscription à Walhain.">
-  <meta name="keywords" content="tarif stage jeu vidéo, prix académie esport, inscription, informations pratiques, module 7 semaines">
+  <title>Tarifs et informations pratiques | Ludus Mentis</title>
+  <meta name="description" content="Découvrez nos tarifs transparents et toutes les informations pratiques pour inscrire votre enfant. Modules de 7 semaines à 230€ tout compris.">
+  <meta name="keywords" content="tarifs, prix, inscription, modules, informations pratiques, académie gaming">
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Configuration Tailwind -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ea580c',
+            'primary-focus': '#c2410c',
+            secondary: '#f59e0b',
+            accent: '#ef4444',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
+
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <div id="header"></div>
-  <main class="container">
-
-    <section class="section hero">
-      <h1>Académie : Informations et Tarifs</h1>
-      <p>Découvrez notre programme de modules thématiques conçus pour transformer la pratique du jeu vidéo en une véritable compétence de vie. Pour toute autre question, <a href="contact.html">n'hésitez pas à nous contacter</a>.</p>
+  
+  <main class="container mx-auto px-4 py-8" id="main">
+    <!-- Hero Section -->
+    <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+          Informations pratiques et tarifs
+        </h1>
+        <p class="text-lg text-gray-700">
+          Tout ce que vous devez savoir pour inscrire votre enfant. 
+          Transparence totale sur nos tarifs et notre organisation.
+        </p>
+      </div>
     </section>
 
-    <section class="section card">
-      <h2>Structure de nos modules</h2>
-      <ul>
-        <li><strong>Format :</strong> Chaque module est un cycle complet de <strong>7 semaines</strong>.</li>
-        <li><strong>Fréquence :</strong> Les ateliers durent <strong>2 heures</strong> et ont lieu une fois par semaine.</li>
-        <li><strong>Pour qui :</strong> Les jeunes de 10 à 15 ans, prêts à découvrir le jeu sous un nouvel angle.</li>
-        <li><strong>Objectif :</strong> Se concentrer sur un aspect clé de la performance et du bien-être, et explorer une large palette de jeux coopératifs.</li>
-      </ul>
+    <!-- Tarif principal -->
+    <section class="mb-12">
+      <div class="card bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-2xl">
+        <div class="card-body text-center">
+          <h2 class="text-3xl font-bold mb-4">Notre tarif unique et transparent</h2>
+          <div class="text-6xl font-bold mb-2">230€</div>
+          <p class="text-xl opacity-90">par module de 7 semaines</p>
+          <div class="divider divider-white opacity-30"></div>
+          <p class="text-lg">Soit seulement <strong>32,86€ par séance</strong> de 2 heures</p>
+        </div>
+      </div>
     </section>
 
-    <section class="section card">
-      <h2>Un module, un objectif</h2>
-      <p>Notre programme est découpé en modules thématiques. Chaque module de 7 semaines est une aventure en soi, centrée sur le développement d'une compétence spécifique à travers le jeu.</p>
+    <!-- Ce qui est inclus -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Tout est inclus dans le prix
+      </h2>
       
-      <p>Les thèmes abordés incluent, par exemple :</p>
-      <ul>
-          <li><strong>La préparation :</strong> Apprendre à définir un objectif d'équipe avant de lancer la partie.</li>
-          <li><strong>L'échauffement :</strong> Maîtriser des techniques de concentration et de communication.</li>
-          <li><strong>La performance :</strong> Gérer son stress et sa communication en pleine action.</li>
-          <li><strong>L'analyse :</strong> Savoir débriefer une partie pour en tirer des leçons concrètes.</li>
-      </ul>
-      <p>Cette approche permet à votre enfant non seulement de s'améliorer, mais aussi de découvrir une grande variété de jeux, chacun servant d'outil pour un apprentissage ciblé.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-white shadow-lg border-2 border-green-200">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">🎮</div>
+            <h3 class="font-bold text-gray-800">Matériel fourni</h3>
+            <p class="text-sm text-gray-600">PC gaming, consoles, jeux, tout est sur place</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow-lg border-2 border-blue-200">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">👨‍🏫</div>
+            <h3 class="font-bold text-gray-800">Encadrement pro</h3>
+            <p class="text-sm text-gray-600">Animateurs formés, max 8 jeunes/groupe</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow-lg border-2 border-purple-200">
+          <div class="card-body text-center">
+            <div class="text-4xl mb-3">🛡️</div>
+            <h3 class="font-bold text-gray-800">Assurance incluse</h3>
+            <p class="text-sm text-gray-600">Couverture complète pendant les activités</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section card" style="text-align:center;">
-        <h2>Tarif et Inscription</h2>
-        <p style="font-size: 1.5em; font-weight: 600; color: var(--clr-accent-dark); margin-bottom: 0.5em;">230 € par module</p>
-        <p>Ce tarif unique comprend les 7 ateliers de 2 heures, l'encadrement, l'accès à tout le matériel et l'assurance.</p>
-        <a href="contact.html" class="btn" style="margin-top: 1.5em;">Demander les dates du prochain module</a>
+    <!-- Structure des modules avec timeline -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl border-2 border-gray-200">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">
+            Structure d'un module complet
+          </h2>
+          
+          <!-- Timeline visuelle -->
+          <div class="overflow-x-auto">
+            <table class="table table-zebra w-full">
+              <thead>
+                <tr class="bg-orange-100">
+                  <th class="text-gray-800">Semaine</th>
+                  <th class="text-gray-800">Thème</th>
+                  <th class="text-gray-800">Objectif</th>
+                  <th class="text-gray-800">Jeu principal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-bold">Semaine 1</td>
+                  <td>Découverte</td>
+                  <td>Créer la cohésion de groupe</td>
+                  <td><span class="badge badge-primary">Party games</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 2</td>
+                  <td>Communication</td>
+                  <td>Apprendre à communiquer clairement</td>
+                  <td><span class="badge badge-secondary">Keep Talking</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 3</td>
+                  <td>Coordination</td>
+                  <td>Synchroniser les actions</td>
+                  <td><span class="badge badge-accent">Overcooked</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 4</td>
+                  <td>Stratégie</td>
+                  <td>Planifier ensemble</td>
+                  <td><span class="badge badge-info">Portal 2</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 5</td>
+                  <td>Gestion du stress</td>
+                  <td>Rester calme sous pression</td>
+                  <td><span class="badge badge-warning">Rocket League</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 6</td>
+                  <td>Leadership</td>
+                  <td>Prendre et donner des responsabilités</td>
+                  <td><span class="badge badge-success">Minecraft</span></td>
+                </tr>
+                <tr>
+                  <td class="font-bold">Semaine 7</td>
+                  <td>Célébration</td>
+                  <td>Valoriser les progrès</td>
+                  <td><span class="badge badge-primary">Tournoi amical</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Comparaison avec autres activités -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Comparaison avec d'autres activités
+      </h2>
+      
+      <div class="overflow-x-auto">
+        <table class="table w-full bg-white shadow-lg rounded-lg">
+          <thead>
+            <tr class="bg-gray-100">
+              <th></th>
+              <th class="text-center">Ludus Mentis</th>
+              <th class="text-center">Sport classique</th>
+              <th class="text-center">Cours particuliers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-bold">Prix/heure</td>
+              <td class="text-center text-green-600 font-bold">16,43€</td>
+              <td class="text-center">15-25€</td>
+              <td class="text-center">30-50€</td>
+            </tr>
+            <tr>
+              <td class="font-bold">Durée session</td>
+              <td class="text-center"><span class="badge badge-success">2h</span></td>
+              <td class="text-center">1h-1h30</td>
+              <td class="text-center">1h</td>
+            </tr>
+            <tr>
+              <td class="font-bold">Taille groupe</td>
+              <td class="text-center"><span class="badge badge-primary">8 max</span></td>
+              <td class="text-center">15-20</td>
+              <td class="text-center">1</td>
+            </tr>
+            <tr>
+              <td class="font-bold">Matériel inclus</td>
+              <td class="text-center">✅</td>
+              <td class="text-center">❌</td>
+              <td class="text-center">❌</td>
+            </tr>
+            <tr>
+              <td class="font-bold">Suivi personnalisé</td>
+              <td class="text-center">✅</td>
+              <td class="text-center">⚠️</td>
+              <td class="text-center">✅</td>
+            </tr>
+            <tr>
+              <td class="font-bold">Développement soft skills</td>
+              <td class="text-center">✅</td>
+              <td class="text-center">⚠️</td>
+              <td class="text-center">❌</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Options de paiement -->
+    <section class="mb-12">
+      <div class="card bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+            Facilités de paiement
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <div class="text-3xl mb-3">💳</div>
+                <h3 class="font-bold text-gray-800">Paiement comptant</h3>
+                <p class="text-sm text-gray-600">230€ à l'inscription</p>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <div class="text-3xl mb-3">📅</div>
+                <h3 class="font-bold text-gray-800">2x sans frais</h3>
+                <p class="text-sm text-gray-600">115€ x 2 mensualités</p>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <div class="bg-white rounded-xl p-6 shadow-sm">
+                <div class="text-3xl mb-3">🤝</div>
+                <h3 class="font-bold text-gray-800">Sur mesure</h3>
+                <p class="text-sm text-gray-600">Contactez-nous pour un arrangement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendrier -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl border-2 border-gray-200">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+            Planning 2026
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-blue-50 rounded-xl p-4 border-2 border-blue-200">
+              <h3 class="font-bold text-blue-700 mb-2">Module 1</h3>
+              <p class="text-sm">Janvier - Février</p>
+              <p class="text-xs text-gray-600 mt-2">Découverte & Communication</p>
+            </div>
+            
+            <div class="bg-green-50 rounded-xl p-4 border-2 border-green-200">
+              <h3 class="font-bold text-green-700 mb-2">Module 2</h3>
+              <p class="text-sm">Mars - Avril</p>
+              <p class="text-xs text-gray-600 mt-2">Stratégie & Coordination</p>
+            </div>
+            
+            <div class="bg-purple-50 rounded-xl p-4 border-2 border-purple-200">
+              <h3 class="font-bold text-purple-700 mb-2">Module 3</h3>
+              <p class="text-sm">Mai - Juin</p>
+              <p class="text-xs text-gray-600 mt-2">Leadership & Autonomie</p>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Inscription possible à tout moment de l'année selon les places disponibles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">Réservez votre place dès maintenant</h2>
+      <p class="text-xl mb-6 opacity-95">
+        Places limitées à 8 jeunes par groupe pour garantir la qualité.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
+          Demander les dates
+        </a>
+        <a href="faq.html" class="btn btn-outline btn-white btn-lg">
+          Questions fréquentes
+        </a>
+      </div>
+    </section>
   </main>
-  <div id="footer"></div>
+  
+   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
 </body>
 </html>

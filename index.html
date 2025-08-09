@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/" />
+  <meta property="og:title" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
+  <meta property="og:description" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
+  <meta name="twitter:description" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+
+
+  <link rel="canonical" href="https://ludusmentis.be/" />
+
+
+  <!-- A11Y helpers -->
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+
+  <!-- CMP + Consent Mode v2 -->
+  <script src="/assets/js/consent-default.js"></script>
+  <!-- tarteaucitron at site root per user's structure -->
+  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
+  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+
     <meta charset="UTF-8">
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+    <!-- End Google Tag Manager -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludus Mentis | Ateliers Jeux Vidéo pour Ados à Walhain</title>
-    <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie (communication, gestion du stress, esprit d'équipe). Découvrez nos ateliers éducatifs à Walhain.">
-    <meta name="keywords" content="stage jeux vidéo, coaching esport, adolescent, Walhain, activité extra-scolaire, développement personnel, compétences socio-émotionnelles">
+    <title>Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain</title>
+    <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie. Ateliers éducatifs pour jeunes de 10-15 ans à Walhain. Ouverture janvier 2026.">
+    <meta name="keywords" content="stage jeux vidéo, coaching esport, adolescent, Walhain, activité extra-scolaire, développement personnel">
 
     <script type="application/ld+json">
     {
@@ -31,79 +58,225 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "areaServed": "Belgique"
     }
     </script>
+    
+    <!-- DaisyUI + Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration Tailwind -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#fb923c',
+              'primary-focus': '#ea580c',
+              secondary: '#fbbf24',
+              accent: '#ef4444',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body>
+<body class="min-h-screen bg-base-100">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
+
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div id="header"></div>
-  <main class="container">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="header"></div>
+    
+    <main class="container mx-auto px-4 py-8" id="main">
+        <!-- Hero Section Améliorée -->
+        <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-12">
+            <div class="text-center max-w-4xl mx-auto">
+                <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" class="w-32 mx-auto mb-6 hover:scale-105 transition-transform" />
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                    Et si le jeu vidéo aidait votre enfant à grandir ?
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-700 mb-8">
+                    Transformons ensemble la passion du gaming en compétences essentielles pour la vie. 
+                    Notre approche unique développe <strong class="text-orange-600">communication, collaboration et confiance en soi</strong> 
+                    à travers le jeu vidéo encadré.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#programme" class="btn btn-primary btn-lg">Découvrir le programme</a>
+                    <a href="contact.html" class="btn btn-outline btn-primary btn-lg">Réserver une place</a>
+                </div>
+                <p class="mt-6 text-sm text-gray-600">
+                    📍 Walhain • 🎮 10-15 ans • 🚀 Ouverture janvier 2026
+                </p>
+            </div>
+        </section>
 
-  <section class="section hero">
-  <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" style="max-width:120px; margin-bottom:1em" />
- <h1>Et si le jeu vidéo aidait votre enfant à grandir ?</h1>
-<p>Chez Ludus Mentis, nous transformons la passion du jeu vidéo en un puissant outil de développement personnel. Grâce à notre approche pédagogique unique, votre enfant apprend la communication, la gestion des émotions et l'esprit d’équipe. Pour s'épanouir à l'écran, comme dans la vie de tous les jours.</p>
-</section>
-  <section class="section card" id="concept">
-      <h2>Des compétences humaines pour le 21<sup>e</sup> siècle</h2>
-      <p>Notre programme est conçu pour développer les compétences les plus recherchées aujourd’hui&nbsp;: <strong>collaboration, communication, créativité, et résolution de problèmes</strong>.</p>
-      <p>Grâce à des ateliers concrets, des jeux coopératifs et des moments d’échange en groupe, nous travaillons toutes ces aptitudes essentielles pour leur avenir.</p>
-    </section>
+        <!-- Stats rapides -->
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div class="stat bg-white rounded-2xl shadow-lg text-center">
+                <div class="stat-value text-primary">10-15</div>
+                <div class="stat-desc">ans</div>
+            </div>
+            <div class="stat bg-white rounded-2xl shadow-lg text-center">
+                <div class="stat-value text-primary">7</div>
+                <div class="stat-desc">semaines/module</div>
+            </div>
+            <div class="stat bg-white rounded-2xl shadow-lg text-center">
+                <div class="stat-value text-primary">2h</div>
+                <div class="stat-desc">par atelier</div>
+            </div>
+            <div class="stat bg-white rounded-2xl shadow-lg text-center">
+                <div class="stat-value text-primary">8</div>
+                <div class="stat-desc">jeunes max</div>
+            </div>
+        </section>
 
-    <section class="section card">
-      <h2>Les bénéfices pour votre enfant</h2>
-      <ul>
-        <li><strong>Communication&nbsp;:</strong> Exprimer ses idées clairement et écouter les autres.</li>
-        <li><strong>Esprit d’équipe&nbsp;:</strong> Travailler ensemble vers un objectif commun.</li>
-        <li><strong>Gestion du stress&nbsp;:</strong> Rester concentré et calme dans les moments clés.</li>
-        <li><strong>Confiance en soi&nbsp;:</strong> Valoriser ses talents et oser prendre des initiatives.</li>
-      </ul>
-    </section>
- 
-      <section class="section card">
-      <h2>Pourquoi un accompagnement est-il essentiel&nbsp;?</h2>
-        <p>Si le jeu vidéo est une passion pour des millions de jeunes, une pratique non encadrée présente des risques. les chiffres parlent d'eux-mêmes&nbsp;:</p>
-      <ul>
-        <li>
-          <strong>Plus d'un tiers des adolescents jouent tous les jours</strong>, parfois au détriment d'autres activités.
-        </li>
-        <li>
-          <strong>12&nbsp;% des jeunes sont considérés à risque de développer une pratique problématique</strong> (gaming disorder) selon l'OMS.
-        </li>
-      </ul>
-      <p style="margin-top: 1.5em;">Notre mission est de transformer ce temps d'écran en une expérience constructive.</p>
-      <p style="text-align:center; margin-top:2em;"><a href="enjeux.html" class="btn">Voir les chiffres &amp; sources détaillés</a></p>
-    </section>
+        <!-- Les 3 piliers -->
+        <section id="programme" class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Notre approche en 3 piliers</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🎮</div>
+                        <h3 class="card-title text-orange-600">Jouer ensemble</h3>
+                        <p>Des jeux coopératifs soigneusement sélectionnés où la réussite dépend de l'entraide et de la communication.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">💭</div>
+                        <h3 class="card-title text-orange-600">Réfléchir ensemble</h3>
+                        <p>Débriefings guidés après chaque session pour analyser, comprendre et apprendre de l'expérience vécue.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🌟</div>
+                        <h3 class="card-title text-orange-600">Grandir ensemble</h3>
+                        <p>Développement de compétences transférables : gestion du stress, travail d'équipe, communication claire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Pourquoi c'est important -->
+        <section class="card bg-gradient-to-r from-orange-50 to-amber-50 p-8 mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Pourquoi un encadrement est essentiel ?</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">⚠️</span>
+                            <div>
+                                <strong class="text-orange-600">34% des ados</strong> jouent quotidiennement, 
+                                parfois au détriment d'autres activités essentielles.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">📊</span>
+                            <div>
+                                <strong class="text-orange-600">12% des jeunes</strong> risquent de développer 
+                                une pratique problématique selon l'OMS.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl">🎯</span>
+                            <div>
+                                <strong class="text-orange-600">Notre mission :</strong> transformer ce temps 
+                                d'écran en expérience constructive et enrichissante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="enjeux.html" class="btn btn-primary">
+                        Voir l'analyse complète
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
 
+        <!-- Compétences développées -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Les compétences du 21<sup>e</sup> siècle</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-3xl mb-3">💬</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Communication</h4>
+                    <p class="text-sm text-gray-600">Exprimer ses idées clairement et écouter activement les autres</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-3xl mb-3">🤝</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Collaboration</h4>
+                    <p class="text-sm text-gray-600">Travailler en équipe vers un objectif commun</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-3xl mb-3">🧠</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Résolution de problèmes</h4>
+                    <p class="text-sm text-gray-600">Analyser, adapter et trouver des solutions créatives</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Gestion émotionnelle</h4>
+                    <p class="text-sm text-gray-600">Gérer stress et frustration de manière constructive</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="section card">
-      <h2>Un projet soutenu localement</h2>
-      <p>Ludus Mentis est une initiative locale soutenue par la <strong>commune de walhain</strong> et la <strong>fédération belge d’esport</strong>, portée par des acteurs engagés dans l’éducation, la prévention et l’innovation pédagogique.</p>
-      
-      <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
-        <a href="https://www.walhain.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_walhain.png" alt="Logo de la commune de Walhain" style="max-height: 70px; object-fit: contain;">
-        </a>
-        <a href="https://besf.be/" target="_blank" rel="noopener">
-          <img src="assets/images/logo_besf.png" alt="Logo de la Fédération Belge d'Esport" style="max-height: 70px; object-fit: contain;">
-        </a>
-      </div>
-      <p style="text-align:center; margin-top:2em;"><a href="academie.html" class="btn">Découvrir notre académie</a></p>
-    </section>
+        <!-- Partenaires -->
+        <section class="card bg-white p-8 mb-12 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Un projet soutenu localement</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                Ludus Mentis bénéficie du soutien d'acteurs engagés dans l'éducation, 
+                la prévention et l'innovation pédagogique.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <a href="https://www.walhain.be/" target="_blank" rel="noopener" class="hover:scale-105 transition-transform">
+                    <img src="assets/images/logo_walhain.png" alt="Logo commune de Walhain" class="h-20">
+                </a>
+                <a href="https://besf.be/" target="_blank" rel="noopener" class="hover:scale-105 transition-transform">
+                    <img src="assets/images/logo_besf.png" alt="Logo fédération belge d'esport" class="h-20">
+                </a>
+            </div>
+        </section>
 
-      <section class="section card" style="text-align:center;">
-  <h2>Des questions ? parlons-en !</h2>
-  <p><a href="faq.html">consultez notre faq</a> ou <a href="contact.html">contactez-nous directement</a>.<br>
-    nous répondons à toutes vos préoccupations de parent.</p>
-</section>
-
-
-  </main>
-  <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
+        <!-- CTA Final -->
+        <section class="bg-gradient-to-r from-orange-400 to-orange-600 rounded-3xl p-8 lg:p-12 text-white text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">Prêt à transformer le gaming en apprentissage ?</h2>
+            <p class="text-xl mb-8 opacity-95">
+                Places limitées pour garantir un accompagnement de qualité. 
+                Réservez dès maintenant pour janvier 2026.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
+                    Réserver une place
+                </a>
+                <a href="faq.html" class="btn btn-outline btn-white btn-lg">
+                    Consulter la FAQ
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer"></div>
+    <script src="assets/js/include.js"></script>
 </body>
 </html>
