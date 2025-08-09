@@ -255,4 +255,12 @@ function initThemeToggle() {
   }, imageOptions);
 
   images.forEach(img => imageObserver.observe(img));
+
+  // Fallback: delegated click for theme toggle (in case of late binding)
+  document.addEventListener('click', function(e) {
+    const btn = e.target && (e.target.id === 'theme-toggle' ? e.target : e.target.closest && e.target.closest('#theme-toggle'));
+    if (!btn) return;
+    const ev = new Event('click', {bubbles: true});
+    btn.dispatchEvent(ev);
+  });
 });
