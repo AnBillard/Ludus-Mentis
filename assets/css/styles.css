@@ -1014,3 +1014,12 @@ html.dark, :root[data-theme="dark"] {
 .btn-square { width: 42px; height: 42px; padding: 0; }
 
 .btn[aria-label*="Thème"], #theme-toggle { cursor: pointer; }
+
+
+/* Ensure single-line header and horizontal menu */
+.navbar .container { flex-wrap: nowrap; }
+.navbar-start, .navbar-end { flex: 0 0 auto; }
+.navbar-center { flex: 1 1 auto; min-width: 0; }
+.menu { display: flex; align-items: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.menu-horizontal { flex-direction: row; }
+.menu a { display: inline-flex; align-items: center; padding: 0.5rem 0.75rem; border-radius: 0.5rem; }
