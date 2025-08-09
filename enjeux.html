@@ -30,44 +30,259 @@
 
   <div data-include="/components/header.html"></div>
 
-  <main id="main" class="container mx-auto px-4 py-10 max-w-5xl">
-    <header class="mb-10">
-      <h1 class="text-3xl font-bold">Les enjeux du jeu vidéo et notre approche éducative</h1>
-      <p class="opacity-70 mt-2">Présentation des enjeux clés et de la manière dont Ludus Mentis y répond.</p>
-    </header>
+ <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+                    Le jeu vidéo : une réalité, des enjeux, nos solutions
+                </h1>
+                <p class="text-lg text-gray-700">
+                    Le jeu vidéo est central dans la vie des jeunes. Source de plaisir et de socialisation, 
+                    il suscite aussi des interrogations légitimes. Voici notre analyse basée sur des données 
+                    scientifiques et nos solutions concrètes.
+                </p>
+            </div>
+        </section>
 
-    <section class="mb-12 prose max-w-none">
-      <h2>Enjeux éducatifs</h2>
-      <!-- COLLER ICI VOTRE CONTENU ACTUEL -->
-    </section>
+        <!-- Chiffres clés avec visualisation -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Les chiffres qui interpellent
+            </h2>
+            
+            <!-- Stats cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="stat bg-white rounded-2xl shadow-lg border-2 border-red-200">
+                    <div class="stat-figure text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value text-red-600">34%</div>
+                    <div class="stat-title">Jouent quotidiennement</div>
+                    <div class="stat-desc">des adolescents</div>
+                </div>
+                
+                <div class="stat bg-white rounded-2xl shadow-lg border-2 border-orange-200">
+                    <div class="stat-figure text-orange-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value text-orange-600">22%</div>
+                    <div class="stat-title">Sessions >4h</div>
+                    <div class="stat-desc">d'affilée</div>
+                </div>
+                
+                <div class="stat bg-white rounded-2xl shadow-lg border-2 border-amber-200">
+                    <div class="stat-figure text-amber-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value text-amber-600">57%</div>
+                    <div class="stat-title">Dépassent 2h/jour</div>
+                    <div class="stat-desc">le week-end</div>
+                </div>
+                
+                <div class="stat bg-white rounded-2xl shadow-lg border-2 border-purple-200">
+                    <div class="stat-figure text-purple-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value text-purple-600">12%</div>
+                    <div class="stat-title">À risque</div>
+                    <div class="stat-desc">gaming disorder</div>
+                </div>
+            </div>
 
-    <section class="mb-12 prose max-w-none">
-      <h2>Enjeux sociaux</h2>
-      <!-- COLLER ICI VOTRE CONTENU ACTUEL -->
-    </section>
+            <!-- Graphique visuel -->
+            <div class="card bg-white shadow-xl border-2 border-gray-200">
+                <div class="card-body">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Temps d'écran moyen par jour</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Semaine</span>
+                                <span class="text-sm text-gray-600">2.5h</span>
+                            </div>
+                            <progress class="progress progress-warning w-full" value="63" max="100"></progress>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Week-end</span>
+                                <span class="text-sm text-gray-600">4h</span>
+                            </div>
+                            <progress class="progress progress-error w-full" value="100" max="100"></progress>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-green-600">Recommandé</span>
+                                <span class="text-sm text-green-600">2h max</span>
+                            </div>
+                            <progress class="progress progress-success w-full" value="50" max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="mb-12 prose max-w-none">
-      <h2>Enjeux de santé & équilibre</h2>
-      <!-- COLLER ICI VOTRE CONTENU ACTUEL -->
-    </section>
+        <!-- Les 3 enjeux principaux -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                3 enjeux majeurs et nos réponses
+            </h2>
 
-    <section class="mb-12 prose max-w-none">
-      <h2>Prévention & encadrement responsables</h2>
-      <!-- COLLER ICI VOTRE CONTENU ACTUEL -->
-    </section>
+            <!-- Enjeu 1 -->
+            <div class="collapse collapse-plus bg-white mb-4 shadow-lg border-2 border-blue-200">
+                <input type="radio" name="enjeux-accordion" checked="checked" />
+                <div class="collapse-title text-xl font-medium">
+                    <span class="text-blue-600">⚖️ Enjeu n°1 :</span> Équilibre vie numérique / vie réelle
+                </div>
+                <div class="collapse-content">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">🔴 Les risques</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Sédentarité accrue</li>
+                                <li>• Fatigue visuelle</li>
+                                <li>• Troubles du sommeil</li>
+                                <li>• Baisse des résultats scolaires</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-700 mb-3">✅ Notre solution</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Sessions limitées à 2h avec pauses</li>
+                                <li>• Alternance jeu/activités physiques</li>
+                                <li>• Sensibilisation sommeil et nutrition</li>
+                                <li>• Outils de gestion du temps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <section class="mt-14">
-      <div class="card bg-base-200">
-        <div class="card-body">
-          <h2 class="card-title">Envie d’en savoir plus ?</h2>
-          <p>Découvrez notre méthodologie et les activités concrètes mises en place.</p>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="/methodologie.html">Voir la méthodologie</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+            <!-- Enjeu 2 -->
+            <div class="collapse collapse-plus bg-white mb-4 shadow-lg border-2 border-green-200">
+                <input type="radio" name="enjeux-accordion" />
+                <div class="collapse-title text-xl font-medium">
+                    <span class="text-green-600">🤝 Enjeu n°2 :</span> De l'isolement à la coopération
+                </div>
+                <div class="collapse-content">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">🔴 Les risques</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Isolement social réel</li>
+                                <li>• Cyberharcèlement</li>
+                                <li>• Comportements toxiques</li>
+                                <li>• Perte d'empathie</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-700 mb-3">✅ Notre solution</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Jeux coopératifs en présentiel</li>
+                                <li>• Charte éthique co-construite</li>
+                                <li>• Débriefings sur le respect</li>
+                                <li>• Valorisation de l'entraide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enjeu 3 -->
+            <div class="collapse collapse-plus bg-white mb-4 shadow-lg border-2 border-purple-200">
+                <input type="radio" name="enjeux-accordion" />
+                <div class="collapse-title text-xl font-medium">
+                    <span class="text-purple-600">🎯 Enjeu n°3 :</span> Gestion émotionnelle
+                </div>
+                <div class="collapse-content">
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-3">🔴 Les risques</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Frustration excessive (ragequit)</li>
+                                <li>• Baisse de l'estime de soi</li>
+                                <li>• Anxiété de performance</li>
+                                <li>• Risque de dépendance (12%)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-green-700 mb-3">✅ Notre solution</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• Valorisation de l'effort vs résultat</li>
+                                <li>• Techniques de respiration</li>
+                                <li>• Apprentissage de l'échec positif</li>
+                                <li>• Cadre sécurisant et bienveillant</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notre approche globale -->
+        <section class="mb-12">
+            <div class="card bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200">
+                <div class="card-body text-center">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">
+                        Notre approche : transformer les risques en opportunités
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <div class="text-4xl mb-3">🎮</div>
+                            <h3 class="font-bold text-green-700">Le jeu comme outil</h3>
+                            <p class="text-gray-600">Pas un problème à combattre mais un levier d'apprentissage</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl mb-3">👨‍🏫</div>
+                            <h3 class="font-bold text-green-700">L'encadrement pro</h3>
+                            <p class="text-gray-600">Animateurs formés pour transformer l'expérience</p>
+                        </div>
+                        <div>
+                            <div class="text-4xl mb-3">📊</div>
+                            <h3 class="font-bold text-green-700">L'approche scientifique</h3>
+                            <p class="text-gray-600">Basée sur la recherche en psychologie du sport</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section class="sources card mb-12" id="sources">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Sources scientifiques</h2>
+            <p class="text-gray-600 mb-4">Notre approche s'appuie sur des données récentes et vérifiées :</p>
+            <ol class="space-y-2">
+                <li>OMS (2024) - "Teens, screens and mental health" report</li>
+                <li>Sciensano (2023) - Enquête de santé HIS Belgique</li>
+                <li>European Commission (2024) - Digital Economy and Society Index</li>
+                <li>PLOS ONE (2022) - Mobile game addiction and health</li>
+                <li>European Parliament (2023) - Cyberbullying Among Young People</li>
+            </ol>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
+            <h2 class="text-3xl font-bold mb-4">Transformons ensemble ces défis en opportunités</h2>
+            <p class="text-xl mb-6 opacity-95">
+                Découvrez comment notre programme répond concrètement à ces enjeux.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="concept.html" class="btn btn-white btn-lg text-orange-600">
+                    Notre concept
+                </a>
+                <a href="contact.html" class="btn btn-outline btn-white btn-lg">
+                    Discutons-en
+                </a>
+            </div>
+        </section>
+    </main>
 
   <div data-include="/components/footer.html"></div>
 
