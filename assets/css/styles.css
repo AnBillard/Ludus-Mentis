@@ -60,11 +60,21 @@
   --lm-z-modal: 50;
   --lm-z-popover: 60;
   --lm-z-tooltip: 70;
+
+  color-scheme: light;
+  /* Aliases for kit-pedagogique.css */
+  --clr-accent: var(--lm-primary);
+  --clr-accent-light: var(--lm-primary-light);
+  --clr-accent-dark: var(--lm-primary-dark);
+  --clr-bg: var(--lm-bg-base);
+  --clr-surface: var(--lm-bg-surface);
 }
 
+
 /* Dark mode - WCAG AAA sur fonds sombres */
-.dark {
-  --lm-primary: #fb923c;           /* Orange-400 */
+:root[data-theme='dark'], .dark {
+  color-scheme: dark;
+  --lm-primary: #ff9e48;           /* Orange-400 */
   --lm-primary-hover: #fdba74;     /* Orange-300 */
   --lm-primary-light: #431407;     /* Orange-950 */
   --lm-primary-dark: #fed7aa;      /* Orange-200 */
@@ -703,12 +713,7 @@ a:hover {
     --lm-border: #000000;
   }
   
-  .dark {
-    --lm-primary: #ffaa00;
-    --lm-text-primary: #ffffff;
-    --lm-bg-base: #000000;
-    --lm-border: #ffffff;
-  }
+  
   
   .btn,
   .card,
