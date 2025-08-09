@@ -1023,3 +1023,25 @@ html.dark, :root[data-theme="dark"] {
 .menu { display: flex; align-items: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
 .menu-horizontal { flex-direction: row; }
 .menu a { display: inline-flex; align-items: center; padding: 0.5rem 0.75rem; border-radius: 0.5rem; }
+
+
+
+/* Keep header in one line with safe horizontal scroll if needed */
+.navbar .container { flex-wrap: nowrap; overflow-x: auto; }
+.menu { display: flex; align-items: center; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+.menu-horizontal { flex-direction: row; flex-wrap: nowrap; white-space: nowrap; }
+
+/* Dark-mode readable CTA */
+.btn-cta { color: #fff; }
+html.dark .btn-cta, :root[data-theme="dark"] .btn-cta {
+  color: #fff;
+  border-color: var(--lm-primary-hover);
+  background: linear-gradient(135deg, var(--lm-primary) 0%, var(--lm-secondary) 100%);
+}
+
+/* Better focus visibility */
+.btn-cta:focus-visible, #theme-toggle:focus-visible, .menu a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(251 146 60 / 0.45);
+  border-radius: 0.5rem;
+}
