@@ -703,9 +703,7 @@ a:hover {
   header,
   footer,
   .btn,
-  .navbar {
-    display: none !important;
-  }
+  /* .navbar default display restored */
   
   .card {
     box-shadow: none;
@@ -882,4 +880,108 @@ a:hover {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+
+
+/* Header / Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--lm-z-sticky, 20);
+  background: var(--lm-bg-elevated);
+  color: var(--lm-text-primary);
+  border-bottom: 1px solid var(--lm-border);
+  backdrop-filter: saturate(120%) blur(6px);
+  -webkit-backdrop-filter: saturate(120%) blur(6px);
+  transition: background-color var(--lm-transition), border-color var(--lm-transition), color var(--lm-transition);
+}
+.navbar a {
+  color: var(--lm-text-secondary);
+  transition: color var(--lm-transition), background-color var(--lm-transition), border-color var(--lm-transition), transform var(--lm-transition);
+}
+.navbar a:hover {
+  color: var(--lm-primary);
+}
+
+
+
+/* Buttons utilities */
+.btn-ghost {
+  background: transparent;
+  color: var(--lm-text-secondary);
+  border-color: transparent;
+}
+.btn-ghost:hover {
+  background: rgb(255 255 255 / 0.06);
+}
+html.dark .btn-ghost, :root[data-theme="dark"] .btn-ghost {
+  color: var(--lm-text-secondary);
+}
+.btn-circle {
+  border-radius: 999px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+}
+.btn-block {
+  display: inline-flex;
+  width: 100%;
+}
+/* Header CTA */
+.btn-cta {
+  background: linear-gradient(135deg, var(--lm-primary) 0%, var(--lm-secondary) 100%);
+  border-color: var(--lm-primary);
+  color: #fff;
+  box-shadow: var(--lm-shadow-md);
+}
+.btn-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--lm-shadow-lg);
+}
+.btn-cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(251 146 60 / 0.35);
+}
+
+
+
+/* === Utility shim (lightweight) to support used classes === */
+.text-gray-800 { color: var(--lm-text-primary); }
+.text-gray-700, .text-gray-600 { color: var(--lm-text-secondary); }
+.text-gray-500, .text-gray-400 { color: var(--lm-text-muted); }
+.text-white { color: #fff; }
+
+.bg-base-100 { background: var(--lm-bg-base); }
+.bg-white { background: var(--lm-bg-surface); }
+
+.border-2 { border-width: 2px; }
+.border-gray-200 { border-color: var(--lm-border); }
+
+/* Dark variants */
+html.dark .text-gray-100, :root[data-theme="dark"] .text-gray-100 { color: var(--lm-text-primary); }
+html.dark .text-gray-300, :root[data-theme="dark"] .text-gray-300 { color: var(--lm-text-secondary); }
+html.dark .text-gray-400, :root[data-theme="dark"] .text-gray-400 { color: var(--lm-text-muted); }
+html.dark .border-gray-700, :root[data-theme="dark"] .border-gray-700 { border-color: var(--lm-border); }
+html.dark .bg-gray-800, :root[data-theme="dark"] .bg-gray-800 { background: var(--lm-bg-surface); }
+
+/* Gradients used */
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--lm-grad-from, rgb(251 146 60 / 0.08)), var(--lm-grad-to, rgb(251 191 36 / 0.08))); }
+html.dark .bg-gradient-to-br, :root[data-theme="dark"] .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--lm-grad-from-dark, rgb(251 146 60 / 0.15)), var(--lm-grad-to-dark, rgb(251 191 36 / 0.15))); }
+
+/* Optional tokens for gradients */
+:root {
+  --lm-grad-from: rgb(251 146 60 / 0.08);
+  --lm-grad-to:   rgb(251 191 36 / 0.08);
+}
+html.dark, :root[data-theme="dark"] {
+  --lm-grad-from-dark: rgb(251 146 60 / 0.15);
+  --lm-grad-to-dark:   rgb(251 191 36 / 0.15);
+}
+
+
+
+/* Headings refinements */
+.subtitle, .lead {
+  color: var(--lm-text-secondary);
 }
