@@ -8,6 +8,7 @@
    1. ROOT VARIABLES & ACCESSIBILITY
    ====================================================================== */
 :root {
+  --on-primary: #ffffff;  /* text on primary buttons/accents */
   /* Light mode - WCAG AAA compliant colors */
   --primary: #ea580c;        /* Orange-600 - Better contrast */
   --primary-hover: #c2410c;  /* Orange-700 */
@@ -37,7 +38,9 @@
   --text-secondary: #d1d5db; /* Gray-300 - WCAG AA on dark */
   --bg-base: #111827;        /* Gray-900 */
   --bg-surface: #1f2937;     /* Gray-800 */
-  --border: #374151;         /* Gray-700 */
+  --border: #4b5563;         /* Gray-700 */
+
+  --on-primary: #111827;   /* Dark text on warm accents for contrast */
 }
 
 /* ======================================================================
@@ -153,7 +156,7 @@ a:hover {
    5. NAVBAR IMPROVEMENTS
    ====================================================================== */
 .navbar {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
   min-height: 64px;
   padding: 0.5rem 1rem;
@@ -161,7 +164,7 @@ a:hover {
 
 /* Dropdown improvements for contrast */
 .dropdown-content {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
@@ -178,7 +181,7 @@ a:hover {
 
 /* Mobile menu contrast fix */
 .menu-compact {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border: 2px solid var(--border);
 }
 
@@ -191,7 +194,7 @@ a:hover {
    6. CARDS WITH PROPER CONTRAST
    ====================================================================== */
 .card {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: var(--space-lg);
@@ -231,7 +234,7 @@ a:hover {
 
 .btn-primary {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
   border-color: var(--primary);
 }
 
@@ -262,7 +265,7 @@ a:hover {
    8. FORMS WITH ACCESSIBILITY
    ====================================================================== */
 .input, .textarea, .select {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border: 2px solid var(--border);
   color: var(--text-primary);
   font-size: 1rem;
@@ -351,7 +354,7 @@ footer a:hover {
    11. STATS SECTION
    ====================================================================== */
 .stat {
-  background: var(--bg-base);
+  background: var(--bg-surface);
   border: 2px solid var(--border);
   padding: var(--space-md);
   text-align: center;
@@ -444,7 +447,7 @@ footer a:hover {
    ====================================================================== */
 @media print {
   body {
-    background: white;
+    background: var(--bg-base);
     color: black;
   }
   
@@ -498,4 +501,54 @@ footer a:hover {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+
+/* === Dark mode legibility overrides (2025-08-09) === */
+[data-theme="dark"] .card,
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .menu-compact,
+[data-theme="dark"] .dropdown,
+[data-theme="dark"] .popover,
+[data-theme="dark"] .tooltip {
+  background: var(--bg-surface) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select,
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea,
+[data-theme="dark"] .select {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] ::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+[data-theme="dark"] .btn-outline {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .btn-primary {
+  color: var(--on-primary);
+}
+
+/* Improve link contrast and focus visibility */
+[data-theme="dark"] a {
+  text-underline-offset: 2px;
+}
+[data-theme="dark"] a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
 }
