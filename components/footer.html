@@ -1,361 +1,42 @@
-<!DOCTYPE html>
-<html lang="fr" data-theme="light">
-<head>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ludus Mentis" />
-  <meta property="og:url" content="https://ludusmentis.be/charte.html" />
-  <meta property="og:title" content="Charte & Sécurité | Ludus Mentis" />
-  <meta property="og:description" content="Nos engagements pour la sécurité et le bien-être de vos enfants. Règles claires, protection garantie." />
-  
-  <link rel="canonical" href="https://ludusmentis.be/charte.html" />
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-  <link rel="stylesheet" href="/assets/css/styles-improved.css" />
-  
-  <script src="/assets/js/consent-default.js"></script>
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charte & Sécurité | Ludus Mentis</title>
-  
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#ea580c',
-            'primary-focus': '#c2410c',
-            secondary: '#f59e0b',
-            accent: '#ef4444',
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
-</head>
-<body class="min-h-screen bg-base-100">
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
-  
-  <div id="header"></div>
-  
-  <main class="container mx-auto px-4 py-8" id="main">
-    <!-- Hero Section -->
-    <section class="hero bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-green-200 dark:border-green-800">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-          Charte & Sécurité
-        </h1>
-        <p class="text-lg text-gray-700 dark:text-gray-300">
-          Un cadre clair et sécurisant pour permettre à chaque jeune de s'épanouir.<br>
-          <strong class="text-green-600 dark:text-green-400">Transparence, protection et bienveillance.</strong>
-        </p>
+<!-- components/footer.html -->
+<footer class="mt-16 border-t border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
+    <div>
+      <h2 class="font-bold text-lg">Ludus Mentis</h2>
+      <p class="text-gray-600 dark:text-gray-400 mt-2">Club de jeu vidéo coopératif à Walhain (10–15 ans). PEGI ≤12, sans loot boxes ni chat en ligne.</p>
+      <p class="mt-3"><a href="mailto:info@ludusmentis.be" class="btn btn-outline">info@ludusmentis.be</a></p>
+    </div>
+    <nav aria-label="Navigation principale">
+      <h3 class="font-semibold mb-2">Pages</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="nos-jeux.html">Nos jeux</a></li>
+        <li><a href="methodologie.html">Méthodologie</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Ressources">
+      <h3 class="font-semibold mb-2">Ressources</h3>
+      <ul class="space-y-2">
+        <li><a href="enjeux.html">Repères utiles</a></li>
+        <li><a href="kit-pedagogique.html">Kit pédagogique</a></li>
+        <li><a href="educateurs.html">Espace éducateurs</a></li>
+        <li><a href="infos-tarifs.html">Infos & tarifs</a></li>
+        <li><a href="concept.html">Notre concept</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3 class="font-semibold mb-2">Partenaires</h3>
+      <div class="flex items-center gap-4">
+        <img src="assets/images/logo_walhain.png" alt="Commune de Walhain" style="height:40px" />
+        <img src="assets/images/logo_besf.png" alt="Fédération belge d'esport" style="height:40px" />
       </div>
-    </section>
-
-    <!-- Les 4 piliers de sécurité -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
-        Nos 4 piliers de sécurité
-      </h2>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 text-center">
-          <div class="card-body">
-            <div class="text-4xl mb-3">🛡️</div>
-            <h3 class="font-bold text-gray-800 dark:text-gray-100">Protection numérique</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-              PEGI ≤12, pas de loot boxes, pas de chat en ligne
-            </p>
-          </div>
-        </div>
-        
-        <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 text-center">
-          <div class="card-body">
-            <div class="text-4xl mb-3">👥</div>
-            <h3 class="font-bold text-gray-800 dark:text-gray-100">Encadrement pro</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-              Ratio 1:8-10, objectif 2 adultes visibles
-            </p>
-          </div>
-        </div>
-        
-        <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 text-center">
-          <div class="card-body">
-            <div class="text-4xl mb-3">🔒</div>
-            <h3 class="font-bold text-gray-800 dark:text-gray-100">Vie privée</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-              RGPD respecté, images anonymisées par défaut
-            </p>
-          </div>
-        </div>
-        
-        <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 text-center">
-          <div class="card-body">
-            <div class="text-4xl mb-3">❤️</div>
-            <h3 class="font-bold text-gray-800 dark:text-gray-100">Bien-être</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-              Pauses obligatoires, hygiène d'écran, anti-toxicité
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- La Charte Parent/Enfant -->
-    <section class="mb-12">
-      <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-            📜 La Charte Parent/Enfant
-          </h2>
-          
-          <div class="grid lg:grid-cols-2 gap-8">
-            <!-- Engagements du jeune -->
-            <div class="bg-blue-50 dark:bg-blue-950 rounded-xl p-6 border-2 border-blue-200 dark:border-blue-800">
-              <h3 class="font-bold text-blue-700 dark:text-blue-300 mb-4">
-                Engagements du jeune
-              </h3>
-              <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>✅ Je respecte tous les participants et l'animateur</li>
-                <li>✅ Je critique la stratégie, jamais la personne</li>
-                <li>✅ J'accepte de tourner sur tous les rôles</li>
-                <li>✅ Je signale si je me sens mal ou fatigué</li>
-                <li>✅ Je participe aux pauses actives</li>
-                <li>✅ Je range le matériel après utilisation</li>
-                <li>✅ J'applique le "GG ritual" après chaque partie</li>
-              </ul>
-            </div>
-            
-            <!-- Engagements du parent -->
-            <div class="bg-green-50 dark:bg-green-950 rounded-xl p-6 border-2 border-green-200 dark:border-green-800">
-              <h3 class="font-bold text-green-700 dark:text-green-300 mb-4">
-                Engagements du parent
-              </h3>
-              <ul class="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>✅ J'accompagne mon enfant aux premières séances</li>
-                <li>✅ Je respecte les horaires de début et fin</li>
-                <li>✅ Je lis les bilans et feedbacks transmis</li>
-                <li>✅ Je signale tout changement de santé/situation</li>
-                <li>✅ J'applique les conseils d'hygiène d'écran à la maison</li>
-                <li>✅ Je contacte l'animateur si besoin</li>
-                <li>✅ Je participe aux réunions parents</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Règles du club -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 border-2 border-orange-200 dark:border-orange-800">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-            🎮 Règles du club
-          </h2>
-          
-          <div class="grid md:grid-cols-3 gap-6">
-            <!-- Respect & Langage -->
-            <div class="bg-white dark:bg-gray-800 rounded-xl p-4">
-              <h3 class="font-bold text-orange-600 dark:text-orange-400 mb-3">
-                Respect & Langage
-              </h3>
-              <ul class="text-sm space-y-1 text-gray-700 dark:text-gray-300">
-                <li>• 0 toxicité tolérée</li>
-                <li>• Pas d'insultes ni moqueries</li>
-                <li>• Encouragements obligatoires</li>
-                <li>• Feedback constructif uniquement</li>
-              </ul>
-            </div>
-            
-            <!-- Matériel & Jeux -->
-            <div class="bg-white dark:bg-gray-800 rounded-xl p-4">
-              <h3 class="font-bold text-orange-600 dark:text-orange-400 mb-3">
-                Matériel & Jeux
-              </h3>
-              <ul class="text-sm space-y-1 text-gray-700 dark:text-gray-300">
-                <li>• PEGI ≤12 uniquement</li>
-                <li>• Pas de loot boxes</li>
-                <li>• Pas de chat en ligne</li>
-                <li>• Priorité aux modes locaux</li>
-              </ul>
-            </div>
-            
-            <!-- Santé & Pauses -->
-            <div class="bg-white dark:bg-gray-800 rounded-xl p-4">
-              <h3 class="font-bold text-orange-600 dark:text-orange-400 mb-3">
-                Santé & Pauses
-              </h3>
-              <ul class="text-sm space-y-1 text-gray-700 dark:text-gray-300">
-                <li>• Pauses obligatoires</li>
-                <li>• Règle 20-20-20 pour les yeux</li>
-                <li>• Hydratation régulière</li>
-                <li>• Étirements après 1h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Protection des données -->
-    <section class="mb-12">
-      <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-            🔒 Protection des données (RGPD)
-          </h2>
-          
-          <div class="space-y-4">
-            <div class="alert alert-info">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span>Nous respectons strictement le RGPD et la protection des mineurs</span>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-3">
-                  Données collectées
-                </h3>
-                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li>✓ Nom, prénom, âge de l'enfant</li>
-                  <li>✓ Coordonnées du parent</li>
-                  <li>✓ Évaluations pré/post anonymisées</li>
-                  <li>✓ Aucune donnée sensible</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-3">
-                  Images & Vidéos
-                </h3>
-                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li>✓ Anonymisation par défaut</li>
-                  <li>✓ Visages floutés / angles non identifiants</li>
-                  <li>✓ Diffusion identifiable UNIQUEMENT avec consentement écrit</li>
-                  <li>✓ Droit de retrait à tout moment</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-4">
-              <p class="text-sm text-gray-600 dark:text-gray-400">
-                <strong>Conservation :</strong> Données limitées au module en cours<br>
-                <strong>Accès :</strong> Sur demande à info@ludusmentis.be<br>
-                <strong>Suppression :</strong> Automatique après 3 mois ou sur demande
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sécurité physique -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-2 border-green-200 dark:border-green-800">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-            🏥 Sécurité physique & urgences
-          </h2>
-          
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="text-3xl mb-3">🚑</div>
-              <h3 class="font-bold text-green-700 dark:text-green-300">Premiers secours</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">
-                Animateur formé, trousse de secours, procédures d'urgence
-              </p>
-            </div>
-            
-            <div class="text-center">
-              <div class="text-3xl mb-3">📞</div>
-              <h3 class="font-bold text-green-700 dark:text-green-300">Contact d'urgence</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">
-                Parents joignables à tout moment, fiche santé à jour
-              </p>
-            </div>
-            
-            <div class="text-center">
-              <div class="text-3xl mb-3">🏢</div>
-              <h3 class="font-bold text-green-700 dark:text-green-300">Assurance</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">
-                RC et accidents corporels couverts pendant les activités
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Engagement qualité -->
-    <section class="mb-12">
-      <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
-        <div class="card-body text-center">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-            Notre engagement qualité
-          </h2>
-          
-          <div class="max-w-3xl mx-auto">
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              "La sécurité et le bien-être des jeunes primeront toujours sur la performance ou le profit. 
-              Chaque décision est prise dans l'intérêt supérieur de l'enfant."
-            </p>
-            
-            <div class="flex justify-center gap-8 mb-6">
-              <img src="assets/images/logo_walhain.png" alt="Commune de Walhain" class="h-16 dark:brightness-90">
-              <img src="assets/images/logo_besf.png" alt="Fédération belge d'esport" class="h-16 dark:brightness-90">
-            </div>
-            
-            <p class="text-sm text-gray-600 dark:text-gray-400">
-              Soutenu par la Commune de Walhain et la Fédération belge d'esport
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="text-center bg-gradient-to-r from-green-500 to-emerald-600 dark:from-green-700 dark:to-emerald-800 rounded-3xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">Un cadre sûr pour grandir ensemble</h2>
-      <p class="text-xl mb-6 opacity-95">
-        Téléchargez la charte complète ou contactez-nous pour toute question
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="assets/charte-ludus-mentis.pdf" download class="btn btn-white btn-lg text-green-600 hover:text-green-700">
-          📄 Télécharger la charte
-        </a>
-        <a href="mailto:info@ludusmentis.be" class="btn btn-outline btn-white btn-lg">
-          ✉️ Nous contacter
-        </a>
-      </div>
-    </section>
-  </main>
-  
-  <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
-  
-  <script>
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
-</body>
-</html>
+      <p class="text-sm text-gray-500 mt-3">Lettre de soutien <strong>BESF</strong> à venir.</p>
+      <p class="text-sm text-gray-500 mt-2"><a href="mentions.html">Mentions légales</a></p>
+    </div>
+  </div>
+  <div class="text-center text-sm text-gray-500 pb-6">&copy; 2025 Ludus Mentis</div>
+</footer>
