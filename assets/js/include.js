@@ -61,92 +61,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Theme toggle functionality (optional) ---
-  
-  function updateThemeToggleUI(mode) {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-    const sun = document.getElementById('sun-icon');
-    const moon = document.getElementById('moon-icon');
-    const auto = document.getElementById('auto-icon');
-    // Hide all, show current
-    ;[sun, moon, auto].forEach(el => { if (el) el.classList.add('hidden'); });
-    if (mode === 'light' && sun) sun.classList.remove('hidden');
-    else if (mode === 'dark' && moon) moon.classList.remove('hidden');
-    else if (auto) auto.classList.remove('hidden');
-    // Update title / aria-label
-    const titles = {
-      light: 'Thème : clair (cliquer pour passer en sombre)',
-      dark:  'Thème : sombre (cliquer pour passer en auto)',
-      auto:  'Thème : auto (suivre le système, cliquer pour passer en clair)'
-    };
-    btn.title = titles[mode] || 'Basculer le thème';
-    btn.setAttribute('aria-label', btn.title);
-    btn.setAttribute('data-theme-mode', mode);
-  }
-  // a11y state for tri-state: true(dark), false(light), mixed(auto)
-  if (mode === 'dark') btn.setAttribute('aria-pressed', 'true');
-  else if (mode === 'light') btn.setAttribute('aria-pressed', 'false');
-  else btn.setAttribute('aria-pressed', 'mixed');
-
-
-function initThemeToggle() {
-  const doc = document.documentElement;
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-
-  const apply = (mode) => {
-    if (mode === 'dark') {
-      doc.setAttribute('data-theme', 'dark');
-      doc.classList.add('dark');
-    } else if (mode === 'light') {
-      doc.setAttribute('data-theme', 'light');
-      doc.classList.remove('dark');
+  function initThemeToggle() {
+    // Check for saved theme preference or default to 'auto'
+    const savedTheme = localStorage.getItem('theme') || 'auto';
+    
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
     } else {
-      // auto -> mirror system at init and on change
-      if (prefersDark && prefersDark.matches) {
-        doc.setAttribute('data-theme', 'dark');
-        doc.classList.add('dark');
-      } else {
-        doc.setAttribute('data-theme', 'light');
-        doc.classList.remove('dark');
-      }
-    }
-    updateThemeToggleUI(mode);
-  };
-
-  let mode = localStorage.getItem('theme') || 'auto';
-  apply(mode);
-
-  if (prefersDark) {
-    prefersDark.addEventListener('change', () => {
-      if ((localStorage.getItem('theme') || 'auto') === 'auto') {
-        apply('auto');
-      }
-    });
-  }
-
-  const btn = document.getElementById('theme-toggle');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const current = localStorage.getItem('theme') || 'auto';
-      const next = current === 'light' ? 'dark' : (current === 'dark' ? 'auto' : 'light');
-      localStorage.setItem('theme', next);
-      apply(next);
-    });
-  }
-}
-      // Keep in sync if the OS theme changes while on auto
-      if (prefersDark) {
-        prefersDark.addEventListener('change', (e) => {
-          if ((localStorage.getItem('theme') || 'auto') === 'auto') {
-            if (e.matches) {
-              document.documentElement.setAttribute('data-theme', 'dark');
-              document.documentElement.classList.add('dark');
-            } else {
-              document.documentElement.setAttribute('data-theme', 'light');
-              document.documentElement.classList.remove('dark');
-            }
-          }
-        });
+      // Auto mode - follow system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
     }
   }
