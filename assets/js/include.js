@@ -90,62 +90,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function initThemeToggle() {
-    // Check for saved theme preference or default to 'auto'
-    const savedTheme = localStorage.getItem('theme') || 'auto';
-    
-    if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else if (savedTheme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      document.documentElement.classList.remove('dark');
+  const doc = document.documentElement;
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+
+  const apply = (mode) => {
+    if (mode === 'dark') {
+      doc.setAttribute('data-theme', 'dark');
+      doc.classList.add('dark');
+    } else if (mode === 'light') {
+      doc.setAttribute('data-theme', 'light');
+      doc.classList.remove('dark');
     } else {
-      // Auto mode - follow system preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      // auto -> mirror system at init and on change
       if (prefersDark && prefersDark.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.documentElement.classList.add('dark');
+        doc.setAttribute('data-theme', 'dark');
+        doc.classList.add('dark');
       } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.documentElement.classList.remove('dark');
-      
-    // After initial application, reflect UI
-    const current = (localStorage.getItem('theme') || 'auto');
-    updateThemeToggleUI(current);
-
-    // Click handler: cycle light -> dark -> auto
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const saved = localStorage.getItem('theme') || 'auto';
-        let next = 'light';
-        if (saved === 'light') next = 'dark';
-        else if (saved === 'dark') next = 'auto';
-        else next = 'light';
-
-        localStorage.setItem('theme', next);
-
-        // Apply immediately
-        if (next === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          document.documentElement.classList.add('dark');
-        } else if (next === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          document.documentElement.classList.remove('dark');
-        } else {
-          // Auto -> mirror system
-          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-          if (prefersDark && prefersDark.matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.documentElement.classList.remove('dark');
-          }
-        }
-        updateThemeToggleUI(next);
-      });
+        doc.setAttribute('data-theme', 'light');
+        doc.classList.remove('dark');
+      }
     }
+    updateThemeToggleUI(mode);
+  };
+
+  let mode = localStorage.getItem('theme') || 'auto';
+  apply(mode);
+
+  if (prefersDark) {
+    prefersDark.addEventListener('change', () => {
+      if ((localStorage.getItem('theme') || 'auto') === 'auto') {
+        apply('auto');
+      }
+    });
+  }
+
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const current = localStorage.getItem('theme') || 'auto';
+      const next = current === 'light' ? 'dark' : (current === 'dark' ? 'auto' : 'light');
+      localStorage.setItem('theme', next);
+      apply(next);
+    });
+  }
 }
       // Keep in sync if the OS theme changes while on auto
       if (prefersDark) {
