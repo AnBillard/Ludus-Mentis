@@ -61,13 +61,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Theme toggle functionality (optional) ---
+  
   function initThemeToggle() {
-    // Check for saved theme preference or default to 'auto'
-    const savedTheme = localStorage.getItem('theme') || 'auto';
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+    const sun = document.getElementById('sun-icon');
+    const moon = document.getElementById('moon-icon');
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
     
-    if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else if (savedTheme === 'light') {
+    function setMetaTheme(color) {
+      document.querySelectorAll('meta[name="theme-color"]').forEach(m => m.setAttribute('content', color));
+    }
+    function apply(theme) {
+      if (theme === 'dark') {
+        root.classList.add('dark');
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        if (sun) sun.classList.add('hidden');
+        if (moon) moon.classList.remove('hidden');
+        setMetaTheme('#0a0a0a');
+      } else if (theme === 'light') {
+        root.classList.remove('dark');
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        if (sun) sun.classList.remove('hidden');
+        if (moon) moon.classList.add('hidden');
+        setMetaTheme('#ffffff');
+      } else {
+        localStorage.setItem('theme', 'auto');
+        apply(mql.matches ? 'dark' : 'light');
+      }
+    }
+    const saved = localStorage.getItem('theme') || 'auto';
+    apply(saved);
+    mql.addEventListener('change', () => {
+      if ((localStorage.getItem('theme') || 'auto') === 'auto') apply('auto');
+    });
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const isDark = root.classList.contains('dark');
+        apply(isDark ? 'light' : 'dark');
+      });
+    }
+  }
+     else if (savedTheme === 'light') {
       document.documentElement.setAttribute('data-theme', 'light');
     } else {
       // Auto mode - follow system preference
