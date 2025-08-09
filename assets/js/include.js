@@ -61,7 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Theme toggle functionality (optional) ---
-  function initThemeToggle() {
+  
+  function updateThemeToggleUI(mode) {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const sun = document.getElementById('sun-icon');
+    const moon = document.getElementById('moon-icon');
+    const auto = document.getElementById('auto-icon');
+    // Hide all, show current
+    ;[sun, moon, auto].forEach(el => { if (el) el.classList.add('hidden'); });
+    if (mode === 'light' && sun) sun.classList.remove('hidden');
+    else if (mode === 'dark' && moon) moon.classList.remove('hidden');
+    else if (auto) auto.classList.remove('hidden');
+    // Update title / aria-label
+    const titles = {
+      light: 'Thème : clair (cliquer pour passer en sombre)',
+      dark:  'Thème : sombre (cliquer pour passer en auto)',
+      auto:  'Thème : auto (suivre le système, cliquer pour passer en clair)'
+    };
+    btn.title = titles[mode] || 'Basculer le thème';
+    btn.setAttribute('aria-label', btn.title);
+    btn.setAttribute('data-theme-mode', mode);
+  }
+
+function initThemeToggle() {
     // Check for saved theme preference or default to 'auto'
     const savedTheme = localStorage.getItem('theme') || 'auto';
     
@@ -80,7 +103,45 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
         document.documentElement.classList.remove('dark');
-      }
+      
+    // After initial application, reflect UI
+    const current = (localStorage.getItem('theme') || 'auto');
+    updateThemeToggleUI(current);
+
+    // Click handler: cycle light -> dark -> auto
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const saved = localStorage.getItem('theme') || 'auto';
+        let next = 'light';
+        if (saved === 'light') next = 'dark';
+        else if (saved === 'dark') next = 'auto';
+        else next = 'light';
+
+        localStorage.setItem('theme', next);
+
+        // Apply immediately
+        if (next === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.classList.add('dark');
+        } else if (next === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Auto -> mirror system
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+          if (prefersDark && prefersDark.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.classList.remove('dark');
+          }
+        }
+        updateThemeToggleUI(next);
+      });
+    }
+}
       // Keep in sync if the OS theme changes while on auto
       if (prefersDark) {
         prefersDark.addEventListener('change', (e) => {
