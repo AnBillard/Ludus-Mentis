@@ -69,9 +69,7 @@
       </button>
       
       <!-- CTA Button Desktop -->
-      <a href="contact.html" class="btn btn-cta btn-sm hidden lg:flex">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v0.5l-10 6L2 4.5V4zm0 3.236l9.445 5.667a1 1 0 001.11 0L22 7.236V20a2 2 0 01-2 2H4a2 2 0 01-2-2V7.236z"/></svg>S\'inscrire
-      </a>
+
       
       <!-- Mobile menu button -->
       <div class="dropdown dropdown-end lg:hidden">
@@ -98,8 +96,6 @@
           <li><a href="faq.html" class="pl-4 py-2 dark:text-gray-300">FAQ</a></li>
           <li><a href="preuves.html" class="text-base py-3 font-medium dark:text-gray-300">Preuves scientifiques</a></li>
           <li class="mt-4">
-            <a href="contact.html" class="btn btn-cta btn-block">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v0.5l-10 6L2 4.5V4zm0 3.236l9.445 5.667a1 1 0 001.11 0L22 7.236V20a2 2 0 01-2 2H4a2 2 0 01-2-2V7.236z"/></svg>S\'inscrire
             </a>
           </li>
         </nav>
@@ -107,59 +103,3 @@
     </div>
   </div>
 </header>
-
-<script>
-  // Theme toggle functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = document.getElementById('sun-icon');
-    const moonIcon = document.getElementById('moon-icon');
-    
-    // Check for saved theme preference or default to light
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    // Apply saved theme
-    if (currentTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.setAttribute('data-theme', 'dark');
-      sunIcon.classList.add('hidden');
-      moonIcon.classList.remove('hidden');
-    }
-    
-    // Toggle theme
-    themeToggle.addEventListener('click', function() {
-      const isDark = document.documentElement.classList.contains('dark');
-      
-      if (isDark) {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        sunIcon.classList.remove('hidden');
-        moonIcon.classList.add('hidden');
-      } else {
-        document.documentElement.classList.add('dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
-      }
-    });
-    
-    // Keyboard navigation for dropdowns
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-      const trigger = dropdown.querySelector('button[tabindex="0"]');
-      const menu = dropdown.querySelector('.dropdown-content');
-      
-      if (trigger && menu) {
-        trigger.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-            trigger.setAttribute('aria-expanded', !isExpanded);
-          }
-        });
-      }
-    });
-  });
-</script>
