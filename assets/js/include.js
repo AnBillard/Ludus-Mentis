@@ -67,12 +67,33 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (savedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
     } else if (savedTheme === 'light') {
       document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
     } else {
       // Auto mode - follow system preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      if (prefersDark && prefersDark.matches) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.classList.remove('dark');
+      }
+      // Keep in sync if the OS theme changes while on auto
+      if (prefersDark) {
+        prefersDark.addEventListener('change', (e) => {
+          if ((localStorage.getItem('theme') || 'auto') === 'auto') {
+            if (e.matches) {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'light');
+              document.documentElement.classList.remove('dark');
+            }
+          }
+        });
       }
     }
   }
