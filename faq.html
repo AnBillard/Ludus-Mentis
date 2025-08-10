@@ -1,193 +1,176 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="ludus">
 <head>
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ludus Mentis" />
-  <meta property="og:url" content="https://ludusmentis.be/faq.html" />
-  <meta property="og:title" content="Questions fréquentes | Ludus Mentis" />
-  <meta property="og:description" content="Toutes les réponses sur notre club : inscription, déroulement, tarifs, sécurité." />
+  <title>Questions fréquentes | Ludus Mentis</title>
+  <meta name="description" content="Toutes les réponses sur notre club de jeu vidéo : inscription, déroulement, tarifs, approche pédagogique.">
   
-  <link rel="canonical" href="https://ludusmentis.be/faq.html" />
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-  <link rel="stylesheet" href="/assets/css/styles-improved.css" />
-  
-  <script src="/assets/js/consent-default.js"></script>
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - Questions fréquentes | Ludus Mentis</title>
-  
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/master-config.js"></script>
   
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#ea580c',
-            'primary-focus': '#c2410c',
-            secondary: '#f59e0b',
-            accent: '#ef4444',
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
+  <style>
+    :root {
+      --ludus-teal: #17a2b8;
+      --ludus-orange: #ff9800;
     }
-  </script>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+    .text-ludus-teal { color: var(--ludus-teal); }
+    .text-ludus-orange { color: var(--ludus-orange); }
+    .bg-ludus-teal { background-color: var(--ludus-teal); }
+    .bg-ludus-orange { background-color: var(--ludus-orange); }
+  </style>
 </head>
-<body class="min-h-screen bg-base-100">
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
-  
+<body>
   <div id="header"></div>
   
-  <main class="container mx-auto px-4 py-8 max-w-4xl" id="main">
-    <!-- Hero Section -->
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Hero -->
     <section class="text-center mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-ludus-teal">
         Questions fréquentes
       </h1>
-      <p class="text-lg text-gray-600 dark:text-gray-400">
-        Tout ce que les parents doivent savoir avant l'inscription
+      <p class="text-lg text-gray-600">
+        Tout ce que les parents et les jeunes veulent savoir
       </p>
     </section>
 
-    <!-- FAQ Accordion avec ARIA -->
+    <!-- FAQ Accordion -->
     <div class="space-y-4" role="region" aria-label="Questions fréquentes">
       
-      <!-- Question 1 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <!-- Question 1 - CLARIFIÉE -->
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq1" checked="checked" />
-        <label for="faq1" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          🎯 Est-ce une thérapie anti-addiction ?
+        <label for="faq1" class="collapse-title text-xl font-medium cursor-pointer">
+          🎮 C'est quoi exactement Ludus Mentis ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <p class="mb-3">
-              <strong class="text-orange-600 dark:text-orange-400">Non.</strong> 
-              C'est un <strong>hobby encadré</strong> qui mise sur la coopération, la mesure et l'hygiène d'écran.
+              <strong class="text-ludus-orange">Un club de jeu vidéo social et éducatif.</strong>
             </p>
-            <p>
-              Nous ne sommes ni thérapeutes ni centre de désintoxication. Nous offrons un cadre structuré 
-              où le jeu vidéo devient un outil d'apprentissage social, avec des limites claires et des pauses actives.
+            <p class="mb-3">
+              On se retrouve chaque semaine pour jouer ensemble à des jeux coopératifs, 
+              dans un lieu dédié, avec un animateur qui guide les sessions.
+            </p>
+            <p class="text-gray-600">
+              <strong>Ce n'est PAS :</strong> une thérapie, un traitement anti-addiction, 
+              une école d'esport, ou du soutien scolaire. C'est un <strong>hobby encadré</strong> 
+              où les jeunes développent naturellement des compétences sociales en s'amusant.
             </p>
           </div>
         </div>
       </div>
 
       <!-- Question 2 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq2" />
-        <label for="faq2" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          🎮 Faut-il être "bon" aux jeux vidéo ?
+        <label for="faq2" class="collapse-title text-xl font-medium cursor-pointer">
+          👦 Mon enfant n'est pas "bon" aux jeux vidéo, peut-il venir ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <p class="mb-3">
-              <strong class="text-orange-600 dark:text-orange-400">Non !</strong> 
-              On progresse <strong>ensemble</strong> avec des rôles complémentaires.
+              <strong class="text-ludus-teal">Absolument ! Le niveau ne compte pas.</strong>
             </p>
             <ul class="space-y-2">
-              <li>✅ Tous les niveaux sont bienvenus</li>
-              <li>✅ Chacun trouve sa place selon ses forces</li>
-              <li>✅ L'entraide prime sur la performance</li>
-              <li>✅ Les jeux sont adaptés progressivement</li>
+              <li>✅ On joue en coopération, pas en compétition</li>
+              <li>✅ Chacun a un rôle adapté à ses capacités</li>
+              <li>✅ L'entraide est valorisée, pas la performance</li>
+              <li>✅ Les jeux sont choisis pour être accessibles à tous</li>
             </ul>
+            <p class="mt-3 text-gray-600">
+              Certains de nos meilleurs moments viennent des débutants qui apportent 
+              une perspective fraîche au groupe !
+            </p>
           </div>
         </div>
       </div>
 
       <!-- Question 3 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq3" />
-        <label for="faq3" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
+        <label for="faq3" class="collapse-title text-xl font-medium cursor-pointer">
           🎯 Quels jeux utilisez-vous ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <p class="mb-4">
-              Uniquement des jeux <strong class="text-orange-600 dark:text-orange-400">coopératifs locaux</strong>, 
-              sans loot boxes, sans chat en ligne, PEGI ≤12 :
+              <strong class="text-ludus-orange">100% jeux coopératifs</strong>, 
+              soigneusement sélectionnés :
             </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="badge badge-primary text-white">Overcooked! 2</span>
-              <span class="badge badge-secondary text-white">Portal 2 Co-op</span>
-              <span class="badge badge-accent text-white">Keep Talking</span>
-              <span class="badge badge-info text-white">Lovers in Space</span>
-              <span class="badge badge-success text-white">Moving Out</span>
-              <span class="badge badge-warning">Snipperclips</span>
-              <span class="badge badge-primary text-white">Unravel Two</span>
-              <span class="badge badge-secondary text-white">Trine 4</span>
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div class="badge badge-lg bg-ludus-teal text-white">🍳 Overcooked! 2</div>
+              <div class="badge badge-lg bg-ludus-teal text-white">🌀 Portal 2 Co-op</div>
+              <div class="badge badge-lg bg-ludus-orange text-white">💣 Keep Talking</div>
+              <div class="badge badge-lg bg-ludus-orange text-white">🚀 Lovers in Space</div>
+              <div class="badge badge-lg bg-ludus-teal text-white">📦 Moving Out</div>
+              <div class="badge badge-lg bg-ludus-teal text-white">✂️ Snipperclips</div>
+            </div>
+            <div class="alert alert-info">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span><strong>Critères stricts :</strong> PEGI ≤12, pas de loot boxes, pas de chat en ligne, jeu local uniquement</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Question 4 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <!-- Question 4 - ADAPTÉ -->
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq4" />
-        <label for="faq4" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          📊 Comment mesurez-vous les progrès ?
+        <label for="faq4" class="collapse-title text-xl font-medium cursor-pointer">
+          📊 Comment suivez-vous les progrès ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
-            <p class="mb-4">Système simple et transparent :</p>
+          <div class="pt-4">
+            <p class="mb-4">Nous observons et documentons l'évolution sociale :</p>
             <div class="space-y-3">
-              <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-3">
-                <strong class="text-gray-800 dark:text-gray-100">📝 Questionnaire pré/post</strong>
-                <p class="text-sm">4-5 items sur cohésion, communication, entraide (échelle 1-5)</p>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <strong>📝 Auto-évaluation simple</strong>
+                <p class="text-sm">Les jeunes notent leur ressenti sur la cohésion d'équipe (1-5)</p>
               </div>
-              <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-3">
-                <strong class="text-gray-800 dark:text-gray-100">👀 Observables en séance</strong>
-                <p class="text-sm">Annonces claires, entraide spontanée, gestion émotionnelle</p>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <strong>👀 Observations en séance</strong>
+                <p class="text-sm">Communication, entraide spontanée, gestion des émotions</p>
               </div>
-              <div class="bg-gray-50 dark:bg-gray-900 rounded-lg p-3">
-                <strong class="text-gray-800 dark:text-gray-100">📈 Bilan personnalisé</strong>
-                <p class="text-sm">Remis aux parents en fin de module avec graphiques</p>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <strong>📈 Bilan personnalisé</strong>
+                <p class="text-sm">Rapport qualitatif remis aux parents en fin de module</p>
               </div>
             </div>
+            <p class="mt-3 text-sm text-gray-600">
+              <strong>Note :</strong> Il ne s'agit pas d'une évaluation thérapeutique mais 
+              d'un suivi pédagogique classique, comme dans un club sportif.
+            </p>
           </div>
         </div>
       </div>
 
       <!-- Question 5 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq5" />
-        <label for="faq5" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          🛡️ Quelle sécurité pour mon enfant ?
+        <label for="faq5" class="collapse-title text-xl font-medium cursor-pointer">
+          🛡️ Comment garantissez-vous la sécurité ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <div class="grid md:grid-cols-2 gap-4">
               <div>
-                <h4 class="font-bold text-gray-800 dark:text-gray-100 mb-2">Protection numérique</h4>
+                <h4 class="font-bold text-ludus-teal mb-2">Sécurité numérique</h4>
                 <ul class="space-y-1 text-sm">
                   <li>✓ PEGI ≤12 uniquement</li>
-                  <li>✓ Pas de loot boxes</li>
-                  <li>✓ Pas de chat en ligne</li>
-                  <li>✓ Code anti-toxicité strict</li>
+                  <li>✓ Pas de jeux en ligne</li>
+                  <li>✓ Pas de chat avec inconnus</li>
+                  <li>✓ Environnement contrôlé</li>
                 </ul>
               </div>
               <div>
-                <h4 class="font-bold text-gray-800 dark:text-gray-100 mb-2">Encadrement</h4>
+                <h4 class="font-bold text-ludus-orange mb-2">Encadrement</h4>
                 <ul class="space-y-1 text-sm">
-                  <li>✓ Ratio 1:8-10 max</li>
-                  <li>✓ Images anonymisées par défaut</li>
-                  <li>✓ RGPD respecté</li>
-                  <li>✓ Droit d'interrompre si tension</li>
+                  <li>✓ 1 animateur pour 8-10 jeunes</li>
+                  <li>✓ Règles claires dès le départ</li>
+                  <li>✓ Parents informés régulièrement</li>
+                  <li>✓ Assurance responsabilité civile</li>
                 </ul>
               </div>
             </div>
@@ -196,22 +179,31 @@
       </div>
 
       <!-- Question 6 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq6" />
-        <label for="faq6" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          💰 Combien ça coûte ?
+        <label for="faq6" class="collapse-title text-xl font-medium cursor-pointer">
+          💰 Combien ça coûte et qu'est-ce qui est inclus ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
-            <div class="bg-orange-50 dark:bg-orange-950 rounded-xl p-6 border-2 border-orange-200 dark:border-orange-800">
-              <p class="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">230€</p>
-              <p class="font-medium mb-3">par module de 7 semaines (14h au total)</p>
-              <p class="text-sm mb-4">Soit seulement 16,43€/heure - tout compris !</p>
+          <div class="pt-4">
+            <div class="bg-gradient-to-br from-teal-50 to-orange-50 rounded-xl p-6 border-2 border-ludus-teal">
+              <p class="text-3xl font-bold text-ludus-orange mb-2">230€</p>
+              <p class="font-medium mb-3">Module de 7 semaines (14h au total)</p>
+              <p class="text-sm mb-4">= 16,43€/heure tout compris</p>
+              
+              <h4 class="font-bold mb-2">✅ Inclus dans le prix :</h4>
+              <ul class="text-sm space-y-1 mb-4">
+                <li>• Tout le matériel gaming (PC, consoles, jeux)</li>
+                <li>• Encadrement professionnel</li>
+                <li>• Assurance</li>
+                <li>• Bilan personnalisé</li>
+                <li>• Goûter et boissons</li>
+              </ul>
               
               <div class="space-y-2 text-sm">
-                <p>🏘️ <strong>-15%</strong> pour les résidents de Walhain</p>
-                <p>👨‍👩‍👧‍👦 <strong>-10%</strong> pour les fratries</p>
-                <p>💳 Paiement échelonné possible sur demande</p>
+                <p>🏘️ <strong>-15%</strong> pour les résidents de Walhain (195,50€)</p>
+                <p>👨‍👩‍👧‍👦 <strong>-10%</strong> pour les fratries (207€)</p>
+                <p>💳 Paiement en 2x sans frais possible</p>
               </div>
             </div>
           </div>
@@ -219,89 +211,122 @@
       </div>
 
       <!-- Question 7 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq7" />
-        <label for="faq7" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          📅 Quand et où ?
+        <label for="faq7" class="collapse-title text-xl font-medium cursor-pointer">
+          📅 Quand et où ont lieu les sessions ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <div class="space-y-3">
-              <p>📍 <strong>Lieu :</strong> Walhain (salle communale)</p>
-              <p>🗓️ <strong>Créneaux :</strong></p>
-              <ul class="ml-6 space-y-1">
-                <li>• Mercredi 14h00-16h00</li>
-                <li>• Mercredi 17h00-19h00</li>
-              </ul>
-              <p>📆 <strong>Rythme :</strong> Hors vacances scolaires FWB</p>
-              <p>👥 <strong>Capacité :</strong> 8-10 jeunes max par groupe</p>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📍</span>
+                <div>
+                  <strong>Lieu :</strong> Salle communale de Walhain
+                  <p class="text-sm text-gray-600">Adresse exacte communiquée à l'inscription</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">🗓️</span>
+                <div>
+                  <strong>Créneaux :</strong>
+                  <p class="text-sm">• Mercredi 14h00-16h00 (idéal collégiens)</p>
+                  <p class="text-sm">• Mercredi 17h00-19h00 (idéal lycéens)</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📆</span>
+                <div>
+                  <strong>Format :</strong> Modules de 7 semaines
+                  <p class="text-sm text-gray-600">Hors vacances scolaires</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">🚀</span>
+                <div>
+                  <strong>Ouverture :</strong> Septembre 2026
+                  <p class="text-sm text-ludus-orange">Préinscriptions ouvertes !</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Question 8 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <!-- Question 8 - CLARIFIÉE -->
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq8" />
-        <label for="faq8" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          🏆 Y a-t-il de la compétition ?
+        <label for="faq8" class="collapse-title text-xl font-medium cursor-pointer">
+          🏆 Y a-t-il de la compétition entre les jeunes ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <p class="mb-4">
-              <strong class="text-orange-600 dark:text-orange-400">Non, pas dans cette phase.</strong>
+              <strong class="text-ludus-teal">Non, zéro compétition !</strong>
             </p>
             <div class="space-y-3">
-              <div class="flex gap-3">
-                <span class="text-green-500">✨</span>
+              <div class="alert alert-success">
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <div>
-                  <strong>Actuellement :</strong> Focus 100% sur la coopération, 
-                  la communication et le bien-être. Aucun classement, aucune pression.
+                  <strong>Notre philosophie :</strong> On joue AVEC les autres, pas CONTRE les autres. 
+                  Tous les jeux sont coopératifs, la réussite est collective.
                 </div>
               </div>
-              <div class="flex gap-3">
-                <span class="text-blue-500">🎯</span>
-                <div>
-                  <strong>Plus tard (optionnel) :</strong> Une filière compétitive pourra être proposée, 
-                  accessible uniquement aux jeunes démontrant maturité et excellente gestion émotionnelle.
-                </div>
-              </div>
+              
+              <p class="text-gray-600">
+                • Pas de classement<br>
+                • Pas de tournoi<br>
+                • Pas de récompense individuelle<br>
+                • Valorisation de l'entraide et du progrès collectif
+              </p>
+              
+              <p class="text-sm text-gray-500">
+                <strong>Note :</strong> Ce n'est pas un club d'esport. Si votre enfant cherche 
+                de la compétition, nous ne sommes pas le bon endroit.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Question 9 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq9" />
-        <label for="faq9" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
-          👨‍👩‍👧 Comment les parents sont impliqués ?
+        <label for="faq9" class="collapse-title text-xl font-medium cursor-pointer">
+          👨‍👩‍👧 Comment les parents sont-ils impliqués ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
+          <div class="pt-4">
             <ul class="space-y-3">
               <li class="flex gap-3">
-                <span>📊</span>
+                <span class="text-ludus-orange">📧</span>
                 <div>
-                  <strong>Bilans réguliers :</strong> Points d'étape sur les progrès
+                  <strong>Communication régulière</strong>
+                  <p class="text-sm text-gray-600">Email après chaque séance avec les points clés</p>
                 </div>
               </li>
               <li class="flex gap-3">
-                <span>👥</span>
+                <span class="text-ludus-teal">📊</span>
                 <div>
-                  <strong>Rencontres :</strong> Échanges en fin de module
+                  <strong>Bilan de fin de module</strong>
+                  <p class="text-sm text-gray-600">Rapport détaillé sur l'évolution de votre enfant</p>
                 </div>
               </li>
               <li class="flex gap-3">
-                <span>📱</span>
+                <span class="text-ludus-orange">👥</span>
                 <div>
-                  <strong>Communication :</strong> Disponibles pour vos questions
+                  <strong>Réunion parents</strong>
+                  <p class="text-sm text-gray-600">Une fois par module pour échanger</p>
                 </div>
               </li>
               <li class="flex gap-3">
-                <span>🎮</span>
+                <span class="text-ludus-teal">💡</span>
                 <div>
-                  <strong>Conseils :</strong> Guide pour accompagner à la maison
+                  <strong>Conseils pratiques</strong>
+                  <p class="text-sm text-gray-600">Guide pour gérer le gaming à la maison</p>
                 </div>
               </li>
             </ul>
@@ -309,32 +334,77 @@
         </div>
       </div>
 
-      <!-- Question 10 -->
-      <div class="collapse collapse-plus bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 shadow-sm">
+      <!-- Question 10 - IMPORTANTE -->
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
         <input type="radio" name="faq-accordion" id="faq10" />
-        <label for="faq10" class="collapse-title text-xl font-medium text-gray-800 dark:text-gray-100 cursor-pointer">
+        <label for="faq10" class="collapse-title text-xl font-medium cursor-pointer">
+          ⚠️ Mon enfant joue trop, est-ce que ça peut l'aider ?
+        </label>
+        <div class="collapse-content">
+          <div class="pt-4">
+            <div class="alert alert-warning mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              <span>
+                <strong>Important :</strong> Nous ne sommes PAS un centre de traitement 
+                pour l'addiction aux jeux vidéo.
+              </span>
+            </div>
+            
+            <p class="mb-3">
+              <strong class="text-ludus-teal">Ce que nous POUVONS apporter :</strong>
+            </p>
+            <ul class="space-y-2 mb-4">
+              <li>✅ Un cadre structuré avec des limites claires (2h/semaine)</li>
+              <li>✅ Une pratique sociale plutôt que solitaire</li>
+              <li>✅ Des jeux différents (coopératifs vs compétitifs en ligne)</li>
+              <li>✅ Une approche équilibrée avec pauses actives</li>
+              <li>✅ Des outils pour mieux gérer son temps de jeu</li>
+            </ul>
+            
+            <p class="text-gray-600">
+              <strong>Si vous cherchez une aide thérapeutique,</strong> nous vous recommandons 
+              de consulter un professionnel de santé. Nous pouvons vous orienter si besoin.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="collapse collapse-plus bg-base-100 border-2 border-gray-200 shadow-sm">
+        <input type="radio" name="faq-accordion" id="faq11" />
+        <label for="faq11" class="collapse-title text-xl font-medium cursor-pointer">
           📝 Comment s'inscrire ?
         </label>
         <div class="collapse-content">
-          <div class="text-gray-600 dark:text-gray-400 pt-4">
-            <p class="mb-4">C'est très simple :</p>
+          <div class="pt-4">
+            <p class="mb-4">L'inscription se fait en 3 étapes simples :</p>
             <ol class="space-y-3">
-              <li>
-                <strong class="text-orange-600 dark:text-orange-400">1.</strong> 
-                Envoyez un mail à <a href="mailto:info@ludusmentis.be" class="text-orange-600 dark:text-orange-400 underline">info@ludusmentis.be</a>
+              <li class="flex gap-3">
+                <span class="bg-ludus-teal text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
+                <div>
+                  <strong>Préinscription en ligne</strong>
+                  <p class="text-sm text-gray-600">Remplissez le formulaire sur notre site</p>
+                </div>
               </li>
-              <li>
-                <strong class="text-orange-600 dark:text-orange-400">2.</strong> 
-                Nous vous contactons pour échanger sur les besoins
+              <li class="flex gap-3">
+                <span class="bg-ludus-orange text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</span>
+                <div>
+                  <strong>Entretien téléphonique</strong>
+                  <p class="text-sm text-gray-600">15 min pour comprendre vos attentes</p>
+                </div>
               </li>
-              <li>
-                <strong class="text-orange-600 dark:text-orange-400">3.</strong> 
-                Validation et envoi des infos pratiques
+              <li class="flex gap-3">
+                <span class="bg-ludus-teal text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</span>
+                <div>
+                  <strong>Confirmation et paiement</strong>
+                  <p class="text-sm text-gray-600">Place réservée après règlement</p>
+                </div>
               </li>
             </ol>
+            
             <div class="mt-6 text-center">
-              <a href="mailto:info@ludusmentis.be" class="btn btn-primary text-white">
-                S'inscrire maintenant
+              <a href="contact.html" class="btn bg-ludus-orange text-white border-0 hover:bg-orange-600">
+                Commencer la préinscription →
               </a>
             </div>
           </div>
@@ -343,34 +413,25 @@
     </div>
 
     <!-- CTA Final -->
-    <section class="mt-12 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 rounded-3xl p-8 text-center border-2 border-orange-200 dark:border-orange-800">
-      <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+    <section class="mt-12 bg-gradient-to-r from-teal-500 to-orange-500 rounded-3xl p-8 text-center text-white">
+      <h2 class="text-2xl font-bold mb-4">
         Une question non couverte ?
       </h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-6">
-        Nous sommes là pour répondre à toutes vos interrogations.
+      <p class="mb-6">
+        N'hésitez pas à nous contacter directement !
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="mailto:info@ludusmentis.be" class="btn btn-primary text-white">
-          Nous écrire
+        <a href="mailto:info@ludusmentis.be" class="btn bg-white text-ludus-teal border-0 hover:bg-gray-100">
+          📧 Nous écrire
         </a>
-        <a href="tel:+32XXXXXXXXX" class="btn btn-outline btn-primary dark:text-orange-400 dark:border-orange-400">
-          Nous appeler
+        <a href="contact.html" class="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+          📝 Formulaire de contact
         </a>
       </div>
     </section>
   </main>
   
   <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
-  
-  <script>
-    // Dark mode support
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>
