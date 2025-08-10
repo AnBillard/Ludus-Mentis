@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/accessibilite.html" />
+  <meta property="og:title" content="Déclaration d'accessibilité | Ludus Mentis" />
+  <meta property="og:description" content="Notre engagement pour un site web accessible à tous. Conformité WCAG 2.1 niveau AA." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/ludus-mentis-og.jpg" />
+  
+  <link rel="canonical" href="https://ludusmentis.be/accessibilite.html" />
+  <link rel="stylesheet" href="/assets/css/a11y.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/consent-default.js"></script>
+  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
+  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déclaration d'accessibilité | Ludus Mentis</title>
+  <meta name="description" content="Déclaration d'accessibilité du site Ludus Mentis. Notre engagement pour l'inclusion numérique et la conformité WCAG 2.1.">
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ea580c',
+            'primary-focus': '#c2410c',
+            secondary: '#f59e0b',
+            accent: '#ef4444',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+</head>
+<body class="min-h-screen bg-base-100 dark:bg-gray-900">
+  <a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">
+    Aller au contenu principal
+  </a>
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8 max-w-4xl" id="main">
+    <!-- En-tête -->
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+        Déclaration d'accessibilité
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        Dernière mise à jour : 10 août 2025
+      </p>
+    </header>
+
+    <!-- Introduction -->
+    <section class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          Notre engagement
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          <strong>Ludus Mentis</strong> s'engage à rendre son site web accessible, 
+          conformément à la législation européenne sur l'accessibilité numérique et 
+          aux directives WCAG 2.1 (Web Content Accessibility Guidelines).
+        </p>
+        <p class="text-gray-700 dark:text-gray-300">
+          Cette déclaration d'accessibilité s'applique au site web 
+          <a href="https://ludusmentis.be" class="text-orange-600 dark:text-orange-400 underline">https://ludusmentis.be</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- État de conformité -->
+    <section class="card bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-2 border-green-200 dark:border-green-800 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          État de conformité
+        </h2>
+        <div class="flex items-start gap-3 mb-4">
+          <span class="text-3xl">✅</span>
+          <div>
+            <p class="text-gray-700 dark:text-gray-300">
+              Ce site web est <strong class="text-green-600 dark:text-green-400">partiellement conforme</strong> 
+              avec les WCAG 2.1 niveau AA. Les non-conformités et exemptions sont énumérées ci-dessous.
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-4">
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-3">Niveau de conformité visé</h3>
+          <div class="flex gap-4">
+            <span class="badge badge-success">WCAG 2.1 - Niveau AA</span>
+            <span class="badge badge-info">EN 301 549</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités d'accessibilité -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+        Fonctionnalités d'accessibilité
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Navigation -->
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-orange-600 dark:text-orange-400 mb-3">
+              🧭 Navigation
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Navigation au clavier complète</li>
+              <li>✓ Liens d'évitement vers le contenu principal</li>
+              <li>✓ Structure hiérarchique des titres</li>
+              <li>✓ Fil d'Ariane (breadcrumb) sur pages profondes</li>
+              <li>✓ Plan du site disponible</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Visuel -->
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-blue-600 dark:text-blue-400 mb-3">
+              👁️ Visuel
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Contrastes conformes AA (7:1 minimum)</li>
+              <li>✓ Mode sombre disponible</li>
+              <li>✓ Texte redimensionnable jusqu'à 200%</li>
+              <li>✓ Pas de texte dans les images</li>
+              <li>✓ Focus visible sur tous les éléments</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contenu -->
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-green-600 dark:text-green-400 mb-3">
+              📝 Contenu
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Textes alternatifs pour les images</li>
+              <li>✓ Langage simple et clair</li>
+              <li>✓ Acronymes explicités</li>
+              <li>✓ Tableaux avec en-têtes appropriés</li>
+              <li>✓ Listes structurées</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interaction -->
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-purple-600 dark:text-purple-400 mb-3">
+              🖱️ Interaction
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>✓ Zones cliquables de 44×44 pixels minimum</li>
+              <li>✓ Formulaires avec labels explicites</li>
+              <li>✓ Messages d'erreur clairs</li>
+              <li>✓ Pas de limite de temps</li>
+              <li>✓ Pas de contenu clignotant</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies utilisées -->
+    <section class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          Technologies utilisées
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          L'accessibilité de ce site web s'appuie sur l'utilisation conforme de :
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-lg">HTML5</span>
+          <span class="badge badge-lg">CSS3</span>
+          <span class="badge badge-lg">JavaScript ES6</span>
+          <span class="badge badge-lg">ARIA 1.1</span>
+          <span class="badge badge-lg">Tailwind CSS</span>
+          <span class="badge badge-lg">DaisyUI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Non-conformités -->
+    <section class="card bg-amber-50 dark:bg-amber-950 border-2 border-amber-200 dark:border-amber-800 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          ⚠️ Non-conformités connues
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Les contenus listés ci-dessous ne sont pas accessibles pour les raisons suivantes :
+        </p>
+        
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-bold text-amber-700 dark:text-amber-300">Non-conformité temporaire</h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300 mt-2">
+              <li>• Certaines images de jeux n'ont pas encore de description détaillée</li>
+              <li>• Les vidéos (à venir) n'auront pas immédiatement de sous-titres</li>
+              <li>• Quelques contrastes de couleur en mode sombre sont limites (ratio 4.3:1 au lieu de 4.5:1)</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-bold text-amber-700 dark:text-amber-300">Charge disproportionnée</h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300 mt-2">
+              <li>• Les logos partenaires externes ne sont pas tous optimisés pour l'accessibilité</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Méthode d'évaluation -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+        Méthode d'évaluation
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-3">
+              🔧 Outils utilisés
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• WAVE (WebAIM)</li>
+              <li>• axe DevTools</li>
+              <li>• Lighthouse (Chrome)</li>
+              <li>• NVDA (lecteur d'écran)</li>
+              <li>• Colour Contrast Analyser</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-white dark:bg-gray-800 shadow-lg border-2 border-gray-200 dark:border-gray-700">
+          <div class="card-body">
+            <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-3">
+              ✅ Tests effectués
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>• Navigation au clavier seul</li>
+              <li>• Test avec lecteur d'écran</li>
+              <li>• Zoom jusqu'à 400%</li>
+              <li>• Désactivation CSS</li>
+              <li>• Mode contraste élevé Windows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Retour et contact -->
+    <section class="card bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 border-2 border-orange-200 dark:border-orange-800 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          📧 Retour d'information et contact
+        </h2>
+        
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Si vous n'arrivez pas à accéder à un contenu ou à un service, vous pouvez nous contacter 
+          pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.
+        </p>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-4">
+          <p class="font-bold text-gray-800 dark:text-gray-100 mb-2">Contactez-nous :</p>
+          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+            <li>
+              📧 Email : 
+              <a href="mailto:info@ludusmentis.be?subject=Accessibilité" 
+                 class="text-orange-600 dark:text-orange-400 underline">
+                info@ludusmentis.be
+              </a>
+            </li>
+            <li>📮 Adresse : Ludus Mentis, Walhain, Belgique</li>
+            <li>⏱️ Nous nous engageons à répondre sous 5 jours ouvrés</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voies de recours -->
+    <section class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          ⚖️ Voies de recours
+        </h2>
+        
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Cette procédure est à utiliser dans le cas suivant : vous avez signalé au responsable 
+          du site internet un défaut d'accessibilité qui vous empêche d'accéder à un contenu ou 
+          à un des services et vous n'avez pas obtenu de réponse satisfaisante.
+        </p>
+        
+        <div class="space-y-4">
+          <div class="alert alert-info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <h3 class="font-bold">En Belgique</h3>
+              <p>Vous pouvez contacter le <strong>Service de médiation fédéral</strong> :</p>
+              <a href="https://www.federaalombudsman.be" target="_blank" rel="noopener" 
+                 class="underline">
+                www.federaalombudsman.be
+              </a>
+            </div>
+          </div>
+          
+          <div class="alert alert-info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <h3 class="font-bold">Au niveau européen</h3>
+              <p>Vous pouvez saisir le <strong>Médiateur européen</strong> :</p>
+              <a href="https://www.ombudsman.europa.eu" target="_blank" rel="noopener" 
+                 class="underline">
+                www.ombudsman.europa.eu
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Améliorations prévues -->
+    <section class="card bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-2 border-green-200 dark:border-green-800 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          🚀 Améliorations prévues
+        </h2>
+        
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Nous nous engageons à améliorer continuellement l'accessibilité de notre site :
+        </p>
+        
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="badge badge-success">2025 Q3</span>
+            <p class="text-gray-700 dark:text-gray-300">
+              Ajout de descriptions détaillées pour toutes les images
+            </p>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <span class="badge badge-info">2025 Q4</span>
+            <p class="text-gray-700 dark:text-gray-300">
+              Amélioration des contrastes en mode sombre
+            </p>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <span class="badge badge-warning">2026 Q1</span>
+            <p class="text-gray-700 dark:text-gray-300">
+              Sous-titrage des futures vidéos pédagogiques
+            </p>
+          </div>
+          
+          <div class="flex items-start gap-3">
+            <span class="badge badge-primary">2026 Q2</span>
+            <p class="text-gray-700 dark:text-gray-300">
+              Audit externe complet et certification
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Raccourcis clavier -->
+    <section class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          ⌨️ Raccourcis clavier
+        </h2>
+        
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Pour faciliter la navigation, voici les raccourcis clavier disponibles :
+        </p>
+        
+        <div class="overflow-x-auto">
+          <table class="table table-zebra w-full">
+            <thead>
+              <tr>
+                <th class="text-gray-800 dark:text-gray-100">Raccourci</th>
+                <th class="text-gray-800 dark:text-gray-100">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">1</kbd></td>
+                <td>Aller à l'accueil</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">2</kbd></td>
+                <td>Aller au menu principal</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">3</kbd></td>
+                <td>Aller au contenu principal</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">4</kbd></td>
+                <td>Aller à la recherche</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">9</kbd></td>
+                <td>Aller au contact</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Alt</kbd> + <kbd class="kbd">0</kbd></td>
+                <td>Afficher cette page d'accessibilité</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Tab</kbd></td>
+                <td>Naviguer vers l'élément suivant</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Shift</kbd> + <kbd class="kbd">Tab</kbd></td>
+                <td>Naviguer vers l'élément précédent</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Enter</kbd></td>
+                <td>Activer le lien ou bouton</td>
+              </tr>
+              <tr>
+                <td><kbd class="kbd">Esc</kbd></td>
+                <td>Fermer les menus déroulants</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+          <strong>Note :</strong> Sur Mac, remplacez <kbd class="kbd">Alt</kbd> par <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Option</kbd>
+        </p>
+      </div>
+    </section>
+
+    <!-- Ressources utiles -->
+    <section class="card bg-gray-50 dark:bg-gray-900 border-2 border-gray-300 dark:border-gray-700">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          📚 Ressources utiles
+        </h2>
+        
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Pour en savoir plus sur l'accessibilité numérique :
+        </p>
+        
+        <ul class="space-y-2">
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/quickref/" 
+               target="_blank" 
+               rel="noopener"
+               class="text-orange-600 dark:text-orange-400 underline">
+              → Guide rapide WCAG 2.1 (W3C)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.anysurfer.be/fr" 
+               target="_blank" 
+               rel="noopener"
+               class="text-orange-600 dark:text-orange-400 underline">
+              → AnySurfer - Accessibilité en Belgique
+            </a>
+          </li>
+          <li>
+            <a href="https://wave.webaim.org/" 
+               target="_blank" 
+               rel="noopener"
+               class="text-orange-600 dark:text-orange-400 underline">
+              → WAVE - Outil de test d'accessibilité
+            </a>
+          </li>
+          <li>
+            <a href="https://www.nvaccess.org/" 
+               target="_blank" 
+               rel="noopener"
+               class="text-orange-600 dark:text-orange-400 underline">
+              → NVDA - Lecteur d'écran gratuit
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <div id="footer"></div>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/theme.js"></script>
+  
+  <!-- Raccourcis clavier -->
+  <script>
+    document.addEventListener('keydown', function(e) {
+      // Alt + touches pour navigation rapide
+      if (e.altKey) {
+        switch(e.key) {
+          case '1':
+            e.preventDefault();
+            window.location.href = '/';
+            break;
+          case '2':
+            e.preventDefault();
+            document.querySelector('#header')?.scrollIntoView();
+            break;
+          case '3':
+            e.preventDefault();
+            document.querySelector('#main')?.scrollIntoView();
+            break;
+          case '9':
+            e.preventDefault();
+            window.location.href = '/contact.html';
+            break;
+          case '0':
+            e.preventDefault();
+            window.location.href = '/accessibilite.html';
+            break;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
