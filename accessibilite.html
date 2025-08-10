@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibilité | Ludus Mentis</title>
+  <meta name="description" content="Notre engagement pour un site web accessible à tous. Conformité WCAG 2.1 niveau AA.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/accessibilite.html" />
+  <meta property="og:title" content="Déclaration d'accessibilité | Ludus Mentis" />
+  <meta property="og:description" content="Notre engagement pour un site web accessible à tous." />
+  
+  <link rel="canonical" href="https://ludusmentis.be/accessibilite.html" />
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    
+    /* Focus visible pour accessibilité */
+    :focus-visible {
+      outline: 3px solid #17a2b8;
+      outline-offset: 2px;
+    }
+    
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #17a2b8;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+  
+  <div id="header"></div>
+  
+  <main id="main" class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- En-tête -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800">
+        Déclaration d'accessibilité
+      </h1>
+      <p class="text-gray-600">
+        Mise à jour : 10 août 2025
+      </p>
+    </header>
+
+    <!-- Engagement -->
+    <section class="card bg-white shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-ludus-teal">Notre engagement</h2>
+        <p class="text-gray-700 mb-4">
+          Ludus Mentis s'engage à rendre son site accessible conformément aux directives WCAG 2.1 niveau AA.
+        </p>
+        <div class="flex items-center gap-3 p-4 bg-green-50 rounded-lg">
+          <span class="text-3xl">✅</span>
+          <div>
+            <strong class="text-green-700">Partiellement conforme</strong>
+            <p class="text-sm text-gray-600">WCAG 2.1 - Niveau AA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalités principales -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 text-ludus-teal">Fonctionnalités d'accessibilité</h2>
+      
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="card bg-base-100 border">
+          <div class="card-body compact">
+            <h3 class="font-bold text-ludus-orange mb-2">🧭 Navigation</h3>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>✓ Navigation au clavier complète</li>
+              <li>✓ Structure de titres logique</li>
+              <li>✓ Liens d'évitement</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 border">
+          <div class="card-body compact">
+            <h3 class="font-bold text-ludus-orange mb-2">👁️ Visuel</h3>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>✓ Contrastes conformes AA</li>
+              <li>✓ Texte redimensionnable</li>
+              <li>✓ Focus visible</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 border">
+          <div class="card-body compact">
+            <h3 class="font-bold text-ludus-orange mb-2">📝 Contenu</h3>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>✓ Textes alternatifs</li>
+              <li>✓ Langage simple</li>
+              <li>✓ Labels explicites</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 border">
+          <div class="card-body compact">
+            <h3 class="font-bold text-ludus-orange mb-2">🖱️ Interaction</h3>
+            <ul class="text-sm space-y-1 text-gray-600">
+              <li>✓ Zones cliquables 44×44px</li>
+              <li>✓ Messages d'erreur clairs</li>
+              <li>✓ Pas de limite de temps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Non-conformités -->
+    <section class="card bg-amber-50 mb-8">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold mb-4 text-amber-700">⚠️ Points d'amélioration</h2>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Certaines images décoratives manquent d'attributs alt vides</li>
+          <li>• Les vidéos futures n'auront pas immédiatement de sous-titres</li>
+          <li>• Quelques contrastes en mode sombre à améliorer</li>
+        </ul>
+        <p class="text-sm text-gray-600 mt-4">
+          Nous travaillons activement à corriger ces points.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="card bg-gradient-to-r from-ludus-teal to-ludus-orange text-white">
+      <div class="card-body text-center">
+        <h2 class="text-2xl font-bold mb-4">Signaler un problème</h2>
+        <p class="mb-4">
+          Difficulté d'accès ? Contactez-nous pour une alternative.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:info@ludusmentis.be?subject=Accessibilité" 
+             class="btn bg-white text-ludus-teal hover:bg-gray-100">
+            📧 info@ludusmentis.be
+          </a>
+        </div>
+        <p class="text-sm mt-4 opacity-90">
+          Délai de réponse : 5 jours ouvrés
+        </p>
+      </div>
+    </section>
+
+    <!-- Raccourcis clavier -->
+    <details class="mb-8">
+      <summary class="cursor-pointer text-lg font-bold text-ludus-teal hover:underline">
+        ⌨️ Raccourcis clavier disponibles
+      </summary>
+      <div class="mt-4 overflow-x-auto">
+        <table class="table table-compact w-full">
+          <thead>
+            <tr>
+              <th>Raccourci</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd class="kbd kbd-sm">Tab</kbd></td>
+              <td>Navigation avant</td>
+            </tr>
+            <tr>
+              <td><kbd class="kbd kbd-sm">Shift</kbd> + <kbd class="kbd kbd-sm">Tab</kbd></td>
+              <td>Navigation arrière</td>
+            </tr>
+            <tr>
+              <td><kbd class="kbd kbd-sm">Enter</kbd></td>
+              <td>Activer lien/bouton</td>
+            </tr>
+            <tr>
+              <td><kbd class="kbd kbd-sm">Esc</kbd></td>
+              <td>Fermer menus</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Ressources -->
+    <section class="text-sm text-gray-600">
+      <p class="mb-2"><strong>Ressources utiles :</strong></p>
+      <ul class="space-y-1">
+        <li>• <a href="https://www.anysurfer.be/fr" class="text-ludus-teal hover:underline">AnySurfer Belgique</a></li>
+        <li>• <a href="https://www.w3.org/WAI/WCAG21/quickref/" class="text-ludus-teal hover:underline">Guide WCAG 2.1</a></li>
+        <li>• <a href="mailto:contact@apd-gba.be" class="text-ludus-teal hover:underline">Autorité protection données</a></li>
+      </ul>
+    </section>
+  </main>
+  
+  <div id="footer"></div>
+  
+  <!-- Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>

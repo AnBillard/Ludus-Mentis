@@ -1,119 +1,547 @@
-<!doctype html>
-<html lang="fr-BE">
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentions légales & Confidentialité | Ludus Mentis</title>
-  <meta name="description" content="Mentions légales, politique de confidentialité et cookies de Ludus Mentis." />
-
-  <link rel="canonical" href="https://ludusmentis.be/mentions.html" />
-  <!-- OG/Twitter minimal -->
+  <!-- Meta tags essentiels -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales & Politique de confidentialité | Ludus Mentis</title>
+  <meta name="description" content="Mentions légales, politique de confidentialité RGPD et gestion des cookies de Ludus Mentis.">
+  
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/mentions.html" />
-  <meta property="og:title" content="Mentions légales & Confidentialité | Ludus Mentis" />
-  <meta property="og:description" content="Mentions légales, politique de confidentialité et cookies de Ludus Mentis." />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-mentions.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mentions légales & Confidentialité | Ludus Mentis" />
-  <meta name="twitter:description" content="Mentions légales, politique de confidentialité et cookies de Ludus Mentis." />
-  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-mentions.jpg" />
-
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-  <!-- CMP -->
-  <script src="/assets/js/consent-default.js"></script>
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+  <meta property="og:title" content="Mentions légales & RGPD | Ludus Mentis" />
+  <meta property="og:description" content="Politique de confidentialité, gestion des données personnelles et cookies conformément au RGPD." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-legal.jpg" />
+  
+  <link rel="canonical" href="https://ludusmentis.be/mentions.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Configuration par défaut (tout refusé)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted'
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  <!-- End Google Tag Manager -->
+  
+  <!-- DaisyUI + Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  
+  <!-- Styles -->
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+  </style>
 </head>
-<body class="bg-base-100 text-base-content">
-  <a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
-
-  <div data-include="/components/header.html"></div>
-
-  <main id="main" class="container mx-auto px-4 py-10 max-w-4xl">
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold">Mentions légales & politique de confidentialité</h1>
-      <p class="text-sm opacity-70 mt-2">Dernière mise à jour : 8 août 2025</p>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- Skip link pour accessibilité -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
+    Aller au contenu principal
+  </a>
+  
+  <div id="header"></div>
+  
+  <main id="main" class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- En-tête -->
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800">
+        Mentions légales & Politique de confidentialité
+      </h1>
+      <p class="text-gray-600">
+        Dernière mise à jour : 10 août 2025
+      </p>
     </header>
 
-    <section class="prose max-w-none">
-      <h2>1. Éditeur du site</h2>
-      <p><strong>Ludus Mentis</strong> <!-- À REMPLACER : forme juridique + n° BCE --> <br>
-      Adresse : <!-- À REMPLACER : adresse postale -->, Walhain, Belgique<br>
-      E-mail : <a href="mailto:info@ludusmentis.be">info@ludusmentis.be</a></p>
-
-      <h2>2. Hébergeur</h2>
-      <p><!-- À REMPLACER : nom de l’hébergeur et coordonnées --></p>
-
-      <h2>3. Propriété intellectuelle</h2>
-      <p>Le contenu de ce site (textes, images, logos, charte graphique) est protégé par le droit d’auteur. Toute reproduction non autorisée est interdite.</p>
-
-      <h2>4. Données personnelles</h2>
-      <h3>4.1. Responsable du traitement</h3>
-      <p>Ludus Mentis, joignable à <a href="mailto:info@ludusmentis.be">info@ludusmentis.be</a>.</p>
-
-      <h3>4.2. Données collectées</h3>
-      <ul>
-        <li><strong>Formulaire de contact</strong> : nom, prénom, e-mail, message (via Formspree).</li>
-        <li><strong>Mesures d’audience</strong> : après consentement (GA4 via tarteaucitron).</li>
-      </ul>
-
-      <h3>4.3. Finalités & bases légales</h3>
-      <ul>
-        <li>Réponse aux demandes — <strong>intérêt légitime</strong> / <strong>précontractuel</strong>.</li>
-        <li>Statistiques — <strong>consentement</strong>.</li>
-      </ul>
-
-      <h3>4.4. Durées de conservation</h3>
-      <ul>
-        <li>Demandes de contact : <strong><!-- À REMPLACER ex. 12 mois --></strong>.</li>
-        <li>Cookies analytiques : selon le cookie (voir tableau ci-dessous).</li>
-      </ul>
-
-      <h3>4.5. Destinataires & transferts</h3>
-      <ul>
-        <li><strong>Formspree</strong> (soumission de formulaires).</li>
-        <li><strong>Google</strong> (Analytics), <em>après consentement</em>.</li>
-      </ul>
-
-      <h3>4.6. Vos droits</h3>
-      <p>Droits d’accès, rectification, effacement, opposition, limitation, portabilité. Contact : <a href="mailto:info@ludusmentis.be">info@ludusmentis.be</a>. Réclamation possible auprès de l’APD.</p>
-
-      <h2 id="cookies">5. Cookies & traceurs</h2>
-      <p>Nous utilisons un gestionnaire de consentement. Aucun cookie non essentiel n’est déposé avant votre choix. Vous pouvez modifier vos préférences à tout moment :</p>
-      <p><button class="btn btn-outline" type="button" onclick="window.showCmp()">Gérer mes préférences</button></p>
-
-      <h3>5.1. Catégories</h3>
-      <ul>
-        <li><strong>Nécessaires</strong> : fonctionnement du site.</li>
-        <li><strong>Statistiques</strong> : mesure d’audience (avec consentement).</li>
-        <li><strong>Marketing</strong> : si activé ultérieurement.</li>
-      </ul>
-
-      <h3>5.2. Liste des cookies</h3>
-      <div class="overflow-x-auto">
-        <table class="table table-zebra">
-          <thead><tr><th>Nom</th><th>Fournisseur</th><th>Finalité</th><th>Durée</th><th>Type</th></tr></thead>
-          <tbody>
-            <tr><td>lm_cookies</td><td>Site</td><td>Mémoriser votre choix</td><td>6–12 mois</td><td>HTTP</td></tr>
-            <tr><td>_ga</td><td>Google</td><td>Statistiques</td><td>13 mois</td><td>HTTP</td></tr>
-          </tbody>
-        </table>
+    <!-- Navigation des sections -->
+    <nav class="mb-8">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-ludus-teal">Accès rapide</h2>
+          <div class="flex flex-wrap gap-2">
+            <a href="#editeur" class="btn btn-sm btn-outline">Éditeur</a>
+            <a href="#rgpd" class="btn btn-sm btn-outline">Protection des données</a>
+            <a href="#cookies" class="btn btn-sm btn-outline">Cookies</a>
+            <a href="#droits" class="btn btn-sm btn-outline">Vos droits</a>
+            <a href="#contact" class="btn btn-sm btn-outline">Contact DPO</a>
+          </div>
+        </div>
       </div>
+    </nav>
 
-      <h2>6. Sécurité</h2>
-      <p>Nous utilisons des mesures raisonnables (HTTPS, politiques d’en-têtes, CSP) pour protéger vos données.</p>
-
-      <h2>7. Modifications</h2>
-      <p>Nous pouvons mettre à jour ces mentions. La date de dernière mise à jour figure en tête de page.</p>
-
-      <h2>8. Droit applicable</h2>
-      <p>Le droit belge s’applique.</p>
+    <!-- Section 1 : Éditeur -->
+    <section id="editeur" class="mb-12">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">1. Éditeur du site</h2>
+          
+          <div class="space-y-2 text-gray-700">
+            <p><strong>Dénomination :</strong> Ludus Mentis ASBL (en cours de création)</p>
+            <p><strong>Fondateur et responsable :</strong> Antoine Billard</p>
+            <p><strong>Adresse :</strong> [Adresse à confirmer], 1457 Walhain, Belgique</p>
+            <p><strong>Email :</strong> <a href="mailto:info@ludusmentis.be" class="text-ludus-teal hover:underline">info@ludusmentis.be</a></p>
+            <p><strong>N° BCE :</strong> En cours d'attribution</p>
+            <p><strong>N° TVA :</strong> En cours d'attribution</p>
+          </div>
+          
+          <div class="alert alert-info mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>ASBL en cours de création - Ouverture prévue septembre 2026</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Section 2 : Hébergeur -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">2. Hébergeur</h2>
+          
+          <div class="space-y-2 text-gray-700">
+            <p><strong>Société :</strong> [À compléter - ex: OVH, Netlify, Vercel]</p>
+            <p><strong>Adresse :</strong> [À compléter]</p>
+            <p><strong>Contact :</strong> [À compléter]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 : Protection des données (RGPD) -->
+    <section id="rgpd" class="mb-12">
+      <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-6 text-blue-700">3. Protection des données personnelles (RGPD)</h2>
+          
+          <!-- Responsable du traitement -->
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">3.1 Responsable du traitement</h3>
+            <p class="text-gray-700">
+              Ludus Mentis, représenté par Antoine Billard<br>
+              Contact DPO : <a href="mailto:rgpd@ludusmentis.be" class="text-blue-600 hover:underline">rgpd@ludusmentis.be</a>
+            </p>
+          </div>
+          
+          <!-- Données collectées -->
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">3.2 Données collectées</h3>
+            
+            <div class="overflow-x-auto">
+              <table class="table table-zebra w-full">
+                <thead>
+                  <tr>
+                    <th>Type de données</th>
+                    <th>Finalité</th>
+                    <th>Base légale</th>
+                    <th>Durée</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Formulaire de contact</strong><br>
+                      <span class="text-sm">Nom, email, message</span>
+                    </td>
+                    <td>Répondre aux demandes</td>
+                    <td>Intérêt légitime</td>
+                    <td>3 mois</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Préinscription</strong><br>
+                      <span class="text-sm">Nom enfant/parent, email, téléphone</span>
+                    </td>
+                    <td>Gestion des inscriptions</td>
+                    <td>Précontractuel</td>
+                    <td>Jusqu'à ouverture (09/2026)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Newsletter</strong><br>
+                      <span class="text-sm">Email</span>
+                    </td>
+                    <td>Envoi d'informations</td>
+                    <td>Consentement</td>
+                    <td>Jusqu'à désinscription</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Analytics (GA4)</strong><br>
+                      <span class="text-sm">Données de navigation</span>
+                    </td>
+                    <td>Statistiques du site</td>
+                    <td>Consentement</td>
+                    <td>14 mois</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Destinataires -->
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">3.3 Destinataires des données</h3>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-blue-600 mb-2">Sous-traitants techniques</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                  <li>• Formspree (formulaires)</li>
+                  <li>• Google (Analytics) - après consentement</li>
+                  <li>• Hébergeur web</li>
+                </ul>
+              </div>
+              
+              <div class="bg-white rounded-lg p-4">
+                <h4 class="font-bold text-blue-600 mb-2">Partenaires (avec accord)</h4>
+                <ul class="text-sm space-y-1 text-gray-600">
+                  <li>• Commune de Walhain</li>
+                  <li>• Fédération belge d'esport</li>
+                  <li>• Uniquement si consentement explicite</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Transferts hors UE -->
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">3.4 Transferts hors UE</h3>
+            <div class="alert alert-warning">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <div>
+                <p><strong>Transferts possibles vers les États-Unis :</strong></p>
+                <ul class="text-sm mt-2">
+                  <li>• Google Analytics (si consentement)</li>
+                  <li>• Formspree (formulaires)</li>
+                </ul>
+                <p class="text-sm mt-2">Ces transferts sont encadrés par les clauses contractuelles types de la Commission européenne.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 : Vos droits -->
+    <section id="droits" class="mb-12">
+      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-6 text-green-700">4. Vos droits RGPD</h2>
+          
+          <p class="text-gray-700 mb-4">
+            Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-green-600 mb-2">✅ Droits d'accès</h3>
+              <ul class="text-sm space-y-1 text-gray-600">
+                <li>• Droit d'accès à vos données</li>
+                <li>• Droit de rectification</li>
+                <li>• Droit à l'effacement</li>
+                <li>• Droit à la portabilité</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4">
+              <h3 class="font-bold text-green-600 mb-2">🛡️ Droits de contrôle</h3>
+              <ul class="text-sm space-y-1 text-gray-600">
+                <li>• Droit d'opposition</li>
+                <li>• Droit à la limitation</li>
+                <li>• Retrait du consentement</li>
+                <li>• Réclamation auprès de l'APD</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 text-center">
+            <p class="text-gray-700 mb-3">Pour exercer vos droits :</p>
+            <a href="mailto:rgpd@ludusmentis.be" class="btn btn-primary">
+              Contacter notre DPO
+            </a>
+          </div>
+          
+          <div class="alert alert-info mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <p><strong>Autorité de protection des données (Belgique)</strong></p>
+              <p class="text-sm">Rue de la Presse 35, 1000 Bruxelles</p>
+              <p class="text-sm">contact@apd-gba.be • +32 2 274 48 00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 : Cookies -->
+    <section id="cookies" class="mb-12">
+      <div class="card bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-6 text-orange-700">5. Politique de cookies</h2>
+          
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">5.1 Qu'est-ce qu'un cookie ?</h3>
+            <p class="text-gray-700">
+              Un cookie est un petit fichier texte déposé sur votre appareil lors de la visite d'un site web. 
+              Il permet de mémoriser vos préférences et d'analyser l'utilisation du site.
+            </p>
+          </div>
+          
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">5.2 Cookies utilisés</h3>
+            
+            <div class="overflow-x-auto">
+              <table class="table table-zebra w-full">
+                <thead>
+                  <tr>
+                    <th>Nom</th>
+                    <th>Fournisseur</th>
+                    <th>Finalité</th>
+                    <th>Durée</th>
+                    <th>Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>ludusmentis_gdpr</code></td>
+                    <td>Ludus Mentis</td>
+                    <td>Mémoriser vos choix cookies</td>
+                    <td>12 mois</td>
+                    <td><span class="badge badge-success">Nécessaire</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>_ga</code></td>
+                    <td>Google</td>
+                    <td>Distinguer les utilisateurs</td>
+                    <td>14 mois</td>
+                    <td><span class="badge badge-warning">Statistiques</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>_gid</code></td>
+                    <td>Google</td>
+                    <td>Distinguer les utilisateurs</td>
+                    <td>24 heures</td>
+                    <td><span class="badge badge-warning">Statistiques</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>_gat_gtag_*</code></td>
+                    <td>Google</td>
+                    <td>Limiter le taux de requêtes</td>
+                    <td>1 minute</td>
+                    <td><span class="badge badge-warning">Statistiques</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-800">5.3 Gestion de vos préférences</h3>
+            
+            <div class="text-center">
+              <p class="text-gray-700 mb-4">
+                Vous pouvez modifier vos préférences cookies à tout moment :
+              </p>
+              <button onclick="if(typeof tarteaucitron !== 'undefined') tarteaucitron.userInterface.openPanel();" 
+                      class="btn btn-primary btn-lg">
+                🍪 Gérer mes cookies
+              </button>
+            </div>
+          </div>
+          
+          <div class="alert alert-info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <div>
+              <p><strong>Cookies strictement nécessaires :</strong></p>
+              <p class="text-sm">Ces cookies sont essentiels au fonctionnement du site et ne peuvent être désactivés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 : Sécurité -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-4 text-ludus-purple">6. Sécurité des données</h2>
+          
+          <p class="text-gray-700 mb-4">
+            Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3">
+              <span class="text-green-500 text-xl">🔒</span>
+              <div>
+                <strong>Chiffrement HTTPS</strong>
+                <p class="text-sm text-gray-600">Toutes les connexions sont sécurisées</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <span class="text-green-500 text-xl">🛡️</span>
+              <div>
+                <strong>Accès restreint</strong>
+                <p class="text-sm text-gray-600">Seules les personnes autorisées</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <span class="text-green-500 text-xl">🔐</span>
+              <div>
+                <strong>Mots de passe sécurisés</strong>
+                <p class="text-sm text-gray-600">Politique stricte de mots de passe</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <span class="text-green-500 text-xl">📊</span>
+              <div>
+                <strong>Minimisation des données</strong>
+                <p class="text-sm text-gray-600">Nous ne collectons que le nécessaire</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7 : Propriété intellectuelle -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-4 text-gray-800">7. Propriété intellectuelle</h2>
+          
+          <p class="text-gray-700 mb-4">
+            L'ensemble du contenu de ce site (textes, images, logos, vidéos, structure) est protégé par le droit d'auteur 
+            et appartient à Ludus Mentis ou à ses partenaires.
+          </p>
+          
+          <p class="text-gray-700">
+            Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, 
+            quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8 : Contact -->
+    <section id="contact" class="mb-12">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body text-center">
+          <h2 class="text-2xl font-bold mb-4">8. Contact</h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold mb-2">Questions générales</h3>
+              <p>📧 <a href="mailto:info@ludusmentis.be" class="underline">info@ludusmentis.be</a></p>
+            </div>
+            
+            <div>
+              <h3 class="font-bold mb-2">Protection des données</h3>
+              <p>🔒 <a href="mailto:rgpd@ludusmentis.be" class="underline">rgpd@ludusmentis.be</a></p>
+            </div>
+          </div>
+          
+          <p class="text-sm mt-6 opacity-90">
+            Ludus Mentis • Walhain, Belgique • ASBL en cours de création
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dernière mise à jour -->
+    <footer class="text-center text-gray-500 text-sm">
+      <p>Ces mentions légales ont été mises à jour le 10 août 2025.</p>
+      <p>Nous nous réservons le droit de les modifier à tout moment.</p>
+    </footer>
   </main>
-
-  <div data-include="/components/footer.html"></div>
-
-  <script src="/assets/js/include.js" defer></script>
+  
+  <div id="footer"></div>
+  
+  <!-- CMP Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    // GA4
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>

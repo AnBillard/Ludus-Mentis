@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
+  <!-- Meta tags essentiels -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis</title>
+  <meta name="description" content="L'histoire d'Antoine Billard, fondateur de Ludus Mentis. Un parcours alliant passion pour le jeu vidéo et conviction que l'esport peut être une véritable école de vie.">
+  
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/a-propos.html" />
   <meta property="og:title" content="Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis" />
-  <meta property="og:description" content="Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis" />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
+  <meta property="og:description" content="L'histoire d'Antoine Billard, fondateur de Ludus Mentis. Un parcours unique du scoutisme au gaming éducatif." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-apropos.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis" />
-  <meta name="twitter:description" content="Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis" />
-  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
-
-
+  
   <link rel="canonical" href="https://ludusmentis.be/a-propos.html" />
-
-
-  <!-- A11Y helpers -->
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-
-  <!-- CMP + Consent Mode v2 -->
-  <script src="/assets/js/consent-default.js"></script>
-  <!-- tarteaucitron at site root per user's structure -->
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
-
-  <meta charset="UTF-8">
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Configuration par défaut (tout refusé pour EEA)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,48 +44,19 @@
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
   <!-- End Google Tag Manager -->
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre histoire : du scoutisme à l'esport éducatif | Ludus Mentis</title>
-  <meta name="description" content="L'histoire d'Antoine Billard, fondateur de Ludus Mentis. Un parcours alliant passion pour le jeu vidéo et conviction que l'esport peut être une véritable école de vie.">
-  <meta name="keywords" content="fondateur, histoire, antoine billard, esport, éducation, scoutisme, valeurs">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ludus Mentis",
-    "description": "Histoire et mission de Ludus Mentis, initiative éducative mêlant jeu vidéo et développement personnel",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Walhain",
-      "addressRegion": "Wallonie",
-      "addressCountry": "BE"
-    },
-    "url": "https://ludusmentis.be/a-propos",
-    "email": "info@ludusmentis.be",
-    "areaServed": "Belgique"
-  }
-  </script>
-  
   <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Configuration Tailwind -->
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: '#ea580c',
-            'primary-focus': '#c2410c',
-            secondary: '#f59e0b',
-            accent: '#ef4444',
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
           }
         }
       }
@@ -89,202 +68,360 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  
+  <!-- Styles -->
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .gradient-ludus {
+      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-base-100">
-<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
-
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   
+  <!-- Skip link pour accessibilité -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
+    Aller au contenu principal
+  </a>
+  
   <div id="header"></div>
   
-  <main class="container mx-auto px-4 py-8" id="main">
+  <main id="main" class="container mx-auto px-4 py-8 max-w-5xl">
     <!-- Hero Section avec photo -->
-    <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200">
+    <section class="hero bg-gradient-to-br from-teal-50 via-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-12 border-2 border-ludus-orange">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-center text-gray-800">
-          Notre histoire : du scoutisme à l'esport
+          Notre histoire : du scoutisme à l'esport éducatif
         </h1>
+        
         <div class="flex flex-col lg:flex-row gap-8 items-center">
-          <div class="lg:w-1/3">
-            <div class="avatar placeholder">
-              <div class="bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-full w-48 h-48 mx-auto">
-                <span class="text-6xl">AB</span>
+          <div class="lg:w-1/3 text-center">
+            <div class="avatar placeholder float-animation">
+              <div class="bg-gradient-to-br from-ludus-teal to-ludus-orange text-white rounded-full w-48 h-48 shadow-xl">
+                <span class="text-6xl font-bold">AB</span>
               </div>
             </div>
-            <p class="text-center mt-4 font-bold text-gray-800">Antoine Billard</p>
-            <p class="text-center text-gray-600">Fondateur</p>
+            <h2 class="mt-4 text-xl font-bold text-gray-800">Antoine Billard</h2>
+            <p class="text-gray-600">Fondateur & Passionné</p>
+            <div class="flex justify-center gap-2 mt-3">
+              <span class="badge badge-sm bg-ludus-teal text-white">Gamer 20+ ans</span>
+              <span class="badge badge-sm bg-ludus-orange text-white">Manager esport</span>
+            </div>
           </div>
+          
           <div class="lg:w-2/3">
             <p class="text-lg text-gray-700 mb-4">
-              <strong>Je m'appelle Antoine Billard, et Ludus Mentis est le projet qui rassemble toutes mes passions.</strong>
+              <strong class="text-ludus-teal">Je m'appelle Antoine Billard</strong>, et Ludus Mentis est 
+              le projet qui rassemble toutes mes passions et mes convictions.
+            </p>
+            <p class="text-gray-600 mb-4">
+              Enfant, mon parcours a été un grand mélange : les valeurs de partage et de nature des 
+              <strong class="text-ludus-orange">scouts</strong>, la rigueur et la créativité de 
+              l'<strong class="text-ludus-orange">académie de musique</strong>, et l'esprit d'équipe du 
+              <strong class="text-ludus-orange">football</strong>. Et au milieu de tout ça, une constante : 
+              le jeu vidéo.
             </p>
             <p class="text-gray-600">
-              Enfant, mon parcours a été un grand mélange : les valeurs de partage et de nature des scouts, 
-              la rigueur et la créativité de l'académie de musique, et l'esprit d'équipe du football. 
-              Et au milieu de tout ça, une constante : le jeu vidéo.
+              Mais à l'époque, jouer aux jeux vidéo était vu comme une perte de temps, quelque chose 
+              à limiter, voire à interdire. J'ai toujours su, au fond de moi, que c'était bien plus que ça.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Timeline du parcours -->
+    <!-- Timeline du parcours refaite -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Mon parcours</h2>
+      <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">Mon parcours</h2>
+      
       <div class="max-w-3xl mx-auto">
-        <ul class="timeline timeline-vertical">
-          <li>
-            <div class="timeline-start timeline-box bg-blue-50 border-blue-200">
-              <div class="font-bold text-blue-700">Enfance</div>
-              <p class="text-sm">Scouts, musique, football... et déjà les jeux vidéo</p>
-            </div>
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-blue-500">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-            </div>
-            <hr class="bg-blue-300"/>
-          </li>
+        <div class="relative">
+          <!-- Ligne verticale -->
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ludus-teal via-ludus-orange to-ludus-purple"></div>
           
-          <li>
-            <hr class="bg-green-300"/>
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-green-500">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
+          <div class="space-y-8">
+            <!-- Étape 1: Enfance -->
+            <div class="flex gap-6">
+              <div class="relative z-10">
+                <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                  <span class="text-2xl">👦</span>
+                </div>
+              </div>
+              <div class="flex-grow bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="font-bold text-blue-700 mb-2">Enfance multi-passions</h3>
+                <p class="text-gray-600">
+                  Scouts pour les valeurs humaines, académie de musique pour la discipline créative, 
+                  football pour l'esprit d'équipe... et déjà les jeux vidéo en secret !
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="badge badge-sm badge-outline">Nature</span>
+                  <span class="badge badge-sm badge-outline">Créativité</span>
+                  <span class="badge badge-sm badge-outline">Team spirit</span>
+                  <span class="badge badge-sm badge-outline">Gaming passion</span>
+                </div>
+              </div>
             </div>
-            <div class="timeline-end timeline-box bg-green-50 border-green-200">
-              <div class="font-bold text-green-700">Études</div>
-              <p class="text-sm">Ingénieur de gestion - Structure et méthode</p>
+            
+            <!-- Étape 2: Études -->
+            <div class="flex gap-6">
+              <div class="relative z-10">
+                <div class="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                  <span class="text-2xl">🎓</span>
+                </div>
+              </div>
+              <div class="flex-grow bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="font-bold text-green-700 mb-2">Ingénieur de gestion</h3>
+                <p class="text-gray-600">
+                  Formation en gestion de projets, analyse systémique, approche méthodique. 
+                  Toujours gamer passionné, je commence à voir le potentiel éducatif du jeu vidéo.
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="badge badge-sm badge-outline">Méthode</span>
+                  <span class="badge badge-sm badge-outline">Analyse</span>
+                  <span class="badge badge-sm badge-outline">Structure</span>
+                </div>
+              </div>
             </div>
-            <hr class="bg-green-300"/>
-          </li>
-          
-          <li>
-            <hr class="bg-purple-300"/>
-            <div class="timeline-start timeline-box bg-purple-50 border-purple-200">
-              <div class="font-bold text-purple-700">Carrière</div>
-              <p class="text-sm">Chef de projet IT - Collaboration et résolution de problèmes</p>
+            
+            <!-- Étape 3: Carrière IT -->
+            <div class="flex gap-6">
+              <div class="relative z-10">
+                <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                  <span class="text-2xl">💼</span>
+                </div>
+              </div>
+              <div class="flex-grow bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="font-bold text-purple-700 mb-2">Chef de projet IT</h3>
+                <p class="text-gray-600">
+                  Gestion d'équipes multiculturelles, résolution de problèmes complexes, communication claire. 
+                  Je retrouve dans le travail les mêmes dynamiques que dans les jeux coopératifs !
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="badge badge-sm badge-outline">Leadership</span>
+                  <span class="badge badge-sm badge-outline">Collaboration</span>
+                  <span class="badge badge-sm badge-outline">Problem solving</span>
+                </div>
+              </div>
             </div>
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-purple-500">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
+            
+            <!-- Étape 4: Manager esport -->
+            <div class="flex gap-6">
+              <div class="relative z-10">
+                <div class="bg-amber-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                  <span class="text-2xl">🏆</span>
+                </div>
+              </div>
+              <div class="flex-grow bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="font-bold text-amber-700 mb-2">Manager équipe nationale Dota 2</h3>
+                <p class="text-gray-600">
+                  Accompagnement de jeunes talents, gestion du stress en compétition, création d'une cohésion d'équipe. 
+                  Je constate l'impact positif d'un encadrement structuré sur les joueurs.
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="badge badge-sm badge-outline">Coaching</span>
+                  <span class="badge badge-sm badge-outline">Psychologie</span>
+                  <span class="badge badge-sm badge-outline">Performance</span>
+                </div>
+              </div>
             </div>
-            <hr class="bg-purple-300"/>
-          </li>
-          
-          <li>
-            <hr class="bg-orange-300"/>
-            <div class="timeline-middle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-orange-500">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
+            
+            <!-- Étape 5: Ludus Mentis -->
+            <div class="flex gap-6">
+              <div class="relative z-10">
+                <div class="gradient-ludus text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                  <span class="text-2xl">🚀</span>
+                </div>
+              </div>
+              <div class="flex-grow bg-gradient-to-br from-orange-50 to-teal-50 rounded-xl p-6 shadow-lg border-2 border-ludus-orange">
+                <h3 class="font-bold text-ludus-teal mb-2">Création de Ludus Mentis</h3>
+                <p class="text-gray-700 font-medium">
+                  La synthèse de tout mon parcours : créer le cadre qui n'existait pas pour moi enfant. 
+                  Un lieu où le gaming devient social, éducatif et valorisé.
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="badge badge-sm bg-ludus-teal text-white">Vision</span>
+                  <span class="badge badge-sm bg-ludus-orange text-white">Mission</span>
+                  <span class="badge badge-sm bg-ludus-purple text-white">Impact</span>
+                </div>
+              </div>
             </div>
-            <div class="timeline-end timeline-box bg-orange-50 border-orange-200">
-              <div class="font-bold text-orange-700">Aujourd'hui</div>
-              <p class="text-sm">Manager équipe nationale Dota 2 & Fondateur Ludus Mentis</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Cards avec stats -->
+    <!-- Vision et conviction -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Une conviction, des chiffres</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="stat bg-white rounded-2xl shadow-lg border-2 border-gray-200">
-          <div class="stat-figure text-orange-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-            </svg>
-          </div>
-          <div class="stat-value text-2xl">15+</div>
-          <div class="stat-title">Années d'expérience gaming</div>
-        </div>
-        
-        <div class="stat bg-white rounded-2xl shadow-lg border-2 border-gray-200">
-          <div class="stat-figure text-green-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </div>
-          <div class="stat-value text-2xl">100%</div>
-          <div class="stat-title">Approche bienveillante</div>
-        </div>
-        
-        <div class="stat bg-white rounded-2xl shadow-lg border-2 border-gray-200">
-          <div class="stat-figure text-blue-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-            </svg>
-          </div>
-          <div class="stat-value text-2xl">2026</div>
-          <div class="stat-title">Ouverture académie</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision avec illustration -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-200">
+      <div class="card bg-white shadow-xl border-2 border-ludus-purple">
         <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800">Réconcilier les mondes</h2>
+          <h2 class="text-3xl font-bold mb-6 text-center text-ludus-purple">
+            Ma conviction profonde
+          </h2>
           
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p class="text-gray-700 mb-4">
-                Je suis convaincu que les jeux vidéo, si souvent diabolisés, sont en réalité 
-                un formidable outil de développement personnel. La recherche scientifique confirme 
-                aujourd'hui cette vision.
+              <p class="text-lg text-gray-700 mb-4">
+                <strong class="text-ludus-orange">Je suis convaincu</strong> que les jeux vidéo, 
+                si souvent diabolisés, sont en réalité un formidable outil de développement personnel.
               </p>
-              <p class="text-gray-700 mb-4">
-                Ludus Mentis est né de cette certitude : créer le cadre qui n'existait pas pour moi. 
-                Un lieu qui s'inspire de :
+              <p class="text-gray-600 mb-4">
+                La recherche scientifique confirme aujourd'hui cette vision : les jeux coopératifs 
+                développent l'empathie, la communication, la gestion du stress, la résolution de problèmes...
               </p>
-              <ul class="space-y-2 text-gray-700">
-                <li>🎼 La rigueur d'une académie de musique</li>
-                <li>⛺ La bienveillance d'un mouvement de jeunesse</li>
-                <li>🎮 La passion de l'esport</li>
-              </ul>
+              <p class="text-gray-600">
+                <strong class="text-ludus-teal">Ludus Mentis</strong> est né de cette certitude : 
+                créer le cadre structuré et bienveillant qui permet de transformer une passion 
+                souvent incomprise en véritable école de vie.
+              </p>
             </div>
+            
             <div class="text-center">
-              <div class="radial-progress text-orange-500" style="--value:75; --size:12rem; --thickness: 1rem;">
-                <div class="text-center">
-                  <div class="text-3xl font-bold">75%</div>
-                  <div class="text-sm">des compétences<br/>du futur</div>
-                </div>
+              <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl p-8">
+                <div class="text-6xl mb-4">🎯</div>
+                <h3 class="font-bold text-purple-700 mb-3">Notre mission</h3>
+                <p class="text-gray-700">
+                  Réconcilier parents et enfants autour du gaming, 
+                  en créant un espace où la passion devient apprentissage.
+                </p>
               </div>
-              <p class="text-sm text-gray-600 mt-4">sont des soft skills développées par le jeu</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Partenaires -->
+    <!-- Les 3 inspirations -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl border-2 border-gray-200">
-        <div class="card-body text-center">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800">Des partenaires qui croient en nous</h2>
-          <p class="text-gray-600 mb-8">
-            Ce projet est soutenu par des acteurs clés qui partagent notre vision innovante :
-          </p>
-          <div class="flex flex-wrap justify-center items-center gap-8">
-            <div class="text-center">
-              <img src="assets/images/logo_walhain.png" alt="Commune de Walhain" class="h-20 mx-auto mb-2">
-              <p class="text-sm text-gray-600">Commune de Walhain</p>
+      <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
+        Ludus Mentis : la synthèse de 3 mondes
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Académie de musique -->
+        <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">🎼</div>
+            <h3 class="font-bold text-blue-700 mb-3">L'académie de musique</h3>
+            <p class="text-gray-600 mb-4">
+              La rigueur de la pratique régulière, la progression structurée, l'évaluation bienveillante.
+            </p>
+            <div class="text-left bg-white rounded-lg p-3">
+              <p class="text-sm text-gray-700">
+                <strong>Ce qu'on en garde :</strong><br>
+                • Sessions hebdomadaires<br>
+                • Progression mesurée<br>
+                • Bilans personnalisés
+              </p>
             </div>
-            <div class="text-center">
-              <img src="assets/images/logo_besf.png" alt="Fédération belge d'esport" class="h-20 mx-auto mb-2">
+          </div>
+        </div>
+        
+        <!-- Mouvement scout -->
+        <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">⛺</div>
+            <h3 class="font-bold text-green-700 mb-3">Le mouvement scout</h3>
+            <p class="text-gray-600 mb-4">
+              Les valeurs humaines, l'entraide, le respect, l'apprentissage par l'action.
+            </p>
+            <div class="text-left bg-white rounded-lg p-3">
+              <p class="text-sm text-gray-700">
+                <strong>Ce qu'on en garde :</strong><br>
+                • Bienveillance absolue<br>
+                • Esprit d'équipe<br>
+                • Rituels de groupe
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Esport moderne -->
+        <div class="card bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">🎮</div>
+            <h3 class="font-bold text-orange-700 mb-3">L'esport moderne</h3>
+            <p class="text-gray-600 mb-4">
+              La passion du gaming, la performance collective, l'analyse stratégique.
+            </p>
+            <div class="text-left bg-white rounded-lg p-3">
+              <p class="text-sm text-gray-700">
+                <strong>Ce qu'on en garde :</strong><br>
+                • Jeux coopératifs<br>
+                • Débriefings structurés<br>
+                • Culture gaming positive
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats et réalisations -->
+    <section class="mb-12">
+      <div class="card bg-gradient-to-r from-ludus-teal to-ludus-orange text-white shadow-xl">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold text-center mb-8">Mon parcours en chiffres</h2>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div class="text-4xl font-bold mb-2">20+</div>
+              <p class="text-sm opacity-90">Années de gaming</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">10+</div>
+              <p class="text-sm opacity-90">Années en gestion projet</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">98</div>
+              <p class="text-sm opacity-90">Études analysées</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">1</div>
+              <p class="text-sm opacity-90">Mission claire</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partenaires et soutiens -->
+    <section class="mb-12">
+      <div class="card bg-white shadow-xl">
+        <div class="card-body text-center">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">
+            Un projet soutenu et reconnu
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Des partenaires institutionnels croient en notre vision innovante
+          </p>
+          
+          <div class="flex flex-wrap justify-center items-center gap-8">
+            <div class="text-center group">
+              <img src="/assets/images/logo_walhain.png" 
+                   alt="Commune de Walhain" 
+                   class="h-20 mx-auto mb-2 grayscale hover:grayscale-0 transition-all">
+              <p class="text-sm text-gray-600">Commune de Walhain</p>
+              <p class="text-xs text-gray-500">Soutien institutionnel</p>
+            </div>
+            <div class="text-center group">
+              <img src="/assets/images/logo_besf.png" 
+                   alt="Fédération belge d'esport" 
+                   class="h-20 mx-auto mb-2 grayscale hover:grayscale-0 transition-all">
               <p class="text-sm text-gray-600">Fédération belge d'esport</p>
+              <p class="text-xs text-gray-500">Partenaire technique</p>
             </div>
           </div>
         </div>
@@ -292,21 +429,59 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">Envie de rejoindre l'aventure ?</h2>
-      <p class="text-xl mb-6 opacity-95">
-        Ensemble, faisons du jeu vidéo une véritable école de vie.
+    <section class="text-center gradient-ludus rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+        Envie de faire partie de l'aventure ?
+      </h2>
+      <p class="text-xl mb-8 opacity-95">
+        Ensemble, faisons du jeu vidéo une véritable école de vie
       </p>
-      <a href="contact.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
-        Contactez-moi
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
+          Contactez-moi directement
+        </a>
+        <a href="/concept.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+          Découvrir le concept
+        </a>
+      </div>
+      
+      <div class="mt-8 text-sm opacity-75">
+        <p>📧 antoine.billard@ludusmentis.be</p>
+        <p>📍 Walhain, Brabant wallon, Belgique</p>
+      </div>
     </section>
   </main>
   
   <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
+  
+  <!-- CMP Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    // GA4 avec l'ID correct
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>

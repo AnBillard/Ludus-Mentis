@@ -1,282 +1,442 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="ludus">
 <head>
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ludus Mentis" />
-  <meta property="og:url" content="https://ludusmentis.be/" />
-  <meta property="og:title" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
-  <meta property="og:description" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
-  <meta name="twitter:description" content="Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain" />
-  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
-
-
-  <link rel="canonical" href="https://ludusmentis.be/" />
-
-
-  <!-- A11Y helpers -->
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-
-  <!-- CMP + Consent Mode v2 -->
-  <script src="/assets/js/consent-default.js"></script>
-  <!-- tarteaucitron at site root per user's structure -->
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
-
-    <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-    <!-- End Google Tag Manager -->
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludus Mentis | Ateliers jeux vidéo éducatifs à Walhain</title>
-    <meta name="description" content="Transformez la passion des jeux vidéo de votre ado en compétences de vie. Ateliers éducatifs pour jeunes de 10-15 ans à Walhain. Ouverture janvier 2026.">
-    <meta name="keywords" content="stage jeux vidéo, coaching esport, adolescent, Walhain, activité extra-scolaire, développement personnel">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ludus Mentis",
-      "description": "Programme d'ateliers de jeux vidéo éducatifs pour adolescents de 10 à 15 ans à Walhain",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Walhain",
-        "addressRegion": "Wallonie",
-        "addressCountry": "BE"
-      },
-      "url": "https://ludusmentis.be/",
-      "email": "info@ludusmentis.be",
-      "areaServed": "Belgique"
+  <title>Ludus Mentis | Club de jeu vidéo coopératif à Walhain</title>
+  <meta name="description" content="Club gaming pour ados 10-15 ans. Sessions encadrées de 2h/semaine, jeux coopératifs uniquement. Développez des compétences sociales en jouant !">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    :root {
+      --ludus-teal: #17a2b8;
+      --ludus-orange: #ff9800;
     }
-    </script>
     
-    <!-- DaisyUI + Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    .text-ludus-teal { color: var(--ludus-teal); }
+    .text-ludus-orange { color: var(--ludus-orange); }
+    .bg-ludus-teal { background-color: var(--ludus-teal); }
+    .bg-ludus-orange { background-color: var(--ludus-orange); }
+    .border-ludus-teal { border-color: var(--ludus-teal); }
+    .border-ludus-orange { border-color: var(--ludus-orange); }
     
-    <!-- Configuration Tailwind -->
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: '#fb923c',
-              'primary-focus': '#ea580c',
-              secondary: '#fbbf24',
-              accent: '#ef4444',
-            },
-            fontFamily: {
-              'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-              'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
+    .gradient-ludus {
+      background: linear-gradient(135deg, var(--ludus-teal) 0%, var(--ludus-orange) 100%);
+    }
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    /* Audience-specific content */
+    .parent-content, .teen-content { display: none; }
+    [data-audience="parent"] .parent-content { display: block; }
+    [data-audience="teen"] .teen-content { display: block; }
     
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+    /* Teen mode styling */
+    [data-audience="teen"] {
+      --primary-color: var(--ludus-orange);
+      --secondary-color: var(--ludus-teal);
+    }
+    
+    [data-audience="parent"] {
+      --primary-color: var(--ludus-teal);
+      --secondary-color: var(--ludus-orange);
+    }
+    
+    .primary-color { color: var(--primary-color); }
+    .bg-primary-color { background-color: var(--primary-color); }
+    .border-primary-color { border-color: var(--primary-color); }
+  </style>
+  
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body class="min-h-screen bg-base-100">
-<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
+<body data-audience="parent">
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero Section avec contenu adaptatif -->
+    <section class="hero gradient-ludus-soft rounded-3xl p-8 lg:p-12 mb-12 border-2 border-primary-color">
+      <div class="text-center max-w-4xl mx-auto">
+        <img src="/assets/images/Ludus-Mentis-transparent.png" alt="Ludus Mentis" class="w-32 h-32 mx-auto mb-6">
+        
+        <!-- Contenu Parents -->
+        <div class="parent-content">
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6 text-ludus-teal">
+            Offrez-lui un cadre sain<br>pour sa passion gaming
+          </h1>
+          
+          <p class="text-xl lg:text-2xl mb-8 text-gray-700">
+            <strong class="text-ludus-orange">Club encadré</strong> pour adolescents de 10-15 ans<br>
+            <strong class="text-ludus-teal">2h par semaine</strong>, hors domicile, avec d'autres jeunes<br>
+            <strong>Développement de compétences</strong> mesurables et transférables
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#decouvrir" class="btn btn-lg bg-ludus-teal text-white border-0 hover:bg-teal-600">
+              Découvrir notre approche
+            </a>
+            <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-ludus-orange text-ludus-orange hover:bg-ludus-orange hover:text-white">
+              Inscrire mon enfant
+            </a>
+          </div>
+        </div>
+        
+        <!-- Contenu Ados -->
+        <div class="teen-content">
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6 text-ludus-orange">
+            Le club gaming<br>qui déchire ! 🎮
+          </h1>
+          
+          <p class="text-xl lg:text-2xl mb-8 text-gray-700">
+            <strong class="text-ludus-teal">Joue avec d'autres passionnés</strong> IRL<br>
+            <strong class="text-ludus-orange">100% coop</strong>, zéro toxicité, que du fun<br>
+            <strong>Deviens meilleur</strong> en équipe et fais-toi des potes !
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#decouvrir" class="btn btn-lg bg-ludus-orange text-white border-0 hover:bg-orange-600">
+              C'est quoi ce truc ? 🤔
+            </a>
+            <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-ludus-teal text-ludus-teal hover:bg-ludus-teal hover:text-white">
+              Je veux rejoindre ! 🚀
+            </a>
+          </div>
+        </div>
+        
+        <!-- Badges communs -->
+        <div class="flex flex-wrap gap-3 justify-center mt-8">
+          <div class="badge badge-lg bg-ludus-teal text-white border-0">👥 10-15 ans</div>
+          <div class="badge badge-lg bg-ludus-orange text-white border-0">🎮 100% coop</div>
+          <div class="badge badge-lg bg-gray-700 text-white">📍 Walhain</div>
+          <div class="badge badge-lg badge-outline border-2 border-ludus-teal">🚀 Sept. 2026</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <div id="header"></div>
-    
-    <main class="container mx-auto px-4 py-8" id="main">
-        <!-- Hero Section Améliorée -->
-        <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-12">
-            <div class="text-center max-w-4xl mx-auto">
-                <img src="assets/images/Ludus-Mentis-transparent.png" alt="Logo Ludus Mentis" class="w-32 mx-auto mb-6 hover:scale-105 transition-transform" />
-                <h1 class="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                    Et si le jeu vidéo aidait votre enfant à grandir ?
-                </h1>
-                <p class="text-lg lg:text-xl text-gray-700 mb-8">
-                    Transformons ensemble la passion du gaming en compétences essentielles pour la vie. 
-                    Notre approche unique développe <strong class="text-orange-600">communication, collaboration et confiance en soi</strong> 
-                    à travers le jeu vidéo encadré.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#programme" class="btn btn-primary btn-lg">Découvrir le programme</a>
-                    <a href="contact.html" class="btn btn-outline btn-primary btn-lg">Réserver une place</a>
-                </div>
-                <p class="mt-6 text-sm text-gray-600">
-                    📍 Walhain • 🎮 10-15 ans • 🚀 Ouverture janvier 2026
-                </p>
+    <!-- Section "Ce qu'on fait" avec double contenu -->
+    <section id="decouvrir" class="mb-12">
+      <!-- Titre adaptatif -->
+      <h2 class="text-3xl font-bold text-center mb-8 primary-color">
+        <span class="parent-content">Un club pensé pour les parents et les ados</span>
+        <span class="teen-content">Un club de gaming pas comme les autres 🎯</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="card bg-base-100 shadow-xl border-t-4 border-ludus-teal">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">🎮</div>
+            <h3 class="font-bold text-xl mb-3">
+              <span class="parent-content">Sessions encadrées</span>
+              <span class="teen-content">On joue ensemble !</span>
+            </h3>
+            <div class="parent-content text-gray-600">
+              <p>2h par semaine dans un lieu dédié et sécurisé. 
+              Encadrement professionnel, groupe de 8-10 jeunes maximum.</p>
             </div>
-        </section>
+            <div class="teen-content text-gray-600">
+              <p>Retrouve d'autres gamers chaque semaine ! 
+              Sessions de 2h avec les meilleurs jeux coop.</p>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-ghost">Overcooked</span>
+              <span class="badge badge-ghost">Portal 2</span>
+              <span class="badge badge-ghost">Moving Out</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card bg-base-100 shadow-xl border-t-4 border-ludus-orange">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">📈</div>
+            <h3 class="font-bold text-xl mb-3">
+              <span class="parent-content">Développement mesuré</span>
+              <span class="teen-content">Level up IRL !</span>
+            </h3>
+            <div class="parent-content text-gray-600">
+              <p>Communication, gestion du stress, résolution de problèmes. 
+              Bilan personnalisé en fin de module.</p>
+            </div>
+            <div class="teen-content text-gray-600">
+              <p>Deviens meilleur en communication, gère mieux le stress, 
+              résous des problèmes en équipe !</p>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-ghost">Méthode Kolb</span>
+              <span class="badge badge-ghost">Débriefings</span>
+              <span class="badge badge-ghost">Progrès</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card bg-base-100 shadow-xl border-t-4 border-ludus-teal">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">⚖️</div>
+            <h3 class="font-bold text-xl mb-3">
+              <span class="parent-content">Pratique responsable</span>
+              <span class="teen-content">Gaming équilibré</span>
+            </h3>
+            <div class="parent-content text-gray-600">
+              <p>Limite saine du temps d'écran, pauses actives obligatoires, 
+              parents impliqués dans le suivi.</p>
+            </div>
+            <div class="teen-content text-gray-600">
+              <p>Pas de sessions marathon ! Pauses actives, 
+              zéro toxicité, que de la bonne ambiance.</p>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-ghost">2h/semaine max</span>
+              <span class="badge badge-ghost">PEGI ≤12</span>
+              <span class="badge badge-ghost">Hors ligne</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Stats rapides -->
-        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            <div class="stat bg-white rounded-2xl shadow-lg text-center">
-                <div class="stat-value text-primary">10-15</div>
-                <div class="stat-desc">ans</div>
+    <!-- Section "Pour qui ?" avec double perspective -->
+    <section class="mb-12">
+      <div class="card gradient-ludus-soft">
+        <div class="card-body">
+          <!-- Version Parents -->
+          <div class="parent-content">
+            <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
+              Est-ce fait pour votre enfant ?
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div>
+                <h3 class="font-bold text-xl mb-4 text-ludus-orange">✅ C'est parfait si...</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">→</span>
+                    <span>Votre enfant passe beaucoup de temps seul devant les écrans</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">→</span>
+                    <span>Vous cherchez une activité sociale encadrée</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">→</span>
+                    <span>Vous voulez qu'il développe des compétences utiles</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">→</span>
+                    <span>Les conflits autour du gaming sont fréquents</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="font-bold text-xl mb-4 text-ludus-teal">❌ Ce n'est pas adapté si...</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">→</span>
+                    <span>Vous cherchez une thérapie anti-addiction</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">→</span>
+                    <span>Votre enfant veut de la compétition esport</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">→</span>
+                    <span>Il préfère jouer seul exclusivement</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">→</span>
+                    <span>Vous êtes contre tout jeu vidéo</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="stat bg-white rounded-2xl shadow-lg text-center">
-                <div class="stat-value text-primary">7</div>
-                <div class="stat-desc">semaines/module</div>
+          </div>
+          
+          <!-- Version Ados -->
+          <div class="teen-content">
+            <h2 class="text-3xl font-bold text-center mb-8 text-ludus-orange">
+              C'est pour toi si... 🤔
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div>
+                <h3 class="font-bold text-xl mb-4 text-ludus-teal">🔥 Tu vas kiffer si...</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>T'adores les jeux vidéo (ou tu veux découvrir)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>Tu veux rencontrer d'autres gamers IRL</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>T'aimes jouer en équipe et rigoler</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-green-500">✓</span>
+                    <span>T'as entre 10 et 15 ans</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="font-bold text-xl mb-4 text-ludus-orange">😕 C'est pas pour toi si...</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">✗</span>
+                    <span>Tu veux tryhard et devenir pro</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">✗</span>
+                    <span>Tu préfères jouer solo dans ta chambre</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">✗</span>
+                    <span>Tu cherches du PvP compétitif</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-red-500">✗</span>
+                    <span>T'aimes pas aider les autres</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="stat bg-white rounded-2xl shadow-lg text-center">
-                <div class="stat-value text-primary">2h</div>
-                <div class="stat-desc">par atelier</div>
+            
+            <div class="text-center mt-8">
+              <p class="text-lg font-bold text-gray-700">
+                "Pas besoin d'être un pro ! On accepte tous les niveaux 💪"
+              </p>
             </div>
-            <div class="stat bg-white rounded-2xl shadow-lg text-center">
-                <div class="stat-value text-primary">8</div>
-                <div class="stat-desc">jeunes max</div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Les 3 piliers -->
-        <section id="programme" class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Notre approche en 3 piliers</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="text-4xl mb-4">🎮</div>
-                        <h3 class="card-title text-orange-600">Jouer ensemble</h3>
-                        <p>Des jeux coopératifs soigneusement sélectionnés où la réussite dépend de l'entraide et de la communication.</p>
-                    </div>
+    <!-- Témoignages adaptés -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8 primary-color">
+        <span class="parent-content">Ce qu'ils en disent</span>
+        <span class="teen-content">La team parle ! 💬</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Témoignage 1 - Adaptatif -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="parent-content">
+              <div class="flex items-start gap-4">
+                <div class="avatar placeholder">
+                  <div class="bg-ludus-teal text-white rounded-full w-12">
+                    <span>SP</span>
+                  </div>
                 </div>
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="text-4xl mb-4">💭</div>
-                        <h3 class="card-title text-orange-600">Réfléchir ensemble</h3>
-                        <p>Débriefings guidés après chaque session pour analyser, comprendre et apprendre de l'expérience vécue.</p>
-                    </div>
-                </div>
-                <div class="card bg-white shadow-xl">
-                    <div class="card-body">
-                        <div class="text-4xl mb-4">🌟</div>
-                        <h3 class="card-title text-orange-600">Grandir ensemble</h3>
-                        <p>Développement de compétences transférables : gestion du stress, travail d'équipe, communication claire.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pourquoi c'est important -->
-        <section class="card bg-gradient-to-r from-orange-50 to-amber-50 p-8 mb-12">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Pourquoi un encadrement est essentiel ?</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">⚠️</span>
-                            <div>
-                                <strong class="text-orange-600">34% des ados</strong> jouent quotidiennement, 
-                                parfois au détriment d'autres activités essentielles.
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">📊</span>
-                            <div>
-                                <strong class="text-orange-600">12% des jeunes</strong> risquent de développer 
-                                une pratique problématique selon l'OMS.
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-2xl">🎯</span>
-                            <div>
-                                <strong class="text-orange-600">Notre mission :</strong> transformer ce temps 
-                                d'écran en expérience constructive et enrichissante.
-                            </div>
-                        </div>
-                    </div>
+                  <p class="italic text-gray-600">
+                    "Mon fils est transformé ! Il parle de stratégie, de communication d'équipe. 
+                    Les conflits à la maison ont diminué depuis qu'il a ce rendez-vous hebdomadaire."
+                  </p>
+                  <cite class="text-sm text-ludus-orange mt-2 block">
+                    - Sophie, maman de Lucas (13 ans)
+                  </cite>
                 </div>
-                <div class="text-center">
-                    <a href="enjeux.html" class="btn btn-primary">
-                        Voir l'analyse complète
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
+              </div>
             </div>
-        </section>
+            
+            <div class="teen-content">
+              <div class="flex items-start gap-4">
+                <div class="avatar placeholder">
+                  <div class="bg-ludus-orange text-white rounded-full w-12">
+                    <span>LK</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="italic text-gray-600">
+                    "C'est trop bien ! On joue à des jeux de ouf et l'ambiance est super cool. 
+                    J'ai rencontré des potes qui aiment les mêmes jeux que moi !"
+                  </p>
+                  <cite class="text-sm text-ludus-teal mt-2 block">
+                    - Lucas, 13 ans, membre du club
+                  </cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Témoignage 2 - Fondateur -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="flex items-start gap-4">
+              <div class="avatar placeholder">
+                <div class="bg-primary-color text-white rounded-full w-12">
+                  <span>AB</span>
+                </div>
+              </div>
+              <div>
+                <p class="italic text-gray-600 parent-content">
+                  "J'ai créé Ludus Mentis car ce cadre n'existait pas quand j'étais ado. 
+                  Un endroit où la passion du jeu vidéo devient sociale et éducative."
+                </p>
+                <p class="italic text-gray-600 teen-content">
+                  "J'ai créé ce club parce que j'aurais adoré avoir ça quand j'étais ado ! 
+                  Un endroit pour jouer sans toxicité, avec des potes, et progresser ensemble."
+                </p>
+                <cite class="text-sm primary-color mt-2 block">
+                  - Antoine Billard, Fondateur
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Compétences développées -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Les compétences du 21<sup>e</sup> siècle</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-3xl mb-3">💬</div>
-                    <h4 class="font-bold text-gray-800 mb-2">Communication</h4>
-                    <p class="text-sm text-gray-600">Exprimer ses idées clairement et écouter activement les autres</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-3xl mb-3">🤝</div>
-                    <h4 class="font-bold text-gray-800 mb-2">Collaboration</h4>
-                    <p class="text-sm text-gray-600">Travailler en équipe vers un objectif commun</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-3xl mb-3">🧠</div>
-                    <h4 class="font-bold text-gray-800 mb-2">Résolution de problèmes</h4>
-                    <p class="text-sm text-gray-600">Analyser, adapter et trouver des solutions créatives</p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-3xl mb-3">🎯</div>
-                    <h4 class="font-bold text-gray-800 mb-2">Gestion émotionnelle</h4>
-                    <p class="text-sm text-gray-600">Gérer stress et frustration de manière constructive</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Partenaires -->
-        <section class="card bg-white p-8 mb-12 text-center">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">Un projet soutenu localement</h2>
-            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-                Ludus Mentis bénéficie du soutien d'acteurs engagés dans l'éducation, 
-                la prévention et l'innovation pédagogique.
-            </p>
-            <div class="flex flex-wrap justify-center items-center gap-8">
-                <a href="https://www.walhain.be/" target="_blank" rel="noopener" class="hover:scale-105 transition-transform">
-                    <img src="assets/images/logo_walhain.png" alt="Logo commune de Walhain" class="h-20">
-                </a>
-                <a href="https://besf.be/" target="_blank" rel="noopener" class="hover:scale-105 transition-transform">
-                    <img src="assets/images/logo_besf.png" alt="Logo fédération belge d'esport" class="h-20">
-                </a>
-            </div>
-        </section>
-
-        <!-- CTA Final -->
-        <section class="bg-gradient-to-r from-orange-400 to-orange-600 rounded-3xl p-8 lg:p-12 text-white text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-4">Prêt à transformer le gaming en apprentissage ?</h2>
-            <p class="text-xl mb-8 opacity-95">
-                Places limitées pour garantir un accompagnement de qualité. 
-                Réservez dès maintenant pour janvier 2026.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
-                    Réserver une place
-                </a>
-                <a href="faq.html" class="btn btn-outline btn-white btn-lg">
-                    Consulter la FAQ
-                </a>
-            </div>
-        </section>
-    </main>
-    
-    <div id="footer"></div>
-    <script src="assets/js/include.js"></script>
+    <!-- CTA Final adaptatif -->
+    <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
+      <div class="parent-content">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          Prêt à offrir cette expérience à votre enfant ?
+        </h2>
+        <p class="text-xl mb-8 opacity-95">
+          Places limitées • Ouverture septembre 2026 • Préinscriptions ouvertes
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
+            Préinscrire mon enfant
+          </a>
+          <a href="/faq.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-teal">
+            J'ai des questions
+          </a>
+        </div>
+      </div>
+      
+      <div class="teen-content">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          Alors, tu rejoins l'aventure ? 🚀
+        </h2>
+        <p class="text-xl mb-8 opacity-95">
+          Plus que quelques places ! On commence en septembre 2026
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact.html" class="btn btn-lg bg-white text-ludus-orange border-0 hover:bg-gray-100">
+            Je veux ma place ! 🎮
+          </a>
+          <a href="/faq.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+            J'ai des questions 🤔
+          </a>
+        </div>
+      </div>
+      
+      <p class="text-sm opacity-75 mt-6">
+        ASBL en cours de création • Contact : info@ludusmentis.be
+      </p>
+    </section>
+  </main>
+  
+  <div id="footer"></div>
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>

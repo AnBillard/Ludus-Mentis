@@ -1,3 +1,39 @@
+# Robots.txt pour Ludus Mentis
+# https://ludusmentis.be/
+
+# Règles pour tous les robots
 User-agent: *
 Allow: /
+Disallow: /assets/js/
+Disallow: /tarteaucitron.js/
+Disallow: /*.pdf$
+Crawl-delay: 1
+
+# Règles spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /
+Allow: /assets/images/
+Allow: /assets/css/
+Disallow: /assets/js/
+Crawl-delay: 0
+
+# Règles pour Googlebot Images
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Disallow: /
+
+# Bloquer les mauvais bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap
 Sitemap: https://ludusmentis.be/sitemap.xml
