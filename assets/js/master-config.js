@@ -1,5 +1,5 @@
 // /assets/js/master-config.js
-// Configuration centralisée pour Ludus Mentis
+// Configuration centralisée pour Ludus Mentis - VERSION SIMPLIFIÉE
 
 window.LudusConfig = {
   // Analytics
@@ -9,7 +9,7 @@ window.LudusConfig = {
     enableTracking: true
   },
   
-  // Organisation - CLARIFIÉ
+  // Organisation
   organization: {
     name: 'Ludus Mentis',
     type: 'Club de jeu vidéo éducatif',
@@ -20,41 +20,32 @@ window.LudusConfig = {
     founder: 'Antoine Billard'
   },
   
-  // Positionnement - CLARIFIÉ
-  positioning: {
-    what: 'Club de jeu vidéo coopératif',
-    how: 'Sessions structurées hors domicile avec méthode pédagogique',
-    why: 'Pratique responsable du gaming et développement de compétences sociales',
-    notWhat: 'Ni thérapie, ni centre de traitement, ni compétition esport'
+  // Contact UNIQUE
+  contact: {
+    email: 'info@ludusmentis.be', // UNE SEULE ADRESSE
+    address: {
+      city: 'Walhain',
+      region: 'Brabant wallon',
+      country: 'Belgique'
+    }
   },
   
-  // Public cible - CLARIFIÉ
+  // Public cible
   targetAudience: {
-    primary: {
-      name: 'Adolescents',
-      age: '10-15 ans',
-      need: 'Cadre social pour leur passion gaming'
-    },
-    secondary: {
-      name: 'Parents',
-      need: 'Solution équilibrée pour gérer le temps d\'écran'
-    },
-    tertiary: {
-      name: 'Éducateurs',
-      need: 'Outil pédagogique innovant'
-    }
+    ageRange: '10-15 ans',
+    groupSize: '8-10 participants',
+    level: 'Tous niveaux acceptés'
   },
   
   // Programme
   program: {
     format: 'Modules de 7 semaines',
     sessionDuration: '2 heures',
-    frequency: 'Hebdomadaire (mercredi)',
-    groupSize: '8-10 participants maximum',
-    location: 'Walhain, Brabant wallon',
-    schedule: [
-      { day: 'Mercredi', time: '14h00-16h00', target: 'Jeunes collégiens' },
-      { day: 'Mercredi', time: '17h00-19h00', target: 'Lycéens' }
+    frequency: 'Hebdomadaire',
+    day: 'Mercredi',
+    slots: [
+      { time: '14h00-16h00', target: 'Idéal collégiens' },
+      { time: '17h00-19h00', target: 'Idéal lycéens' }
     ]
   },
   
@@ -62,39 +53,36 @@ window.LudusConfig = {
   pricing: {
     modulePrice: 230,
     currency: 'EUR',
-    perSession: 32.86,
-    included: [
-      'Matériel gaming fourni',
-      'Encadrement professionnel',
-      'Assurance',
-      'Bilan personnalisé'
-    ],
+    perHour: 16.43,
+    duration: '7 semaines',
+    included: 'Tout compris (matériel, encadrement, assurance, bilan)',
     discounts: [
-      { type: 'resident', location: 'Walhain', percentage: 15 },
-      { type: 'family', description: 'Fratries', percentage: 10 }
+      { type: 'resident', location: 'Walhain', percentage: 15, finalPrice: 195.50 },
+      { type: 'family', description: 'Fratries', percentage: 10, finalPrice: 207 }
     ],
-    paymentOptions: [
-      'Paiement comptant',
-      '2x sans frais',
-      'Arrangement personnalisé sur demande'
-    ]
+    paymentOptions: ['Comptant', '2x sans frais', 'Arrangement personnalisé']
   },
   
-  // Contact
-  contact: {
-    email: 'info@ludusmentis.be',
-    address: {
-      city: 'Walhain',
-      region: 'Brabant wallon',
-      country: 'Belgique',
-      note: 'Lieu exact communiqué à l\'inscription'
-    }
+  // Pages du site (nouvelle architecture)
+  sitemap: {
+    pages: [
+      { url: '/', title: 'Accueil', priority: 1.0 },
+      { url: '/notre-approche.html', title: 'Notre approche', priority: 0.9 },
+      { url: '/programmes.html', title: 'Programme', priority: 0.9 },
+      { url: '/jeux.html', title: 'Les jeux', priority: 0.7 },
+      { url: '/infos-pratiques.html', title: 'Infos pratiques', priority: 0.8 },
+      { url: '/contact.html', title: 'Contact', priority: 0.9 },
+      { url: '/a-propos.html', title: 'À propos', priority: 0.6 },
+      { url: '/recherche.html', title: 'Recherche', priority: 0.5 },
+      { url: '/charte.html', title: 'Charte', priority: 0.5 },
+      { url: '/mentions.html', title: 'Mentions légales', priority: 0.3 }
+    ]
   },
   
   // Formulaires
   forms: {
     formspreeId: 'mdkdwzoy',
-    privacyNotice: 'Vos données sont traitées conformément au RGPD. Aucun transfert hors UE sans votre consentement explicite.'
+    privacyNotice: 'Données traitées conformément au RGPD, conservation jusqu\'à septembre 2026'
   },
   
   // Partenaires
@@ -102,62 +90,32 @@ window.LudusConfig = {
     {
       name: 'Commune de Walhain',
       logo: '/assets/images/logo_walhain.png',
-      url: 'https://www.walhain.be/',
       type: 'Soutien institutionnel'
     },
     {
       name: 'Fédération belge d\'esport',
       logo: '/assets/images/logo_besf.png',
-      url: 'https://besf.be/',
       type: 'Partenaire technique'
     }
   ],
   
-  // Jeux utilisés - PÉDAGOGIQUES UNIQUEMENT
-  games: [
-    { 
-      name: 'Overcooked! 2', 
-      pegi: 3, 
-      players: '2-4', 
-      type: 'coop',
-      skills: 'Communication, gestion du stress'
-    },
-    { 
-      name: 'Portal 2 Co-op', 
-      pegi: 12, 
-      players: '2', 
-      type: 'puzzle',
-      skills: 'Résolution de problèmes, synchronisation'
-    },
-    { 
-      name: 'Keep Talking and Nobody Explodes', 
-      pegi: 3, 
-      players: '2-4', 
-      type: 'communication',
-      skills: 'Écoute active, précision verbale'
-    },
-    { 
-      name: 'Lovers in a Dangerous Spacetime', 
-      pegi: 7, 
-      players: '2-4', 
-      type: 'coop',
-      skills: 'Coordination, leadership rotatif'
-    },
-    { 
-      name: 'Moving Out', 
-      pegi: 3, 
-      players: '2-4', 
-      type: 'coop',
-      skills: 'Planification, travail d\'équipe'
-    }
-  ],
+  // Jeux principaux
+  games: {
+    stars: [
+      { name: 'Overcooked! 2', pegi: 3, players: '2-4', skill: 'Communication' },
+      { name: 'Portal 2 Co-op', pegi: 12, players: '2', skill: 'Synchronisation' },
+      { name: 'Keep Talking', pegi: 3, players: '2-4', skill: 'Écoute active' },
+      { name: 'Lovers Spacetime', pegi: 7, players: '2-4', skill: 'Leadership' },
+      { name: 'Moving Out', pegi: 3, players: '2-4', skill: 'Planification' }
+    ],
+    banned: ['Fortnite', 'Roblox', 'FIFA/FC', 'Call of Duty', 'GTA', 'League of Legends']
+  },
   
-  // Messages clés - CLARIFIÉS
+  // Messages clés
   messages: {
-    hero: 'Le club où le jeu vidéo devient un sport d\'équipe',
+    hero: 'Le club où le gaming devient social et éducatif',
     value: 'Transformez la passion gaming en compétences sociales',
     safety: 'Cadre sécurisé, horaires limités, parents impliqués',
-    method: 'Méthode Kolb validée, mesure des progrès, bilan personnalisé',
     notTherapy: 'Club de loisir éducatif, pas un centre thérapeutique'
   },
   
@@ -173,3 +131,6 @@ window.LudusConfig = {
 window.getConfig = function(path) {
   return path.split('.').reduce((obj, key) => obj?.[key], window.LudusConfig);
 };
+
+// Log de confirmation
+console.log('Ludus Mentis Config loaded - Simplified version');
