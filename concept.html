@@ -1,281 +1,385 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="ludus">
 <head>
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ludus Mentis" />
-  <meta property="og:url" content="https://ludusmentis.be/concept.html" />
-  <meta property="og:title" content="Notre concept pédagogique innovant | Ludus Mentis" />
-  <meta property="og:description" content="Notre concept pédagogique innovant | Ludus Mentis" />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Notre concept pédagogique innovant | Ludus Mentis" />
-  <meta name="twitter:description" content="Notre concept pédagogique innovant | Ludus Mentis" />
-  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-default.jpg" />
-
-
-  <link rel="canonical" href="https://ludusmentis.be/concept.html" />
-
-
-  <!-- A11Y helpers -->
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-
-  <!-- CMP + Consent Mode v2 -->
-  <script src="/assets/js/consent-default.js"></script>
-  <!-- tarteaucitron at site root per user's structure -->
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
-
+  <title>Notre concept : le gaming social et éducatif | Ludus Mentis</title>
+  <meta name="description" content="Découvrez comment nous transformons le jeu vidéo en activité sociale enrichissante. Un club où l'on joue ensemble pour mieux grandir.">
+  
   <meta charset="UTF-8">
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-  <!-- End Google Tag Manager -->
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notre concept pédagogique innovant | Ludus Mentis</title>
-  <meta name="description" content="Découvrez comment nous transformons des jeux vidéo populaires en outils pédagogiques pour développer communication, collaboration et gestion émotionnelle chez les jeunes.">
-  <meta name="keywords" content="concept pédagogique, jeu vidéo éducatif, soft skills, compétences humaines, esport, apprentissage par le jeu">
-  
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/master-config.js"></script>
   
-  <!-- Configuration Tailwind -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#ea580c',
-            'primary-focus': '#c2410c',
-            secondary: '#f59e0b',
-            accent: '#ef4444',
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
+  <style>
+    :root {
+      --ludus-teal: #17a2b8;
+      --ludus-orange: #ff9800;
     }
-  </script>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+    .text-ludus-teal { color: var(--ludus-teal); }
+    .text-ludus-orange { color: var(--ludus-orange); }
+    .bg-ludus-teal { background-color: var(--ludus-teal); }
+    .bg-ludus-orange { background-color: var(--ludus-orange); }
+    .border-ludus-teal { border-color: var(--ludus-teal); }
+    .border-ludus-orange { border-color: var(--ludus-orange); }
+    .gradient-ludus {
+      background: linear-gradient(135deg, var(--ludus-teal) 0%, var(--ludus-orange) 100%);
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-base-100">
-<a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-base-100 focus:text-base-content focus:px-3 focus:py-2 focus:rounded" href="#main">Aller au contenu</a>
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
+<body>
   <div id="header"></div>
 
-  <main class="container mx-auto px-4 py-8" id="main">
+  <main class="container mx-auto px-4 py-8">
     <!-- Hero Section -->
-    <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200">
+    <section class="hero bg-gradient-to-br from-teal-50 to-orange-50 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-ludus-teal">
       <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
-          Transformer le plaisir de jouer en compétences pour la vie
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-ludus-teal">
+          Le jeu vidéo comme tu ne l'as jamais vécu
         </h1>
         <p class="text-lg text-gray-700">
-          La passion des jeunes pour le jeu vidéo est une énergie formidable. 
-          Plutôt que de la freiner, nous la canalisons pour créer un espace 
-          d'apprentissage unique, encadré par des professionnels bienveillants.
+          Imagine un endroit où ta passion pour le gaming devient sociale, 
+          où chaque partie te fait progresser, où les parents comprennent enfin 
+          pourquoi tu aimes tant jouer.
         </p>
       </div>
     </section>
 
-    <!-- Compétences développées -->
+    <!-- Le problème qu'on résout -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl border border-gray-200">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800">Des pixels aux compétences humaines</h2>
-          <p class="text-gray-600 mb-6">
-            Au-delà des scores et des classements, chaque partie devient une opportunité 
-            d'apprentissage concret. Voici les compétences clés que nous développons :
-          </p>
+          <h2 class="text-3xl font-bold mb-6 text-center text-ludus-teal">
+            Le gaming aujourd'hui : des paradoxes à résoudre
+          </h2>
           
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="flex gap-4">
-              <span class="text-3xl">💬</span>
-              <div>
-                <h3 class="font-bold text-gray-800 mb-2">Communication efficace</h3>
-                <p class="text-gray-600">Exprimer ses idées clairement, écouter activement 
-                et se coordonner efficacement avec ses coéquipiers.</p>
-              </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Pour les jeunes -->
+            <div>
+              <h3 class="font-bold text-xl mb-4 text-ludus-orange">😕 Pour les jeunes</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Tu adores jouer mais tes parents s'inquiètent</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Tu joues seul dans ta chambre alors que c'est plus fun à plusieurs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Les jeux en ligne peuvent être toxiques</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Difficile de s'arrêter quand on est dans le flow</span>
+                </li>
+              </ul>
             </div>
             
-            <div class="flex gap-4">
-              <span class="text-3xl">🧘</span>
-              <div>
-                <h3 class="font-bold text-gray-800 mb-2">Gestion émotionnelle</h3>
-                <p class="text-gray-600">Maîtriser la pression du défi, transformer 
-                la frustration en apprentissage et célébrer les succès collectifs.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <span class="text-3xl">🎯</span>
-              <div>
-                <h3 class="font-bold text-gray-800 mb-2">Persévérance stratégique</h3>
-                <p class="text-gray-600">Définir des objectifs d'équipe, élaborer 
-                des stratégies et persévérer face aux obstacles.</p>
-              </div>
-            </div>
-            
-            <div class="flex gap-4">
-              <span class="text-3xl">🤝</span>
-              <div>
-                <h3 class="font-bold text-gray-800 mb-2">Intelligence collective</h3>
-                <p class="text-gray-600">S'intégrer dans un groupe, construire 
-                la confiance mutuelle avec respect et empathie.</p>
-              </div>
+            <!-- Pour les parents -->
+            <div>
+              <h3 class="font-bold text-xl mb-4 text-ludus-teal">😟 Pour les parents</h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Inquiétude sur le temps d'écran</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Conflits quotidiens pour limiter</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Incompréhension de cette passion</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-red-500">•</span>
+                  <span>Manque d'alternatives attractives</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Jeux utilisés -->
+    <!-- Notre solution -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
-        Nos outils : des jeux triés sur le volet
+      <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
+        Notre solution : le gaming réinventé
       </h2>
-      <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-        Nous sélectionnons rigoureusement des titres populaires reconnus pour leur 
-        potentiel coopératif. Ce ne sont pas des "jeux éducatifs" ennuyeux, mais 
-        de vrais jeux que les jeunes adorent, utilisés comme supports d'apprentissage.
-      </p>
       
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
-          <div class="card-body">
-            <h3 class="card-title text-blue-700">🍳 Overcooked</h3>
-            <p class="text-gray-700">Une masterclass en communication et gestion du stress. 
-            Dans ce jeu de cuisine frénétique, impossible de réussir sans coordination 
-            parfaite et entraide constante.</p>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <!-- Pilier 1 -->
+        <div class="card bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-ludus-teal">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">🏠</div>
+            <h3 class="font-bold text-xl mb-3 text-ludus-teal">Hors de chez toi</h3>
+            <p class="text-gray-700">
+              Un lieu dédié où le gaming devient une activité sociale. 
+              Fini l'isolement dans la chambre, place aux rencontres réelles !
+            </p>
+            <div class="mt-4">
+              <span class="badge badge-ghost">Salle équipée</span>
+              <span class="badge badge-ghost">Ambiance club</span>
+            </div>
           </div>
         </div>
         
-        <div class="card bg-gradient-to-br from-red-50 to-pink-50 border-2 border-red-200">
-          <div class="card-body">
-            <h3 class="card-title text-red-700">💣 Keep Talking and Nobody Explodes</h3>
-            <p class="text-gray-700">Le jeu de communication par excellence. Un joueur 
-            désamorce la bombe, les autres ont le manuel. L'écoute et la clarté 
-            deviennent vitales.</p>
+        <!-- Pilier 2 -->
+        <div class="card bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-ludus-orange">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="font-bold text-xl mb-3 text-ludus-orange">100% coopératif</h3>
+            <p class="text-gray-700">
+              Uniquement des jeux où l'on gagne ensemble ou on perd ensemble. 
+              L'entraide remplace la compétition.
+            </p>
+            <div class="mt-4">
+              <span class="badge badge-ghost">Pas de toxicité</span>
+              <span class="badge badge-ghost">Esprit d'équipe</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Méthodologie -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-r from-orange-50 to-amber-50 border-2 border-orange-200">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800">
-            Le secret : l'accompagnement humain
-          </h2>
-          <p class="text-lg text-gray-700 mb-6">
-            Le jeu n'est que le point de départ. La vraie magie opère dans 
-            l'accompagnement structuré qui transforme l'expérience en apprentissage durable.
-          </p>
-          
-          <div class="bg-white rounded-xl p-6 border border-orange-200">
-            <h3 class="font-bold text-xl text-orange-700 mb-4">
-              Le cycle d'apprentissage en action
-            </h3>
-            <ol class="space-y-4">
-              <li class="flex gap-3">
-                <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</span>
-                <div>
-                  <strong class="text-gray-800">Jouer ensemble :</strong>
-                  <span class="text-gray-600">Session de jeu où les dynamiques naturelles émergent</span>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</span>
-                <div>
-                  <strong class="text-gray-800">Analyser ensemble :</strong>
-                  <span class="text-gray-600">Débriefing guidé pour comprendre ce qui s'est passé</span>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</span>
-                <div>
-                  <strong class="text-gray-800">Apprendre ensemble :</strong>
-                  <span class="text-gray-600">Extraction des leçons et stratégies d'amélioration</span>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">4</span>
-                <div>
-                  <strong class="text-gray-800">Appliquer ensemble :</strong>
-                  <span class="text-gray-600">Nouvelle partie avec mise en pratique immédiate</span>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vision -->
-    <section class="mb-12">
-      <div class="card bg-white shadow-xl border border-gray-200">
-        <div class="card-body text-center">
-          <h2 class="text-3xl font-bold mb-6 text-gray-800">
-            Notre vision : champions de la vie avant tout
-          </h2>
-          <div class="max-w-3xl mx-auto space-y-4 text-gray-700">
-            <p>
-              <strong class="text-orange-600">Phase 1 :</strong> Construire des bases solides 
-              de bien-être, confiance en soi et intelligence collective à travers notre académie.
+        
+        <!-- Pilier 3 -->
+        <div class="card bg-gradient-to-br from-teal-50 to-orange-50 border-2 border-ludus-teal">
+          <div class="card-body text-center">
+            <div class="text-5xl mb-4">⏰</div>
+            <h3 class="font-bold text-xl mb-3 text-ludus-teal">Cadre structuré</h3>
+            <p class="text-gray-700">
+              2h par semaine, pas plus. Avec pauses actives et débriefings. 
+              Le gaming devient un rendez-vous attendu, pas une obsession.
             </p>
-            <p>
-              <strong class="text-orange-600">Phase 2 :</strong> À terme, ouvrir une filière 
-              plus compétitive, accessible uniquement aux jeunes ayant démontré maturité, 
-              fair-play et excellente gestion émotionnelle.
-            </p>
-            <div class="alert alert-info mt-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              <span class="font-medium">Pour nous, la santé et l'équilibre primeront toujours sur la performance.</span>
+            <div class="mt-4">
+              <span class="badge badge-ghost">Limites saines</span>
+              <span class="badge badge-ghost">Parents rassurés</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- CTA -->
-    <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">Curieux de voir notre programme en action ?</h2>
-      <p class="text-xl mb-6 opacity-95">
-        Découvrez en détail comment se déroule un atelier au sein de notre académie.
+
+    <!-- Comment ça marche concrètement -->
+    <section class="mb-12">
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold mb-8 text-center text-ludus-teal">
+            Une séance type chez Ludus Mentis
+          </h2>
+          
+          <div class="max-w-4xl mx-auto">
+            <!-- Timeline détaillée -->
+            <div class="space-y-6">
+              <!-- 16h00 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-ludus-teal text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">16h00</span>
+                    <span class="text-xs font-bold">Arrivée</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-ludus-orange">Tu arrives au club</h4>
+                  <p class="text-gray-600">
+                    Retrouvailles avec le groupe, choix du jeu du jour ensemble, 
+                    rappel de l'objectif de la séance (ex: "Aujourd'hui on travaille la communication claire")
+                  </p>
+                </div>
+              </div>
+              
+              <!-- 16h10 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-ludus-orange text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">16h10</span>
+                    <span class="text-xs font-bold">Jeu 1</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-ludus-teal">Première session de jeu</h4>
+                  <p class="text-gray-600">
+                    25 minutes d'Overcooked par exemple. L'animateur observe mais n'intervient pas. 
+                    Le chaos s'installe, c'est normal et même voulu !
+                  </p>
+                </div>
+              </div>
+              
+              <!-- 16h35 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-ludus-teal text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">16h35</span>
+                    <span class="text-xs font-bold">Débrief</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-ludus-orange">On analyse ensemble</h4>
+                  <p class="text-gray-600">
+                    "Qu'est-ce qui s'est bien passé ? Qu'est-ce qui a coincé ?" 
+                    Chacun partage son ressenti. On identifie les problèmes de communication, 
+                    on trouve des solutions ensemble.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- 16h55 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-ludus-orange text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">16h55</span>
+                    <span class="text-xs font-bold">Jeu 2</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-ludus-teal">On remet ça avec la stratégie</h4>
+                  <p class="text-gray-600">
+                    Cette fois avec des rôles définis, un protocole de communication. 
+                    La différence est flagrante ! L'équipe progresse visiblement.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- 17h20 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-green-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">17h20</span>
+                    <span class="text-xs font-bold">Pause</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-green-600">Pause active</h4>
+                  <p class="text-gray-600">
+                    On se lève ! Petits jeux physiques, construction LEGO en équipe, 
+                    ou dessin collaboratif. Le cerveau se repose, le corps bouge.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- 17h40 -->
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="bg-ludus-teal text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
+                    <span class="text-xs">17h50</span>
+                    <span class="text-xs font-bold">Clôture</span>
+                  </div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="font-bold text-ludus-orange">On célèbre les progrès</h4>
+                  <p class="text-gray-600">
+                    Valorisation des efforts, "étoile du jour" pour un comportement exemplaire, 
+                    rappel de ce qu'on a appris. Tu repars avec le sourire !
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ce que tu vas y gagner -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
+        Ce que tu vas développer (sans t'en rendre compte)
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-teal-100 to-teal-200 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+            <span class="text-4xl">💬</span>
+          </div>
+          <h3 class="font-bold text-ludus-teal">Communication</h3>
+          <p class="text-sm text-gray-600">
+            Donner des infos claires, écouter les autres, s'exprimer calmement
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+            <span class="text-4xl">🧘</span>
+          </div>
+          <h3 class="font-bold text-ludus-orange">Gestion du stress</h3>
+          <p class="text-sm text-gray-600">
+            Rester calme sous pression, gérer la frustration, rebondir après un échec
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-teal-100 to-orange-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+            <span class="text-4xl">🤝</span>
+          </div>
+          <h3 class="font-bold text-ludus-teal">Travail d'équipe</h3>
+          <p class="text-sm text-gray-600">
+            Faire confiance, déléguer, soutenir, célébrer ensemble
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-orange-100 to-teal-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-3">
+            <span class="text-4xl">🎯</span>
+          </div>
+          <h3 class="font-bold text-ludus-orange">Résolution de problèmes</h3>
+          <p class="text-sm text-gray-600">
+            Analyser, stratégiser, s'adapter, innover
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignage conceptuel -->
+    <section class="mb-12">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body text-center">
+          <h2 class="text-3xl font-bold mb-6">
+            Pourquoi ce concept fonctionne
+          </h2>
+          
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl mb-6 opacity-95">
+              "Le jeu vidéo n'est ni bon ni mauvais en soi. C'est le contexte qui fait tout. 
+              En créant le bon environnement - social, structuré, bienveillant - 
+              nous transformons une activité solitaire potentiellement problématique 
+              en expérience collective enrichissante."
+            </p>
+            
+            <div class="flex justify-center gap-4 items-center">
+              <div class="avatar placeholder">
+                <div class="bg-white text-ludus-teal rounded-full w-16">
+                  <span class="text-xl font-bold">AB</span>
+                </div>
+              </div>
+              <div class="text-left">
+                <p class="font-bold">Antoine Billard</p>
+                <p class="text-sm opacity-90">Fondateur, passionné de gaming depuis 20 ans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="text-center bg-base-100 rounded-3xl p-8 border-2 border-ludus-teal">
+      <h2 class="text-3xl font-bold mb-4 text-ludus-teal">
+        Prêt à vivre le gaming autrement ?
+      </h2>
+      <p class="text-xl mb-6 text-gray-700">
+        Rejoins un club où ta passion est comprise et valorisée
       </p>
-      <a href="academie.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
-        Explorer l'académie
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="programmes.html" class="btn btn-lg bg-ludus-teal text-white border-0 hover:bg-teal-600">
+          Découvrir le programme
+        </a>
+        <a href="contact.html" class="btn btn-lg btn-outline border-2 border-ludus-orange text-ludus-orange hover:bg-ludus-orange hover:text-white">
+          S'inscrire maintenant
+        </a>
+      </div>
     </section>
   </main>
 
   <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>
