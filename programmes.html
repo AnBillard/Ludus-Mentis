@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <!-- Meta tags essentiels -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programmes et séances | Ludus Mentis</title>
-  <meta name="description" content="Découvrez notre programme structuré : séances de 2h, méthode Kolb, jeux coopératifs. Modules de 7 semaines à 230€ tout compris.">
+  <title>Programme et séances | Ludus Mentis</title>
+  <meta name="description" content="Découvrez notre programme : séances de 2h, modules de 7 semaines, méthode structurée. Club gaming éducatif à Walhain.">
   
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/programmes.html" />
-  <meta property="og:title" content="Programmes et séances type | Ludus Mentis" />
-  <meta property="og:description" content="Découvrez notre programme structuré : séances de 2h, méthode Kolb, jeux coopératifs et pauses actives." />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-programmes.jpg" />
+  <meta property="og:title" content="Programme structuré | Ludus Mentis" />
+  <meta property="og:description" content="2h par semaine, 7 semaines par module. Une progression mesurable." />
   
-  <link rel="canonical" href="https://ludusmentis.be/programmes.html" />
-  
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     
-    // Configuration par défaut (tout refusé)
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
@@ -30,7 +25,8 @@
       'analytics_storage': 'denied',
       'functionality_storage': 'granted',
       'personalization_storage': 'granted',
-      'security_storage': 'granted'
+      'security_storage': 'granted',
+      'wait_for_update': 500
     });
   </script>
   
@@ -40,15 +36,13 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-  <!-- End Google Tag Manager -->
   
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -61,17 +55,9 @@
     }
   </script>
   
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
   
-  <!-- Styles -->
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
     .gradient-ludus {
       background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
     }
@@ -81,394 +67,273 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
-  <!-- Skip link pour accessibilité -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
-    Aller au contenu principal
-  </a>
   
   <div id="header"></div>
   
-  <main id="main" class="container mx-auto px-4 py-8 max-w-6xl">
+  <main class="container mx-auto px-4 py-8 max-w-6xl">
     <!-- Hero -->
-    <section class="hero bg-gradient-to-br from-teal-50 to-orange-50 rounded-3xl p-8 lg:p-12 mb-12 border-2 border-ludus-teal">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
-          Un programme structuré et évolutif
-        </h1>
-        <p class="text-lg text-gray-700 mb-6">
-          <strong class="text-ludus-teal">7 semaines</strong> × <strong class="text-ludus-orange">2h/semaine</strong><br>
-          8-10 participants • Méthode Kolb validée • Tout le matériel inclus
-        </p>
-        <div class="inline-flex items-center gap-4 bg-white/80 rounded-full px-6 py-3">
-          <span class="text-3xl font-bold text-ludus-orange">230€</span>
-          <span class="text-gray-600">/ module complet</span>
-        </div>
+    <section class="hero bg-gradient-to-br from-teal-50 to-orange-50 rounded-3xl p-8 lg:p-12 mb-12 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+        Un programme structuré et progressif
+      </h1>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <div class="badge badge-lg bg-ludus-teal text-white">7 semaines</div>
+        <div class="badge badge-lg bg-ludus-orange text-white">2h/semaine</div>
+        <div class="badge badge-lg bg-ludus-purple text-white">8-10 participants</div>
       </div>
     </section>
 
-    <!-- Timeline d'une séance -->
+    <!-- Une séance type en visuel -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl border-2 border-gray-200">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-8 text-center text-ludus-teal">
-            Le déroulé chronométré d'une séance (120 min)
-          </h2>
-          
-          <!-- Timeline visuelle -->
-          <div class="relative">
-            <!-- Ligne verticale de connexion -->
-            <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-ludus-teal to-ludus-orange"></div>
-            
-            <div class="space-y-8">
-              <!-- 16h00 - Accueil -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-ludus-teal text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">16h00</span>
-                    <span class="text-xs">10min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">🏁 Accueil & Mise en condition</h3>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>• Rituel d'équipe : salut collectif + mission du jour</li>
-                    <li>• Check-in rapide : niveau d'énergie, humeur</li>
-                    <li>• Rappel de l'objectif pédagogique de la séance</li>
-                    <li>• Échauffement cognitif : mini-défi de communication</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- 16h10 - Jeu 1 -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">16h10</span>
-                    <span class="text-xs">25min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">🎮 Phase 1 : Expérience concrète</h3>
-                  <div class="bg-blue-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-700 mb-2">
-                      <strong>Jeu choisi :</strong> Ex. Overcooked - Niveau progressif
-                    </p>
-                    <p class="text-sm text-gray-600">
-                      Les jeunes jouent avec un objectif précis (ex: "3 étoiles en 15 min").
-                      L'animateur observe sans intervenir, note les dynamiques.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 16h35 - Débrief -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-green-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">16h35</span>
-                    <span class="text-xs">20min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">💬 Phase 2 : Réflexion guidée</h3>
-                  <div class="bg-green-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-700 mb-2">
-                      <strong>Questions clés :</strong> "Qu'est-ce qui a bien marché ? Qu'est-ce qui a coincé ?"
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                      <li>• Tour de table : chacun partage son ressenti</li>
-                      <li>• Identification collective des problèmes</li>
-                      <li>• Propositions de solutions par l'équipe</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 16h55 - Conceptualisation -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">16h55</span>
-                    <span class="text-xs">10min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">💡 Phase 3 : Conceptualisation</h3>
-                  <div class="bg-purple-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-700 mb-2">
-                      <strong>La leçon :</strong> "Pour réussir en équipe, il faut..."
-                    </p>
-                    <p class="text-sm text-gray-600">
-                      L'animateur aide à formuler le principe découvert.
-                      Lien avec la vie réelle : école, famille, sport...
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 17h05 - Jeu 2 -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-amber-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">17h05</span>
-                    <span class="text-xs">25min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">🚀 Phase 4 : Application améliorée</h3>
-                  <div class="bg-amber-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-700 mb-2">
-                      <strong>Nouvelle tentative :</strong> Même jeu, nouvelle stratégie
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                      <li>• Rôles définis clairement</li>
-                      <li>• Communication structurée</li>
-                      <li>• Application des solutions identifiées</li>
-                      <li>• Mesure des progrès immédiats</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 17h30 - Pause active -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-green-600 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">17h30</span>
-                    <span class="text-xs">20min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">⚡ Pause active (hors écran)</h3>
-                  <div class="bg-green-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-700 mb-2">
-                      <strong>Options selon le jour :</strong>
-                    </p>
-                    <div class="grid grid-cols-2 gap-2">
-                      <span class="badge badge-sm">🏃 Circuit physique 7min</span>
-                      <span class="badge badge-sm">🎨 Dessin collaboratif</span>
-                      <span class="badge badge-sm">🧱 Construction LEGO</span>
-                      <span class="badge badge-sm">🎭 Jeu d'impro</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- 17h50 - Clôture -->
-              <div class="flex gap-6">
-                <div class="relative z-10">
-                  <div class="bg-ludus-orange text-white rounded-full w-16 h-16 flex flex-col items-center justify-center">
-                    <span class="text-xs font-bold">17h50</span>
-                    <span class="text-xs">10min</span>
-                  </div>
-                </div>
-                <div class="flex-grow">
-                  <h3 class="font-bold text-lg mb-2">🌟 Clôture & Valorisation</h3>
-                  <ul class="text-sm text-gray-600 space-y-1">
-                    <li>• "Étoile du jour" : comportement exemplaire valorisé</li>
-                    <li>• Journal de bord : 1 phrase par participant</li>
-                    <li>• Rappel du "défi maison" (optionnel, non gaming)</li>
-                    <li>• Rituel de fin : cri d'équipe</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Structure d'un module -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
-        Progression sur 7 semaines
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Le déroulé d'une séance (2h)
       </h2>
       
-      <div class="overflow-x-auto">
-        <table class="table table-zebra w-full bg-white shadow-lg rounded-lg">
-          <thead>
-            <tr class="bg-gradient-to-r from-ludus-teal to-ludus-orange text-white">
-              <th>Semaine</th>
-              <th>Thème principal</th>
-              <th>Compétence ciblée</th>
-              <th>Jeux utilisés</th>
-              <th>Objectif mesurable</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="font-bold">S1</td>
-              <td>🤝 Cohésion</td>
-              <td>Créer le groupe</td>
-              <td><span class="badge badge-sm">Party games</span> <span class="badge badge-sm">Snipperclips</span></td>
-              <td>100% connaissent les prénoms</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S2</td>
-              <td>💬 Communication</td>
-              <td>Clarté des messages</td>
-              <td><span class="badge badge-sm">Keep Talking</span> <span class="badge badge-sm">Spaceteam</span></td>
-              <td>-50% malentendus mesurés</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S3</td>
-              <td>🎯 Coordination</td>
-              <td>Synchronisation</td>
-              <td><span class="badge badge-sm">Overcooked</span> <span class="badge badge-sm">Moving Out</span></td>
-              <td>3 étoiles en 20min</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S4</td>
-              <td>🧠 Stratégie</td>
-              <td>Planification</td>
-              <td><span class="badge badge-sm">Portal 2</span> <span class="badge badge-sm">Trine 4</span></td>
-              <td>Résolution sans aide</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S5</td>
-              <td>😰 Gestion stress</td>
-              <td>Calme sous pression</td>
-              <td><span class="badge badge-sm">Keep Talking</span> <span class="badge badge-sm">Overcooked</span></td>
-              <td>Pas de cris observés</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S6</td>
-              <td>👑 Leadership</td>
-              <td>Rôles tournants</td>
-              <td><span class="badge badge-sm">Lovers Space</span> <span class="badge badge-sm">Minecraft</span></td>
-              <td>Chacun dirige 15min</td>
-            </tr>
-            <tr>
-              <td class="font-bold">S7</td>
-              <td>🎉 Célébration</td>
-              <td>Valorisation</td>
-              <td><span class="badge badge-sm">Choix du groupe</span></td>
-              <td>Bilan personnalisé remis</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Nos protocoles santé -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-500">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-green-700">
-            🏥 Protocoles santé intégrés
-          </h2>
+      <!-- Timeline visuelle simplifiée -->
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Première heure -->
+          <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300">
+            <div class="card-body">
+              <h3 class="font-bold text-xl mb-4 text-blue-700">⏰ Première heure</h3>
+              
+              <div class="space-y-3">
+                <div class="flex gap-3">
+                  <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">10'</div>
+                  <div>
+                    <strong>Accueil & mise en route</strong>
+                    <p class="text-sm text-gray-600">Check-in, objectif du jour</p>
+                  </div>
+                </div>
+                
+                <div class="flex gap-3">
+                  <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">25'</div>
+                  <div>
+                    <strong>Session de jeu #1</strong>
+                    <p class="text-sm text-gray-600">Découverte, expérimentation</p>
+                  </div>
+                </div>
+                
+                <div class="flex gap-3">
+                  <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">20'</div>
+                  <div>
+                    <strong>Débrief collectif</strong>
+                    <p class="text-sm text-gray-600">Qu'est-ce qui a marché/coincé ?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div class="grid md:grid-cols-3 gap-6">
-            <!-- Échauffement -->
-            <div class="bg-white rounded-xl p-6 shadow">
-              <h3 class="font-bold text-green-600 mb-3">🔥 Échauffement (5min)</h3>
-              <ul class="text-sm space-y-2 text-gray-700">
-                <li>✓ Respiration 4-4-4 (calme)</li>
-                <li>✓ Mobilité poignets/nuque</li>
-                <li>✓ Règle 20-20-20 pour les yeux</li>
-                <li>✓ Hydratation obligatoire</li>
-              </ul>
-            </div>
-            
-            <!-- Pauses actives -->
-            <div class="bg-white rounded-xl p-6 shadow">
-              <h3 class="font-bold text-blue-600 mb-3">⚡ Pauses actives</h3>
-              <ul class="text-sm space-y-2 text-gray-700">
-                <li>✓ Circuit 7min chrono</li>
-                <li>✓ Level design papier</li>
-                <li>✓ Construction créative</li>
-                <li>✓ Étirements guidés</li>
-              </ul>
-            </div>
-            
-            <!-- Récupération -->
-            <div class="bg-white rounded-xl p-6 shadow">
-              <h3 class="font-bold text-purple-600 mb-3">🧘 Récupération</h3>
-              <ul class="text-sm space-y-2 text-gray-700">
-                <li>✓ Retour au calme progressif</li>
-                <li>✓ Auto-évaluation fatigue</li>
-                <li>✓ Conseils sommeil</li>
-                <li>✓ Rappel limites maison</li>
-              </ul>
+          <!-- Deuxième heure -->
+          <div class="card bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300">
+            <div class="card-body">
+              <h3 class="font-bold text-xl mb-4 text-orange-700">⏰ Deuxième heure</h3>
+              
+              <div class="space-y-3">
+                <div class="flex gap-3">
+                  <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">10'</div>
+                  <div>
+                    <strong>Stratégie collective</strong>
+                    <p class="text-sm text-gray-600">Plan d'action défini ensemble</p>
+                  </div>
+                </div>
+                
+                <div class="flex gap-3">
+                  <div class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">25'</div>
+                  <div>
+                    <strong>Session de jeu #2</strong>
+                    <p class="text-sm text-gray-600">Application de la stratégie</p>
+                  </div>
+                </div>
+                
+                <div class="flex gap-3">
+                  <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">20'</div>
+                  <div>
+                    <strong>Pause active + Clôture</strong>
+                    <p class="text-sm text-gray-600">Activité hors écran, valorisation</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Tarification transparente -->
+    <!-- Progression sur 7 semaines -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl border-2 border-ludus-orange">
-        <div class="card-body text-center">
-          <h2 class="text-3xl font-bold mb-6 text-ludus-orange">
-            💰 Tarification simple et tout inclus
-          </h2>
-          
-          <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <!-- Tarif de base -->
-            <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6">
-              <div class="text-4xl font-bold text-ludus-orange mb-2">230€</div>
-              <p class="font-medium mb-3">Module 7 semaines</p>
-              <ul class="text-sm text-left space-y-1 text-gray-600">
-                <li>✓ 14h d'activités</li>
-                <li>✓ Matériel fourni</li>
-                <li>✓ Assurance incluse</li>
-                <li>✓ Bilan personnalisé</li>
-              </ul>
-            </div>
-            
-            <!-- Réductions -->
-            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6">
-              <h3 class="font-bold text-ludus-teal mb-3">Réductions</h3>
-              <div class="space-y-3">
-                <div>
-                  <span class="badge badge-success">-15%</span>
-                  <p class="text-sm mt-1">Résidents Walhain</p>
-                  <p class="font-bold">195,50€</p>
-                </div>
-                <div>
-                  <span class="badge badge-info">-10%</span>
-                  <p class="text-sm mt-1">Fratries</p>
-                  <p class="font-bold">207€/enfant</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Paiement -->
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">
-              <h3 class="font-bold text-purple-600 mb-3">Facilités</h3>
-              <ul class="text-sm text-left space-y-2 text-gray-600">
-                <li>💳 Paiement 2x sans frais</li>
-                <li>🎁 Bon cadeau possible</li>
-                <li>📋 Facture déductible</li>
-                <li>🤝 Arrangement sur demande</li>
-              </ul>
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Les 7 semaines d'un module
+      </h2>
+      
+      <!-- Progression visuelle -->
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-2">
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg p-4">
+              <div class="font-bold text-blue-700">S1</div>
+              <div class="text-2xl my-2">🤝</div>
+              <p class="text-xs">Cohésion</p>
             </div>
           </div>
           
-          <p class="text-sm text-gray-500 mt-6">
-            = seulement <strong>16,43€/heure</strong>, moins cher qu'un cours particulier !
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-lg p-4">
+              <div class="font-bold text-green-700">S2</div>
+              <div class="text-2xl my-2">💬</div>
+              <p class="text-xs">Communication</p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg p-4">
+              <div class="font-bold text-purple-700">S3</div>
+              <div class="text-2xl my-2">🎯</div>
+              <p class="text-xs">Coordination</p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg p-4">
+              <div class="font-bold text-orange-700">S4</div>
+              <div class="text-2xl my-2">🧠</div>
+              <p class="text-xs">Stratégie</p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-lg p-4">
+              <div class="font-bold text-red-700">S5</div>
+              <div class="text-2xl my-2">😰</div>
+              <p class="text-xs">Gestion stress</p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-lg p-4">
+              <div class="font-bold text-indigo-700">S6</div>
+              <div class="text-2xl my-2">👑</div>
+              <p class="text-xs">Leadership</p>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg p-4">
+              <div class="font-bold text-yellow-700">S7</div>
+              <div class="text-2xl my-2">🎉</div>
+              <p class="text-xs">Célébration</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+          <p class="text-gray-600">
+            Chaque semaine cible une compétence spécifique avec des jeux adaptés
           </p>
         </div>
       </div>
     </section>
 
-    <!-- CTA final -->
+    <!-- Ce qu'on retient -->
+    <section class="mb-12">
+      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300">
+        <div class="card-body">
+          <h2 class="text-3xl font-bold text-center mb-8 text-green-700">
+            Ce qu'on retient après un module
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-4xl mb-3">💬</div>
+              <h3 class="font-bold text-green-700">Communication claire</h3>
+              <p class="text-sm text-gray-600">
+                Messages courts et précis, écoute active
+              </p>
+            </div>
+            
+            <div>
+              <div class="text-4xl mb-3">🤝</div>
+              <h3 class="font-bold text-green-700">Esprit d'équipe</h3>
+              <p class="text-sm text-gray-600">
+                Entraide spontanée, célébration collective
+              </p>
+            </div>
+            
+            <div>
+              <div class="text-4xl mb-3">🧘</div>
+              <h3 class="font-bold text-green-700">Gestion émotionnelle</h3>
+              <p class="text-sm text-gray-600">
+                Calme sous pression, rebond après échec
+              </p>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Chaque parent reçoit un bilan personnalisé avec les progrès observés</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protocoles santé simplifiés -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+        🏥 Notre attention santé
+      </h2>
+      
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="card bg-white shadow text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">👀</div>
+            <p class="font-bold text-sm">Règle 20-20-20</p>
+            <p class="text-xs text-gray-600">Pause visuelle régulière</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">⚡</div>
+            <p class="font-bold text-sm">Pauses actives</p>
+            <p class="text-xs text-gray-600">20 min hors écran</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">💧</div>
+            <p class="font-bold text-sm">Hydratation</p>
+            <p class="text-xs text-gray-600">Boissons fournies</p>
+          </div>
+        </div>
+        
+        <div class="card bg-white shadow text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">🧘</div>
+            <p class="font-bold text-sm">Respiration</p>
+            <p class="text-xs text-gray-600">Gestion du stress</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-        Prêt à transformer le gaming en apprentissage ?
+        Un programme qui fait progresser
       </h2>
       <p class="text-xl mb-8 opacity-95">
-        Places limitées • Groupes de 8-10 jeunes • Ouverture septembre 2026
+        Structuré, progressif, adapté à chaque groupe
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
           Préinscrire mon enfant
         </a>
-        <a href="/methode.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
-          Notre méthode en détail
+        <a href="/infos-pratiques.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+          Voir les tarifs
         </a>
       </div>
     </section>
@@ -476,7 +341,7 @@
   
   <div id="footer"></div>
   
-  <!-- CMP Tarteaucitron -->
+  <!-- Tarteaucitron -->
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({
@@ -499,7 +364,6 @@
       "partnersList": false
     });
     
-    // GA4
     tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
     (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
   </script>
