@@ -1,84 +1,120 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="ludus">
+<html lang="fr" data-theme="light">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact et préinscription | Ludus Mentis</title>
   <meta name="description" content="Préinscrivez votre enfant au club Ludus Mentis. Sessions de gaming coopératif encadré à Walhain.">
   
-  <!-- Include centralisé -->
-  <script src="/assets/js/master-config.js"></script>
-  <!-- Ici on inclurait le head-common.html en production -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/contact.html" />
+  <meta property="og:title" content="Contact et préinscription | Ludus Mentis" />
+  <meta property="og:description" content="Rejoignez le club gaming éducatif. Places limitées, ouverture septembre 2026." />
   
-  <!-- Pour cet exemple, configuration minimale -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <!-- DaisyUI + Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  
+  <style>
+    .gradient-ludus {
+      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    }
+  </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
   <div id="header"></div>
   
-  <main class="container mx-auto px-4 py-8 max-w-6xl">
-    <!-- Hero Section CLARIFIÉE -->
-    <section class="hero bg-gradient-to-br from-teal-50 to-orange-50 rounded-3xl p-8 mb-8">
-      <div class="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: #17a2b8;">
-          Rejoignez le club Ludus Mentis
-        </h1>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-          <strong style="color: #ff9800;">Un club de jeu vidéo pas comme les autres</strong><br>
-          Sessions hebdomadaires encadrées • Jeux coopératifs • Développement social
-        </p>
-        <div class="mt-4 flex gap-2 justify-center flex-wrap">
-          <span class="badge badge-primary">10-15 ans</span>
-          <span class="badge badge-secondary">8-10 places max</span>
-          <span class="badge badge-accent">Ouverture Sept. 2026</span>
-        </div>
+  <main class="container mx-auto px-4 py-8 max-w-5xl">
+    <!-- Hero -->
+    <section class="text-center mb-12">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+        Rejoignez Ludus Mentis
+      </h1>
+      <p class="text-lg text-gray-600">
+        Préinscription pour septembre 2026 • Places limitées
+      </p>
+      <div class="flex gap-3 justify-center mt-4">
+        <span class="badge badge-primary">10-15 ans</span>
+        <span class="badge badge-secondary">8-10 places/groupe</span>
+        <span class="badge badge-accent">Walhain</span>
       </div>
     </section>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <!-- Formulaire RGPD-compliant -->
+      <!-- Formulaire simplifié -->
       <section>
-        <div class="card bg-base-100 shadow-xl">
+        <div class="card bg-white shadow-xl">
           <div class="card-body">
-            <h2 class="text-2xl font-bold mb-6" style="color: #17a2b8;">
+            <h2 class="text-2xl font-bold mb-6 text-ludus-teal">
               Formulaire de préinscription
             </h2>
             
-            <div class="alert alert-info mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>Préinscription sans engagement • Places limitées • Traitement RGPD</span>
-            </div>
-            
             <form id="contactForm" action="https://formspree.io/f/mdkdwzoy" method="POST" class="space-y-6">
-              <!-- Champs cachés pour la configuration -->
-              <input type="hidden" name="_subject" value="Nouvelle préinscription Ludus Mentis">
-              <input type="hidden" name="_language" value="fr">
-              
-              <!-- Section Jeune -->
-              <fieldset class="border-2 border-teal-200 rounded-lg p-4">
-                <legend class="text-lg font-bold px-2" style="color: #17a2b8;">
-                  Informations du jeune
-                </legend>
+              <!-- Infos du jeune -->
+              <div class="border-2 border-teal-200 rounded-lg p-4">
+                <h3 class="font-bold mb-3 text-ludus-teal">Votre enfant</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
-                  <div class="form-control">
+                  <div>
                     <label for="youth_firstname" class="label">
                       <span class="label-text font-semibold">Prénom *</span>
                     </label>
                     <input type="text" id="youth_firstname" name="youth_firstname" required 
-                           class="input input-bordered input-primary" 
-                           placeholder="Ex: Lucas" />
+                           class="input input-bordered w-full" />
                   </div>
                   
-                  <div class="form-control">
+                  <div>
                     <label for="youth_age" class="label">
-                      <span class="label-text font-semibold">Âge en 2026 *</span>
+                      <span class="label-text font-semibold">Âge *</span>
                     </label>
                     <select id="youth_age" name="youth_age" required 
-                            class="select select-bordered select-primary">
+                            class="select select-bordered w-full">
                       <option value="">Sélectionnez</option>
                       <option value="10">10 ans</option>
                       <option value="11">11 ans</option>
@@ -89,209 +125,110 @@
                     </select>
                   </div>
                 </div>
-                
-                <div class="form-control mt-4">
-                  <label for="youth_experience" class="label">
-                    <span class="label-text font-semibold">Expérience gaming</span>
-                  </label>
-                  <select id="youth_experience" name="youth_experience" 
-                          class="select select-bordered">
-                    <option value="">Sélectionnez (optionnel)</option>
-                    <option value="debutant">Débutant (< 1 an)</option>
-                    <option value="occasionnel">Occasionnel (1-3 ans)</option>
-                    <option value="regulier">Régulier (3+ ans)</option>
-                    <option value="passionne">Passionné (quotidien)</option>
-                  </select>
-                </div>
-              </fieldset>
+              </div>
               
-              <!-- Section Parent/Tuteur -->
-              <fieldset class="border-2 border-orange-200 rounded-lg p-4">
-                <legend class="text-lg font-bold px-2" style="color: #ff9800;">
-                  Responsable légal
-                </legend>
+              <!-- Infos parent -->
+              <div class="border-2 border-orange-200 rounded-lg p-4">
+                <h3 class="font-bold mb-3 text-ludus-orange">Responsable légal</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
-                  <div class="form-control">
+                  <div>
                     <label for="parent_name" class="label">
                       <span class="label-text font-semibold">Nom complet *</span>
                     </label>
                     <input type="text" id="parent_name" name="parent_name" required 
-                           class="input input-bordered input-secondary" />
+                           class="input input-bordered w-full" />
                   </div>
                   
-                  <div class="form-control">
+                  <div>
                     <label for="parent_email" class="label">
                       <span class="label-text font-semibold">Email *</span>
                     </label>
                     <input type="email" id="parent_email" name="parent_email" required 
-                           class="input input-bordered input-secondary" />
+                           class="input input-bordered w-full" />
                   </div>
                 </div>
                 
-                <div class="form-control mt-4">
+                <div class="mt-4">
                   <label for="parent_phone" class="label">
-                    <span class="label-text font-semibold">Téléphone (optionnel)</span>
+                    <span class="label-text font-semibold">Téléphone</span>
                   </label>
                   <input type="tel" id="parent_phone" name="parent_phone" 
-                         class="input input-bordered" 
-                         placeholder="Ex: 0470 12 34 56" />
+                         class="input input-bordered w-full" 
+                         placeholder="Optionnel" />
                 </div>
-                
-                <div class="form-control mt-4">
-                  <label for="commune" class="label">
-                    <span class="label-text font-semibold">Commune de résidence</span>
-                  </label>
-                  <input type="text" id="commune" name="commune" 
-                         class="input input-bordered" 
-                         placeholder="Ex: Walhain, Wavre..." />
-                  <span class="text-xs text-gray-500 mt-1">
-                    -15% pour les résidents de Walhain
-                  </span>
-                </div>
-              </fieldset>
-              
-              <!-- Préférences -->
-              <fieldset class="border-2 border-gray-200 rounded-lg p-4">
-                <legend class="text-lg font-bold px-2 text-gray-700">
-                  Préférences (indicatif)
-                </legend>
-                
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text font-semibold">Créneau souhaité</span>
-                  </label>
-                  <div class="space-y-2">
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
-                      <input type="radio" name="schedule" value="mercredi-14h" 
-                             class="radio radio-primary" />
-                      <div>
-                        <strong>Mercredi 14h00-16h00</strong>
-                        <p class="text-sm text-gray-600">Idéal collégiens</p>
-                      </div>
-                    </label>
-                    
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
-                      <input type="radio" name="schedule" value="mercredi-17h" 
-                             class="radio radio-primary" />
-                      <div>
-                        <strong>Mercredi 17h00-19h00</strong>
-                        <p class="text-sm text-gray-600">Idéal lycéens</p>
-                      </div>
-                    </label>
-                    
-                    <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
-                      <input type="radio" name="schedule" value="flexible" checked
-                             class="radio radio-primary" />
-                      <div>
-                        <strong>Les deux conviennent</strong>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-                
-                <div class="form-control mt-4">
-                  <label for="motivation" class="label">
-                    <span class="label-text font-semibold">Qu'est-ce qui vous intéresse dans notre club ?</span>
-                  </label>
-                  <textarea id="motivation" name="motivation" rows="3" 
-                            class="textarea textarea-bordered" 
-                            placeholder="Optionnel : parlez-nous de vos attentes..."></textarea>
-                </div>
-              </fieldset>
-              
-              <!-- SECTION RGPD CRITIQUE -->
-              <fieldset class="border-2 border-info rounded-lg p-4 bg-info/5">
-                <legend class="text-lg font-bold px-2 text-info">
-                  Protection des données (RGPD)
-                </legend>
-                
-                <!-- Consentements obligatoires -->
-                <div class="space-y-3">
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="rgpd_traitement" value="oui" required 
-                           class="checkbox checkbox-primary mt-1" />
-                    <span class="text-sm">
-                      <strong class="text-error">*</strong> J'accepte que les données personnelles saisies soient traitées par Ludus Mentis 
-                      pour la gestion de cette préinscription, conformément à notre 
-                      <a href="/mentions.html#privacy" class="link link-primary" target="_blank">politique de confidentialité</a>.
-                    </span>
-                  </label>
-                  
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="rgpd_conservation" value="oui" required 
-                           class="checkbox checkbox-primary mt-1" />
-                    <span class="text-sm">
-                      <strong class="text-error">*</strong> J'ai compris que mes données seront conservées jusqu'à l'ouverture du club (septembre 2026) 
-                      puis supprimées si l'inscription n'est pas confirmée.
-                    </span>
-                  </label>
-                  
-                  <!-- Consentements optionnels -->
-                  <div class="divider">Communications optionnelles</div>
-                  
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="newsletter" value="oui" 
-                           class="checkbox checkbox-secondary mt-1" />
-                    <span class="text-sm">
-                      J'accepte de recevoir des informations sur l'évolution du projet et l'ouverture des inscriptions
-                    </span>
-                  </label>
-                  
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="partner_info" value="oui" 
-                           class="checkbox checkbox-secondary mt-1" />
-                    <span class="text-sm">
-                      J'accepte que mes coordonnées soient partagées avec les partenaires officiels 
-                      (Commune de Walhain, Fédération belge d'esport) pour des offres liées au gaming éducatif
-                    </span>
-                  </label>
-                </div>
-                
-                <!-- Droits RGPD -->
-                <div class="alert alert-info mt-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <div class="text-sm">
-                    <strong>Vos droits :</strong> Accès, rectification, effacement, portabilité de vos données. 
-                    Contact DPO : <a href="mailto:rgpd@ludusmentis.be" class="link">rgpd@ludusmentis.be</a>
-                  </div>
-                </div>
-              </fieldset>
-              
-              <!-- Bouton submit -->
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg text-white">
-                  Envoyer la préinscription
-                </button>
-                <p class="text-sm text-gray-500 mt-2">
-                  * Champs obligatoires | Formulaire sécurisé
-                </p>
               </div>
+              
+              <!-- Créneau souhaité -->
+              <div>
+                <label class="label">
+                  <span class="label-text font-semibold">Créneau préféré</span>
+                </label>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                    <input type="radio" name="schedule" value="14h" class="radio radio-primary" />
+                    <span>Mercredi 14h00-16h00</span>
+                  </label>
+                  
+                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                    <input type="radio" name="schedule" value="17h" class="radio radio-primary" />
+                    <span>Mercredi 17h00-19h00</span>
+                  </label>
+                  
+                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                    <input type="radio" name="schedule" value="flexible" checked class="radio radio-primary" />
+                    <span>Les deux conviennent</span>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Message -->
+              <div>
+                <label for="message" class="label">
+                  <span class="label-text font-semibold">Message (optionnel)</span>
+                </label>
+                <textarea id="message" name="message" rows="3" 
+                          class="textarea textarea-bordered w-full" 
+                          placeholder="Questions ou informations complémentaires..."></textarea>
+              </div>
+              
+              <!-- RGPD simplifié -->
+              <div class="bg-blue-50 rounded-lg p-4">
+                <label class="flex items-start gap-3">
+                  <input type="checkbox" name="rgpd_consent" value="oui" required 
+                         class="checkbox checkbox-primary mt-1" />
+                  <span class="text-sm">
+                    J'accepte que mes données soient traitées pour cette préinscription 
+                    (conservation jusqu'à septembre 2026). *
+                  </span>
+                </label>
+              </div>
+              
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary btn-lg w-full text-white">
+                Envoyer la préinscription
+              </button>
             </form>
           </div>
         </div>
       </section>
       
-      <!-- Informations pratiques -->
+      <!-- Infos pratiques -->
       <section>
         <div class="space-y-6">
-          <!-- Ce qu'est Ludus Mentis -->
-          <div class="card bg-base-100 shadow-xl">
+          <!-- Résumé du club -->
+          <div class="card bg-gradient-to-br from-teal-50 to-orange-50">
             <div class="card-body">
-              <h2 class="text-2xl font-bold mb-4" style="color: #17a2b8;">
-                Qu'est-ce que Ludus Mentis ?
-              </h2>
+              <h3 class="text-xl font-bold mb-4 text-ludus-teal">
+                Ludus Mentis en bref
+              </h3>
               
-              <div class="space-y-4">
+              <div class="space-y-3">
                 <div class="flex items-start gap-3">
                   <span class="text-2xl">🎮</span>
                   <div>
-                    <strong>Un club de gaming social</strong>
-                    <p class="text-sm text-gray-600">
-                      On joue ensemble, hors de chez soi, dans un cadre structuré et bienveillant
-                    </p>
+                    <strong>Club de gaming social</strong>
+                    <p class="text-sm text-gray-600">Sessions hebdomadaires encadrées</p>
                   </div>
                 </div>
                 
@@ -299,86 +236,76 @@
                   <span class="text-2xl">🤝</span>
                   <div>
                     <strong>100% coopératif</strong>
-                    <p class="text-sm text-gray-600">
-                      Uniquement des jeux où la réussite dépend de l'équipe, pas de compétition
-                    </p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start gap-3">
-                  <span class="text-2xl">📚</span>
-                  <div>
-                    <strong>Apprentissage naturel</strong>
-                    <p class="text-sm text-gray-600">
-                      Communication, gestion du stress, résolution de problèmes... en s'amusant !
-                    </p>
+                    <p class="text-sm text-gray-600">On gagne ensemble ou on perd ensemble</p>
                   </div>
                 </div>
                 
                 <div class="flex items-start gap-3">
                   <span class="text-2xl">⏰</span>
                   <div>
-                    <strong>Pratique responsable</strong>
-                    <p class="text-sm text-gray-600">
-                      2h par semaine maximum, pauses actives, pas d'écran à la maison requis
-                    </p>
+                    <strong>2h par semaine</strong>
+                    <p class="text-sm text-gray-600">Mercredi après-midi</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start gap-3">
+                  <span class="text-2xl">💰</span>
+                  <div>
+                    <strong>230€ / module</strong>
+                    <p class="text-sm text-gray-600">7 semaines, tout compris</p>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          
+          <!-- Contact direct -->
+          <div class="card bg-white shadow-xl">
+            <div class="card-body text-center">
+              <h3 class="text-xl font-bold mb-4">Contactez-nous directement</h3>
+              
+              <a href="mailto:info@ludusmentis.be" class="btn btn-outline btn-primary mb-3">
+                📧 info@ludusmentis.be
+              </a>
+              
+              <p class="text-sm text-gray-600">
+                Antoine Billard, fondateur<br>
+                Walhain, Brabant wallon
+              </p>
               
               <div class="divider"></div>
               
-              <p class="text-center font-bold" style="color: #ff9800;">
-                "Ce n'est ni une thérapie, ni un centre de traitement.<br>
-                C'est un club où votre passion devient sociale et éducative."
+              <p class="text-xs text-gray-500">
+                ASBL en cours de création<br>
+                Ouverture prévue : septembre 2026
               </p>
             </div>
           </div>
           
-          <!-- Infos pratiques -->
-          <div class="card bg-gradient-to-br from-teal-50 to-orange-50 shadow-xl">
+          <!-- FAQ rapide -->
+          <div class="card bg-white shadow">
             <div class="card-body">
-              <h3 class="text-xl font-bold mb-4">Informations pratiques</h3>
+              <h3 class="font-bold mb-3">Questions rapides</h3>
               
-              <div class="space-y-3">
-                <div class="flex items-center gap-3">
-                  <span>📍</span>
-                  <div>
-                    <strong>Lieu</strong> : Walhain (salle communale)
-                  </div>
-                </div>
+              <div class="space-y-2 text-sm">
+                <details>
+                  <summary class="cursor-pointer font-medium">Faut-il du matériel ?</summary>
+                  <p class="mt-2 text-gray-600">Non, tout est fourni !</p>
+                </details>
                 
-                <div class="flex items-center gap-3">
-                  <span>💰</span>
-                  <div>
-                    <strong>Tarif</strong> : 230€ / module de 7 semaines
-                  </div>
-                </div>
+                <details>
+                  <summary class="cursor-pointer font-medium">Mon enfant est timide...</summary>
+                  <p class="mt-2 text-gray-600">Parfait ! L'approche coop favorise l'inclusion.</p>
+                </details>
                 
-                <div class="flex items-center gap-3">
-                  <span>👥</span>
-                  <div>
-                    <strong>Groupe</strong> : 8-10 jeunes maximum
-                  </div>
-                </div>
-                
-                <div class="flex items-center gap-3">
-                  <span>🎯</span>
-                  <div>
-                    <strong>Âge</strong> : 10-15 ans
-                  </div>
-                </div>
-                
-                <div class="flex items-center gap-3">
-                  <span>📧</span>
-                  <div>
-                    <strong>Contact</strong> : info@ludusmentis.be
-                  </div>
-                </div>
+                <details>
+                  <summary class="cursor-pointer font-medium">Peut-on essayer ?</summary>
+                  <p class="mt-2 text-gray-600">Oui, journées découvertes gratuites prévues.</p>
+                </details>
               </div>
               
-              <a href="faq.html" class="btn btn-outline btn-primary mt-4">
-                Voir toutes les questions fréquentes →
+              <a href="/infos-pratiques.html" class="btn btn-sm btn-outline mt-4">
+                Toutes les FAQ →
               </a>
             </div>
           </div>
@@ -388,6 +315,34 @@
   </main>
   
   <div id="footer"></div>
+  
+  <!-- Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
   <script src="/assets/js/include.js"></script>
 </body>
 </html>
