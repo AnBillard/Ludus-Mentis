@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos jeux coopératifs | Ludus Mentis</title>
+  <meta name="description" content="Découvrez notre sélection de jeux 100% coopératifs : Overcooked, Portal 2, Keep Talking... PEGI ≤12, sans loot boxes, sans chat en ligne.">
+  
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/jeux.html" />
-  <meta property="og:title" content="Nos jeux pédagogiques | Ludus Mentis" />
-  <meta property="og:description" content="Découvrez notre sélection de jeux coopératifs : Overcooked, Portal 2, Keep Talking... Tous PEGI ≤12, sans loot boxes." />
+  <meta property="og:title" content="Nos jeux coopératifs sélectionnés | Ludus Mentis" />
+  <meta property="og:description" content="Jeux 100% coopératifs pour développer communication et entraide. PEGI ≤12, encadrement pédagogique." />
   
   <link rel="canonical" href="https://ludusmentis.be/jeux.html" />
-  <link rel="stylesheet" href="/assets/css/a11y.css" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
   
-  <script src="/assets/js/consent-default.js"></script>
-  <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-  <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos jeux pédagogiques | Ludus Mentis</title>
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
   
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
@@ -29,10 +49,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#ea580c',
-            'primary-focus': '#c2410c',
-            secondary: '#f59e0b',
-            accent: '#ef4444',
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1',
+            'ludus-green': '#059669'
           }
         }
       }
@@ -43,116 +63,108 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    h1, h2, h3 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .gradient-ludus {
+      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-base-100">
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
+    Aller au contenu principal
+  </a>
   
   <div id="header"></div>
   
-  <main class="container mx-auto px-4 py-8" id="main">
-    <!-- Hero -->
-    <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 rounded-3xl p-8 lg:p-12 mb-8 border-2 border-orange-200 dark:border-orange-800">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-          Des jeux triés sur le volet
-        </h1>
-        <p class="text-lg text-gray-700 dark:text-gray-300">
-          Chaque jeu est sélectionné pour ses mécaniques coopératives et son potentiel pédagogique.<br>
-          <strong class="text-orange-600 dark:text-orange-400">100% coop • PEGI ≤12 • Sans loot boxes • Sans chat en ligne</strong>
-        </p>
-      </div>
+  <main id="main" class="container mx-auto px-4 py-8 max-w-6xl">
+    <!-- Hero épuré -->
+    <section class="text-center mb-12">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+        Nos jeux : 100% coopératifs, 0% toxicité
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Chaque jeu est choisi pour développer des compétences spécifiques.
+        <strong class="text-ludus-green">PEGI ≤12</strong> • Sans loot boxes • Sans chat en ligne
+      </p>
     </section>
 
-    <!-- Critères de sélection -->
+    <!-- Nos critères stricts -->
     <section class="mb-12">
-      <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
-        <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-100">
-            Nos critères de sélection stricts
-          </h2>
+      <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200">
+        <h2 class="text-2xl font-bold mb-6 text-center text-green-700">
+          ✅ Nos critères de sélection non négociables
+        </h2>
+        
+        <div class="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🤝</div>
+            <p class="font-bold text-green-600">100% Coop</p>
+            <p class="text-xs text-gray-600">On gagne ensemble</p>
+          </div>
           
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="text-center">
-              <div class="bg-green-100 dark:bg-green-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-3xl">✅</span>
-              </div>
-              <h3 class="font-bold text-gray-800 dark:text-gray-100">PEGI ≤12</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Contenus adaptés à l'âge</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-blue-100 dark:bg-blue-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-3xl">🤝</span>
-              </div>
-              <h3 class="font-bold text-gray-800 dark:text-gray-100">100% Coop</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Réussite collective obligatoire</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-purple-100 dark:bg-purple-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-3xl">🚫</span>
-              </div>
-              <h3 class="font-bold text-gray-800 dark:text-gray-100">Pas de loot boxes</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Aucune mécanique addictive</p>
-            </div>
-            
-            <div class="text-center">
-              <div class="bg-amber-100 dark:bg-amber-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-3xl">🔒</span>
-              </div>
-              <h3 class="font-bold text-gray-800 dark:text-gray-100">Jeu local</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400">Pas de chat en ligne</p>
-            </div>
+          <div class="bg-white rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">👶</div>
+            <p class="font-bold text-green-600">PEGI ≤12</p>
+            <p class="text-xs text-gray-600">Contenu adapté</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🚫</div>
+            <p class="font-bold text-green-600">Pas d'addiction</p>
+            <p class="text-xs text-gray-600">Sans loot boxes</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-4 text-center">
+            <div class="text-3xl mb-2">🏠</div>
+            <p class="font-bold text-green-600">Local only</p>
+            <p class="text-xs text-gray-600">Pas de chat</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Catalogue de jeux détaillé -->
+    <!-- Les 5 jeux principaux -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
-        Notre catalogue pédagogique
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Nos 5 jeux stars
       </h2>
       
-      <div class="grid gap-6">
-        <!-- Overcooked -->
-        <div class="card bg-white dark:bg-gray-800 shadow-lg border-l-8 border-orange-500">
+      <div class="space-y-6">
+        <!-- Overcooked 2 -->
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
           <div class="card-body">
-            <div class="flex flex-col lg:flex-row gap-6">
-              <div class="lg:w-1/3">
-                <img src="assets/images/overcooked-placeholder.jpg" alt="Overcooked gameplay" class="rounded-lg w-full">
-              </div>
-              <div class="lg:w-2/3">
-                <div class="flex items-center gap-3 mb-3">
-                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">🍳 Overcooked! 2</h3>
-                  <span class="badge badge-success">PEGI 3</span>
-                  <span class="badge badge-primary">2-4 joueurs</span>
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <div class="bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl p-8 text-center">
+                  <div class="text-6xl mb-2">🍳</div>
+                  <h3 class="font-bold text-xl">Overcooked! 2</h3>
+                  <div class="flex gap-2 justify-center mt-2">
+                    <span class="badge badge-success">PEGI 3</span>
+                    <span class="badge">2-4 joueurs</span>
+                  </div>
                 </div>
-                
-                <p class="text-gray-600 dark:text-gray-400 mb-4">
-                  Le chaos organisé de la cuisine ! Les joueurs doivent préparer et servir des commandes 
-                  dans des cuisines de plus en plus folles. Impossible de réussir sans une communication parfaite.
+              </div>
+              
+              <div class="md:w-2/3">
+                <h4 class="font-bold text-ludus-orange mb-2">Le chaos culinaire organisé</h4>
+                <p class="text-gray-600 mb-4">
+                  Des cuisines impossibles où chaque seconde compte. Impossible de réussir seul, 
+                  la communication devient vitale. Le jeu parfait pour apprendre à s'organiser sous pression.
                 </p>
                 
-                <div class="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 class="font-bold text-orange-600 dark:text-orange-400">Compétences développées</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Communication claire et concise</li>
-                      <li>• Gestion du stress et des priorités</li>
-                      <li>• Coordination spatiale</li>
-                      <li>• Division efficace des tâches</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-orange-600 dark:text-orange-400">Usage pédagogique</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Rôles fixes par manche</li>
-                      <li>• Annonces obligatoires</li>
-                      <li>• Débrief sur les goulots</li>
-                      <li>• Variante : comm. non-verbale</li>
-                    </ul>
+                <div class="bg-orange-50 rounded-lg p-4">
+                  <p class="font-bold text-sm mb-2">🎯 Compétences développées :</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-sm">Communication claire</span>
+                    <span class="badge badge-sm">Gestion du stress</span>
+                    <span class="badge badge-sm">Priorisation</span>
+                    <span class="badge badge-sm">Coordination</span>
                   </div>
                 </div>
               </div>
@@ -161,42 +173,34 @@
         </div>
 
         <!-- Portal 2 -->
-        <div class="card bg-white dark:bg-gray-800 shadow-lg border-l-8 border-blue-500">
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
           <div class="card-body">
-            <div class="flex flex-col lg:flex-row gap-6">
-              <div class="lg:w-1/3">
-                <img src="assets/images/portal2-placeholder.jpg" alt="Portal 2 co-op" class="rounded-lg w-full">
-              </div>
-              <div class="lg:w-2/3">
-                <div class="flex items-center gap-3 mb-3">
-                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">🌀 Portal 2 (Mode Co-op)</h3>
-                  <span class="badge badge-warning">PEGI 12</span>
-                  <span class="badge badge-primary">2 joueurs</span>
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <div class="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl p-8 text-center">
+                  <div class="text-6xl mb-2">🌀</div>
+                  <h3 class="font-bold text-xl">Portal 2 Co-op</h3>
+                  <div class="flex gap-2 justify-center mt-2">
+                    <span class="badge badge-warning">PEGI 12</span>
+                    <span class="badge">2 joueurs</span>
+                  </div>
                 </div>
-                
-                <p class="text-gray-600 dark:text-gray-400 mb-4">
-                  Puzzles physiques nécessitant une synchronisation parfaite. Chaque joueur contrôle un robot 
-                  avec son propre portal gun. La résolution demande créativité et communication précise.
+              </div>
+              
+              <div class="md:w-2/3">
+                <h4 class="font-bold text-blue-600 mb-2">La synchronisation parfaite</h4>
+                <p class="text-gray-600 mb-4">
+                  Deux robots, deux portails, une infinité de puzzles. Chaque solution demande 
+                  une coordination millimétrée et une communication précise.
                 </p>
                 
-                <div class="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 class="font-bold text-blue-600 dark:text-blue-400">Compétences développées</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Pensée logique et spatiale</li>
-                      <li>• Synchronisation et timing</li>
-                      <li>• Vocabulaire directionnel</li>
-                      <li>• Résolution créative</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-blue-600 dark:text-blue-400">Usage pédagogique</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Protocoles de communication</li>
-                      <li>• Compte à rebours 3-2-1</li>
-                      <li>• Test d'hypothèses</li>
-                      <li>• Rôle observateur externe</li>
-                    </ul>
+                <div class="bg-blue-50 rounded-lg p-4">
+                  <p class="font-bold text-sm mb-2">🎯 Compétences développées :</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-sm">Pensée spatiale</span>
+                    <span class="badge badge-sm">Synchronisation</span>
+                    <span class="badge badge-sm">Patience</span>
+                    <span class="badge badge-sm">Créativité</span>
                   </div>
                 </div>
               </div>
@@ -205,42 +209,34 @@
         </div>
 
         <!-- Keep Talking -->
-        <div class="card bg-white dark:bg-gray-800 shadow-lg border-l-8 border-red-500">
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
           <div class="card-body">
-            <div class="flex flex-col lg:flex-row gap-6">
-              <div class="lg:w-1/3">
-                <img src="assets/images/keeptalk-placeholder.jpg" alt="Keep Talking and Nobody Explodes" class="rounded-lg w-full">
-              </div>
-              <div class="lg:w-2/3">
-                <div class="flex items-center gap-3 mb-3">
-                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">💣 Keep Talking and Nobody Explodes</h3>
-                  <span class="badge badge-success">PEGI 3</span>
-                  <span class="badge badge-primary">2-4 joueurs</span>
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <div class="bg-gradient-to-br from-red-100 to-pink-100 rounded-xl p-8 text-center">
+                  <div class="text-6xl mb-2">💣</div>
+                  <h3 class="font-bold text-xl">Keep Talking</h3>
+                  <div class="flex gap-2 justify-center mt-2">
+                    <span class="badge badge-success">PEGI 3</span>
+                    <span class="badge">2-4 joueurs</span>
+                  </div>
                 </div>
-                
-                <p class="text-gray-600 dark:text-gray-400 mb-4">
-                  Communication asymétrique pure : un joueur voit la bombe, les autres ont le manuel. 
-                  L'écoute active et la clarté deviennent littéralement vitales !
+              </div>
+              
+              <div class="md:w-2/3">
+                <h4 class="font-bold text-red-600 mb-2">La communication sous tension</h4>
+                <p class="text-gray-600 mb-4">
+                  Un voit la bombe, les autres ont le manuel. Aucune place pour l'approximation, 
+                  chaque mot compte. L'exercice ultime d'écoute active.
                 </p>
                 
-                <div class="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 class="font-bold text-red-600 dark:text-red-400">Compétences développées</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Écoute active maximale</li>
-                      <li>• Description précise</li>
-                      <li>• Gestion du temps</li>
-                      <li>• Langage commun</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-red-600 dark:text-red-400">Usage pédagogique</h4>
-                    <ul class="text-sm space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>• Création glossaire commun</li>
-                      <li>• Rotation des rôles</li>
-                      <li>• Clarifications obligatoires</li>
-                      <li>• Variante : bruit de fond</li>
-                    </ul>
+                <div class="bg-red-50 rounded-lg p-4">
+                  <p class="font-bold text-sm mb-2">🎯 Compétences développées :</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-sm">Écoute active</span>
+                    <span class="badge badge-sm">Description précise</span>
+                    <span class="badge badge-sm">Calme</span>
+                    <span class="badge badge-sm">Clarté</span>
                   </div>
                 </div>
               </div>
@@ -248,128 +244,203 @@
           </div>
         </div>
 
-        <!-- Autres jeux en grille -->
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Lovers in Space -->
-          <div class="card bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 border-2 border-purple-200 dark:border-purple-800">
-            <div class="card-body">
-              <h3 class="card-title text-purple-700 dark:text-purple-300">
-                🚀 Lovers in a Dangerous Spacetime
-              </h3>
-              <div class="flex gap-2 mb-3">
-                <span class="badge badge-info badge-sm">PEGI 7</span>
-                <span class="badge badge-primary badge-sm">2-4 joueurs</span>
+        <!-- Lovers in Space -->
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <div class="card-body">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-8 text-center">
+                  <div class="text-6xl mb-2">🚀</div>
+                  <h3 class="font-bold text-xl">Lovers Spacetime</h3>
+                  <div class="flex gap-2 justify-center mt-2">
+                    <span class="badge badge-info">PEGI 7</span>
+                    <span class="badge">2-4 joueurs</span>
+                  </div>
+                </div>
               </div>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Vaisseau spatial multi-postes : moteurs, boucliers, canons. La survie dépend 
-                de la répartition dynamique des rôles.
-              </p>
-              <p class="text-xs text-purple-600 dark:text-purple-400">
-                <strong>Focus :</strong> Priorisation, vision d'ensemble, leadership rotatif
-              </p>
+              
+              <div class="md:w-2/3">
+                <h4 class="font-bold text-purple-600 mb-2">Le vaisseau multi-postes</h4>
+                <p class="text-gray-600 mb-4">
+                  Un vaisseau, plusieurs postes critiques, jamais assez de mains. 
+                  Apprendre à prioriser et déléguer devient une question de survie.
+                </p>
+                
+                <div class="bg-purple-50 rounded-lg p-4">
+                  <p class="font-bold text-sm mb-2">🎯 Compétences développées :</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-sm">Leadership rotatif</span>
+                    <span class="badge badge-sm">Vision globale</span>
+                    <span class="badge badge-sm">Flexibilité</span>
+                    <span class="badge badge-sm">Entraide</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Moving Out -->
-          <div class="card bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-2 border-green-200 dark:border-green-800">
-            <div class="card-body">
-              <h3 class="card-title text-green-700 dark:text-green-300">
-                📦 Moving Out
-              </h3>
-              <div class="flex gap-2 mb-3">
-                <span class="badge badge-success badge-sm">PEGI 3</span>
-                <span class="badge badge-primary badge-sm">2-4 joueurs</span>
+        <!-- Moving Out -->
+        <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <div class="card-body">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="md:w-1/3">
+                <div class="bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-8 text-center">
+                  <div class="text-6xl mb-2">📦</div>
+                  <h3 class="font-bold text-xl">Moving Out</h3>
+                  <div class="flex gap-2 justify-center mt-2">
+                    <span class="badge badge-success">PEGI 3</span>
+                    <span class="badge">2-4 joueurs</span>
+                  </div>
+                </div>
               </div>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Déménagement loufoque où les meubles lourds nécessitent coordination. 
-                L'humour désamorce les tensions.
-              </p>
-              <p class="text-xs text-green-600 dark:text-green-400">
-                <strong>Focus :</strong> Planification, coopération physique, gestion de l'échec
-              </p>
-            </div>
-          </div>
-
-          <!-- Snipperclips -->
-          <div class="card bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 border-2 border-amber-200 dark:border-amber-800">
-            <div class="card-body">
-              <h3 class="card-title text-amber-700 dark:text-amber-300">
-                ✂️ Snipperclips
-              </h3>
-              <div class="flex gap-2 mb-3">
-                <span class="badge badge-success badge-sm">PEGI 3</span>
-                <span class="badge badge-primary badge-sm">2-4 joueurs</span>
+              
+              <div class="md:w-2/3">
+                <h4 class="font-bold text-green-600 mb-2">Le déménagement déjanté</h4>
+                <p class="text-gray-600 mb-4">
+                  Déménager n'a jamais été aussi drôle et chaotique. Les meubles lourds 
+                  nécessitent une vraie coordination physique virtuelle.
+                </p>
+                
+                <div class="bg-green-50 rounded-lg p-4">
+                  <p class="font-bold text-sm mb-2">🎯 Compétences développées :</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-sm">Planification</span>
+                    <span class="badge badge-sm">Coordination physique</span>
+                    <span class="badge badge-sm">Humour</span>
+                    <span class="badge badge-sm">Persévérance</span>
+                  </div>
+                </div>
               </div>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Personnages en papier qui se découpent mutuellement pour résoudre des puzzles. 
-                Créativité et précision requises.
-              </p>
-              <p class="text-xs text-amber-600 dark:text-amber-400">
-                <strong>Focus :</strong> Créativité, précision des consignes, itération
-              </p>
-            </div>
-          </div>
-
-          <!-- Unravel Two -->
-          <div class="card bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-950 dark:to-pink-950 border-2 border-red-200 dark:border-red-800">
-            <div class="card-body">
-              <h3 class="card-title text-red-700 dark:text-red-300">
-                🧶 Unravel Two
-              </h3>
-              <div class="flex gap-2 mb-3">
-                <span class="badge badge-info badge-sm">PEGI 7</span>
-                <span class="badge badge-primary badge-sm">2 joueurs</span>
-              </div>
-              <p class="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Deux Yarnys reliés par un fil. Plateforme poétique demandant entraide 
-                et synchronisation constantes.
-              </p>
-              <p class="text-xs text-red-600 dark:text-red-400">
-                <strong>Focus :</strong> Entraide, timing, patience, encouragement
-              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Jeux bonus -->
+    <!-- Autres jeux -->
     <section class="mb-12">
-      <div class="card bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 border-2 border-orange-200 dark:border-orange-800">
-        <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-center text-gray-800 dark:text-gray-100">
-            🎮 Jeux bonus (usage ponctuel)
-          </h2>
-          
-          <div class="flex flex-wrap justify-center gap-3">
-            <span class="badge badge-lg">⚔️ Trine 4 (stratégie multi-rôles)</span>
-            <span class="badge badge-lg">⚽ Rocket League (gestion pression)</span>
-            <span class="badge badge-lg">🏗️ Minecraft (créativité collective)</span>
-            <span class="badge badge-lg">🎭 It Takes Two (narration coop)</span>
-            <span class="badge badge-lg">🎨 Chicory (expression créative)</span>
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+        🎮 Jeux complémentaires
+      </h2>
+      
+      <div class="bg-gray-50 rounded-xl p-6">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">✂️</div>
+            <p class="font-bold">Snipperclips</p>
+            <p class="text-xs text-gray-600">Puzzles créatifs</p>
           </div>
           
-          <p class="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
-            Ces jeux sont utilisés occasionnellement selon les besoins spécifiques du groupe
-          </p>
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">🧶</div>
+            <p class="font-bold">Unravel Two</p>
+            <p class="text-xs text-gray-600">Plateforme poétique</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">⚔️</div>
+            <p class="font-bold">Trine 4</p>
+            <p class="text-xs text-gray-600">Aventure multi-rôles</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">⚽</div>
+            <p class="font-bold">Rocket League</p>
+            <p class="text-xs text-gray-600">Sport motorisé</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">🏗️</div>
+            <p class="font-bold">Minecraft</p>
+            <p class="text-xs text-gray-600">Construction créative</p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 text-center">
+            <div class="text-2xl mb-2">🎭</div>
+            <p class="font-bold">It Takes Two</p>
+            <p class="text-xs text-gray-600">Narration coop</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Message important -->
+    <section class="mb-12">
+      <div class="bg-amber-50 rounded-xl p-8 border-2 border-amber-300">
+        <h2 class="text-2xl font-bold mb-4 text-amber-700 text-center">
+          ⚠️ Ce que vous ne trouverez PAS chez nous
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div class="text-center">
+            <div class="text-3xl mb-2">🚫</div>
+            <p class="font-bold text-amber-600">Fortnite</p>
+            <p class="text-xs">Compétitif, addictif</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="text-3xl mb-2">❌</div>
+            <p class="font-bold text-amber-600">Roblox</p>
+            <p class="text-xs">Chat non contrôlé</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="text-3xl mb-2">⛔</div>
+            <p class="font-bold text-amber-600">FIFA/FC</p>
+            <p class="text-xs">Loot boxes, rage</p>
+          </div>
+        </div>
+        
+        <p class="text-center text-sm text-gray-600 mt-6">
+          Ces jeux peuvent être fun, mais ils ne correspondent pas à notre approche pédagogique
+        </p>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="text-center bg-gradient-to-r from-orange-500 to-orange-600 dark:from-orange-700 dark:to-orange-800 rounded-3xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">Des jeux qui font grandir</h2>
+    <section class="text-center gradient-ludus rounded-3xl p-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">
+        Des jeux qui font grandir, pas juste jouer
+      </h2>
       <p class="text-xl mb-6 opacity-95">
-        Chaque partie est une opportunité d'apprentissage encadrée et réfléchie.
+        Chaque partie est une leçon, chaque échec une opportunité
       </p>
-      <a href="programmes.html" class="btn btn-white btn-lg text-orange-600 hover:text-orange-700">
-        Voir comment on les utilise →
+      <a href="/programmes.html" class="btn btn-lg bg-white text-ludus-green border-0 hover:bg-gray-100">
+        Découvrir le programme complet →
       </a>
     </section>
   </main>
   
   <div id="footer"></div>
-  <script src="assets/js/include.js"></script>
-  <script src="assets/js/theme-toggle.js"></script>
+  
+  <!-- Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
 </body>
 </html>
