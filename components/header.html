@@ -58,7 +58,6 @@
             <li><a href="/infos-tarifs.html" class="hover:text-ludus-teal">Tarifs & inscriptions</a></li>
             <li><a href="/faq.html" class="hover:text-ludus-teal">FAQ</a></li>
             <li><a href="/a-propos.html" class="hover:text-ludus-teal">À propos</a></li>
-            <li><a href="/educateurs.html" class="hover:text-ludus-teal">Pour éducateurs</a></li>
           </ul>
         </li>
 
@@ -67,8 +66,8 @@
     </nav>
 
     <div class="navbar-end gap-2">
-      <!-- CTA Button Desktop -->
-      <a href="/contact.html" class="btn btn-primary btn-sm hidden lg:flex text-white">
+      <!-- CTA Button Desktop - COULEUR VERTE -->
+      <a href="/contact.html" class="btn btn-sm hidden lg:flex text-white" style="background-color: #059669; border: none;">
         Inscription 2026
       </a>
       
@@ -104,12 +103,11 @@
           <li><a href="/infos-tarifs.html" class="pl-4 py-2">Tarifs & inscriptions</a></li>
           <li><a href="/faq.html" class="pl-4 py-2">FAQ</a></li>
           <li><a href="/a-propos.html" class="pl-4 py-2">À propos</a></li>
-          <li><a href="/educateurs.html" class="pl-4 py-2">Pour éducateurs</a></li>
           
           <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
           
           <li class="mt-4">
-            <a href="/contact.html" class="btn btn-primary btn-block text-white">
+            <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
               Inscription 2026
             </a>
           </li>
@@ -127,6 +125,13 @@
   .dropdown-content a:hover {
     background-color: rgba(23, 162, 184, 0.1);
     color: #17a2b8;
+  }
+  
+  /* Style amélioré pour le bouton vert */
+  .btn[style*="background-color: #059669"]:hover {
+    background-color: #047857 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
   }
   
   @media (max-width: 1024px) {
