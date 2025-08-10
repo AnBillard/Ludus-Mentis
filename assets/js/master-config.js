@@ -1,120 +1,175 @@
-<!-- /assets/includes/head-common.html -->
-<!-- Configuration centralisée pour toutes les pages -->
+// /assets/js/master-config.js
+// Configuration centralisée pour Ludus Mentis
 
-<!-- Meta communes -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
-
-<!-- Configuration centralisée -->
-<script src="/assets/js/master-config.js"></script>
-
-<!-- DaisyUI + Tailwind CSS -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Configuration Tailwind avec couleurs Ludus Mentis -->
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-    daisyui: {
-      themes: [
-        {
-          ludus: {
-            "primary": "#17a2b8",        // Teal du logo
-            "primary-content": "#ffffff",
-            "secondary": "#ff9800",       // Orange du logo
-            "secondary-content": "#000000",
-            "accent": "#ffc107",         // Jaune complémentaire
-            "accent-content": "#000000",
-            "neutral": "#2a323c",
-            "neutral-content": "#f9fafb",
-            "base-100": "#ffffff",
-            "base-200": "#f3f4f6",
-            "base-300": "#e5e7eb",
-            "base-content": "#1f2937",
-            "info": "#3b82f6",
-            "success": "#10b981",
-            "warning": "#f59e0b",
-            "error": "#ef4444",
-            
-            "--rounded-box": "0.5rem",
-            "--rounded-btn": "0.375rem",
-            "--rounded-badge": "9999px",
-            "--animation-btn": "0.25s",
-            "--animation-input": "0.2s",
-            "--btn-focus-scale": "0.95",
-            "--border-btn": "2px",
-            "--tab-border": "2px",
-            "--tab-radius": "0.5rem",
-          },
-          ludusDark: {
-            "primary": "#17a2b8",
-            "primary-content": "#ffffff",
-            "secondary": "#ff9800",
-            "secondary-content": "#000000",
-            "accent": "#ffc107",
-            "accent-content": "#000000",
-            "neutral": "#1f2937",
-            "neutral-content": "#f9fafb",
-            "base-100": "#111827",
-            "base-200": "#1f2937",
-            "base-300": "#374151",
-            "base-content": "#f9fafb",
-            "info": "#60a5fa",
-            "success": "#34d399",
-            "warning": "#fbbf24",
-            "error": "#f87171",
-          }
-        }
-      ]
+window.LudusConfig = {
+  // Analytics
+  analytics: {
+    GA_ID: 'G-075RK8EJ9K',
+    GTM_ID: 'GTM-WMCMP74V',
+    enableTracking: true
+  },
+  
+  // Organisation - CLARIFIÉ
+  organization: {
+    name: 'Ludus Mentis',
+    type: 'Club de jeu vidéo éducatif',
+    tagline: 'On joue ensemble, on progresse ensemble',
+    legalStatus: 'ASBL en cours de création',
+    foundingYear: 2025,
+    openingDate: 'Septembre 2026',
+    founder: 'Antoine Billard'
+  },
+  
+  // Positionnement - CLARIFIÉ
+  positioning: {
+    what: 'Club de jeu vidéo coopératif',
+    how: 'Sessions structurées hors domicile avec méthode pédagogique',
+    why: 'Pratique responsable du gaming et développement de compétences sociales',
+    notWhat: 'Ni thérapie, ni centre de traitement, ni compétition esport'
+  },
+  
+  // Public cible - CLARIFIÉ
+  targetAudience: {
+    primary: {
+      name: 'Adolescents',
+      age: '10-15 ans',
+      need: 'Cadre social pour leur passion gaming'
+    },
+    secondary: {
+      name: 'Parents',
+      need: 'Solution équilibrée pour gérer le temps d\'écran'
+    },
+    tertiary: {
+      name: 'Éducateurs',
+      need: 'Outil pédagogique innovant'
     }
-  }
-</script>
-
-<!-- Fonts Google -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Styles custom minimaux -->
-<style>
-  :root {
-    --color-primary: #17a2b8;
-    --color-secondary: #ff9800;
-    --color-accent: #ffc107;
-  }
+  },
   
-  /* Focus states WCAG AAA */
-  :focus-visible {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
-  }
+  // Programme
+  program: {
+    format: 'Modules de 7 semaines',
+    sessionDuration: '2 heures',
+    frequency: 'Hebdomadaire (mercredi)',
+    groupSize: '8-10 participants maximum',
+    location: 'Walhain, Brabant wallon',
+    schedule: [
+      { day: 'Mercredi', time: '14h00-16h00', target: 'Jeunes collégiens' },
+      { day: 'Mercredi', time: '17h00-19h00', target: 'Lycéens' }
+    ]
+  },
   
-  /* Typography */
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
+  // Tarifs TRANSPARENTS
+  pricing: {
+    modulePrice: 230,
+    currency: 'EUR',
+    perSession: 32.86,
+    included: [
+      'Matériel gaming fourni',
+      'Encadrement professionnel',
+      'Assurance',
+      'Bilan personnalisé'
+    ],
+    discounts: [
+      { type: 'resident', location: 'Walhain', percentage: 15 },
+      { type: 'family', description: 'Fratries', percentage: 10 }
+    ],
+    paymentOptions: [
+      'Paiement comptant',
+      '2x sans frais',
+      'Arrangement personnalisé sur demande'
+    ]
+  },
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-  }
+  // Contact
+  contact: {
+    email: 'info@ludusmentis.be',
+    address: {
+      city: 'Walhain',
+      region: 'Brabant wallon',
+      country: 'Belgique',
+      note: 'Lieu exact communiqué à l\'inscription'
+    }
+  },
   
-  /* Utility classes */
-  .text-primary-ludus { color: #17a2b8; }
-  .text-secondary-ludus { color: #ff9800; }
-  .bg-primary-ludus { background-color: #17a2b8; }
-  .bg-secondary-ludus { background-color: #ff9800; }
-  .border-primary-ludus { border-color: #17a2b8; }
-  .border-secondary-ludus { border-color: #ff9800; }
-</style>
+  // Formulaires
+  forms: {
+    formspreeId: 'mdkdwzoy',
+    privacyNotice: 'Vos données sont traitées conformément au RGPD. Aucun transfert hors UE sans votre consentement explicite.'
+  },
+  
+  // Partenaires
+  partners: [
+    {
+      name: 'Commune de Walhain',
+      logo: '/assets/images/logo_walhain.png',
+      url: 'https://www.walhain.be/',
+      type: 'Soutien institutionnel'
+    },
+    {
+      name: 'Fédération belge d\'esport',
+      logo: '/assets/images/logo_besf.png',
+      url: 'https://besf.be/',
+      type: 'Partenaire technique'
+    }
+  ],
+  
+  // Jeux utilisés - PÉDAGOGIQUES UNIQUEMENT
+  games: [
+    { 
+      name: 'Overcooked! 2', 
+      pegi: 3, 
+      players: '2-4', 
+      type: 'coop',
+      skills: 'Communication, gestion du stress'
+    },
+    { 
+      name: 'Portal 2 Co-op', 
+      pegi: 12, 
+      players: '2', 
+      type: 'puzzle',
+      skills: 'Résolution de problèmes, synchronisation'
+    },
+    { 
+      name: 'Keep Talking and Nobody Explodes', 
+      pegi: 3, 
+      players: '2-4', 
+      type: 'communication',
+      skills: 'Écoute active, précision verbale'
+    },
+    { 
+      name: 'Lovers in a Dangerous Spacetime', 
+      pegi: 7, 
+      players: '2-4', 
+      type: 'coop',
+      skills: 'Coordination, leadership rotatif'
+    },
+    { 
+      name: 'Moving Out', 
+      pegi: 3, 
+      players: '2-4', 
+      type: 'coop',
+      skills: 'Planification, travail d\'équipe'
+    }
+  ],
+  
+  // Messages clés - CLARIFIÉS
+  messages: {
+    hero: 'Le club où le jeu vidéo devient un sport d\'équipe',
+    value: 'Transformez la passion gaming en compétences sociales',
+    safety: 'Cadre sécurisé, horaires limités, parents impliqués',
+    method: 'Méthode Kolb validée, mesure des progrès, bilan personnalisé',
+    notTherapy: 'Club de loisir éducatif, pas un centre thérapeutique'
+  },
+  
+  // SEO
+  seo: {
+    defaultTitle: 'Ludus Mentis | Club de jeu vidéo coopératif à Walhain',
+    defaultDescription: 'Club gaming pour ados 10-15 ans. Sessions encadrées de 2h, jeux coopératifs, développement des soft skills. Walhain, Brabant wallon.',
+    keywords: 'club jeu vidéo, gaming responsable, adolescents, Walhain, coopération, soft skills'
+  }
+};
 
-<!-- Accessibility -->
-<link rel="stylesheet" href="/assets/css/a11y.css" />
-
-<!-- CMP + Consent Mode v2 -->
-<script src="/assets/js/consent-default.js"></script>
-<script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
-<script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
+// Fonction helper pour obtenir une config
+window.getConfig = function(path) {
+  return path.split('.').reduce((obj, key) => obj?.[key], window.LudusConfig);
+};
