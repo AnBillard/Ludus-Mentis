@@ -1,91 +1,75 @@
 <!-- components/footer.html -->
-<footer class="footer footer-center p-8 bg-base-200 text-base-content mt-20">
-  <!-- Navigation principale (1 ligne) -->
-  <nav class="flex flex-wrap gap-4 justify-center text-sm" role="navigation" aria-label="Pied de page">
-    <a href="/" class="link link-hover hover:text-ludus-teal">Accueil</a>
-    <span class="text-gray-400">•</span>
-    <a href="/programmes.html" class="link link-hover hover:text-ludus-teal">Programmes</a>
-    <span class="text-gray-400">•</span>
-    <a href="/infos-tarifs.html" class="link link-hover hover:text-ludus-teal">Tarifs</a>
-    <span class="text-gray-400">•</span>
-    <a href="/faq.html" class="link link-hover hover:text-ludus-teal">FAQ</a>
-    <span class="text-gray-400">•</span>
-    <a href="/contact.html" class="link link-hover hover:text-ludus-teal">Contact</a>
-    <span class="text-gray-400">•</span>
-    <a href="/mentions.html" class="link link-hover hover:text-ludus-teal">Mentions légales</a>
-  </nav> 
-  
-  <!-- Contact et réseaux (compact) -->
-  <div class="flex items-center gap-6">
-    <!-- Email -->
-    <a href="mailto:info@ludusmentis.be" 
-       class="flex items-center gap-2 hover:text-ludus-teal transition-all"
-       aria-label="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-        <polyline points="22,6 12,13 2,6"></polyline>
-      </svg>
-      <span class="text-sm">info@ludusmentis.be</span>
-    </a>
-    
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/ludus.mentis.esport" 
-       target="_blank" 
-       rel="noopener" 
-       class="hover:text-ludus-teal transition-all hover:scale-110"
-       aria-label="Facebook">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-    </a>
-    
-    <!-- Location -->
-    <div class="flex items-center gap-2 text-sm">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-      </svg>
-      <span>Walhain</span>
+<footer class="border-t border-gray-200 mt-20">
+  <div class="container mx-auto px-4 py-6">
+    <!-- Ligne 1 : Navigation principale -->
+    <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 mb-4">
+      <a href="/" class="hover:text-ludus-teal">Accueil</a>
+      <span class="text-gray-300">•</span>
+      <a href="/programmes.html" class="hover:text-ludus-teal">Programmes</a>
+      <span class="text-gray-300">•</span>
+      <a href="/infos-tarifs.html" class="hover:text-ludus-teal">Tarifs</a>
+      <span class="text-gray-300">•</span>
+      <a href="/faq.html" class="hover:text-ludus-teal">FAQ</a>
+      <span class="text-gray-300">•</span>
+      <a href="/contact.html" class="hover:text-ludus-teal">Contact</a>
+      <span class="text-gray-300">•</span>
+      <a href="/mentions.html" class="hover:text-ludus-teal">Mentions légales</a>
     </div>
-  </div>
-  
-  <!-- Partenaires (mini) -->
-  <div class="flex items-center gap-8">
-    <a href="https://www.walhain.be/" target="_blank" rel="noopener" aria-label="Commune de Walhain">
-      <img src="/assets/images/logo_walhain.png" alt="Walhain" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
-    </a>
-    <a href="https://besf.be/" target="_blank" rel="noopener" aria-label="Fédération belge d'esport">
-      <img src="/assets/images/logo_besf.png" alt="BESF" class="h-10 opacity-60 hover:opacity-100 transition-opacity">
-    </a>
-  </div>
-  
-  <!-- Copyright et bouton cookies (1 ligne) -->
-  <div class="text-center">
-    <p class="text-xs text-gray-500">
+    
+    <!-- Ligne 2 : Contact et social -->
+    <div class="flex justify-center items-center gap-6 text-sm text-gray-600 mb-4">
+      <a href="mailto:info@ludusmentis.be" class="flex items-center gap-1 hover:text-ludus-teal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        info@ludusmentis.be
+      </a>
+      <a href="https://www.facebook.com/ludus.mentis.esport" target="_blank" rel="noopener" class="hover:text-ludus-teal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </a>
+      <div class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Walhain
+      </div>
+    </div>
+    
+    <!-- Ligne 3 : Partenaires (logos très petits) -->
+    <div class="flex justify-center items-center gap-6 mb-4">
+      <img src="/assets/images/logo_walhain.png" alt="Walhain" class="h-8 opacity-50 hover:opacity-70 transition-opacity">
+      <img src="/assets/images/logo_besf.png" alt="BESF" class="h-8 opacity-50 hover:opacity-70 transition-opacity">
+    </div>
+    
+    <!-- Ligne 4 : Copyright minimaliste -->
+    <div class="text-center text-xs text-gray-400">
       © 2025-2026 Ludus Mentis ASBL (en création) • 
       <button onclick="if(typeof tarteaucitron !== 'undefined') tarteaucitron.userInterface.openPanel();" 
-              class="underline hover:text-ludus-teal"
-              aria-label="Gérer les cookies">
+              class="underline hover:text-gray-600">
         Gérer les cookies
       </button>
-    </p>
+    </div>
   </div>
 </footer>
 
 <style>
-  /* Footer plus compact */
-  .footer {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+  /* Style ultra-minimal */
+  footer {
+    background-color: #fafafa;
   }
   
-  .footer > * + * {
-    margin-top: 1rem;
-  }
-  
+  /* Mobile : cacher les séparateurs */
   @media (max-width: 640px) {
-    .footer nav span.text-gray-400 {
+    footer span.text-gray-300 {
       display: none;
+    }
+    
+    footer .gap-4 {
+      gap: 0.75rem;
     }
   }
 </style>
