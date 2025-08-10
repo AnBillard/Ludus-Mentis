@@ -1,39 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Page d'accueil - Priorité maximale -->
   <url>
     <loc>https://ludusmentis.be/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
+  
+  <!-- Pages principales - Haute priorité -->
   <url>
-    <loc>https://ludusmentis.be/a-propos.html</loc>
+    <loc>https://ludusmentis.be/programmes.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://ludusmentis.be/academie.html</loc>
-  </url>
-  <url>
-    <loc>https://ludusmentis.be/concept.html</loc>
-  </url>
+  
   <url>
     <loc>https://ludusmentis.be/contact.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://ludusmentis.be/educateurs.html</loc>
-  </url>
-  <url>
-    <loc>https://ludusmentis.be/enjeux.html</loc>
-  </url>
-  <url>
-    <loc>https://ludusmentis.be/faq.html</loc>
-  </url>
+  
   <url>
     <loc>https://ludusmentis.be/infos-tarifs.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+  
+  <!-- Pages de contenu - Priorité moyenne -->
   <url>
-    <loc>https://ludusmentis.be/kit-pedagogique.html</loc>
+    <loc>https://ludusmentis.be/methode.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/concept.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/jeux.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/recherche.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/academie.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/faq.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Pages secondaires - Priorité normale -->
+  <url>
+    <loc>https://ludusmentis.be/a-propos.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/charte.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/educateurs.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ludusmentis.be/enjeux.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Pages légales - Basse priorité -->
   <url>
     <loc>https://ludusmentis.be/mentions.html</loc>
-  </url>
-  <url>
-    <loc>https://ludusmentis.be/methodologie.html</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
