@@ -4,20 +4,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/contact.html" />
-  <meta property="og:title" content="Contact et inscription | Ludus Mentis" />
-  <meta property="og:description" content="Inscrivez votre enfant au club. Créneaux mercredi 14h-16h et 17h-19h. Places limitées." />
+  <meta property="og:title" content="Contact et préinscription 2026 | Ludus Mentis" />
+  <meta property="og:description" content="Préinscrivez votre enfant pour septembre 2026. Créneaux mercredi 14h-16h et 17h-19h. Places limitées." />
   
   <link rel="canonical" href="https://ludusmentis.be/contact.html" />
   <link rel="stylesheet" href="/assets/css/a11y.css" />
-  <link rel="stylesheet" href="/assets/css/styles-improved.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
   
+  <script src="/assets/js/config.js"></script>
   <script src="/assets/js/consent-default.js"></script>
   <script src="/tarteaucitron.js/tarteaucitron.js" defer></script>
   <script src="/assets/js/cmp-tarteaucitron-init.js" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact et inscription | Ludus Mentis</title>
+  <title>Contact et préinscription | Ludus Mentis</title>
   
   <!-- DaisyUI + Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -33,10 +34,6 @@
             'primary-focus': '#c2410c',
             secondary: '#f59e0b',
             accent: '#ef4444',
-          },
-          fontFamily: {
-            'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
           }
         }
       }
@@ -49,7 +46,7 @@
   
   <link rel="icon" type="image/png" href="assets/images/Ludus-Mentis-transparent.png">
 </head>
-<body class="min-h-screen bg-base-100">
+<body class="min-h-screen bg-base-100 dark:bg-gray-900">
   <a class="skip-link" href="#main">Aller au contenu principal</a>
   
   <div id="header"></div>
@@ -59,25 +56,36 @@
     <section class="hero bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 rounded-3xl p-8 mb-8 border-2 border-orange-200 dark:border-orange-800">
       <div class="text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-          Inscrivez votre enfant dès maintenant
+          Préinscrivez votre enfant pour 2026
         </h1>
         <p class="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           <strong class="text-orange-600 dark:text-orange-400">Places limitées à 8-10 jeunes par groupe</strong><br>
-          Créneaux : Mercredi 14h-16h ou 17h-19h
+          Créneaux : Mercredi 14h-16h ou 17h-19h à Walhain
         </p>
+        <div class="mt-4">
+          <span class="badge badge-warning">Ouverture prévue : Septembre 2026</span>
+          <span class="badge badge-info ml-2">ASBL en création</span>
+        </div>
       </div>
     </section>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <!-- Formulaire d'inscription -->
+      <!-- Formulaire de préinscription -->
       <section>
         <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
           <div class="card-body">
             <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-              Formulaire d'inscription
+              Formulaire de préinscription
             </h2>
             
-            <form id="inscriptionForm" action="https://formspree.io/f/mdkdwzoy" method="POST" class="space-y-6">
+            <div class="alert alert-info mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Cette préinscription est sans engagement et nous permet de mesurer l'intérêt</span>
+            </div>
+            
+            <form id="preRegistrationForm" action="https://formspree.io/f/mdkdwzoy" method="POST" class="space-y-6">
+              <input type="hidden" name="_subject" value="Nouvelle préinscription Ludus Mentis 2026">
+              
               <!-- Section Enfant -->
               <fieldset>
                 <legend class="text-lg font-bold text-orange-600 dark:text-orange-400 mb-4">
@@ -90,8 +98,7 @@
                       <span class="label-text font-semibold">Prénom *</span>
                     </label>
                     <input type="text" id="enfant_prenom" name="enfant_prenom" required 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" 
-                           aria-required="true" />
+                           class="input input-bordered focus:input-primary dark:bg-gray-700" />
                   </div>
                   
                   <div class="form-control">
@@ -99,25 +106,23 @@
                       <span class="label-text font-semibold">Nom *</span>
                     </label>
                     <input type="text" id="enfant_nom" name="enfant_nom" required 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" 
-                           aria-required="true" />
+                           class="input input-bordered focus:input-primary dark:bg-gray-700" />
                   </div>
                 </div>
                 
                 <div class="form-control mt-4">
                   <label for="enfant_age" class="label">
-                    <span class="label-text font-semibold">Âge *</span>
+                    <span class="label-text font-semibold">Âge actuel *</span>
                   </label>
                   <select id="enfant_age" name="enfant_age" required 
-                          class="select select-bordered focus:select-primary dark:bg-gray-700" 
-                          aria-required="true">
+                          class="select select-bordered focus:select-primary dark:bg-gray-700">
                     <option value="">Sélectionnez l'âge</option>
-                    <option value="10">10 ans</option>
-                    <option value="11">11 ans</option>
-                    <option value="12">12 ans</option>
-                    <option value="13">13 ans</option>
-                    <option value="14">14 ans</option>
-                    <option value="15">15 ans</option>
+                    <option value="8">8 ans (10 ans en 2026)</option>
+                    <option value="9">9 ans (11 ans en 2026)</option>
+                    <option value="10">10 ans (12 ans en 2026)</option>
+                    <option value="11">11 ans (13 ans en 2026)</option>
+                    <option value="12">12 ans (14 ans en 2026)</option>
+                    <option value="13">13 ans (15 ans en 2026)</option>
                   </select>
                 </div>
               </fieldset>
@@ -128,61 +133,47 @@
                   Informations du parent/tuteur
                 </legend>
                 
-                <div class="grid md:grid-cols-2 gap-4">
-                  <div class="form-control">
-                    <label for="parent_nom" class="label">
-                      <span class="label-text font-semibold">Nom complet *</span>
-                    </label>
-                    <input type="text" id="parent_nom" name="parent_nom" required 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" 
-                           aria-required="true" />
-                  </div>
-                  
-                  <div class="form-control">
-                    <label for="parent_email" class="label">
-                      <span class="label-text font-semibold">Email *</span>
-                    </label>
-                    <input type="email" id="parent_email" name="parent_email" required 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" 
-                           aria-required="true" 
-                           aria-describedby="email-help" />
-                    <span id="email-help" class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      Nous utiliserons cet email pour toute communication
-                    </span>
-                  </div>
+                <div class="form-control">
+                  <label for="parent_nom" class="label">
+                    <span class="label-text font-semibold">Nom complet *</span>
+                  </label>
+                  <input type="text" id="parent_nom" name="parent_nom" required 
+                         class="input input-bordered focus:input-primary dark:bg-gray-700" />
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-4 mt-4">
-                  <div class="form-control">
-                    <label for="parent_tel" class="label">
-                      <span class="label-text font-semibold">Téléphone *</span>
-                    </label>
-                    <input type="tel" id="parent_tel" name="parent_tel" required 
-                           placeholder="+32..." 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" 
-                           aria-required="true" />
-                  </div>
-                  
-                  <div class="form-control">
-                    <label for="commune" class="label">
-                      <span class="label-text font-semibold">Commune</span>
-                    </label>
-                    <input type="text" id="commune" name="commune" 
-                           placeholder="Ex: Walhain, Wavre..." 
-                           class="input input-bordered focus:input-primary dark:bg-gray-700" />
-                  </div>
+                <div class="form-control mt-4">
+                  <label for="parent_email" class="label">
+                    <span class="label-text font-semibold">Email *</span>
+                  </label>
+                  <input type="email" id="parent_email" name="parent_email" required 
+                         class="input input-bordered focus:input-primary dark:bg-gray-700" />
+                  <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Nous utiliserons uniquement cet email pour vous contacter
+                  </span>
+                </div>
+                
+                <div class="form-control mt-4">
+                  <label for="commune" class="label">
+                    <span class="label-text font-semibold">Commune de résidence</span>
+                  </label>
+                  <input type="text" id="commune" name="commune" 
+                         placeholder="Ex: Walhain, Wavre, Gembloux..." 
+                         class="input input-bordered focus:input-primary dark:bg-gray-700" />
+                  <span class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Réduction de 15% pour les résidents de Walhain
+                  </span>
                 </div>
               </fieldset>
               
-              <!-- Section Créneau -->
+              <!-- Section Créneau souhaité -->
               <fieldset>
                 <legend class="text-lg font-bold text-orange-600 dark:text-orange-400 mb-4">
-                  Choix du créneau
+                  Préférence de créneau (indicatif)
                 </legend>
                 
-                <div class="space-y-3" role="group" aria-required="true">
+                <div class="space-y-3">
                   <label class="flex items-center gap-3 p-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-orange-400 cursor-pointer">
-                    <input type="radio" name="creneau" value="mercredi-14h" required 
+                    <input type="radio" name="creneau" value="mercredi-14h" 
                            class="radio radio-primary" />
                     <div>
                       <strong class="text-gray-800 dark:text-gray-100">Mercredi 14h00-16h00</strong>
@@ -191,65 +182,50 @@
                   </label>
                   
                   <label class="flex items-center gap-3 p-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-orange-400 cursor-pointer">
-                    <input type="radio" name="creneau" value="mercredi-17h" required 
+                    <input type="radio" name="creneau" value="mercredi-17h" 
                            class="radio radio-primary" />
                     <div>
                       <strong class="text-gray-800 dark:text-gray-100">Mercredi 17h00-19h00</strong>
                       <p class="text-sm text-gray-600 dark:text-gray-400">Après les activités scolaires</p>
                     </div>
                   </label>
-                </div>
-              </fieldset>
-              
-              <!-- Autorisations -->
-              <fieldset>
-                <legend class="text-lg font-bold text-orange-600 dark:text-orange-400 mb-4">
-                  Autorisations
-                </legend>
-                
-                <div class="space-y-3">
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="photo_anonyme" value="oui" checked 
-                           class="checkbox checkbox-primary mt-1" />
-                    <span class="text-sm text-gray-700 dark:text-gray-300">
-                      J'autorise les photos anonymisées (visages floutés) pour la communication
-                    </span>
-                  </label>
                   
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="photo_identifiable" value="oui" 
-                           class="checkbox checkbox-primary mt-1" />
-                    <span class="text-sm text-gray-700 dark:text-gray-300">
-                      J'autorise les photos identifiables (consentement écrit sera demandé)
-                    </span>
-                  </label>
-                  
-                  <label class="flex items-start gap-3">
-                    <input type="checkbox" name="rgpd" value="accepte" required 
-                           class="checkbox checkbox-primary mt-1" 
-                           aria-required="true" />
-                    <span class="text-sm text-gray-700 dark:text-gray-300">
-                      J'ai lu et j'accepte la <a href="charte.html" class="text-orange-600 dark:text-orange-400 underline">charte</a> 
-                      et la <a href="mentions.html" class="text-orange-600 dark:text-orange-400 underline">politique de confidentialité</a> *
-                    </span>
+                  <label class="flex items-center gap-3 p-3 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-orange-400 cursor-pointer">
+                    <input type="radio" name="creneau" value="indifferent" 
+                           class="radio radio-primary" />
+                    <div>
+                      <strong class="text-gray-800 dark:text-gray-100">Pas de préférence</strong>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">Les deux créneaux conviennent</p>
+                    </div>
                   </label>
                 </div>
               </fieldset>
               
-              <!-- Informations complémentaires -->
+              <!-- Message optionnel -->
               <div class="form-control">
-                <label for="infos" class="label">
-                  <span class="label-text font-semibold">Informations utiles (santé, besoins spécifiques...)</span>
+                <label for="message" class="label">
+                  <span class="label-text font-semibold">Message ou questions (optionnel)</span>
                 </label>
-                <textarea id="infos" name="infos" rows="3" 
+                <textarea id="message" name="message" rows="3" 
                           class="textarea textarea-bordered focus:textarea-primary dark:bg-gray-700" 
-                          placeholder="Allergies, difficultés particulières, etc."></textarea>
+                          placeholder="Dites-nous en plus sur votre enfant, ses intérêts, vos attentes..."></textarea>
+              </div>
+              
+              <!-- Newsletter -->
+              <div class="form-control">
+                <label class="flex items-start gap-3">
+                  <input type="checkbox" name="newsletter" value="oui" checked 
+                         class="checkbox checkbox-primary mt-1" />
+                  <span class="text-sm text-gray-700 dark:text-gray-300">
+                    Je souhaite être informé·e de l'évolution du projet et de l'ouverture des inscriptions
+                  </span>
+                </label>
               </div>
               
               <!-- Bouton submit -->
               <div class="text-center">
                 <button type="submit" class="btn btn-primary btn-lg text-white">
-                  Envoyer l'inscription
+                  Envoyer la préinscription
                 </button>
               </div>
             </form>
@@ -264,7 +240,7 @@
           <div class="card bg-white dark:bg-gray-800 shadow-xl border-2 border-gray-200 dark:border-gray-700">
             <div class="card-body">
               <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-                Contact direct
+                Nous contacter
               </h2>
               
               <div class="space-y-4">
@@ -281,17 +257,31 @@
                   <span class="text-2xl">📍</span>
                   <div>
                     <strong class="text-gray-800 dark:text-gray-100">Lieu</strong>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Walhain, Brabant wallon</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Walhain, Brabant wallon<br>
+                      <em>(Lieu exact à définir)</em>
+                    </p>
                   </div>
                 </div>
                 
                 <div class="flex items-center gap-3 p-3 bg-green-50 dark:bg-green-950 rounded-lg">
                   <span class="text-2xl">📅</span>
                   <div>
-                    <strong class="text-gray-800 dark:text-gray-100">Horaires</strong>
+                    <strong class="text-gray-800 dark:text-gray-100">Horaires prévus</strong>
                     <p class="text-sm text-gray-600 dark:text-gray-400">
                       Mercredi 14h-16h<br>
                       Mercredi 17h-19h
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-center gap-3 p-3 bg-purple-50 dark:bg-purple-950 rounded-lg">
+                  <span class="text-2xl">🚀</span>
+                  <div>
+                    <strong class="text-gray-800 dark:text-gray-100">Lancement</strong>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Septembre 2026<br>
+                      <em>Préinscriptions ouvertes</em>
                     </p>
                   </div>
                 </div>
@@ -306,12 +296,14 @@
                 💡 Bon à savoir
               </h3>
               <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li>✅ Préinscription sans engagement</li>
                 <li>✅ Pas besoin d'être "bon" aux jeux vidéo</li>
                 <li>✅ Matériel fourni sur place</li>
                 <li>✅ 230€ pour 7 semaines (tout compris)</li>
                 <li>✅ -15% résidents Walhain</li>
                 <li>✅ -10% fratries</li>
                 <li>✅ Maximum 8-10 jeunes par groupe</li>
+                <li>✅ ASBL en cours de création</li>
               </ul>
               
               <a href="faq.html" class="btn btn-sm btn-outline btn-primary mt-4 dark:text-orange-400 dark:border-orange-400">
@@ -326,71 +318,6 @@
   
   <div id="footer"></div>
   <script src="assets/js/include.js"></script>
-  
-  <script>
-    // Dark mode support
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-    
-    // Form validation and submission
-    document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      
-      // Loading state
-      submitBtn.innerHTML = '<span class="loading loading-spinner"></span> Envoi en cours...';
-      submitBtn.disabled = true;
-      
-      // Submit form
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          // Success
-          this.reset();
-          submitBtn.innerHTML = '✅ Inscription envoyée !';
-          submitBtn.classList.remove('btn-primary');
-          submitBtn.classList.add('btn-success');
-          
-          // Show success message
-          const alert = document.createElement('div');
-          alert.className = 'alert alert-success mt-4';
-          alert.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>Merci ! Nous vous contacterons dans les 48h pour confirmer l'inscription.</span>
-          `;
-          this.appendChild(alert);
-          
-        } else {
-          throw new Error('Erreur réseau');
-        }
-      }).catch(error => {
-        // Error
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        
-        const alert = document.createElement('div');
-        alert.className = 'alert alert-error mt-4';
-        alert.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement par email.</span>
-        `;
-        this.appendChild(alert);
-      });
-    });
-  </script>
+  <script src="assets/js/theme.js"></script>
 </body>
 </html>
