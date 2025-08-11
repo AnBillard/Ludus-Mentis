@@ -1,190 +1,67 @@
 <!-- components/header.html -->
-<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200 min-h-[4rem]">
-  <div class="container mx-auto px-4">
-    <div class="navbar-start flex-none">
-      <a href="/" class="btn btn-ghost p-0 h-auto min-h-0" aria-label="Accueil Ludus Mentis">
-        <img src="/assets/images/Ludus-Mentis-transparent.png"
-             alt="Logo Ludus Mentis"
-             class="h-8 sm:h-10 hover:scale-105 transition-transform object-contain max-w-[150px]" />
-      </a>
-    </div>
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200">
+  <div class="navbar-start">
+    <a href="/" class="btn btn-ghost normal-case text-xl p-2">
+      <img src="/assets/images/Ludus-Mentis-transparent.png" 
+           alt="Logo Ludus Mentis" 
+           class="h-10 w-auto" />
+    </a>
+  </div>
 
-    <!-- Desktop Navigation - Changed breakpoint to xl -->
-    <nav class="navbar-center hidden xl:flex flex-1 justify-center" role="navigation" aria-label="Navigation principale">
-      <ul class="menu menu-horizontal px-1 gap-1">
-        <li><a href="/" class="font-medium hover:text-ludus-teal text-sm">Accueil</a></li>
-        <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal text-sm">Notre approche</a></li>
-        <li><a href="/programmes.html" class="font-medium hover:text-ludus-teal text-sm">Programme</a></li>
-        <li><a href="/jeux.html" class="font-medium hover:text-ludus-teal text-sm">Les jeux</a></li>
-        <li><a href="/infos-pratiques.html" class="font-medium hover:text-ludus-teal text-sm">Infos pratiques</a></li>
-        <li><a href="/recherche.html" class="font-medium hover:text-ludus-teal text-sm">Sources</a></li>
-        <li><a href="/a-propos.html" class="font-medium hover:text-ludus-teal text-sm">À propos</a></li>
-        <li><a href="/contact.html" class="font-medium hover:text-ludus-teal text-sm">Contact</a></li>
+  <!-- Desktop Navigation -->
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/notre-approche.html">Notre approche</a></li>
+      <li><a href="/programmes.html">Programme</a></li>
+      <li><a href="/jeux.html">Les jeux</a></li>
+      <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
+      <li><a href="/recherche.html">Sources</a></li>
+      <li><a href="/a-propos.html">À propos</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="navbar-end">
+    <!-- CTA Desktop -->
+    <a href="/contact.html" class="btn btn-primary btn-sm hidden lg:inline-flex mr-2">
+      Inscription 2026
+    </a>
+    
+    <!-- Mobile menu -->
+    <div class="dropdown dropdown-end lg:hidden">
+      <label tabindex="0" class="btn btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/notre-approche.html">Notre approche</a></li>
+        <li><a href="/programmes.html">Programme</a></li>
+        <li><a href="/jeux.html">Les jeux</a></li>
+        <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
+        <li><a href="/recherche.html">Sources</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li class="mt-2">
+          <a href="/contact.html" class="btn btn-primary btn-sm btn-block">
+            Inscription 2026
+          </a>
+        </li>
       </ul>
-    </nav>
-
-    <div class="navbar-end gap-2 flex-none">
-      <!-- Theme toggle button (will be injected by theme-manager.js) -->
-      
-      <!-- CTA Button Desktop - Changed breakpoint to xl -->
-      <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
-        Inscription 2026
-      </a>
-      
-      <!-- Mobile menu avec checkbox DaisyUI - Changed breakpoint to xl -->
-      <div class="dropdown dropdown-end xl:hidden">
-        <input id="mobile-menu-toggle" type="checkbox" class="hidden" />
-        <label for="mobile-menu-toggle" tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-        <nav tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-base-200 right-0">
-          <li><a href="/" class="text-base py-3 font-medium">Accueil</a></li>
-          <li><a href="/notre-approche.html" class="text-base py-3">Notre approche</a></li>
-          <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
-          <li><a href="/jeux.html" class="text-base py-3">Les jeux</a></li>
-          <li><a href="/infos-pratiques.html" class="text-base py-3">Infos pratiques</a></li>
-          <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
-          <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
-          <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
-          
-          <li class="mt-4">
-            <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
-              Inscription 2026
-            </a>
-          </li>
-        </nav>
-      </div>
     </div>
   </div>
 </header>
 
 <style>
-  /* Fix pour le dark mode */
+  /* Dark mode fixes */
   [data-theme="ludus-dark"] .dropdown-content {
-    background-color: hsl(220 13% 18%); /* Même couleur que le fond dark */
-    border-color: rgba(255, 255, 255, 0.1);
+    background-color: hsl(220 13% 18%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  [data-theme="ludus-dark"] .dropdown-content a {
-    color: #e5e7eb;
-  }
-  
-  [data-theme="ludus-dark"] .dropdown-content a:hover {
+  [data-theme="ludus-dark"] .menu a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: #4dd0e1;
-  }
-  
-  /* Fix pour le logo responsive */
-  .navbar-start {
-    flex: 0 0 auto !important;
-    min-width: fit-content;
-  }
-  
-  .navbar-center {
-    flex: 1 1 auto;
-  }
-  
-  .navbar-end {
-    flex: 0 0 auto !important;
-    min-width: fit-content;
-  }
-  
-  @media (max-width: 640px) {
-    .navbar-start {
-      margin-right: auto;
-    }
-    
-    .navbar-end {
-      margin-left: 0;
-    }
-  }
-  
-  /* Ajustements pour éviter les overlaps sur tablettes et petits écrans */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    /* Sur lg (1024-1279px), réduire la taille du menu ou passer en burger */
-    .navbar-center .menu-horizontal {
-      gap: 0.25rem;
-    }
-    
-    .navbar-center .menu-horizontal a {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      font-size: 0.875rem;
-    }
-  }
-  
-  /* Assurer un bon espacement du navbar-end */
-  .navbar-end {
-    flex-shrink: 0;
-    min-width: fit-content;
-  }
-  
-  /* Style amélioré pour le bouton CTA */
-  .btn[style*="background-color: #059669"]:hover {
-    background-color: #047857 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
-  }
-  
-  /* Animation du menu mobile */
-  .dropdown-content {
-    animation: slideDown 0.2s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* S'assurer que le menu mobile est bien positionné */
-  .dropdown-end .dropdown-content {
-    right: 0;
-  }
-  
-  /* Forcer la visibilité du menu quand la checkbox est cochée */
-  #mobile-menu-toggle:checked ~ .dropdown-content {
-    display: block !important;
-    visibility: visible !important;
   }
 </style>
-
-<script>
-  // Script simplifié pour fermer le menu quand on clique sur un lien
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const dropdownContent = document.querySelector('.dropdown-end .dropdown-content');
-    
-    if (mobileMenuToggle && dropdownContent) {
-      // Fermer le menu quand on clique sur un lien
-      const menuLinks = dropdownContent.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenuToggle.checked = false;
-        });
-      });
-      
-      // Fermer avec Escape
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenuToggle.checked) {
-          mobileMenuToggle.checked = false;
-        }
-      });
-      
-      // Fermer en cliquant en dehors
-      document.addEventListener('click', function(e) {
-        const dropdown = document.querySelector('.dropdown-end');
-        if (!dropdown.contains(e.target) && mobileMenuToggle.checked) {
-          mobileMenuToggle.checked = false;
-        }
-      });
-    }
-  });
-</script>
