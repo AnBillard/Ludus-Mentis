@@ -1,19 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infos pratiques, tarifs et FAQ | Ludus Mentis</title>
-  <meta name="description" content="Tout savoir sur Ludus Mentis : tarifs (230€/module), horaires, inscription, questions fréquentes. Club gaming éducatif à Walhain.">
+  <title>Tarifs horaires club gaming ado | Ludus Mentis Walhain</title>
+  <meta name="description" content="Club gaming Walhain : 230€/7 semaines, mercredi 14h-16h ou 17h-19h, 10-15 ans. Alternative éducative Fortnite. FAQ parents, tout compris.">
   
-  <!-- Open Graph -->
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://ludusmentis.be/infos-pratiques.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/infos-pratiques.html" />
-  <meta property="og:title" content="Infos pratiques et tarifs | Ludus Mentis" />
-  <meta property="og:description" content="230€ pour 7 semaines de gaming encadré. Toutes les réponses à vos questions." />
+  <meta property="og:title" content="Tarifs et horaires club gaming | Brabant wallon" />
+  <meta property="og:description" content="230€ tout compris pour 7 semaines. Mercredi après-midi à Walhain. Réductions fratries et résidents." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-pricing.jpg" />
+  <meta property="og:locale" content="fr_BE" />
   
-  <!-- Consent Mode v2 -->
+  <!-- Structured Data FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Combien coûte l'inscription à Ludus Mentis ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "230€ pour un module de 7 semaines (14h de gaming encadré), soit 16,43€/heure tout compris. Réductions disponibles pour les résidents de Walhain (-10%) et les fratries (-10%)."
+      }
+    },{
+      "@type": "Question", 
+      "name": "Quels sont les horaires du club gaming ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mercredi après-midi : 14h00-16h00 ou 17h00-19h00. Sessions de 2h par semaine alignées sur le calendrier scolaire."
+      }
+    },{
+      "@type": "Question",
+      "name": "Faut-il acheter du matériel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, tout est fourni : consoles Nintendo Switch, manettes, jeux, goûter et boissons. Votre enfant vient juste avec sa bonne humeur !"
+      }
+    }]
+  }
+  </script>
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        // Détecte TOUS les cas : système, per-device, forced dark mode
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}

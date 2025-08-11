@@ -5,12 +5,12 @@
       <a href="/" class="btn btn-ghost p-0" aria-label="Accueil Ludus Mentis">
         <img src="/assets/images/Ludus-Mentis-transparent.png"
              alt="Logo Ludus Mentis"
-             class="h-10 hover:scale-105 transition-transform" />
+             class="h-10 min-w-[40px] hover:scale-105 transition-transform" />
       </a>
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="navbar-center hidden lg:flex" role="navigation" aria-label="Navigation principale">
+    <nav class="navbar-center hidden xl:flex" role="navigation" aria-label="Navigation principale">
       <ul class="menu menu-horizontal px-1 gap-1">
         <li><a href="/" class="font-medium hover:text-ludus-teal">Accueil</a></li>
         <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal">Notre approche</a></li>
@@ -24,19 +24,19 @@
     </nav>
 
     <div class="navbar-end gap-2">
-      <!-- CTA Button Desktop -->
-      <a href="/contact.html" class="btn btn-sm hidden lg:flex text-white" style="background-color: #059669; border: none;">
+      <!-- CTA Button Desktop - AVANT le toggle qui sera injecté -->
+      <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
         Inscription 2026
       </a>
       
       <!-- Mobile menu button -->
-      <div class="dropdown dropdown-end lg:hidden">
-        <button tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
+      <div class="dropdown dropdown-end xl:hidden">
+        <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-        </button>
-        <nav tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-gray-200 right-0">
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-gray-200 right-0">
           <li><a href="/" class="text-base py-3 font-medium">Accueil</a></li>
           <li><a href="/notre-approche.html" class="text-base py-3">Notre approche</a></li>
           <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
@@ -51,7 +51,7 @@
               Inscription 2026
             </a>
           </li>
-        </nav>
+        </ul>
       </div>
     </div>
   </div>
@@ -67,4 +67,41 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
   }
+  
+  /* Dark mode fixes */
+  [data-theme="ludus-dark"] .dropdown-content {
+    background-color: hsl(220 13% 18%);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-theme="ludus-dark"] .dropdown-content a {
+    color: #e5e7eb;
+  }
+  
+  [data-theme="ludus-dark"] .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #4dd0e1;
+  }
 </style>
+
+<script>
+  // Script pour fermer le menu mobile sur clic d'un lien
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown-end');
+    const dropdownContent = dropdown?.querySelector('.dropdown-content');
+    
+    if (dropdownContent) {
+      const links = dropdownContent.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          // Force la fermeture du dropdown
+          if (dropdown.querySelector('input[type="checkbox"]')) {
+            dropdown.querySelector('input[type="checkbox"]').checked = false;
+          }
+          // Retirer le focus pour fermer le dropdown DaisyUI
+          document.activeElement.blur();
+        });
+      });
+    }
+  });
+</script>

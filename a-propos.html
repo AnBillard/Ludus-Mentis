@@ -1,19 +1,71 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos - Antoine Billard | Ludus Mentis</title>
-  <meta name="description" content="L'histoire d'Antoine Billard, fondateur de Ludus Mentis. Du gaming passion au projet éducatif.">
+  <title>À propos - Antoine Billard fondateur | Ludus Mentis Walhain</title>
+  <meta name="description" content="Découvrez l'histoire d'Antoine Billard, fondateur de Ludus Mentis. 20 ans de gaming transformés en projet éducatif innovant à Walhain, Brabant wallon.">
   
-  <!-- Open Graph -->
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://ludusmentis.be/a-propos.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/a-propos.html" />
-  <meta property="og:title" content="À propos du fondateur | Ludus Mentis" />
-  <meta property="og:description" content="Antoine Billard : 20 ans de gaming, une vision éducative." />
+  <meta property="og:title" content="À propos du fondateur | Club gaming éducatif Walhain" />
+  <meta property="og:description" content="Antoine Billard : chef de projet IT et manager esport créé le premier club gaming 100% coopératif de Belgique." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-about.jpg" />
+  <meta property="og:locale" content="fr_BE" />
   
-  <!-- Consent Mode v2 -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="À propos | Ludus Mentis - Club gaming éducatif" />
+  <meta name="twitter:description" content="Le projet d'Antoine Billard : transformer le gaming en opportunité éducative." />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-about.jpg" />
+  
+  <!-- Structured Data Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Antoine Billard",
+      "jobTitle": "Fondateur de Ludus Mentis",
+      "description": "Chef de projet IT et manager esport, fondateur du premier club gaming coopératif de Belgique",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ludus Mentis",
+        "url": "https://ludusmentis.be"
+      }
+    }
+  }
+  </script>
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        // Détecte TOUS les cas : système, per-device, forced dark mode
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}

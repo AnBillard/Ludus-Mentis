@@ -1,29 +1,51 @@
+<!-- mentions.html -->
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
-  <!-- Meta tags essentiels -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentions légales & Politique de confidentialité | Ludus Mentis</title>
-  <meta name="description" content="Mentions légales, politique de confidentialité RGPD et gestion des cookies de Ludus Mentis.">
+  <title>Mentions légales RGPD | Ludus Mentis ASBL Walhain</title>
+  <meta name="description" content="Politique de confidentialité, protection des données RGPD et gestion des cookies de Ludus Mentis. Contact DPO : info@ludusmentis.be">
   
-  <!-- Open Graph / Twitter -->
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://ludusmentis.be/mentions.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/mentions.html" />
   <meta property="og:title" content="Mentions légales & RGPD | Ludus Mentis" />
-  <meta property="og:description" content="Politique de confidentialité, gestion des données personnelles et cookies conformément au RGPD." />
+  <meta property="og:description" content="Politique de confidentialité et protection des données personnelles conformément au RGPD." />
   <meta property="og:image" content="https://ludusmentis.be/assets/images/og-legal.jpg" />
+  <meta property="og:locale" content="fr_BE" />
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        // Détecte TOUS les cas : système, per-device, forced dark mode
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
   
-  <link rel="canonical" href="https://ludusmentis.be/mentions.html" />
-  <meta name="robots" content="index, follow" />
+  <script src="/assets/js/theme-manager.js"></script>
   
   <!-- Consent Mode v2 (AVANT tout script Google) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     
-    // Configuration par défaut (tout refusé)
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
@@ -31,7 +53,8 @@
       'analytics_storage': 'denied',
       'functionality_storage': 'granted',
       'personalization_storage': 'granted',
-      'security_storage': 'granted'
+      'security_storage': 'granted',
+      'wait_for_update': 500
     });
   </script>
   
@@ -41,15 +64,13 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-  <!-- End Google Tag Manager -->
   
-  <!-- DaisyUI + Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -62,17 +83,9 @@
     }
   </script>
   
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
   
-  <!-- Styles -->
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
     .gradient-ludus {
       background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
     }
