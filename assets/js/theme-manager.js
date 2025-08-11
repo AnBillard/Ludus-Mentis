@@ -104,90 +104,123 @@
         --af: 262 60% 60%;
         --ac: 0 0% 10%;
         
-        /* Backgrounds sombres mais pas noirs */
-        --b1: 214 20% 12%;
-        --b2: 214 20% 10%;
-        --b3: 214 20% 8%;
-        --bc: 210 20% 90%;
+        /* Backgrounds sombres mais pas noirs purs */
+        --b1: 220 13% 18%;  /* #262a33 - Plus clair que avant */
+        --b2: 220 13% 15%;  /* #1f2329 */
+        --b3: 220 13% 12%;  /* #191c21 */
+        --bc: 210 20% 90%;  /* Texte de base clair */
         
         --n: 214 20% 70%;
         --nf: 214 20% 75%;
         --nc: 214 20% 10%;
       }
       
-      /* Gradient adapté pour le dark mode */
-      [data-theme="ludus-dark"] .gradient-ludus {
-        background: linear-gradient(135deg, #26a69a 0%, #ff6f00 100%);
+      /* ====================================
+         FIXES CRITIQUES POUR LA LISIBILITÉ
+      ==================================== */
+      
+      /* Couleur de texte par défaut PARTOUT en dark mode */
+      [data-theme="ludus-dark"],
+      [data-theme="ludus-dark"] body,
+      [data-theme="ludus-dark"] main {
+        color: #f3f4f6; /* Gris très clair par défaut */
+        background-color: #1a1d23; /* Fond moins noir */
       }
       
-      /* Ajustements des textes en dark mode */
-      [data-theme="ludus-dark"] .text-gray-800 {
-        color: #e5e7eb !important;
+      /* Tous les textes sans classe spécifique */
+      [data-theme="ludus-dark"] p,
+      [data-theme="ludus-dark"] span:not([class*="text-"]):not([class*="badge"]),
+      [data-theme="ludus-dark"] li,
+      [data-theme="ludus-dark"] div:not([class*="bg-"]) {
+        color: #e5e7eb; /* Gris clair */
       }
       
-      [data-theme="ludus-dark"] .text-gray-600 {
-        color: #9ca3af !important;
-      }
-      
-      [data-theme="ludus-dark"] .text-gray-700 {
-        color: #d1d5db !important;
-      }
-      
-      /* FIX: Headers (h1, h2, h3, etc.) en dark mode */
+      /* Headers très visibles */
       [data-theme="ludus-dark"] h1,
       [data-theme="ludus-dark"] h2,
       [data-theme="ludus-dark"] h3,
       [data-theme="ludus-dark"] h4,
       [data-theme="ludus-dark"] h5,
       [data-theme="ludus-dark"] h6 {
-        color: #f3f4f6 !important; /* Gris très clair pour les titres */
+        color: #f9fafb !important; /* Presque blanc */
       }
       
-      /* FIX: Texte dans les spans et li sans classe */
-      [data-theme="ludus-dark"] li span:not([class*="text-"]),
-      [data-theme="ludus-dark"] li:not([class*="text-"]) {
-        color: #e5e7eb !important;
+      /* Classes de texte gris - PLUS CLAIRES */
+      [data-theme="ludus-dark"] .text-gray-800 {
+        color: #f3f4f6 !important; /* Très clair au lieu de sombre */
       }
       
-      /* FIX: Les flèches colorées restent colorées */
-      [data-theme="ludus-dark"] .text-green-500,
-      [data-theme="ludus-dark"] .text-red-500,
-      [data-theme="ludus-dark"] .text-blue-500,
-      [data-theme="ludus-dark"] .text-orange-500 {
-        /* Ces couleurs restent telles quelles car elles sont visibles en dark */
-        opacity: 1 !important;
+      [data-theme="ludus-dark"] .text-gray-700 {
+        color: #e5e7eb !important; /* Clair */
       }
       
-      /* FIX: Texte par défaut dans les cards */
-      [data-theme="ludus-dark"] .card-body,
-      [data-theme="ludus-dark"] .card-body p,
-      [data-theme="ludus-dark"] .card-body span:not([class*="text-"]) {
+      [data-theme="ludus-dark"] .text-gray-600 {
+        color: #d1d5db !important; /* Assez clair */
+      }
+      
+      [data-theme="ludus-dark"] .text-gray-500 {
+        color: #9ca3af !important; /* Gris moyen mais lisible */
+      }
+      
+      /* Gradient adapté pour le dark mode */
+      [data-theme="ludus-dark"] .gradient-ludus {
+        background: linear-gradient(135deg, #2dd4bf 0%, #fb923c 100%);
+      }
+      
+      /* Cards avec meilleur contraste */
+      [data-theme="ludus-dark"] .card {
+        background: #242832; /* Fond légèrement plus clair que le body */
+        border: 1px solid rgba(255, 255, 255, 0.1);
         color: #e5e7eb;
       }
       
-      /* FIX: Les card-title spécifiquement */
+      /* Cards avec gradients - les rendre plus sombres */
+      [data-theme="ludus-dark"] .bg-gradient-to-br[class*="from-"][class*="to-"] {
+        background: #242832 !important; /* Override les gradients */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      /* Textes dans les cards */
+      [data-theme="ludus-dark"] .card-body,
+      [data-theme="ludus-dark"] .card-body p,
+      [data-theme="ludus-dark"] .card-body span,
+      [data-theme="ludus-dark"] .card-body li {
+        color: #e5e7eb !important;
+      }
+      
+      /* Card titles encore plus visibles */
       [data-theme="ludus-dark"] .card-title {
         color: #f9fafb !important;
       }
       
-      /* Cards en dark mode */
-      [data-theme="ludus-dark"] .card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+      /* Couleurs spécifiques PLUS LUMINEUSES */
+      [data-theme="ludus-dark"] .text-ludus-teal {
+        color: #5eead4 !important; /* Teal très clair */
       }
       
-      /* Amélioration spécifique pour les cards avec fond coloré */
-      [data-theme="ludus-dark"] .bg-gradient-to-br {
-        opacity: 0.9;
+      [data-theme="ludus-dark"] .text-ludus-orange {
+        color: #fed7aa !important; /* Orange très clair */
       }
       
-      /* Assurer la lisibilité sur les fonds dégradés */
-      [data-theme="ludus-dark"] .from-teal-50,
-      [data-theme="ludus-dark"] .from-orange-50,
-      [data-theme="ludus-dark"] .from-green-50,
-      [data-theme="ludus-dark"] .from-purple-50 {
-        /* Adapter les gradients en dark mode */
-        filter: brightness(0.3) saturate(1.5);
+      [data-theme="ludus-dark"] .text-ludus-purple {
+        color: #d8b4fe !important; /* Purple très clair */
+      }
+      
+      /* Flèches et indicateurs colorés - garder vifs */
+      [data-theme="ludus-dark"] .text-green-500 {
+        color: #10b981 !important; /* Vert vif */
+      }
+      
+      [data-theme="ludus-dark"] .text-red-500 {
+        color: #ef4444 !important; /* Rouge vif */
+      }
+      
+      [data-theme="ludus-dark"] .text-blue-500 {
+        color: #3b82f6 !important; /* Bleu vif */
+      }
+      
+      [data-theme="ludus-dark"] .text-orange-500 {
+        color: #f97316 !important; /* Orange vif */
       }
       
       /* Navbar en dark mode */
