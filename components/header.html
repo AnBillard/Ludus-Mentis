@@ -1,16 +1,16 @@
 <!-- components/header.html -->
 <header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200 min-h-[4rem]">
   <div class="container mx-auto px-4">
-    <div class="navbar-start">
+    <div class="navbar-start flex-none">
       <a href="/" class="btn btn-ghost p-0 h-auto min-h-0" aria-label="Accueil Ludus Mentis">
         <img src="/assets/images/Ludus-Mentis-transparent.png"
              alt="Logo Ludus Mentis"
-             class="h-8 sm:h-10 hover:scale-105 transition-transform object-contain" />
+             class="h-8 sm:h-10 hover:scale-105 transition-transform object-contain max-w-[150px]" />
       </a>
     </div>
 
     <!-- Desktop Navigation - Changed breakpoint to xl -->
-    <nav class="navbar-center hidden xl:flex" role="navigation" aria-label="Navigation principale">
+    <nav class="navbar-center hidden xl:flex flex-1 justify-center" role="navigation" aria-label="Navigation principale">
       <ul class="menu menu-horizontal px-1 gap-1">
         <li><a href="/" class="font-medium hover:text-ludus-teal text-sm">Accueil</a></li>
         <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal text-sm">Notre approche</a></li>
@@ -23,7 +23,7 @@
       </ul>
     </nav>
 
-    <div class="navbar-end gap-2">
+    <div class="navbar-end gap-2 flex-none">
       <!-- Theme toggle button (will be injected by theme-manager.js) -->
       
       <!-- CTA Button Desktop - Changed breakpoint to xl -->
@@ -77,14 +77,26 @@
   }
   
   /* Fix pour le logo responsive */
+  .navbar-start {
+    flex: 0 0 auto !important;
+    min-width: fit-content;
+  }
+  
+  .navbar-center {
+    flex: 1 1 auto;
+  }
+  
+  .navbar-end {
+    flex: 0 0 auto !important;
+    min-width: fit-content;
+  }
+  
   @media (max-width: 640px) {
     .navbar-start {
-      flex: 0 0 auto;
       margin-right: auto;
     }
     
     .navbar-end {
-      flex: 0 0 auto;
       margin-left: 0;
     }
   }
