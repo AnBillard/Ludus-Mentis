@@ -1,67 +1,107 @@
 <!-- components/header.html -->
 <header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200">
-  <div class="navbar-start">
-    <a href="/" class="btn btn-ghost normal-case text-xl p-2">
-      <img src="/assets/images/Ludus-Mentis-transparent.png" 
-           alt="Logo Ludus Mentis" 
-           class="h-10 w-auto" />
-    </a>
-  </div>
+  <div class="container mx-auto px-4">
+    <div class="navbar-start">
+      <a href="/" class="btn btn-ghost p-0" aria-label="Accueil Ludus Mentis">
+        <img src="/assets/images/Ludus-Mentis-transparent.png"
+             alt="Logo Ludus Mentis"
+             class="h-10 hover:scale-105 transition-transform" />
+      </a>
+    </div>
 
-  <!-- Desktop Navigation -->
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/notre-approche.html">Notre approche</a></li>
-      <li><a href="/programmes.html">Programme</a></li>
-      <li><a href="/jeux.html">Les jeux</a></li>
-      <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
-      <li><a href="/recherche.html">Sources</a></li>
-      <li><a href="/a-propos.html">À propos</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </div>
-
-  <div class="navbar-end">
-    <!-- CTA Desktop -->
-    <a href="/contact.html" class="btn btn-primary btn-sm hidden lg:inline-flex mr-2">
-      Inscription 2026
-    </a>
-    
-    <!-- Mobile menu -->
-    <div class="dropdown dropdown-end lg:hidden">
-      <label tabindex="0" class="btn btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/notre-approche.html">Notre approche</a></li>
-        <li><a href="/programmes.html">Programme</a></li>
-        <li><a href="/jeux.html">Les jeux</a></li>
-        <li><a href="/infos-pratiques.html">Infos pratiques</a></li>
-        <li><a href="/recherche.html">Sources</a></li>
-        <li><a href="/a-propos.html">À propos</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li class="mt-2">
-          <a href="/contact.html" class="btn btn-primary btn-sm btn-block">
-            Inscription 2026
-          </a>
-        </li>
+    <!-- Desktop Navigation -->
+    <nav class="navbar-center hidden lg:flex" role="navigation" aria-label="Navigation principale">
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="/" class="font-medium hover:text-ludus-teal">Accueil</a></li>
+        <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal">Notre approche</a></li>
+        <li><a href="/programmes.html" class="font-medium hover:text-ludus-teal">Programme</a></li>
+        <li><a href="/jeux.html" class="font-medium hover:text-ludus-teal">Les jeux</a></li>
+        <li><a href="/infos-pratiques.html" class="font-medium hover:text-ludus-teal">Infos pratiques</a></li>
+        <li><a href="/recherche.html" class="font-medium hover:text-ludus-teal">Sources</a></li>
+        <li><a href="/a-propos.html" class="font-medium hover:text-ludus-teal">À propos</a></li>
+        <li><a href="/contact.html" class="font-medium hover:text-ludus-teal">Contact</a></li>
       </ul>
+    </nav>
+
+    <div class="navbar-end gap-2">
+      <!-- CTA Button Desktop - AVANT le toggle qui sera injecté -->
+      <a href="/contact.html" class="btn btn-sm hidden lg:flex text-white" style="background-color: #059669; border: none;">
+        Inscription 2026
+      </a>
+      
+      <!-- Mobile menu button -->
+      <div class="dropdown dropdown-end lg:hidden">
+        <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-gray-200 right-0">
+          <li><a href="/" class="text-base py-3 font-medium">Accueil</a></li>
+          <li><a href="/notre-approche.html" class="text-base py-3">Notre approche</a></li>
+          <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
+          <li><a href="/jeux.html" class="text-base py-3">Les jeux</a></li>
+          <li><a href="/infos-pratiques.html" class="text-base py-3">Infos pratiques</a></li>
+          <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
+          <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
+          <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
+          
+          <li class="mt-4">
+            <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
+              Inscription 2026
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
 
 <style>
+  .navbar a:hover {
+    color: #17a2b8;
+  }
+  
+  .btn[style*="background-color: #059669"]:hover {
+    background-color: #047857 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+  }
+  
   /* Dark mode fixes */
   [data-theme="ludus-dark"] .dropdown-content {
     background-color: hsl(220 13% 18%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
   }
   
-  [data-theme="ludus-dark"] .menu a:hover {
+  [data-theme="ludus-dark"] .dropdown-content a {
+    color: #e5e7eb;
+  }
+  
+  [data-theme="ludus-dark"] .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    color: #4dd0e1;
   }
 </style>
+
+<script>
+  // Script pour fermer le menu mobile sur clic d'un lien
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown-end');
+    const dropdownContent = dropdown?.querySelector('.dropdown-content');
+    
+    if (dropdownContent) {
+      const links = dropdownContent.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          // Force la fermeture du dropdown
+          if (dropdown.querySelector('input[type="checkbox"]')) {
+            dropdown.querySelector('input[type="checkbox"]').checked = false;
+          }
+          // Retirer le focus pour fermer le dropdown DaisyUI
+          document.activeElement.blur();
+        });
+      });
+    }
+  });
+</script>
