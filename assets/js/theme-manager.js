@@ -1,6 +1,6 @@
 // /assets/js/theme-manager.js
 // Gestion centralisée du dark mode pour Ludus Mentis
-// Un seul fichier à maintenir pour tout le site
+// Version améliorée avec meilleur positionnement du toggle
 
 (function() {
   'use strict';
@@ -30,45 +30,32 @@
   
   // ============================================
   // DÉTECTION ET APPLICATION IMMÉDIATE
-  // (Doit être exécuté le plus tôt possible)
   // ============================================
   function getInitialTheme() {
-    // 1. Priorité : préférence sauvegardée de l'utilisateur
     const saved = localStorage.getItem(CONFIG.storageKey);
     if (saved && CONFIG.themes[saved]) {
       return saved;
     }
     
-    // 2. Sinon : détecter la préférence système/device
-    // Gère tous les cas : per-device, système, etc.
     try {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      // matches sera true si :
-      // - Le système est en dark mode
-      // - Le browser est en "per device" ET le device est en dark
-      // - Le browser force le dark mode
       if (mediaQuery.matches) {
         return 'ludus-dark';
       }
     } catch (e) {
-      // Fallback si matchMedia n'est pas supporté
       console.warn('matchMedia not supported:', e);
     }
     
-    // 3. Fallback : thème par défaut
     return CONFIG.defaultTheme;
   }
   
   // ============================================
   // APPLICATION ULTRA-RAPIDE DU THÈME
-  // Pour éviter le flash white->dark
   // ============================================
   (function applyInitialTheme() {
-    // Cette partie s'exécute IMMÉDIATEMENT, pas d'attente
     const theme = getInitialTheme();
     document.documentElement.setAttribute('data-theme', theme);
     
-    // Aussi définir une classe pour Tailwind si nécessaire
     if (theme === 'ludus-dark') {
       document.documentElement.classList.add('dark');
     }
@@ -78,7 +65,6 @@
   // INJECTION DU CSS POUR LUDUS-DARK
   // ============================================
   function injectThemeStyles() {
-    // Vérifier si les styles sont déjà injectés
     if (document.getElementById('ludus-theme-styles')) return;
     
     const styleSheet = document.createElement('style');
@@ -86,12 +72,10 @@
     styleSheet.textContent = `
       /* ====================================
          THÈME SOMBRE PERSONNALISÉ : ludus-dark
-         Généré automatiquement par theme-manager.js
       ==================================== */
       [data-theme="ludus-dark"] {
         color-scheme: dark;
         
-        /* Couleurs principales adaptées pour le dark */
         --p: 189 70% 60%;
         --pf: 189 70% 50%;
         --pc: 214 20% 10%;
@@ -104,83 +88,71 @@
         --af: 262 60% 60%;
         --ac: 0 0% 10%;
         
-        /* Backgrounds sombres mais pas noirs purs */
-        --b1: 220 13% 18%;  /* #262a33 - Plus clair que avant */
-        --b2: 220 13% 15%;  /* #1f2329 */
-        --b3: 220 13% 12%;  /* #191c21 */
-        --bc: 210 20% 90%;  /* Texte de base clair */
+        --b1: 220 13% 18%;
+        --b2: 220 13% 15%;
+        --b3: 220 13% 12%;
+        --bc: 210 20% 90%;
         
         --n: 214 20% 70%;
         --nf: 214 20% 75%;
         --nc: 214 20% 10%;
       }
       
-      /* ====================================
-         FIXES CRITIQUES POUR LA LISIBILITÉ
-      ==================================== */
-      
-      /* Couleur de texte par défaut PARTOUT en dark mode */
+      /* Couleur de texte par défaut en dark mode */
       [data-theme="ludus-dark"],
       [data-theme="ludus-dark"] body,
       [data-theme="ludus-dark"] main {
-        color: #f3f4f6; /* Gris très clair par défaut */
-        background-color: #1a1d23; /* Fond moins noir */
+        color: #f3f4f6;
+        background-color: #1a1d23;
       }
       
-      /* Tous les textes sans classe spécifique */
       [data-theme="ludus-dark"] p,
       [data-theme="ludus-dark"] span:not([class*="text-"]):not([class*="badge"]),
       [data-theme="ludus-dark"] li,
       [data-theme="ludus-dark"] div:not([class*="bg-"]) {
-        color: #e5e7eb; /* Gris clair */
+        color: #e5e7eb;
       }
       
-      /* Headers très visibles */
       [data-theme="ludus-dark"] h1,
       [data-theme="ludus-dark"] h2,
       [data-theme="ludus-dark"] h3,
       [data-theme="ludus-dark"] h4,
       [data-theme="ludus-dark"] h5,
       [data-theme="ludus-dark"] h6 {
-        color: #f9fafb !important; /* Presque blanc */
+        color: #f9fafb !important;
       }
       
-      /* Classes de texte gris - PLUS CLAIRES */
       [data-theme="ludus-dark"] .text-gray-800 {
-        color: #f3f4f6 !important; /* Très clair au lieu de sombre */
+        color: #f3f4f6 !important;
       }
       
       [data-theme="ludus-dark"] .text-gray-700 {
-        color: #e5e7eb !important; /* Clair */
+        color: #e5e7eb !important;
       }
       
       [data-theme="ludus-dark"] .text-gray-600 {
-        color: #d1d5db !important; /* Assez clair */
+        color: #d1d5db !important;
       }
       
       [data-theme="ludus-dark"] .text-gray-500 {
-        color: #9ca3af !important; /* Gris moyen mais lisible */
+        color: #9ca3af !important;
       }
       
-      /* Gradient adapté pour le dark mode */
       [data-theme="ludus-dark"] .gradient-ludus {
         background: linear-gradient(135deg, #2dd4bf 0%, #fb923c 100%);
       }
       
-      /* Cards avec meilleur contraste */
       [data-theme="ludus-dark"] .card {
-        background: #242832; /* Fond légèrement plus clair que le body */
+        background: #242832;
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: #e5e7eb;
       }
       
-      /* Cards avec gradients - les rendre plus sombres */
       [data-theme="ludus-dark"] .bg-gradient-to-br[class*="from-"][class*="to-"] {
-        background: #242832 !important; /* Override les gradients */
+        background: #242832 !important;
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
       
-      /* Textes dans les cards */
       [data-theme="ludus-dark"] .card-body,
       [data-theme="ludus-dark"] .card-body p,
       [data-theme="ludus-dark"] .card-body span,
@@ -188,48 +160,27 @@
         color: #e5e7eb !important;
       }
       
-      /* Card titles encore plus visibles */
       [data-theme="ludus-dark"] .card-title {
         color: #f9fafb !important;
       }
       
-      /* Couleurs spécifiques PLUS LUMINEUSES */
       [data-theme="ludus-dark"] .text-ludus-teal {
-        color: #5eead4 !important; /* Teal très clair */
+        color: #5eead4 !important;
       }
       
       [data-theme="ludus-dark"] .text-ludus-orange {
-        color: #fed7aa !important; /* Orange très clair */
+        color: #fed7aa !important;
       }
       
       [data-theme="ludus-dark"] .text-ludus-purple {
-        color: #d8b4fe !important; /* Purple très clair */
+        color: #d8b4fe !important;
       }
       
-      /* Flèches et indicateurs colorés - garder vifs */
-      [data-theme="ludus-dark"] .text-green-500 {
-        color: #10b981 !important; /* Vert vif */
-      }
-      
-      [data-theme="ludus-dark"] .text-red-500 {
-        color: #ef4444 !important; /* Rouge vif */
-      }
-      
-      [data-theme="ludus-dark"] .text-blue-500 {
-        color: #3b82f6 !important; /* Bleu vif */
-      }
-      
-      [data-theme="ludus-dark"] .text-orange-500 {
-        color: #f97316 !important; /* Orange vif */
-      }
-      
-      /* Navbar en dark mode */
       [data-theme="ludus-dark"] .navbar {
         background: rgba(26, 32, 44, 0.95);
         backdrop-filter: blur(10px);
       }
       
-      /* FIX: Liens de navigation en dark mode */
       [data-theme="ludus-dark"] .navbar a,
       [data-theme="ludus-dark"] .menu a {
         color: #e5e7eb;
@@ -237,26 +188,21 @@
       
       [data-theme="ludus-dark"] .navbar a:hover,
       [data-theme="ludus-dark"] .menu a:hover {
-        color: #4dd0e1; /* Teal clair au hover */
+        color: #4dd0e1;
       }
       
-      /* FIX: Couleurs spécifiques qui doivent rester visibles */
-      [data-theme="ludus-dark"] .text-ludus-teal {
-        color: #4dd0e1 !important; /* Version plus claire du teal */
-      }
-      
-      [data-theme="ludus-dark"] .text-ludus-orange {
-        color: #ffb74d !important; /* Version plus claire de l'orange */
-      }
-      
-      [data-theme="ludus-dark"] .text-ludus-purple {
-        color: #b794f4 !important; /* Version plus claire du purple */
-      }
-      
-      /* Style du toggle button */
+      /* Style du toggle button amélioré */
       #${CONFIG.toggleButtonId} {
-        margin: 0 0.5rem;
+        margin: 0 0.25rem;
         transition: all 0.3s ease;
+        flex-shrink: 0;
+        min-width: 2.5rem;
+      }
+      
+      @media (max-width: 640px) {
+        #${CONFIG.toggleButtonId} {
+          margin: 0 0.125rem;
+        }
       }
       
       [data-theme="light"] #${CONFIG.toggleButtonId} {
@@ -283,19 +229,20 @@
       .navbar-end {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.25rem;
       }
       
-      /* ====================================
-         FIXES SUPPLÉMENTAIRES POUR DARK MODE
-      ==================================== */
+      /* Fix pour le menu mobile en dark mode */
+      [data-theme="ludus-dark"] .dropdown-content {
+        background-color: hsl(220 13% 18%);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
       
-      /* Texte par défaut pour tout le body en dark */
+      /* Autres fixes dark mode */
       [data-theme="ludus-dark"] body {
         color: #e5e7eb;
       }
       
-      /* Forcer la couleur sur les éléments sans classe spécifique */
       [data-theme="ludus-dark"] main p:not([class*="text-"]),
       [data-theme="ludus-dark"] main span:not([class*="text-"]):not([class*="badge"]),
       [data-theme="ludus-dark"] main li:not([class*="text-"]),
@@ -303,7 +250,6 @@
         color: inherit;
       }
       
-      /* Tables en dark mode */
       [data-theme="ludus-dark"] table {
         color: #e5e7eb;
       }
@@ -312,17 +258,14 @@
         color: #f3f4f6;
       }
       
-      /* Alerts avec meilleur contraste */
       [data-theme="ludus-dark"] .alert {
         filter: brightness(1.2);
       }
       
-      /* Badges avec meilleur contraste */
       [data-theme="ludus-dark"] .badge {
         filter: brightness(1.1);
       }
       
-      /* Boutons outline en dark mode */
       [data-theme="ludus-dark"] .btn-outline {
         border-color: rgba(255, 255, 255, 0.3);
         color: #e5e7eb;
@@ -349,7 +292,12 @@
     document.documentElement.setAttribute('data-theme', themeName);
     localStorage.setItem(CONFIG.storageKey, themeName);
     
-    // Déclencher un événement custom pour d'autres scripts
+    if (themeName === 'ludus-dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
     window.dispatchEvent(new CustomEvent('themeChanged', { 
       detail: { theme: themeName } 
     }));
@@ -359,7 +307,6 @@
   // CRÉATION DU BOUTON TOGGLE
   // ============================================
   function createThemeToggle() {
-    // Vérifier si le bouton existe déjà
     if (document.getElementById(CONFIG.toggleButtonId)) {
       return document.getElementById(CONFIG.toggleButtonId);
     }
@@ -394,7 +341,7 @@
   function insertToggleButton() {
     const toggle = createThemeToggle();
     
-    // Stratégie 1: Chercher dans la navbar
+    // Chercher dans la navbar-end
     const navbarEnd = document.querySelector('.navbar-end');
     if (navbarEnd) {
       // Chercher le bouton CTA desktop
@@ -425,9 +372,9 @@
     // Injecter les styles
     injectThemeStyles();
     
-    // Attendre que le header soit chargé (car il est injecté dynamiquement)
+    // Attendre que le header soit chargé
     let attempts = 0;
-    const maxAttempts = 50; // 5 secondes max
+    const maxAttempts = 50;
     
     const checkInterval = setInterval(() => {
       attempts++;
@@ -462,12 +409,11 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
-    // DOM déjà chargé
     init();
   }
   
   // ============================================
-  // API PUBLIQUE (optionnelle)
+  // API PUBLIQUE
   // ============================================
   window.LudusTheme = {
     set: setTheme,
