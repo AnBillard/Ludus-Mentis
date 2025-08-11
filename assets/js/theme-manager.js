@@ -348,14 +348,19 @@
       const ctaDesktop = navbarEnd.querySelector('a[href="/contact.html"].hidden.lg\\:flex');
       
       if (ctaDesktop) {
-        // Insérer juste avant le CTA
-        navbarEnd.insertBefore(toggle, ctaDesktop);
-      } else {
-        // Sinon, l'insérer au début de navbar-end
-        const firstChild = navbarEnd.firstChild;
-        if (firstChild) {
-          navbarEnd.insertBefore(toggle, firstChild);
+        // Insérer APRÈS le CTA (avant le dropdown mobile)
+        if (ctaDesktop.nextSibling) {
+          navbarEnd.insertBefore(toggle, ctaDesktop.nextSibling);
         } else {
+          navbarEnd.appendChild(toggle);
+        }
+      } else {
+        // Si pas de CTA, chercher le dropdown mobile
+        const mobileDropdown = navbarEnd.querySelector('.dropdown-end');
+        if (mobileDropdown) {
+          navbarEnd.insertBefore(toggle, mobileDropdown);
+        } else {
+          // Sinon l'ajouter à la fin
           navbarEnd.appendChild(toggle);
         }
       }
