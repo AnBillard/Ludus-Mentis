@@ -9,30 +9,30 @@
       </a>
     </div>
 
-    <!-- Desktop Navigation -->
-    <nav class="navbar-center hidden lg:flex" role="navigation" aria-label="Navigation principale">
+    <!-- Desktop Navigation - Changed breakpoint to xl -->
+    <nav class="navbar-center hidden xl:flex" role="navigation" aria-label="Navigation principale">
       <ul class="menu menu-horizontal px-1 gap-1">
-        <li><a href="/" class="font-medium hover:text-ludus-teal">Accueil</a></li>
-        <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal">Notre approche</a></li>
-        <li><a href="/programmes.html" class="font-medium hover:text-ludus-teal">Programme</a></li>
-        <li><a href="/jeux.html" class="font-medium hover:text-ludus-teal">Les jeux</a></li>
-        <li><a href="/infos-pratiques.html" class="font-medium hover:text-ludus-teal">Infos pratiques</a></li>
-        <li><a href="/recherche.html" class="font-medium hover:text-ludus-teal">Sources</a></li>
-        <li><a href="/a-propos.html" class="font-medium hover:text-ludus-teal">À propos</a></li>
-        <li><a href="/contact.html" class="font-medium hover:text-ludus-teal">Contact</a></li>
+        <li><a href="/" class="font-medium hover:text-ludus-teal text-sm">Accueil</a></li>
+        <li><a href="/notre-approche.html" class="font-medium hover:text-ludus-teal text-sm">Notre approche</a></li>
+        <li><a href="/programmes.html" class="font-medium hover:text-ludus-teal text-sm">Programme</a></li>
+        <li><a href="/jeux.html" class="font-medium hover:text-ludus-teal text-sm">Les jeux</a></li>
+        <li><a href="/infos-pratiques.html" class="font-medium hover:text-ludus-teal text-sm">Infos pratiques</a></li>
+        <li><a href="/recherche.html" class="font-medium hover:text-ludus-teal text-sm">Sources</a></li>
+        <li><a href="/a-propos.html" class="font-medium hover:text-ludus-teal text-sm">À propos</a></li>
+        <li><a href="/contact.html" class="font-medium hover:text-ludus-teal text-sm">Contact</a></li>
       </ul>
     </nav>
 
     <div class="navbar-end gap-2">
       <!-- Theme toggle button (will be injected by theme-manager.js) -->
       
-      <!-- CTA Button Desktop -->
-      <a href="/contact.html" class="btn btn-sm hidden lg:flex text-white" style="background-color: #059669; border: none;">
+      <!-- CTA Button Desktop - Changed breakpoint to xl -->
+      <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
         Inscription 2026
       </a>
       
-      <!-- Mobile menu avec checkbox DaisyUI -->
-      <div class="dropdown dropdown-end lg:hidden">
+      <!-- Mobile menu avec checkbox DaisyUI - Changed breakpoint to xl -->
+      <div class="dropdown dropdown-end xl:hidden">
         <input id="mobile-menu-toggle" type="checkbox" class="hidden" />
         <label for="mobile-menu-toggle" tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,6 +87,26 @@
       flex: 0 0 auto;
       margin-left: 0;
     }
+  }
+  
+  /* Ajustements pour éviter les overlaps sur tablettes et petits écrans */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Sur lg (1024-1279px), réduire la taille du menu ou passer en burger */
+    .navbar-center .menu-horizontal {
+      gap: 0.25rem;
+    }
+    
+    .navbar-center .menu-horizontal a {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Assurer un bon espacement du navbar-end */
+  .navbar-end {
+    flex-shrink: 0;
+    min-width: fit-content;
   }
   
   /* Style amélioré pour le bouton CTA */
