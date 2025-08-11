@@ -54,6 +54,7 @@
   }
   </script>
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -61,7 +62,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -75,7 +75,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -133,59 +133,58 @@
   <div id="header"></div>
   
   <main class="container mx-auto px-4 py-8 max-w-6xl">
-    <!-- Hero corrigé sans superposition -->
+    <!-- Hero -->
     <section class="hero bg-gradient-to-br from-teal-50 to-orange-50 rounded-3xl p-8 lg:p-12 mb-12">
       <div class="text-center">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
           Un programme structuré et progressif
         </h1>
-        <p class="text-lg text-gray-600 mb-6">
+        <p class="text-lg mb-6 opacity-75">
           Modules alignés sur le calendrier scolaire de la Communauté française
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
-          <div class="badge badge-lg bg-ludus-teal text-white">7 semaines/module</div>
-          <div class="badge badge-lg bg-ludus-orange text-white">2h/semaine</div>
-          <div class="badge badge-lg bg-ludus-purple text-white">8-10 participants</div>
+          <div class="badge badge-lg badge-primary">7 semaines/module</div>
+          <div class="badge badge-lg badge-secondary">2h/semaine</div>
+          <div class="badge badge-lg badge-accent">8-10 participants</div>
         </div>
       </div>
     </section>
 
-    <!-- Une séance type en visuel -->
+    <!-- Une séance type -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-8">
         Le déroulé d'une séance (2h)
       </h2>
       
-      <!-- Timeline visuelle simplifiée -->
       <div class="max-w-4xl mx-auto">
         <div class="grid md:grid-cols-2 gap-6">
           <!-- Première heure -->
-          <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300">
+          <div class="card bg-base-100 border-2 border-primary">
             <div class="card-body">
-              <h3 class="font-bold text-xl mb-4 text-blue-700">⏰ Première heure</h3>
+              <h3 class="card-title text-primary mb-4">⏰ Première heure</h3>
               
               <div class="space-y-3">
                 <div class="flex gap-3">
-                  <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">10'</div>
+                  <div class="badge badge-primary badge-lg">10'</div>
                   <div>
                     <strong>Accueil & échauffement</strong>
-                    <p class="text-sm text-gray-600">Check-in, exercices de préparation</p>
+                    <p class="text-sm opacity-75">Check-in, exercices de préparation</p>
                   </div>
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">25'</div>
+                  <div class="badge badge-primary badge-lg">25'</div>
                   <div>
                     <strong>Session de jeu #1</strong>
-                    <p class="text-sm text-gray-600">Découverte, expérimentation</p>
+                    <p class="text-sm opacity-75">Découverte, expérimentation</p>
                   </div>
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="bg-blue-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">20'</div>
+                  <div class="badge badge-primary badge-lg">20'</div>
                   <div>
                     <strong>Débrief collectif</strong>
-                    <p class="text-sm text-gray-600">Qu'est-ce qui a marché/coincé ?</p>
+                    <p class="text-sm opacity-75">Qu'est-ce qui a marché/coincé ?</p>
                   </div>
                 </div>
               </div>
@@ -193,32 +192,32 @@
           </div>
           
           <!-- Deuxième heure -->
-          <div class="card bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300">
+          <div class="card bg-base-100 border-2 border-secondary">
             <div class="card-body">
-              <h3 class="font-bold text-xl mb-4 text-orange-700">⏰ Deuxième heure</h3>
+              <h3 class="card-title text-secondary mb-4">⏰ Deuxième heure</h3>
               
               <div class="space-y-3">
                 <div class="flex gap-3">
-                  <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">10'</div>
+                  <div class="badge badge-secondary badge-lg">10'</div>
                   <div>
                     <strong>Stratégie collective</strong>
-                    <p class="text-sm text-gray-600">Plan d'action défini ensemble</p>
+                    <p class="text-sm opacity-75">Plan d'action défini ensemble</p>
                   </div>
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">25'</div>
+                  <div class="badge badge-secondary badge-lg">25'</div>
                   <div>
                     <strong>Session de jeu #2</strong>
-                    <p class="text-sm text-gray-600">Application de la stratégie</p>
+                    <p class="text-sm opacity-75">Application de la stratégie</p>
                   </div>
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">20'</div>
+                  <div class="badge badge-success badge-lg">20'</div>
                   <div>
                     <strong>Pause active + Cooldown</strong>
-                    <p class="text-sm text-gray-600">Retour au calme, valorisation</p>
+                    <p class="text-sm opacity-75">Retour au calme, valorisation</p>
                   </div>
                 </div>
               </div>
@@ -243,72 +242,85 @@
 
     <!-- Progression sur 7 semaines -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-8">
         Les 7 semaines d'un module
       </h2>
       
-      <!-- Progression visuelle -->
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-7 gap-2">
           <div class="text-center">
-            <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg p-4">
-              <div class="font-bold text-blue-700">S1</div>
-              <div class="text-2xl my-2">🤝</div>
-              <p class="text-xs">Cohésion</p>
+            <div class="card bg-blue-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-blue-700">S1</div>
+                <div class="text-2xl my-2">🤝</div>
+                <p class="text-xs">Cohésion</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-lg p-4">
-              <div class="font-bold text-green-700">S2</div>
-              <div class="text-2xl my-2">💬</div>
-              <p class="text-xs">Communication</p>
+            <div class="card bg-green-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-green-700">S2</div>
+                <div class="text-2xl my-2">💬</div>
+                <p class="text-xs">Communication</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg p-4">
-              <div class="font-bold text-purple-700">S3</div>
-              <div class="text-2xl my-2">🎯</div>
-              <p class="text-xs">Coordination</p>
+            <div class="card bg-purple-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-purple-700">S3</div>
+                <div class="text-2xl my-2">🎯</div>
+                <p class="text-xs">Coordination</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg p-4">
-              <div class="font-bold text-orange-700">S4</div>
-              <div class="text-2xl my-2">🧠</div>
-              <p class="text-xs">Stratégie</p>
+            <div class="card bg-orange-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-orange-700">S4</div>
+                <div class="text-2xl my-2">🧠</div>
+                <p class="text-xs">Stratégie</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-lg p-4">
-              <div class="font-bold text-red-700">S5</div>
-              <div class="text-2xl my-2">😰</div>
-              <p class="text-xs">Gestion stress</p>
+            <div class="card bg-red-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-red-700">S5</div>
+                <div class="text-2xl my-2">😰</div>
+                <p class="text-xs">Gestion stress</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-lg p-4">
-              <div class="font-bold text-indigo-700">S6</div>
-              <div class="text-2xl my-2">👑</div>
-              <p class="text-xs">Leadership</p>
+            <div class="card bg-indigo-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-indigo-700">S6</div>
+                <div class="text-2xl my-2">👑</div>
+                <p class="text-xs">Leadership</p>
+              </div>
             </div>
           </div>
           
           <div class="text-center">
-            <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg p-4">
-              <div class="font-bold text-yellow-700">S7</div>
-              <div class="text-2xl my-2">🎉</div>
-              <p class="text-xs">Célébration</p>
+            <div class="card bg-yellow-100">
+              <div class="card-body compact p-4">
+                <div class="font-bold text-yellow-700">S7</div>
+                <div class="text-2xl my-2">🎉</div>
+                <p class="text-xs">Célébration</p>
+              </div>
             </div>
           </div>
         </div>
         
         <div class="mt-6 text-center">
-          <p class="text-gray-600">
+          <p class="opacity-75">
             Chaque semaine cible une compétence spécifique avec des jeux adaptés
           </p>
         </div>
@@ -317,9 +329,9 @@
 
     <!-- Ce qu'on retient -->
     <section class="mb-12">
-      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300">
+      <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
-          <h2 class="text-3xl font-bold text-center mb-8 text-green-700">
+          <h2 class="card-title text-3xl mx-auto mb-8 text-success">
             Ce qu'on retient après un module
           </h2>
           
@@ -327,7 +339,7 @@
             <div>
               <div class="text-4xl mb-3">💬</div>
               <h3 class="font-bold text-green-700">Communication claire</h3>
-              <p class="text-sm text-gray-600">
+              <p class="text-sm opacity-75">
                 Messages courts et précis, écoute active
               </p>
             </div>
@@ -335,7 +347,7 @@
             <div>
               <div class="text-4xl mb-3">🤝</div>
               <h3 class="font-bold text-green-700">Esprit d'équipe</h3>
-              <p class="text-sm text-gray-600">
+              <p class="text-sm opacity-75">
                 Entraide spontanée, célébration collective
               </p>
             </div>
@@ -343,7 +355,7 @@
             <div>
               <div class="text-4xl mb-3">🧘</div>
               <h3 class="font-bold text-green-700">Gestion émotionnelle</h3>
-              <p class="text-sm text-gray-600">
+              <p class="text-sm opacity-75">
                 Calme sous pression, rebond après échec
               </p>
             </div>
@@ -359,43 +371,43 @@
       </div>
     </section>
 
-    <!-- Protocoles santé simplifiés -->
+    <!-- Protocoles santé -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+      <h2 class="text-2xl font-bold text-center mb-6">
         🏥 Notre attention santé
       </h2>
       
       <div class="grid md:grid-cols-4 gap-4">
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">👀</div>
-            <p class="font-bold text-sm">Règle 20-20-20</p>
-            <p class="text-xs text-gray-600">Pause visuelle régulière</p>
+        <div class="stat bg-base-100 shadow text-center rounded-box">
+          <div class="stat-figure text-primary">
+            <div class="text-3xl">👀</div>
           </div>
+          <div class="stat-title">Règle 20-20-20</div>
+          <div class="stat-desc text-xs">Pause visuelle régulière</div>
         </div>
         
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">⚡</div>
-            <p class="font-bold text-sm">Pauses actives</p>
-            <p class="text-xs text-gray-600">20 min hors écran</p>
+        <div class="stat bg-base-100 shadow text-center rounded-box">
+          <div class="stat-figure text-secondary">
+            <div class="text-3xl">⚡</div>
           </div>
+          <div class="stat-title">Pauses actives</div>
+          <div class="stat-desc text-xs">20 min hors écran</div>
         </div>
         
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">💧</div>
-            <p class="font-bold text-sm">Hydratation</p>
-            <p class="text-xs text-gray-600">Boissons fournies</p>
+        <div class="stat bg-base-100 shadow text-center rounded-box">
+          <div class="stat-figure text-accent">
+            <div class="text-3xl">💧</div>
           </div>
+          <div class="stat-title">Hydratation</div>
+          <div class="stat-desc text-xs">Boissons fournies</div>
         </div>
         
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">🧘</div>
-            <p class="font-bold text-sm">Respiration</p>
-            <p class="text-xs text-gray-600">Gestion du stress</p>
+        <div class="stat bg-base-100 shadow text-center rounded-box">
+          <div class="stat-figure text-info">
+            <div class="text-3xl">🧘</div>
           </div>
+          <div class="stat-title">Respiration</div>
+          <div class="stat-desc text-xs">Gestion du stress</div>
         </div>
       </div>
     </section>
