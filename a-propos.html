@@ -44,6 +44,7 @@
   }
   </script>
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -51,7 +52,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -65,7 +65,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -132,10 +132,10 @@
           </div>
         </div>
         
-        <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
           Antoine Billard
         </h1>
-        <p class="text-xl text-gray-700">
+        <p class="text-xl">
           Fondateur de Ludus Mentis<br>
           <span class="text-ludus-teal">Chef de projet IT</span> • 
           <span class="text-ludus-orange">Gamer depuis 20 ans</span> • 
@@ -146,13 +146,13 @@
 
     <!-- Mon histoire en bref -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">
+          <h2 class="card-title text-2xl mb-6 mx-auto">
             Mon parcours en quelques mots
           </h2>
           
-          <div class="prose max-w-none text-gray-700">
+          <div class="prose max-w-none">
             <p class="text-lg mb-4">
               <strong>Je m'appelle Antoine Billard</strong>, et Ludus Mentis est l'aboutissement 
               de toutes mes passions et convictions.
@@ -189,7 +189,7 @@
     <section class="mb-12">
       <div class="card gradient-ludus text-white">
         <div class="card-body text-center">
-          <h2 class="text-3xl font-bold mb-6">
+          <h2 class="card-title text-3xl mb-6 mx-auto">
             Ma conviction profonde
           </h2>
           
@@ -208,7 +208,7 @@
 
     <!-- Les 3 inspirations -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+      <h2 class="text-2xl font-bold text-center mb-6">
         Ludus Mentis : la synthèse de 3 mondes
       </h2>
       
@@ -217,7 +217,7 @@
           <div class="card-body compact">
             <div class="text-3xl mb-2">🎼</div>
             <h3 class="font-bold text-blue-700">Académie de musique</h3>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm opacity-75">
               Rigueur, progression structurée, évaluation bienveillante
             </p>
           </div>
@@ -227,7 +227,7 @@
           <div class="card-body compact">
             <div class="text-3xl mb-2">⛺</div>
             <h3 class="font-bold text-green-700">Mouvement scout</h3>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm opacity-75">
               Valeurs humaines, entraide, apprentissage par l'action
             </p>
           </div>
@@ -237,7 +237,7 @@
           <div class="card-body compact">
             <div class="text-3xl mb-2">🎮</div>
             <h3 class="font-bold text-orange-700">Esport moderne</h3>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm opacity-75">
               Passion gaming, performance collective, analyse stratégique
             </p>
           </div>
@@ -247,17 +247,17 @@
 
     <!-- Contact direct -->
     <section class="text-center">
-      <h2 class="text-2xl font-bold mb-4 text-gray-800">
+      <h2 class="text-2xl font-bold mb-4">
         Envie d'échanger ?
       </h2>
-      <p class="text-lg mb-6 text-gray-600">
+      <p class="text-lg mb-6 opacity-75">
         Je réponds personnellement à tous les messages
       </p>
-      <a href="mailto:info@ludusmentis.be" class="btn btn-primary btn-lg text-white">
+      <a href="mailto:info@ludusmentis.be" class="btn btn-primary btn-lg">
         📧 info@ludusmentis.be
       </a>
       
-      <div class="mt-6 text-sm text-gray-500">
+      <div class="mt-6 text-sm opacity-50">
         Basé à Walhain, Brabant wallon
       </div>
     </section>

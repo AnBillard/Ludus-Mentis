@@ -50,6 +50,7 @@
   }
   </script>
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -57,7 +58,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -71,7 +71,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -159,7 +159,7 @@
     
     <!-- Hero -->
     <section class="text-center mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-4">
         Rejoignez Ludus Mentis
       </h1>
       <p class="text-lg text-gray-600">
@@ -173,11 +173,11 @@
     </section>
 
     <div class="grid lg:grid-cols-2 gap-8">
-      <!-- Formulaire simplifié avec AJAX -->
+      <!-- Formulaire simplifié -->
       <section>
-        <div class="card bg-white shadow-xl">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h2 class="text-2xl font-bold mb-6 text-ludus-teal">
+            <h2 class="card-title text-2xl text-ludus-teal mb-6">
               Formulaire de préinscription
             </h2>
             
@@ -187,20 +187,20 @@
                 <h3 class="font-bold mb-3 text-ludus-teal">Votre enfant</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label for="youth_firstname" class="label">
+                  <div class="form-control">
+                    <label class="label">
                       <span class="label-text font-semibold">Prénom *</span>
                     </label>
-                    <input type="text" id="youth_firstname" name="youth_firstname" required 
-                           class="input input-bordered w-full" />
+                    <input type="text" name="youth_firstname" required 
+                           class="input input-bordered" />
                   </div>
                   
-                  <div>
-                    <label for="youth_age" class="label">
+                  <div class="form-control">
+                    <label class="label">
                       <span class="label-text font-semibold">Âge *</span>
                     </label>
-                    <select id="youth_age" name="youth_age" required 
-                            class="select select-bordered w-full">
+                    <select name="youth_age" required 
+                            class="select select-bordered">
                       <option value="">Sélectionnez</option>
                       <option value="10">10 ans</option>
                       <option value="11">11 ans</option>
@@ -218,69 +218,69 @@
                 <h3 class="font-bold mb-3 text-ludus-orange">Responsable légal</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label for="parent_name" class="label">
+                  <div class="form-control">
+                    <label class="label">
                       <span class="label-text font-semibold">Nom complet *</span>
                     </label>
-                    <input type="text" id="parent_name" name="parent_name" required 
-                           class="input input-bordered w-full" />
+                    <input type="text" name="parent_name" required 
+                           class="input input-bordered" />
                   </div>
                   
-                  <div>
-                    <label for="parent_email" class="label">
+                  <div class="form-control">
+                    <label class="label">
                       <span class="label-text font-semibold">Email *</span>
                     </label>
-                    <input type="email" id="parent_email" name="parent_email" required 
-                           class="input input-bordered w-full" />
+                    <input type="email" name="parent_email" required 
+                           class="input input-bordered" />
                   </div>
                 </div>
                 
-                <div class="mt-4">
-                  <label for="parent_phone" class="label">
+                <div class="form-control mt-4">
+                  <label class="label">
                     <span class="label-text font-semibold">Téléphone</span>
                   </label>
-                  <input type="tel" id="parent_phone" name="parent_phone" 
-                         class="input input-bordered w-full" 
+                  <input type="tel" name="parent_phone" 
+                         class="input input-bordered" 
                          placeholder="Optionnel" />
                 </div>
               </div>
               
               <!-- Créneau souhaité -->
-              <div>
+              <div class="form-control">
                 <label class="label">
                   <span class="label-text font-semibold">Créneau préféré</span>
                 </label>
                 <div class="space-y-2">
-                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                  <label class="label cursor-pointer justify-start gap-3">
                     <input type="radio" name="schedule" value="14h" class="radio radio-primary" />
-                    <span>Mercredi 14h00-16h00</span>
+                    <span class="label-text">Mercredi 14h00-16h00</span>
                   </label>
                   
-                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                  <label class="label cursor-pointer justify-start gap-3">
                     <input type="radio" name="schedule" value="17h" class="radio radio-primary" />
-                    <span>Mercredi 17h00-19h00</span>
+                    <span class="label-text">Mercredi 17h00-19h00</span>
                   </label>
                   
-                  <label class="flex items-center gap-3 p-3 border rounded-lg hover:bg-base-200 cursor-pointer">
+                  <label class="label cursor-pointer justify-start gap-3">
                     <input type="radio" name="schedule" value="flexible" checked class="radio radio-primary" />
-                    <span>Les deux conviennent</span>
+                    <span class="label-text">Les deux conviennent</span>
                   </label>
                 </div>
               </div>
               
               <!-- Message -->
-              <div>
-                <label for="message" class="label">
+              <div class="form-control">
+                <label class="label">
                   <span class="label-text font-semibold">Message (optionnel)</span>
                 </label>
-                <textarea id="message" name="message" rows="3" 
-                          class="textarea textarea-bordered w-full" 
+                <textarea name="message" rows="3" 
+                          class="textarea textarea-bordered" 
                           placeholder="Questions ou informations complémentaires..."></textarea>
               </div>
               
-              <!-- RGPD simplifié -->
-              <div class="bg-blue-50 rounded-lg p-4">
-                <label class="flex items-start gap-3">
+              <!-- RGPD -->
+              <div class="alert alert-info">
+                <label class="cursor-pointer flex items-start gap-3">
                   <input type="checkbox" name="rgpd_consent" value="oui" required 
                          class="checkbox checkbox-primary mt-1" />
                   <span class="text-sm">
@@ -290,8 +290,8 @@
                 </label>
               </div>
               
-              <!-- Submit avec état de chargement -->
-              <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-full text-white">
+              <!-- Submit -->
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-full">
                 <span id="submitText">Envoyer la préinscription</span>
                 <span id="submitLoader" class="hidden loading loading-spinner"></span>
               </button>
@@ -309,100 +309,98 @@
       </section>
       
       <!-- Infos pratiques -->
-      <section>
-        <div class="space-y-6">
-          <!-- Résumé du club -->
-          <div class="card bg-gradient-to-br from-teal-50 to-orange-50">
-            <div class="card-body">
-              <h3 class="text-xl font-bold mb-4 text-ludus-teal">
-                Ludus Mentis en bref
-              </h3>
+      <section class="space-y-6">
+        <!-- Résumé du club -->
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-ludus-teal mb-4">
+              Ludus Mentis en bref
+            </h3>
+            
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">🎮</span>
+                <div>
+                  <strong>Club de gaming social</strong>
+                  <p class="text-sm opacity-75">Sessions hebdomadaires encadrées</p>
+                </div>
+              </div>
               
-              <div class="space-y-3">
-                <div class="flex items-start gap-3">
-                  <span class="text-2xl">🎮</span>
-                  <div>
-                    <strong>Club de gaming social</strong>
-                    <p class="text-sm text-gray-600">Sessions hebdomadaires encadrées</p>
-                  </div>
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">🤝</span>
+                <div>
+                  <strong>100% coopératif</strong>
+                  <p class="text-sm opacity-75">On gagne ensemble ou on perd ensemble</p>
                 </div>
-                
-                <div class="flex items-start gap-3">
-                  <span class="text-2xl">🤝</span>
-                  <div>
-                    <strong>100% coopératif</strong>
-                    <p class="text-sm text-gray-600">On gagne ensemble ou on perd ensemble</p>
-                  </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">⏰</span>
+                <div>
+                  <strong>2h par semaine</strong>
+                  <p class="text-sm opacity-75">Mercredi après-midi</p>
                 </div>
-                
-                <div class="flex items-start gap-3">
-                  <span class="text-2xl">⏰</span>
-                  <div>
-                    <strong>2h par semaine</strong>
-                    <p class="text-sm text-gray-600">Mercredi après-midi</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start gap-3">
-                  <span class="text-2xl">💰</span>
-                  <div>
-                    <strong>230€ / module</strong>
-                    <p class="text-sm text-gray-600">7 semaines, tout compris</p>
-                  </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">💰</span>
+                <div>
+                  <strong>230€ / module</strong>
+                  <p class="text-sm opacity-75">7 semaines, tout compris</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Contact direct -->
-          <div class="card bg-white shadow-xl">
-            <div class="card-body text-center">
-              <h3 class="text-xl font-bold mb-4">Contactez-nous directement</h3>
-              
-              <a href="mailto:info@ludusmentis.be" class="btn btn-outline btn-primary mb-3">
-                📧 info@ludusmentis.be
-              </a>
-              
-              <p class="text-sm text-gray-600">
-                Antoine Billard, fondateur<br>
-                Walhain, Brabant wallon
-              </p>
-              
-              <div class="divider"></div>
-              
-              <p class="text-xs text-gray-500">
-                ASBL en cours de création<br>
-                Ouverture prévue : janvier 2026
-              </p>
-            </div>
+        </div>
+        
+        <!-- Contact direct -->
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body text-center">
+            <h3 class="card-title mx-auto mb-4">Contactez-nous directement</h3>
+            
+            <a href="mailto:info@ludusmentis.be" class="btn btn-outline btn-primary mb-3">
+              📧 info@ludusmentis.be
+            </a>
+            
+            <p class="text-sm opacity-75">
+              Antoine Billard, fondateur<br>
+              Walhain, Brabant wallon
+            </p>
+            
+            <div class="divider"></div>
+            
+            <p class="text-xs opacity-50">
+              ASBL en cours de création<br>
+              Ouverture prévue : janvier 2026
+            </p>
           </div>
-          
-          <!-- FAQ rapide -->
-          <div class="card bg-white shadow">
-            <div class="card-body">
-              <h3 class="font-bold mb-3">Questions rapides</h3>
+        </div>
+        
+        <!-- FAQ rapide -->
+        <div class="card bg-base-100 shadow">
+          <div class="card-body">
+            <h3 class="font-bold mb-3">Questions rapides</h3>
+            
+            <div class="space-y-2 text-sm">
+              <details>
+                <summary class="cursor-pointer font-medium">Faut-il du matériel ?</summary>
+                <p class="mt-2 opacity-75">Non, tout est fourni !</p>
+              </details>
               
-              <div class="space-y-2 text-sm">
-                <details>
-                  <summary class="cursor-pointer font-medium">Faut-il du matériel ?</summary>
-                  <p class="mt-2 text-gray-600">Non, tout est fourni !</p>
-                </details>
-                
-                <details>
-                  <summary class="cursor-pointer font-medium">Mon enfant est timide...</summary>
-                  <p class="mt-2 text-gray-600">Parfait ! L'approche coop favorise l'inclusion.</p>
-                </details>
-                
-                <details>
-                  <summary class="cursor-pointer font-medium">Comment payer ?</summary>
-                  <p class="mt-2 text-gray-600">À l'inscription ou au premier cours.</p>
-                </details>
-              </div>
+              <details>
+                <summary class="cursor-pointer font-medium">Mon enfant est timide...</summary>
+                <p class="mt-2 opacity-75">Parfait ! L'approche coop favorise l'inclusion.</p>
+              </details>
               
-              <a href="/infos-pratiques.html" class="btn btn-sm btn-outline mt-4">
-                Toutes les FAQ →
-              </a>
+              <details>
+                <summary class="cursor-pointer font-medium">Comment payer ?</summary>
+                <p class="mt-2 opacity-75">À l'inscription ou au premier cours.</p>
+              </details>
             </div>
+            
+            <a href="/infos-pratiques.html" class="btn btn-sm btn-outline mt-4">
+              Toutes les FAQ →
+            </a>
           </div>
         </div>
       </section>

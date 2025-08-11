@@ -49,6 +49,7 @@
   }
   </script>
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -56,7 +57,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -70,7 +70,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -131,52 +131,52 @@
   <main class="container mx-auto px-4 py-8 max-w-5xl">
     <!-- Hero avec prix direct -->
     <section class="text-center mb-12">
-      <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">
         Infos pratiques & Tarifs
       </h1>
       
       <div class="inline-flex flex-col items-center bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-300">
         <div class="text-5xl font-bold text-ludus-green">230€</div>
-        <p class="text-xl text-gray-700 mt-2">Module de 7 semaines</p>
-        <p class="text-gray-600">= 16,43€/heure tout compris</p>
+        <p class="text-xl mt-2">Module de 7 semaines</p>
+        <p class="opacity-75">= 16,43€/heure tout compris</p>
       </div>
     </section>
 
-    <!-- Informations essentielles en cards -->
+    <!-- Informations essentielles -->
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Quand -->
-        <div class="card bg-white shadow-xl border-t-4 border-ludus-orange">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="font-bold text-xl mb-3 text-ludus-orange">📅 Quand ?</h3>
+            <h3 class="card-title text-ludus-orange">📅 Quand ?</h3>
             <p class="font-medium mb-2">Mercredi après-midi</p>
-            <div class="space-y-2 text-sm text-gray-600">
+            <div class="space-y-2 text-sm">
               <div class="badge badge-outline">14h00-16h00</div>
               <div class="badge badge-outline">17h00-19h00</div>
             </div>
-            <p class="text-xs text-gray-500 mt-3">Modules alignés sur le calendrier scolaire</p>
+            <p class="text-xs opacity-50 mt-3">Modules alignés sur le calendrier scolaire</p>
           </div>
         </div>
         
         <!-- Où -->
-        <div class="card bg-white shadow-xl border-t-4 border-ludus-teal">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="font-bold text-xl mb-3 text-ludus-teal">📍 Où ?</h3>
+            <h3 class="card-title text-ludus-teal">📍 Où ?</h3>
             <p class="font-medium mb-2">Walhain</p>
-            <p class="text-sm text-gray-600">Salle communale équipée</p>
-            <p class="text-sm text-gray-600">Brabant wallon</p>
-            <p class="text-xs text-gray-500 mt-3">Parking gratuit</p>
+            <p class="text-sm opacity-75">Salle communale équipée</p>
+            <p class="text-sm opacity-75">Brabant wallon</p>
+            <p class="text-xs opacity-50 mt-3">Parking gratuit</p>
           </div>
         </div>
         
         <!-- Pour qui -->
-        <div class="card bg-white shadow-xl border-t-4 border-ludus-purple">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="font-bold text-xl mb-3 text-ludus-purple">👥 Pour qui ?</h3>
+            <h3 class="card-title text-ludus-purple">👥 Pour qui ?</h3>
             <p class="font-medium mb-2">10-15 ans</p>
-            <p class="text-sm text-gray-600">8-10 jeunes par groupe</p>
-            <p class="text-sm text-gray-600">Tous niveaux acceptés</p>
-            <p class="text-xs text-gray-500 mt-3">Groupes par âge</p>
+            <p class="text-sm opacity-75">8-10 jeunes par groupe</p>
+            <p class="text-sm opacity-75">Tous niveaux acceptés</p>
+            <p class="text-xs opacity-50 mt-3">Groupes par âge</p>
           </div>
         </div>
       </div>
@@ -184,35 +184,43 @@
 
     <!-- Ce qui est inclus -->
     <section class="mb-12">
-      <div class="card bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-ludus-teal">
+      <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-6 text-center text-ludus-teal">
+          <h2 class="card-title text-2xl mx-auto mb-6 text-success">
             ✅ Tout est inclus dans le prix
           </h2>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white rounded-lg p-4 text-center">
-              <div class="text-3xl mb-2">🎮</div>
-              <h4 class="font-bold text-sm">Matériel gaming</h4>
-              <p class="text-xs text-gray-600">Nintendo Switch et jeux</p>
+            <div class="stat bg-base-100 rounded-lg text-center">
+              <div class="stat-figure text-primary">
+                <div class="text-3xl">🎮</div>
+              </div>
+              <div class="stat-title text-sm">Matériel gaming</div>
+              <div class="stat-desc text-xs">Nintendo Switch et jeux</div>
             </div>
             
-            <div class="bg-white rounded-lg p-4 text-center">
-              <div class="text-3xl mb-2">👨‍🏫</div>
-              <h4 class="font-bold text-sm">Encadrement</h4>
-              <p class="text-xs text-gray-600">Animateur bienveillant</p>
+            <div class="stat bg-base-100 rounded-lg text-center">
+              <div class="stat-figure text-secondary">
+                <div class="text-3xl">👨‍🏫</div>
+              </div>
+              <div class="stat-title text-sm">Encadrement</div>
+              <div class="stat-desc text-xs">Animateur bienveillant</div>
             </div>
             
-            <div class="bg-white rounded-lg p-4 text-center">
-              <div class="text-3xl mb-2">🛡️</div>
-              <h4 class="font-bold text-sm">Assurance</h4>
-              <p class="text-xs text-gray-600">RC + accidents</p>
+            <div class="stat bg-base-100 rounded-lg text-center">
+              <div class="stat-figure text-accent">
+                <div class="text-3xl">🛡️</div>
+              </div>
+              <div class="stat-title text-sm">Assurance</div>
+              <div class="stat-desc text-xs">RC + accidents</div>
             </div>
             
-            <div class="bg-white rounded-lg p-4 text-center">
-              <div class="text-3xl mb-2">📊</div>
-              <h4 class="font-bold text-sm">Suivi progression</h4>
-              <p class="text-xs text-gray-600">Communication parents</p>
+            <div class="stat bg-base-100 rounded-lg text-center">
+              <div class="stat-figure text-info">
+                <div class="text-3xl">📊</div>
+              </div>
+              <div class="stat-title text-sm">Suivi progression</div>
+              <div class="stat-desc text-xs">Communication parents</div>
             </div>
           </div>
         </div>
@@ -223,51 +231,51 @@
     <section class="mb-12">
       <div class="grid md:grid-cols-2 gap-6">
         <!-- Réductions -->
-        <div class="card bg-white shadow-xl">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="text-xl font-bold mb-4 text-ludus-orange">💰 Réductions</h3>
+            <h3 class="card-title text-ludus-orange mb-4">💰 Réductions</h3>
             
             <div class="space-y-3">
               <div class="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
                 <div>
                   <span class="font-bold">Résidents Walhain</span>
-                  <p class="text-sm text-gray-600">207€</p>
+                  <p class="text-sm opacity-75">207€</p>
                 </div>
-                <span class="badge badge-lg badge-success">-10%</span>
+                <span class="badge badge-success badge-lg">-10%</span>
               </div>
               
               <div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                 <div>
                   <span class="font-bold">Fratries</span>
-                  <p class="text-sm text-gray-600">207€/pour le deuxième enfant</p>
+                  <p class="text-sm opacity-75">207€/pour le deuxième enfant</p>
                 </div>
-                <span class="badge badge-lg badge-info">-10%</span>
+                <span class="badge badge-info badge-lg">-10%</span>
               </div>
               
-              <p class="text-xs text-gray-500 mt-2">* Réductions non cumulables</p>
+              <p class="text-xs opacity-50 mt-2">* Réductions non cumulables</p>
             </div>
           </div>
         </div>
         
         <!-- Paiement -->
-        <div class="card bg-white shadow-xl">
+        <div class="card bg-base-100 shadow-xl">
           <div class="card-body">
-            <h3 class="text-xl font-bold mb-4 text-ludus-green">💳 Facilités de paiement</h3>
+            <h3 class="card-title text-ludus-green mb-4">💳 Facilités de paiement</h3>
             
             <div class="space-y-3">
               <div class="p-3 bg-green-50 rounded-lg">
                 <span class="font-bold">À l'inscription</span>
-                <p class="text-sm text-gray-600">230€ en une fois</p>
+                <p class="text-sm opacity-75">230€ en une fois</p>
               </div>
               
               <div class="p-3 bg-blue-50 rounded-lg">
                 <span class="font-bold">Au premier cours</span>
-                <p class="text-sm text-gray-600">Paiement différé possible</p>
+                <p class="text-sm opacity-75">Paiement différé possible</p>
               </div>
               
               <div class="p-3 bg-purple-50 rounded-lg">
                 <span class="font-bold">Arrangement personnalisé</span>
-                <p class="text-sm text-gray-600">Contactez-nous</p>
+                <p class="text-sm opacity-75">Contactez-nous</p>
               </div>
             </div>
           </div>
@@ -277,7 +285,7 @@
 
     <!-- FAQ Accordion -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-8">
         Questions fréquentes
       </h2>
       
@@ -351,24 +359,24 @@
               <p class="mb-4">L'inscription se fait en 3 étapes simples :</p>
               <ol class="space-y-3">
                 <li class="flex gap-3">
-                  <span class="bg-ludus-teal text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</span>
+                  <span class="badge badge-primary badge-lg">1</span>
                   <div>
                     <strong>Préinscription en ligne</strong>
-                    <p class="text-sm text-gray-600">Via le formulaire de contact</p>
+                    <p class="text-sm opacity-75">Via le formulaire de contact</p>
                   </div>
                 </li>
                 <li class="flex gap-3">
-                  <span class="bg-ludus-orange text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</span>
+                  <span class="badge badge-secondary badge-lg">2</span>
                   <div>
                     <strong>Entretien téléphonique</strong>
-                    <p class="text-sm text-gray-600">15 min pour répondre à vos questions</p>
+                    <p class="text-sm opacity-75">15 min pour répondre à vos questions</p>
                   </div>
                 </li>
                 <li class="flex gap-3">
-                  <span class="bg-ludus-green text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</span>
+                  <span class="badge badge-success badge-lg">3</span>
                   <div>
                     <strong>Confirmation et paiement</strong>
-                    <p class="text-sm text-gray-600">Place réservée après règlement</p>
+                    <p class="text-sm opacity-75">Place réservée après règlement</p>
                   </div>
                 </li>
               </ol>
@@ -412,12 +420,12 @@
 
     <!-- Planning 2026 -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
+      <h2 class="text-2xl font-bold text-center mb-6">
         📅 Planning 2026
       </h2>
       
       <div class="overflow-x-auto">
-        <table class="table w-full bg-white shadow-lg rounded-lg">
+        <table class="table w-full">
           <thead>
             <tr class="bg-gradient-to-r from-ludus-teal to-ludus-green text-white">
               <th>Module</th>
@@ -431,7 +439,7 @@
               <td>Janvier - Février 2026</td>
               <td><span class="badge badge-success">Ouvert aux inscriptions</span></td>
             </tr>
-            <tr>
+            <tr class="bg-base-200">
               <td class="font-bold">Module 2</td>
               <td>Mars - Avril 2026</td>
               <td><span class="badge badge-warning">Bientôt disponible</span></td>
@@ -441,7 +449,7 @@
               <td>Avril - Juin 2026</td>
               <td><span class="badge">À venir</span></td>
             </tr>
-            <tr>
+            <tr class="bg-base-200">
               <td class="font-bold">Module 4</td>
               <td>Sept - Oct 2026</td>
               <td><span class="badge">Rentrée 2026</span></td>

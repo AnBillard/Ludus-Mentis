@@ -38,6 +38,7 @@
   }
   </script>
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -45,7 +46,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -59,7 +59,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -114,12 +114,6 @@
     .float-animation {
       animation: float 3s ease-in-out infinite;
     }
-    .source-link {
-      font-size: 0.75rem;
-      color: #6b7280;
-      text-decoration: underline;
-      cursor: help;
-    }
   </style>
 </head>
 <body>
@@ -142,88 +136,88 @@
       </div>
     </section>
 
-    <!-- Les défis qu'on résout - VERSION CLARIFIÉE -->
+    <!-- Les défis qu'on résout -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-8">
         Les défis du gaming aujourd'hui
       </h2>
       
-      <p class="text-center text-gray-600 mb-6">
+      <p class="text-center opacity-75 mb-6">
         Cliquez sur chaque carte pour voir les sources et détails
       </p>
       
       <div class="grid md:grid-cols-4 gap-4">
         <!-- Sédentarité -->
-        <details class="card bg-white shadow border-t-4 border-red-500 cursor-pointer">
+        <details class="card bg-base-100 shadow border-t-4 border-error cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">🏃‍♂️</div>
-            <h3 class="font-bold text-gray-800">Sédentarité</h3>
-            <p class="text-sm text-gray-600">Baisse d'activité physique</p>
-            <p class="text-xs text-gray-400 mt-1">▼ Cliquez pour détails</p>
+            <h3 class="font-bold">Sédentarité</h3>
+            <p class="text-sm opacity-75">Baisse d'activité physique</p>
+            <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs text-gray-600">
+            <p class="text-xs">
               <strong>Source :</strong> OMS (2020) - Les adolescents passant >3h/jour devant un écran 
               ont 48% moins d'activité physique que les recommandations (60 min/jour).
             </p>
-            <p class="text-xs text-gray-500 mt-2">
+            <p class="text-xs opacity-75 mt-2">
               <em>Étude sur 1,6 million d'adolescents dans 146 pays</em>
             </p>
           </div>
         </details>
         
         <!-- Isolement -->
-        <details class="card bg-white shadow border-t-4 border-amber-500 cursor-pointer">
+        <details class="card bg-base-100 shadow border-t-4 border-warning cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">😔</div>
-            <h3 class="font-bold text-gray-800">Isolement</h3>
-            <p class="text-sm text-gray-600">Majorité jouent seuls</p>
-            <p class="text-xs text-gray-400 mt-1">▼ Cliquez pour détails</p>
+            <h3 class="font-bold">Isolement</h3>
+            <p class="text-sm opacity-75">Majorité jouent seuls</p>
+            <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs text-gray-600">
+            <p class="text-xs">
               <strong>Source :</strong> Pew Research Center (2018) - 61% des adolescents 
               jouent principalement seuls, sans interaction sociale directe.
             </p>
-            <p class="text-xs text-gray-500 mt-2">
+            <p class="text-xs opacity-75 mt-2">
               <em>Enquête sur 1,423 adolescents américains et européens</em>
             </p>
           </div>
         </details>
         
         <!-- Conflits familiaux -->
-        <details class="card bg-white shadow border-t-4 border-orange-500 cursor-pointer">
+        <details class="card bg-base-100 shadow border-t-4 border-orange-500 cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">🏠</div>
-            <h3 class="font-bold text-gray-800">Conflits familiaux</h3>
-            <p class="text-sm text-gray-600">Source de tensions</p>
-            <p class="text-xs text-gray-400 mt-1">▼ Cliquez pour détails</p>
+            <h3 class="font-bold">Conflits familiaux</h3>
+            <p class="text-sm opacity-75">Source de tensions</p>
+            <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs text-gray-600">
+            <p class="text-xs">
               <strong>Source :</strong> EU Kids Online (2020) - 73% des parents européens 
               rapportent des conflits liés au temps d'écran et aux jeux vidéo.
             </p>
-            <p class="text-xs text-gray-500 mt-2">
+            <p class="text-xs opacity-75 mt-2">
               <em>25,000 familles interrogées dans 19 pays européens</em>
             </p>
           </div>
         </details>
         
         <!-- Usage problématique -->
-        <details class="card bg-white shadow border-t-4 border-purple-500 cursor-pointer">
+        <details class="card bg-base-100 shadow border-t-4 border-secondary cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">⚠️</div>
-            <h3 class="font-bold text-gray-800">Usage problématique</h3>
-            <p class="text-sm text-gray-600">3-4% à risque</p>
-            <p class="text-xs text-gray-400 mt-1">▼ Cliquez pour détails</p>
+            <h3 class="font-bold">Usage problématique</h3>
+            <p class="text-sm opacity-75">3-4% à risque</p>
+            <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs text-gray-600">
+            <p class="text-xs">
               <strong>Source :</strong> Mihara & Higuchi (2017) - Entre 3 et 4% des 
               jeunes joueurs développent des symptômes de "Gaming Disorder" selon l'OMS.
             </p>
-            <p class="text-xs text-gray-500 mt-2">
+            <p class="text-xs opacity-75 mt-2">
               <em>Meta-analyse de 37 études, 164,000 participants</em>
             </p>
           </div>
@@ -233,19 +227,19 @@
 
     <!-- Notre solution en 3 piliers -->
     <section class="mb-12">
-      <div class="card bg-gradient-to-br from-teal-50 to-orange-50">
+      <div class="card bg-base-200">
         <div class="card-body">
-          <h2 class="text-3xl font-bold text-center mb-8 text-ludus-teal">
+          <h2 class="card-title text-3xl mx-auto mb-8 text-ludus-teal">
             Notre solution en 3 piliers
           </h2>
           
           <div class="grid md:grid-cols-3 gap-6">
-            <!-- Pilier 1 : Le contexte -->
-            <div class="text-center">
-              <div class="bg-white rounded-xl p-6 shadow h-full">
+            <!-- Pilier 1 -->
+            <div class="card bg-base-100 shadow">
+              <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation">🏠</div>
-                <h3 class="font-bold text-xl mb-3 text-ludus-teal">Le bon contexte</h3>
-                <ul class="text-left text-gray-600 space-y-2">
+                <h3 class="card-title text-ludus-teal">Le bon contexte</h3>
+                <ul class="text-left space-y-2">
                   <li>✓ Hors domicile = activité sociale</li>
                   <li>✓ En groupe = vraies rencontres</li>
                   <li>✓ Encadré = cadre sécurisant</li>
@@ -254,12 +248,12 @@
               </div>
             </div>
             
-            <!-- Pilier 2 : Les bons jeux -->
-            <div class="text-center">
-              <div class="bg-white rounded-xl p-6 shadow h-full">
+            <!-- Pilier 2 -->
+            <div class="card bg-base-100 shadow">
+              <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation" style="animation-delay: 0.5s;">🎮</div>
-                <h3 class="font-bold text-xl mb-3 text-ludus-orange">Les bons jeux</h3>
-                <ul class="text-left text-gray-600 space-y-2">
+                <h3 class="card-title text-ludus-orange">Les bons jeux</h3>
+                <ul class="text-left space-y-2">
                   <li>✓ 100% coopératifs</li>
                   <li>✓ PEGI ≤12 uniquement</li>
                   <li>✓ Sans loot boxes</li>
@@ -268,12 +262,12 @@
               </div>
             </div>
             
-            <!-- Pilier 3 : La méthode -->
-            <div class="text-center">
-              <div class="bg-white rounded-xl p-6 shadow h-full">
+            <!-- Pilier 3 -->
+            <div class="card bg-base-100 shadow">
+              <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation" style="animation-delay: 1s;">🔄</div>
-                <h3 class="font-bold text-xl mb-3 text-ludus-purple">La bonne méthode</h3>
-                <ul class="text-left text-gray-600 space-y-2">
+                <h3 class="card-title text-ludus-purple">La bonne méthode</h3>
+                <ul class="text-left space-y-2">
                   <li>✓ Cycle de Kolb adapté</li>
                   <li>✓ Débriefings structurés</li>
                   <li>✓ <strong>Routines santé systématiques</strong></li>
@@ -286,13 +280,13 @@
       </div>
     </section>
 
-    <!-- Le cycle de Kolb adapté au gaming -->
+    <!-- Le cycle de Kolb -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-8">
         Notre méthode : le cycle de Kolb adapté
       </h2>
       
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <div class="grid md:grid-cols-4 gap-4">
             <div class="text-center">
@@ -300,7 +294,7 @@
                 <span class="text-2xl">🎮</span>
               </div>
               <h3 class="font-bold text-blue-700">1. Expérience</h3>
-              <p class="text-sm text-gray-600">On joue ensemble</p>
+              <p class="text-sm opacity-75">On joue ensemble</p>
             </div>
             
             <div class="text-center">
@@ -308,7 +302,7 @@
                 <span class="text-2xl">🤔</span>
               </div>
               <h3 class="font-bold text-green-700">2. Observation</h3>
-              <p class="text-sm text-gray-600">Qu'est-ce qui s'est passé ?</p>
+              <p class="text-sm opacity-75">Qu'est-ce qui s'est passé ?</p>
             </div>
             
             <div class="text-center">
@@ -316,7 +310,7 @@
                 <span class="text-2xl">💡</span>
               </div>
               <h3 class="font-bold text-orange-700">3. Conceptualisation</h3>
-              <p class="text-sm text-gray-600">Qu'est-ce qu'on retient ?</p>
+              <p class="text-sm opacity-75">Qu'est-ce qu'on retient ?</p>
             </div>
             
             <div class="text-center">
@@ -324,7 +318,7 @@
                 <span class="text-2xl">🚀</span>
               </div>
               <h3 class="font-bold text-purple-700">4. Application</h3>
-              <p class="text-sm text-gray-600">On réessaie mieux</p>
+              <p class="text-sm opacity-75">On réessaie mieux</p>
             </div>
           </div>
           
@@ -338,9 +332,7 @@
       </div>
     </section>
 
-
-
-    <!-- Validation scientifique - VERSION CORRIGÉE -->
+    <!-- Validation scientifique -->
     <section class="mb-12">
       <div class="card gradient-ludus text-white">
         <div class="card-body">
@@ -355,7 +347,6 @@
                 <div class="text-4xl mb-2">📚</div>
                 <div class="text-3xl font-bold">98</div>
                 <p>Études analysées</p>
-                <p class="text-xs opacity-75 mt-2">▼ Détails</p>
               </summary>
               <div class="text-sm text-left mt-4">
                 Meta-analyse de Greitemeyer & Mügge (2014) portant sur 
@@ -370,7 +361,6 @@
                 <div class="text-4xl mb-2">🤝</div>
                 <div class="text-3xl font-bold">+35%</div>
                 <p>Comportements d'entraide</p>
-                <p class="text-xs opacity-75 mt-2">▼ Détails</p>
               </summary>
               <div class="text-sm text-left mt-4">
                 <strong>Source :</strong> Greitemeyer & Mügge (2014) - 
@@ -386,7 +376,6 @@
                 <div class="text-4xl mb-2">📊</div>
                 <div class="text-3xl font-bold">Le contexte</div>
                 <p>est déterminant</p>
-                <p class="text-xs opacity-75 mt-2">▼ Détails</p>
               </summary>
               <div class="text-sm text-left mt-4">
                 <strong>Source :</strong> Orben & Przybylski (2019) - 
@@ -401,111 +390,76 @@
       </div>
     </section>
 
-    <!-- Routines santé -->
+    <!-- Boîte à outils parents -->
     <section class="mb-12">
-      <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">
-        🏥 Nos protocoles santé obligatoires
-      </h2>
-      
-      <div class="grid md:grid-cols-4 gap-4">
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">👀</div>
-            <p class="font-bold text-sm">Règle 20-20-20</p>
-            <p class="text-xs text-gray-600">Toutes les 20 min, regarder à 20 pieds (6m) pendant 20 sec</p>
-          </div>
-        </div>
-        
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">⚡</div>
-            <p class="font-bold text-sm">Pauses actives</p>
-            <p class="text-xs text-gray-600">20 min d'activités physiques légères</p>
-          </div>
-        </div>
-        
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">💧</div>
-            <p class="font-bold text-sm">Hydratation</p>
-            <p class="text-xs text-gray-600">Eau disponible en permanence</p>
-          </div>
-        </div>
-        
-        <div class="card bg-white shadow text-center">
-          <div class="card-body compact">
-            <div class="text-3xl mb-2">🧘</div>
-            <p class="font-bold text-sm">Cooldown</p>
-            <p class="text-xs text-gray-600">Exercices de respiration et étirements</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Boîte à outils parents - VERSION RENFORCÉE -->
-    <section class="mb-12">
-      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300">
+      <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
-          <h2 class="text-3xl font-bold mb-6 text-center text-green-700">
+          <h2 class="card-title text-3xl mx-auto mb-6 text-success">
             📦 Votre boîte à outils parents complète
           </h2>
           
-          <p class="text-center text-lg text-gray-700 mb-8">
+          <p class="text-center text-lg mb-8">
             <strong>Des ressources concrètes et pratiques pour accompagner votre enfant</strong><br>
             Remises lors de la première séance et enrichies tout au long du module
           </p>
           
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <!-- Guide des limites -->
-            <div class="bg-white rounded-lg p-4 shadow hover:shadow-xl transition-all">
-              <div class="text-3xl mb-2 text-center">📋</div>
-              <h3 class="font-bold text-green-600 mb-2">Guide des limites</h3>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Contrat famille personnalisable</li>
-                <li>• Horaires recommandés par âge</li>
-                <li>• Système de récompenses</li>
-                <li>• Gestion des "5 minutes de plus"</li>
-              </ul>
+            <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
+              <div class="card-body compact">
+                <div class="text-3xl mb-2 text-center">📋</div>
+                <h3 class="font-bold text-green-600 mb-2">Guide des limites</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Contrat famille personnalisable</li>
+                  <li>• Horaires recommandés par âge</li>
+                  <li>• Système de récompenses</li>
+                  <li>• Gestion des "5 minutes de plus"</li>
+                </ul>
+              </div>
             </div>
             
             <!-- Communication -->
-            <div class="bg-white rounded-lg p-4 shadow hover:shadow-xl transition-all">
-              <div class="text-3xl mb-2 text-center">💬</div>
-              <h3 class="font-bold text-green-600 mb-2">Dialoguer sur le gaming</h3>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Questions pour engager le dialogue</li>
-                <li>• Vocabulaire gaming expliqué</li>
-                <li>• Gérer les frustrations</li>
-                <li>• Valoriser les progrès</li>
-              </ul>
+            <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
+              <div class="card-body compact">
+                <div class="text-3xl mb-2 text-center">💬</div>
+                <h3 class="font-bold text-green-600 mb-2">Dialoguer sur le gaming</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Questions pour engager le dialogue</li>
+                  <li>• Vocabulaire gaming expliqué</li>
+                  <li>• Gérer les frustrations</li>
+                  <li>• Valoriser les progrès</li>
+                </ul>
+              </div>
             </div>
             
             <!-- Activités famille -->
-            <div class="bg-white rounded-lg p-4 shadow hover:shadow-xl transition-all">
-              <div class="text-3xl mb-2 text-center">👨‍👩‍👧‍👦</div>
-              <h3 class="font-bold text-green-600 mb-2">Gaming en famille</h3>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Liste de jeux coop familiaux</li>
-                <li>• Soirées gaming structurées</li>
-                <li>• Défis parent-enfant</li>
-                <li>• Alternatives sans écran</li>
-              </ul>
+            <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
+              <div class="card-body compact">
+                <div class="text-3xl mb-2 text-center">👨‍👩‍👧‍👦</div>
+                <h3 class="font-bold text-green-600 mb-2">Gaming en famille</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Liste de jeux coop familiaux</li>
+                  <li>• Soirées gaming structurées</li>
+                  <li>• Défis parent-enfant</li>
+                  <li>• Alternatives sans écran</li>
+                </ul>
+              </div>
             </div>
             
             <!-- Suivi santé -->
-            <div class="bg-white rounded-lg p-4 shadow hover:shadow-xl transition-all">
-              <div class="text-3xl mb-2 text-center">🏥</div>
-              <h3 class="font-bold text-green-600 mb-2">Santé & bien-être</h3>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Exercices posturaux illustrés</li>
-                <li>• Règle 20-20-20 rappel</li>
-                <li>• Signes d'alerte à surveiller</li>
-                <li>• Routine pré/post gaming</li>
-              </ul>
+            <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
+              <div class="card-body compact">
+                <div class="text-3xl mb-2 text-center">🏥</div>
+                <h3 class="font-bold text-green-600 mb-2">Santé & bien-être</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Exercices posturaux illustrés</li>
+                  <li>• Règle 20-20-20 rappel</li>
+                  <li>• Signes d'alerte à surveiller</li>
+                  <li>• Routine pré/post gaming</li>
+                </ul>
+              </div>
             </div>
           </div>
-          
-          
         </div>
       </div>
     </section>
@@ -513,10 +467,10 @@
     <!-- CTA Final -->
     <section class="text-center gradient-ludus rounded-3xl p-8 text-white">
       <h2 class="text-3xl font-bold mb-4">
-        Une approche transparente et mesurable
+        Une approche transparente et documentée
       </h2>
       <p class="text-xl mb-6 opacity-95">
-        Toutes nos méthodes sont documentées et nos résultats seront publiés
+        Toutes nos méthodes sont basées sur la recherche scientifique
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/recherche.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
