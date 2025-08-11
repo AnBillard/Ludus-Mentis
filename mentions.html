@@ -1,4 +1,3 @@
-<!-- mentions.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,6 +19,7 @@
   <meta property="og:image" content="https://ludusmentis.be/assets/images/og-legal.jpg" />
   <meta property="og:locale" content="fr_BE" />
 
+  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -27,7 +27,6 @@
       if (saved) {
         theme = saved;
       } else {
-        // Détecte TOUS les cas : système, per-device, forced dark mode
         try {
           theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
         } catch(e) {
@@ -41,7 +40,7 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 (AVANT tout script Google) -->
+  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -95,7 +94,6 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   
   <!-- Skip link pour accessibilité -->
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
@@ -107,10 +105,10 @@
   <main id="main" class="container mx-auto px-4 py-8 max-w-4xl">
     <!-- En-tête -->
     <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold mb-4 text-gray-800">
+      <h1 class="text-4xl font-bold mb-4">
         Mentions légales & Politique de confidentialité
       </h1>
-      <p class="text-gray-600">
+      <p class="opacity-75">
         Dernière mise à jour : 10 août 2025
       </p>
     </header>
@@ -133,11 +131,11 @@
 
     <!-- Section 1 : Éditeur -->
     <section id="editeur" class="mb-12">
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">1. Éditeur du site</h2>
+          <h2 class="card-title text-2xl mb-4 text-ludus-teal">1. Éditeur du site</h2>
           
-          <div class="space-y-2 text-gray-700">
+          <div class="space-y-2">
             <p><strong>Dénomination :</strong> Ludus Mentis ASBL (en cours de création)</p>
             <p><strong>Fondateur et responsable :</strong> Antoine Billard</p>
             <p><strong>Adresse :</strong> [Adresse à confirmer], 1457 Walhain, Belgique</p>
@@ -158,11 +156,11 @@
 
     <!-- Section 2 : Hébergeur -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">2. Hébergeur</h2>
+          <h2 class="card-title text-2xl mb-4 text-ludus-teal">2. Hébergeur</h2>
           
-          <div class="space-y-2 text-gray-700">
+          <div class="space-y-2">
             <p><strong>Société :</strong> [À compléter - ex: OVH, Netlify, Vercel]</p>
             <p><strong>Adresse :</strong> [À compléter]</p>
             <p><strong>Contact :</strong> [À compléter]</p>
@@ -173,23 +171,23 @@
 
     <!-- Section 3 : Protection des données (RGPD) -->
     <section id="rgpd" class="mb-12">
-      <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200">
+      <div class="card bg-primary/10 border-2 border-primary">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-6 text-blue-700">3. Protection des données personnelles (RGPD)</h2>
+          <h2 class="card-title text-2xl mb-6 text-primary">3. Protection des données personnelles (RGPD)</h2>
           
           <!-- Responsable du traitement -->
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">3.1 Responsable du traitement</h3>
-            <p class="text-gray-700">
+            <h3 class="text-xl font-bold mb-3">3.1 Responsable du traitement</h3>
+            <p>
               Ludus Mentis, représenté par Antoine Billard<br>
-              Contact DPO : <a href="mailto:info@ludusmentis.be" class="text-blue-600 hover:underline">info@ludusmentis.be</a><br>
-              <span class="text-sm text-gray-600">(Même adresse pour toutes les questions RGPD)</span>
+              Contact DPO : <a href="mailto:info@ludusmentis.be" class="text-primary hover:underline">info@ludusmentis.be</a><br>
+              <span class="text-sm opacity-75">(Même adresse pour toutes les questions RGPD)</span>
             </p>
           </div>
           
           <!-- Données collectées -->
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">3.2 Données collectées</h3>
+            <h3 class="text-xl font-bold mb-3">3.2 Données collectées</h3>
             
             <div class="overflow-x-auto">
               <table class="table table-zebra w-full">
@@ -245,32 +243,36 @@
           
           <!-- Destinataires -->
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">3.3 Destinataires des données</h3>
+            <h3 class="text-xl font-bold mb-3">3.3 Destinataires des données</h3>
             
             <div class="grid md:grid-cols-2 gap-4">
-              <div class="bg-white rounded-lg p-4">
-                <h4 class="font-bold text-blue-600 mb-2">Sous-traitants techniques</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                  <li>• Formspree (formulaires)</li>
-                  <li>• Google (Analytics) - après consentement</li>
-                  <li>• Hébergeur web</li>
-                </ul>
+              <div class="card bg-base-100">
+                <div class="card-body compact">
+                  <h4 class="font-bold text-primary mb-2">Sous-traitants techniques</h4>
+                  <ul class="text-sm space-y-1">
+                    <li>• Formspree (formulaires)</li>
+                    <li>• Google (Analytics) - après consentement</li>
+                    <li>• Hébergeur web</li>
+                  </ul>
+                </div>
               </div>
               
-              <div class="bg-white rounded-lg p-4">
-                <h4 class="font-bold text-blue-600 mb-2">Partenaires (avec accord)</h4>
-                <ul class="text-sm space-y-1 text-gray-600">
-                  <li>• Commune de Walhain</li>
-                  <li>• Fédération belge d'esport</li>
-                  <li>• Uniquement si consentement explicite</li>
-                </ul>
+              <div class="card bg-base-100">
+                <div class="card-body compact">
+                  <h4 class="font-bold text-primary mb-2">Partenaires (avec accord)</h4>
+                  <ul class="text-sm space-y-1">
+                    <li>• Commune de Walhain</li>
+                    <li>• Fédération belge d'esport</li>
+                    <li>• Uniquement si consentement explicite</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           
           <!-- Transferts hors UE -->
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">3.4 Transferts hors UE</h3>
+            <h3 class="text-xl font-bold mb-3">3.4 Transferts hors UE</h3>
             <div class="alert alert-warning">
               <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -291,38 +293,42 @@
 
     <!-- Section 4 : Vos droits -->
     <section id="droits" class="mb-12">
-      <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+      <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-6 text-green-700">4. Vos droits RGPD</h2>
+          <h2 class="card-title text-2xl mb-6 text-success">4. Vos droits RGPD</h2>
           
-          <p class="text-gray-700 mb-4">
+          <p class="mb-4">
             Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
           </p>
           
           <div class="grid md:grid-cols-2 gap-4">
-            <div class="bg-white rounded-lg p-4">
-              <h3 class="font-bold text-green-600 mb-2">✅ Droits d'accès</h3>
-              <ul class="text-sm space-y-1 text-gray-600">
-                <li>• Droit d'accès à vos données</li>
-                <li>• Droit de rectification</li>
-                <li>• Droit à l'effacement</li>
-                <li>• Droit à la portabilité</li>
-              </ul>
+            <div class="card bg-base-100">
+              <div class="card-body compact">
+                <h3 class="font-bold text-success mb-2">✅ Droits d'accès</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Droit d'accès à vos données</li>
+                  <li>• Droit de rectification</li>
+                  <li>• Droit à l'effacement</li>
+                  <li>• Droit à la portabilité</li>
+                </ul>
+              </div>
             </div>
             
-            <div class="bg-white rounded-lg p-4">
-              <h3 class="font-bold text-green-600 mb-2">🛡️ Droits de contrôle</h3>
-              <ul class="text-sm space-y-1 text-gray-600">
-                <li>• Droit d'opposition</li>
-                <li>• Droit à la limitation</li>
-                <li>• Retrait du consentement</li>
-                <li>• Réclamation auprès de l'APD</li>
-              </ul>
+            <div class="card bg-base-100">
+              <div class="card-body compact">
+                <h3 class="font-bold text-success mb-2">🛡️ Droits de contrôle</h3>
+                <ul class="text-sm space-y-1">
+                  <li>• Droit d'opposition</li>
+                  <li>• Droit à la limitation</li>
+                  <li>• Retrait du consentement</li>
+                  <li>• Réclamation auprès de l'APD</li>
+                </ul>
+              </div>
             </div>
           </div>
           
           <div class="mt-6 text-center">
-            <p class="text-gray-700 mb-3">Pour exercer vos droits :</p>
+            <p class="mb-3">Pour exercer vos droits :</p>
             <a href="mailto:info@ludusmentis.be" class="btn btn-primary">
               Contacter notre DPO
             </a>
@@ -344,20 +350,20 @@
 
     <!-- Section 5 : Cookies -->
     <section id="cookies" class="mb-12">
-      <div class="card bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200">
+      <div class="card bg-warning/10 border-2 border-warning">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-6 text-orange-700">5. Politique de cookies</h2>
+          <h2 class="card-title text-2xl mb-6 text-warning">5. Politique de cookies</h2>
           
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">5.1 Qu'est-ce qu'un cookie ?</h3>
-            <p class="text-gray-700">
+            <h3 class="text-xl font-bold mb-3">5.1 Qu'est-ce qu'un cookie ?</h3>
+            <p>
               Un cookie est un petit fichier texte déposé sur votre appareil lors de la visite d'un site web. 
               Il permet de mémoriser vos préférences et d'analyser l'utilisation du site.
             </p>
           </div>
           
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">5.2 Cookies utilisés</h3>
+            <h3 class="text-xl font-bold mb-3">5.2 Cookies utilisés</h3>
             
             <div class="overflow-x-auto">
               <table class="table table-zebra w-full">
@@ -405,10 +411,10 @@
           </div>
           
           <div class="mb-6">
-            <h3 class="text-xl font-bold mb-3 text-gray-800">5.3 Gestion de vos préférences</h3>
+            <h3 class="text-xl font-bold mb-3">5.3 Gestion de vos préférences</h3>
             
             <div class="text-center">
-              <p class="text-gray-700 mb-4">
+              <p class="mb-4">
                 Vous pouvez modifier vos préférences cookies à tout moment :
               </p>
               <button onclick="if(typeof tarteaucitron !== 'undefined') tarteaucitron.userInterface.openPanel();" 
@@ -419,7 +425,7 @@
           </div>
           
           <div class="alert alert-info">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 h-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <div>
@@ -433,11 +439,11 @@
 
     <!-- Section 6 : Sécurité -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-ludus-purple">6. Sécurité des données</h2>
+          <h2 class="card-title text-2xl mb-4 text-ludus-purple">6. Sécurité des données</h2>
           
-          <p class="text-gray-700 mb-4">
+          <p class="mb-4">
             Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :
           </p>
           
@@ -446,7 +452,7 @@
               <span class="text-green-500 text-xl">🔒</span>
               <div>
                 <strong>Chiffrement HTTPS</strong>
-                <p class="text-sm text-gray-600">Toutes les connexions sont sécurisées</p>
+                <p class="text-sm opacity-75">Toutes les connexions sont sécurisées</p>
               </div>
             </div>
             
@@ -454,7 +460,7 @@
               <span class="text-green-500 text-xl">🛡️</span>
               <div>
                 <strong>Accès restreint</strong>
-                <p class="text-sm text-gray-600">Seules les personnes autorisées</p>
+                <p class="text-sm opacity-75">Seules les personnes autorisées</p>
               </div>
             </div>
             
@@ -462,7 +468,7 @@
               <span class="text-green-500 text-xl">🔐</span>
               <div>
                 <strong>Mots de passe sécurisés</strong>
-                <p class="text-sm text-gray-600">Politique stricte de mots de passe</p>
+                <p class="text-sm opacity-75">Politique stricte de mots de passe</p>
               </div>
             </div>
             
@@ -470,7 +476,7 @@
               <span class="text-green-500 text-xl">📊</span>
               <div>
                 <strong>Minimisation des données</strong>
-                <p class="text-sm text-gray-600">Nous ne collectons que le nécessaire</p>
+                <p class="text-sm opacity-75">Nous ne collectons que le nécessaire</p>
               </div>
             </div>
           </div>
@@ -480,16 +486,16 @@
 
     <!-- Section 7 : Propriété intellectuelle -->
     <section class="mb-12">
-      <div class="card bg-white shadow-xl">
+      <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-gray-800">7. Propriété intellectuelle</h2>
+          <h2 class="card-title text-2xl mb-4">7. Propriété intellectuelle</h2>
           
-          <p class="text-gray-700 mb-4">
+          <p class="mb-4">
             L'ensemble du contenu de ce site (textes, images, logos, vidéos, structure) est protégé par le droit d'auteur 
             et appartient à Ludus Mentis ou à ses partenaires.
           </p>
           
-          <p class="text-gray-700">
+          <p>
             Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, 
             quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable.
           </p>
@@ -501,7 +507,7 @@
     <section id="contact" class="mb-12">
       <div class="card gradient-ludus text-white">
         <div class="card-body text-center">
-          <h2 class="text-2xl font-bold mb-4">8. Contact</h2>
+          <h2 class="card-title text-2xl mb-4 mx-auto">8. Contact</h2>
           
           <div class="grid md:grid-cols-2 gap-6">
             <div>
@@ -523,7 +529,7 @@
     </section>
 
     <!-- Dernière mise à jour -->
-    <footer class="text-center text-gray-500 text-sm">
+    <footer class="text-center opacity-50 text-sm">
       <p>Ces mentions légales ont été mises à jour le 10 août 2025.</p>
       <p>Nous nous réservons le droit de les modifier à tout moment.</p>
     </footer>
