@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,26 @@
   <meta property="og:url" content="https://ludusmentis.be/a-propos.html" />
   <meta property="og:title" content="À propos du fondateur | Ludus Mentis" />
   <meta property="og:description" content="Antoine Billard : 20 ans de gaming, une vision éducative." />
+   <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        // Détecte TOUS les cas : système, per-device, forced dark mode
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
   
+  <script src="/assets/js/theme-manager.js"></script>
   <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
