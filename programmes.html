@@ -1,18 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programme et séances | Ludus Mentis</title>
-  <meta name="description" content="Découvrez notre programme : séances de 2h, modules de 7 semaines, méthode structurée. Club gaming éducatif à Walhain.">
+  <title>Programme séances club gaming mercredi | Ludus Mentis</title>
+  <meta name="description" content="Programme structuré : 2h/semaine, modules 7 semaines, mercredi 14h-16h ou 17h-19h. Développement soft skills par gaming coopératif à Walhain.">
   
-  <!-- Open Graph -->
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://ludusmentis.be/programmes.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/programmes.html" />
-  <meta property="og:title" content="Programme structuré | Ludus Mentis" />
-  <meta property="og:description" content="2h par semaine, 7 semaines par module. Une progression mesurable." />
-   <script>
+  <meta property="og:title" content="Programme gaming éducatif mercredi | Walhain" />
+  <meta property="og:description" content="Sessions structurées de 2h avec pauses actives, débriefings et progression mesurable." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-program.jpg" />
+  <meta property="og:locale" content="fr_BE" />
+  
+  <!-- Structured Data Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Sessions Ludus Mentis",
+    "description": "Club gaming éducatif pour adolescents",
+    "startDate": "2026-01-07T14:00",
+    "endDate": "2026-01-07T16:00",
+    "eventSchedule": {
+      "@type": "Schedule",
+      "repeatFrequency": "P1W",
+      "byDay": "Wednesday",
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "scheduleTimezone": "Europe/Brussels"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Walhain",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Walhain",
+        "addressRegion": "Brabant wallon",
+        "addressCountry": "BE"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Ludus Mentis",
+      "url": "https://ludusmentis.be"
+    }
+  }
+  </script>
+
+  <script>
     (function(){
       var saved = localStorage.getItem('theme');
       var theme;
@@ -32,7 +74,8 @@
   </script>
   
   <script src="/assets/js/theme-manager.js"></script>
-  <!-- Consent Mode v2 -->
+  
+  <!-- Consent Mode v2 (AVANT tout script Google) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
