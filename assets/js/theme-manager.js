@@ -392,10 +392,53 @@
         filter: brightness(1.3);
       }
       
-      /* Stats avec gradients */
+      /* Stats avec gradients - amélioration du contraste */
       [data-theme="ludus-dark"] .stat.bg-gradient-to-br {
         background: #242832 !important;
         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      /* Fix spécifique pour les stats santé avec gradients colorés */
+      [data-theme="ludus-dark"] .stat.bg-gradient-to-br[class*="from-teal"] {
+        background: linear-gradient(135deg, rgba(23, 162, 184, 0.2) 0%, rgba(23, 162, 184, 0.1) 100%) !important;
+        border: 2px solid #17a2b8 !important;
+      }
+      
+      [data-theme="ludus-dark"] .stat.bg-gradient-to-br[class*="from-orange"] {
+        background: linear-gradient(135deg, rgba(255, 152, 0, 0.2) 0%, rgba(255, 152, 0, 0.1) 100%) !important;
+        border: 2px solid #ff9800 !important;
+      }
+      
+      [data-theme="ludus-dark"] .stat.bg-gradient-to-br[class*="from-purple"] {
+        background: linear-gradient(135deg, rgba(107, 70, 193, 0.2) 0%, rgba(107, 70, 193, 0.1) 100%) !important;
+        border: 2px solid #6b46c1 !important;
+      }
+      
+      /* Amélioration du texte dans les stats en dark mode */
+      [data-theme="ludus-dark"] .stat .stat-title {
+        color: #f9fafb !important;
+        font-weight: 600;
+      }
+      
+      [data-theme="ludus-dark"] .stat .stat-desc {
+        color: #d1d5db !important;
+        opacity: 0.9;
+      }
+      
+      [data-theme="ludus-dark"] .stat .stat-figure {
+        opacity: 1 !important;
+      }
+      
+      [data-theme="ludus-dark"] .stat.border-ludus-teal .stat-figure {
+        color: #5eead4 !important;
+      }
+      
+      [data-theme="ludus-dark"] .stat.border-ludus-orange .stat-figure {
+        color: #fed7aa !important;
+      }
+      
+      [data-theme="ludus-dark"] .stat.border-ludus-purple .stat-figure {
+        color: #d8b4fe !important;
       }
       
       /* Alert info spéciale */
