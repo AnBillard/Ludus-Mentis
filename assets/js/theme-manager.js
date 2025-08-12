@@ -1,6 +1,6 @@
 // /assets/js/theme-manager.js
 // Gestion centralisée du dark mode pour Ludus Mentis
-// Version améliorée avec meilleur positionnement du toggle
+// Version corrigée avec fixes pour formulaires et couleurs
 
 (function() {
   'use strict';
@@ -122,6 +122,64 @@
         color: #f9fafb !important;
       }
       
+      /* ====================================
+         FIXES CRITIQUES POUR FORMULAIRES
+      ==================================== */
+      
+      /* Inputs et textareas */
+      [data-theme="ludus-dark"] input[type="text"],
+      [data-theme="ludus-dark"] input[type="email"],
+      [data-theme="ludus-dark"] input[type="tel"],
+      [data-theme="ludus-dark"] input[type="password"],
+      [data-theme="ludus-dark"] input[type="number"],
+      [data-theme="ludus-dark"] input[type="date"],
+      [data-theme="ludus-dark"] textarea,
+      [data-theme="ludus-dark"] select {
+        background-color: hsl(220 13% 25%) !important;
+        border-color: hsl(220 13% 35%) !important;
+        color: #e5e7eb !important;
+      }
+      
+      [data-theme="ludus-dark"] input[type="text"]:focus,
+      [data-theme="ludus-dark"] input[type="email"]:focus,
+      [data-theme="ludus-dark"] input[type="tel"]:focus,
+      [data-theme="ludus-dark"] input[type="password"]:focus,
+      [data-theme="ludus-dark"] input[type="number"]:focus,
+      [data-theme="ludus-dark"] input[type="date"]:focus,
+      [data-theme="ludus-dark"] textarea:focus,
+      [data-theme="ludus-dark"] select:focus {
+        border-color: #17a2b8 !important;
+        outline-color: #17a2b8 !important;
+      }
+      
+      /* Checkboxes et radio buttons - FIX CRITIQUE */
+      [data-theme="ludus-dark"] input[type="checkbox"],
+      [data-theme="ludus-dark"] input[type="radio"] {
+        background-color: hsl(220 13% 25%) !important;
+        border-color: hsl(220 13% 45%) !important;
+      }
+      
+      [data-theme="ludus-dark"] input[type="checkbox"]:checked,
+      [data-theme="ludus-dark"] input[type="radio"]:checked {
+        background-color: #17a2b8 !important;
+        border-color: #17a2b8 !important;
+      }
+      
+      [data-theme="ludus-dark"] input[type="checkbox"]:hover,
+      [data-theme="ludus-dark"] input[type="radio"]:hover {
+        border-color: #17a2b8 !important;
+      }
+      
+      /* Labels */
+      [data-theme="ludus-dark"] .label-text {
+        color: #e5e7eb !important;
+      }
+      
+      /* ====================================
+         COULEURS COHÉRENTES
+      ==================================== */
+      
+      /* Couleurs de texte */
       [data-theme="ludus-dark"] .text-gray-800 {
         color: #f3f4f6 !important;
       }
@@ -138,10 +196,67 @@
         color: #9ca3af !important;
       }
       
+      /* Couleurs Ludus */
+      [data-theme="ludus-dark"] .text-ludus-teal {
+        color: #5eead4 !important;
+      }
+      
+      [data-theme="ludus-dark"] .text-ludus-orange {
+        color: #fed7aa !important;
+      }
+      
+      [data-theme="ludus-dark"] .text-ludus-purple {
+        color: #d8b4fe !important;
+      }
+      
+      /* Bordures personnalisées */
+      .border-ludus-teal {
+        border-color: #17a2b8 !important;
+      }
+      
+      .border-ludus-orange {
+        border-color: #ff9800 !important;
+      }
+      
+      .border-ludus-purple {
+        border-color: #6b46c1 !important;
+      }
+      
+      /* Backgrounds légers */
+      .bg-ludus-teal-light {
+        background-color: rgba(23, 162, 184, 0.1);
+      }
+      
+      .bg-ludus-orange-light {
+        background-color: rgba(255, 152, 0, 0.1);
+      }
+      
+      .bg-ludus-purple-light {
+        background-color: rgba(107, 70, 193, 0.1);
+      }
+      
+      [data-theme="ludus-dark"] .bg-ludus-teal-light {
+        background-color: rgba(23, 162, 184, 0.15);
+      }
+      
+      [data-theme="ludus-dark"] .bg-ludus-orange-light {
+        background-color: rgba(255, 152, 0, 0.15);
+      }
+      
+      [data-theme="ludus-dark"] .bg-ludus-purple-light {
+        background-color: rgba(107, 70, 193, 0.15);
+      }
+      
+      /* ====================================
+         COMPOSANTS
+      ==================================== */
+      
+      /* Gradient signature */
       [data-theme="ludus-dark"] .gradient-ludus {
         background: linear-gradient(135deg, #2dd4bf 0%, #fb923c 100%);
       }
       
+      /* Cards */
       [data-theme="ludus-dark"] .card {
         background: #242832;
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -164,18 +279,7 @@
         color: #f9fafb !important;
       }
       
-      [data-theme="ludus-dark"] .text-ludus-teal {
-        color: #5eead4 !important;
-      }
-      
-      [data-theme="ludus-dark"] .text-ludus-orange {
-        color: #fed7aa !important;
-      }
-      
-      [data-theme="ludus-dark"] .text-ludus-purple {
-        color: #d8b4fe !important;
-      }
-      
+      /* Navbar */
       [data-theme="ludus-dark"] .navbar {
         background: rgba(26, 32, 44, 0.95);
         backdrop-filter: blur(10px);
@@ -191,7 +295,46 @@
         color: #4dd0e1;
       }
       
-      /* Style du toggle button amélioré */
+      /* Dropdown menus */
+      [data-theme="ludus-dark"] .dropdown-content {
+        background-color: hsl(220 13% 18%);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      /* Tables */
+      [data-theme="ludus-dark"] table {
+        color: #e5e7eb;
+      }
+      
+      [data-theme="ludus-dark"] th {
+        color: #f3f4f6;
+      }
+      
+      /* Alerts */
+      [data-theme="ludus-dark"] .alert {
+        filter: brightness(1.2);
+      }
+      
+      /* Badges */
+      [data-theme="ludus-dark"] .badge {
+        filter: brightness(1.1);
+      }
+      
+      /* Boutons outline */
+      [data-theme="ludus-dark"] .btn-outline {
+        border-color: rgba(255, 255, 255, 0.3);
+        color: #e5e7eb;
+      }
+      
+      [data-theme="ludus-dark"] .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+      
+      /* ====================================
+         TOGGLE BUTTON
+      ==================================== */
+      
       #${CONFIG.toggleButtonId} {
         margin: 0 0.25rem;
         transition: all 0.3s ease;
@@ -230,50 +373,6 @@
         display: flex;
         align-items: center;
         gap: 0.25rem;
-      }
-      
-      /* Fix pour le menu mobile en dark mode */
-      [data-theme="ludus-dark"] .dropdown-content {
-        background-color: hsl(220 13% 18%);
-        border-color: rgba(255, 255, 255, 0.1);
-      }
-      
-      /* Autres fixes dark mode */
-      [data-theme="ludus-dark"] body {
-        color: #e5e7eb;
-      }
-      
-      [data-theme="ludus-dark"] main p:not([class*="text-"]),
-      [data-theme="ludus-dark"] main span:not([class*="text-"]):not([class*="badge"]),
-      [data-theme="ludus-dark"] main li:not([class*="text-"]),
-      [data-theme="ludus-dark"] main div:not([class*="text-"]) {
-        color: inherit;
-      }
-      
-      [data-theme="ludus-dark"] table {
-        color: #e5e7eb;
-      }
-      
-      [data-theme="ludus-dark"] th {
-        color: #f3f4f6;
-      }
-      
-      [data-theme="ludus-dark"] .alert {
-        filter: brightness(1.2);
-      }
-      
-      [data-theme="ludus-dark"] .badge {
-        filter: brightness(1.1);
-      }
-      
-      [data-theme="ludus-dark"] .btn-outline {
-        border-color: rgba(255, 255, 255, 0.3);
-        color: #e5e7eb;
-      }
-      
-      [data-theme="ludus-dark"] .btn-outline:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.5);
       }
     `;
     
@@ -345,7 +444,7 @@
     const navbarEnd = document.querySelector('.navbar-end');
     if (navbarEnd) {
       // Chercher le bouton CTA desktop
-      const ctaDesktop = navbarEnd.querySelector('a[href="/contact.html"].hidden.lg\\:flex');
+      const ctaDesktop = navbarEnd.querySelector('a[href="/contact.html"].hidden.lg\\:flex, a[href="/contact.html"].hidden.xl\\:flex');
       
       if (ctaDesktop) {
         // Insérer APRÈS le CTA (avant le dropdown mobile)
