@@ -120,7 +120,6 @@
       background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
     }
     
-    /* Animation pour le message de succès */
     @keyframes slideInDown {
       from {
         transform: translateY(-100%);
@@ -162,7 +161,7 @@
       <h1 class="text-4xl lg:text-5xl font-bold mb-4">
         Rejoignez Ludus Mentis
       </h1>
-      <p class="text-lg text-gray-600">
+      <p class="text-lg opacity-75">
         Préinscription pour janvier 2026 • Places limitées
       </p>
       <div class="flex gap-3 justify-center mt-4">
@@ -183,7 +182,7 @@
             
             <form id="contactForm" class="space-y-6">
               <!-- Infos du jeune -->
-              <div class="border-2 border-teal-200 rounded-lg p-4">
+              <div class="border-2 border-ludus-teal rounded-lg p-4 bg-ludus-teal-light">
                 <h3 class="font-bold mb-3 text-ludus-teal">Votre enfant</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
@@ -214,7 +213,7 @@
               </div>
               
               <!-- Infos parent -->
-              <div class="border-2 border-orange-200 rounded-lg p-4">
+              <div class="border-2 border-ludus-orange rounded-lg p-4 bg-ludus-orange-light">
                 <h3 class="font-bold mb-3 text-ludus-orange">Responsable légal</h3>
                 
                 <div class="grid md:grid-cols-2 gap-4">
@@ -282,7 +281,7 @@
               <div class="alert alert-info">
                 <label class="cursor-pointer flex items-start gap-3">
                   <input type="checkbox" name="rgpd_consent" value="oui" required 
-                         class="checkbox checkbox-primary mt-1" />
+                         class="checkbox checkbox-primary mt-1 flex-shrink-0" />
                   <span class="text-sm">
                     J'accepte que mes données soient traitées pour cette préinscription 
                     (conservation jusqu'à janvier 2026). *
