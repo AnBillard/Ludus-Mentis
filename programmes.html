@@ -123,6 +123,36 @@
     .gradient-ludus {
       background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
     }
+    
+    /* Badges personnalisés dans le thème Ludus */
+    .badge-ludus-teal {
+      background-color: #17a2b8;
+      color: white;
+      border: none;
+    }
+    
+    .badge-ludus-orange {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+    }
+    
+    .badge-ludus-purple {
+      background-color: #6b46c1;
+      color: white;
+      border: none;
+    }
+    
+    /* Cards dans le thème */
+    .card-ludus-teal {
+      background: linear-gradient(135deg, rgba(23, 162, 184, 0.1) 0%, rgba(23, 162, 184, 0.05) 100%);
+      border: 2px solid #17a2b8;
+    }
+    
+    .card-ludus-orange {
+      background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
+      border: 2px solid #ff9800;
+    }
   </style>
 </head>
 <body>
@@ -133,24 +163,24 @@
   <div id="header"></div>
   
   <main class="container mx-auto px-4 py-8 max-w-6xl">
-    <!-- Hero -->
-   <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
-  <div class="text-center max-w-4xl mx-auto">
-    <h1 class="text-4xl lg:text-5xl font-bold mb-6">
-      Un programme structuré et progressif
-    </h1>
-    <p class="text-xl mb-6 opacity-95">
-      Modules alignés sur le calendrier scolaire de la Communauté française
-    </p>
-    <div class="flex flex-wrap gap-4 justify-center">
-      <div class="badge badge-lg bg-white/20 text-white border-0">7 semaines/module</div>
-      <div class="badge badge-lg bg-white/20 text-white border-0">2h/semaine</div>
-      <div class="badge badge-lg bg-white/20 text-white border-0">8-10 participants</div>
-    </div>
-  </div>
-</section>
+    <!-- Hero harmonisée -->
+    <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+          Un programme structuré et progressif
+        </h1>
+        <p class="text-xl mb-6 opacity-95">
+          Modules alignés sur le calendrier scolaire de la Communauté française
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <div class="badge badge-lg bg-white/20 text-white border-0">7 semaines/module</div>
+          <div class="badge badge-lg bg-white/20 text-white border-0">2h/semaine</div>
+          <div class="badge badge-lg bg-white/20 text-white border-0">8-10 participants</div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Une séance type -->
+    <!-- Une séance type - VERSION HARMONISÉE -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
         Le déroulé d'une séance (2h)
@@ -158,14 +188,14 @@
       
       <div class="max-w-4xl mx-auto">
         <div class="grid md:grid-cols-2 gap-6">
-          <!-- Première heure -->
-          <div class="card bg-base-100 border-2 border-primary">
+          <!-- Première heure - Thème Ludus Teal -->
+          <div class="card card-ludus-teal">
             <div class="card-body">
-              <h3 class="card-title text-primary mb-4">⏰ Première heure</h3>
+              <h3 class="card-title text-ludus-teal mb-4">⏰ Première heure</h3>
               
               <div class="space-y-3">
                 <div class="flex gap-3">
-                  <div class="badge badge-primary badge-lg">10'</div>
+                  <div class="badge badge-ludus-teal badge-lg">10'</div>
                   <div>
                     <strong>Accueil & échauffement</strong>
                     <p class="text-sm opacity-75">Check-in, exercices de préparation</p>
@@ -173,7 +203,7 @@
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="badge badge-primary badge-lg">25'</div>
+                  <div class="badge badge-ludus-teal badge-lg">25'</div>
                   <div>
                     <strong>Session de jeu #1</strong>
                     <p class="text-sm opacity-75">Découverte, expérimentation</p>
@@ -181,7 +211,7 @@
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="badge badge-primary badge-lg">20'</div>
+                  <div class="badge badge-ludus-teal badge-lg">20'</div>
                   <div>
                     <strong>Débrief collectif</strong>
                     <p class="text-sm opacity-75">Qu'est-ce qui a marché/coincé ?</p>
@@ -191,14 +221,14 @@
             </div>
           </div>
           
-          <!-- Deuxième heure -->
-          <div class="card bg-base-100 border-2 border-secondary">
+          <!-- Deuxième heure - Thème Ludus Orange -->
+          <div class="card card-ludus-orange">
             <div class="card-body">
-              <h3 class="card-title text-secondary mb-4">⏰ Deuxième heure</h3>
+              <h3 class="card-title text-ludus-orange mb-4">⏰ Deuxième heure</h3>
               
               <div class="space-y-3">
                 <div class="flex gap-3">
-                  <div class="badge badge-secondary badge-lg">10'</div>
+                  <div class="badge badge-ludus-orange badge-lg">10'</div>
                   <div>
                     <strong>Stratégie collective</strong>
                     <p class="text-sm opacity-75">Plan d'action défini ensemble</p>
@@ -206,7 +236,7 @@
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="badge badge-secondary badge-lg">25'</div>
+                  <div class="badge badge-ludus-orange badge-lg">25'</div>
                   <div>
                     <strong>Session de jeu #2</strong>
                     <p class="text-sm opacity-75">Application de la stratégie</p>
@@ -214,7 +244,7 @@
                 </div>
                 
                 <div class="flex gap-3">
-                  <div class="badge badge-success badge-lg">20'</div>
+                  <div class="badge badge-ludus-purple badge-lg">20'</div>
                   <div>
                     <strong>Pause active + Cooldown</strong>
                     <p class="text-sm opacity-75">Retour au calme, valorisation</p>
@@ -227,7 +257,7 @@
         
         <!-- Routines spéciales -->
         <div class="mt-6">
-          <div class="alert alert-info">
+          <div class="alert border-2 border-ludus-teal bg-teal-50 text-ludus-teal">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
@@ -240,7 +270,7 @@
       </div>
     </section>
 
-    <!-- Progression sur 7 semaines -->
+    <!-- Progression sur 7 semaines - VERSION HARMONISÉE -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
         Les 7 semaines d'un module
@@ -248,70 +278,77 @@
       
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-7 gap-2">
+          <!-- Semaine 1 - Teal -->
           <div class="text-center">
-            <div class="card bg-blue-100">
+            <div class="card bg-gradient-to-br from-teal-100 to-teal-50 border-2 border-ludus-teal">
               <div class="card-body compact p-4">
-                <div class="font-bold text-blue-700">S1</div>
+                <div class="font-bold text-ludus-teal">S1</div>
                 <div class="text-2xl my-2">🤝</div>
                 <p class="text-xs">Cohésion</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 2 - Orange -->
           <div class="text-center">
-            <div class="card bg-green-100">
+            <div class="card bg-gradient-to-br from-orange-100 to-orange-50 border-2 border-ludus-orange">
               <div class="card-body compact p-4">
-                <div class="font-bold text-green-700">S2</div>
+                <div class="font-bold text-ludus-orange">S2</div>
                 <div class="text-2xl my-2">💬</div>
                 <p class="text-xs">Communication</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 3 - Purple -->
           <div class="text-center">
-            <div class="card bg-purple-100">
+            <div class="card bg-gradient-to-br from-purple-100 to-purple-50 border-2 border-ludus-purple">
               <div class="card-body compact p-4">
-                <div class="font-bold text-purple-700">S3</div>
+                <div class="font-bold text-ludus-purple">S3</div>
                 <div class="text-2xl my-2">🎯</div>
                 <p class="text-xs">Coordination</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 4 - Teal -->
           <div class="text-center">
-            <div class="card bg-orange-100">
+            <div class="card bg-gradient-to-br from-teal-100 to-teal-50 border-2 border-ludus-teal">
               <div class="card-body compact p-4">
-                <div class="font-bold text-orange-700">S4</div>
+                <div class="font-bold text-ludus-teal">S4</div>
                 <div class="text-2xl my-2">🧠</div>
                 <p class="text-xs">Stratégie</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 5 - Orange -->
           <div class="text-center">
-            <div class="card bg-red-100">
+            <div class="card bg-gradient-to-br from-orange-100 to-orange-50 border-2 border-ludus-orange">
               <div class="card-body compact p-4">
-                <div class="font-bold text-red-700">S5</div>
+                <div class="font-bold text-ludus-orange">S5</div>
                 <div class="text-2xl my-2">😰</div>
                 <p class="text-xs">Gestion stress</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 6 - Purple -->
           <div class="text-center">
-            <div class="card bg-indigo-100">
+            <div class="card bg-gradient-to-br from-purple-100 to-purple-50 border-2 border-ludus-purple">
               <div class="card-body compact p-4">
-                <div class="font-bold text-indigo-700">S6</div>
+                <div class="font-bold text-ludus-purple">S6</div>
                 <div class="text-2xl my-2">👑</div>
                 <p class="text-xs">Leadership</p>
               </div>
             </div>
           </div>
           
+          <!-- Semaine 7 - Gradient special -->
           <div class="text-center">
-            <div class="card bg-yellow-100">
+            <div class="card gradient-ludus text-white">
               <div class="card-body compact p-4">
-                <div class="font-bold text-yellow-700">S7</div>
+                <div class="font-bold">S7</div>
                 <div class="text-2xl my-2">🎉</div>
                 <p class="text-xs">Célébration</p>
               </div>
@@ -327,18 +364,18 @@
       </div>
     </section>
 
-    <!-- Ce qu'on retient -->
+    <!-- Ce qu'on retient - VERSION HARMONISÉE -->
     <section class="mb-12">
-      <div class="card bg-success/10 border-2 border-success">
+      <div class="card bg-gradient-to-br from-teal-50 to-orange-50 border-2 border-ludus-teal">
         <div class="card-body">
-          <h2 class="card-title text-3xl mx-auto mb-8 text-success">
+          <h2 class="card-title text-3xl mx-auto mb-8 text-ludus-teal">
             Ce qu'on retient après un module
           </h2>
           
           <div class="grid md:grid-cols-3 gap-6 text-center">
             <div>
               <div class="text-4xl mb-3">💬</div>
-              <h3 class="font-bold text-green-700">Communication claire</h3>
+              <h3 class="font-bold text-ludus-teal">Communication claire</h3>
               <p class="text-sm opacity-75">
                 Messages courts et précis, écoute active
               </p>
@@ -346,7 +383,7 @@
             
             <div>
               <div class="text-4xl mb-3">🤝</div>
-              <h3 class="font-bold text-green-700">Esprit d'équipe</h3>
+              <h3 class="font-bold text-ludus-orange">Esprit d'équipe</h3>
               <p class="text-sm opacity-75">
                 Entraide spontanée, célébration collective
               </p>
@@ -354,14 +391,14 @@
             
             <div>
               <div class="text-4xl mb-3">🧘</div>
-              <h3 class="font-bold text-green-700">Gestion émotionnelle</h3>
+              <h3 class="font-bold text-ludus-purple">Gestion émotionnelle</h3>
               <p class="text-sm opacity-75">
                 Calme sous pression, rebond après échec
               </p>
             </div>
           </div>
           
-          <div class="alert alert-info mt-6">
+          <div class="alert border-2 border-ludus-orange bg-orange-50 text-ludus-orange mt-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
@@ -371,39 +408,39 @@
       </div>
     </section>
 
-    <!-- Protocoles santé -->
+    <!-- Protocoles santé - VERSION HARMONISÉE -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-center mb-6">
         🏥 Notre attention santé
       </h2>
       
       <div class="grid md:grid-cols-4 gap-4">
-        <div class="stat bg-base-100 shadow text-center rounded-box">
-          <div class="stat-figure text-primary">
+        <div class="stat bg-gradient-to-br from-teal-50 to-white shadow text-center rounded-box border border-ludus-teal">
+          <div class="stat-figure text-ludus-teal">
             <div class="text-3xl">👀</div>
           </div>
           <div class="stat-title">Règle 20-20-20</div>
           <div class="stat-desc text-xs">Pause visuelle régulière</div>
         </div>
         
-        <div class="stat bg-base-100 shadow text-center rounded-box">
-          <div class="stat-figure text-secondary">
+        <div class="stat bg-gradient-to-br from-orange-50 to-white shadow text-center rounded-box border border-ludus-orange">
+          <div class="stat-figure text-ludus-orange">
             <div class="text-3xl">⚡</div>
           </div>
           <div class="stat-title">Pauses actives</div>
           <div class="stat-desc text-xs">20 min hors écran</div>
         </div>
         
-        <div class="stat bg-base-100 shadow text-center rounded-box">
-          <div class="stat-figure text-accent">
+        <div class="stat bg-gradient-to-br from-purple-50 to-white shadow text-center rounded-box border border-ludus-purple">
+          <div class="stat-figure text-ludus-purple">
             <div class="text-3xl">💧</div>
           </div>
           <div class="stat-title">Hydratation</div>
           <div class="stat-desc text-xs">Boissons fournies</div>
         </div>
         
-        <div class="stat bg-base-100 shadow text-center rounded-box">
-          <div class="stat-figure text-info">
+        <div class="stat bg-gradient-to-br from-teal-50 to-white shadow text-center rounded-box border border-ludus-teal">
+          <div class="stat-figure text-ludus-teal">
             <div class="text-3xl">🧘</div>
           </div>
           <div class="stat-title">Respiration</div>
@@ -412,7 +449,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA - Reste identique -->
     <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-4">
         Un programme qui fait progresser
