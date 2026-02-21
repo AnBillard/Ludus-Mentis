@@ -62,7 +62,6 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Configuration Tailwind (nécessaire pour les couleurs custom) -->
   <script>
     tailwind.config = {
       theme: {
@@ -79,7 +78,6 @@
   
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
   
-  <!-- Style minimal : juste le gradient signature -->
   <style>
     .gradient-ludus {
       background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
@@ -94,45 +92,56 @@
   <div id="header"></div>
   
   <main class="container mx-auto px-4 py-8">
-    <!-- Hero Section simplifié -->
-   <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
-    <div class="text-center max-w-4xl mx-auto">
+
+    <!-- Bandeau "on a démarré" -->
+    <div class="alert alert-success mb-6 max-w-4xl mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>
+        <strong>Premières séances terminées !</strong> Le prochain module démarre le <strong>mercredi 4 mars 2026</strong>.
+        <a href="/infos-pratiques.html" class="underline ml-1">Voir les détails →</a>
+      </span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
+      <div class="text-center max-w-4xl mx-auto">
         <img src="/assets/images/Ludus-Mentis-transparent.png" alt="Ludus Mentis ®" class="w-32 h-32 mx-auto mb-6">
         
         <h1 class="text-4xl lg:text-6xl font-bold mb-6">
-            Le club où les gamers<br>deviennent une vraie team
+          Le club où les gamers<br>deviennent une vraie team
         </h1>
         
         <p class="text-xl lg:text-2xl mb-8 opacity-95">
-            <strong>2h par semaine</strong> • <strong>100% coop</strong> • <strong>8-10 joueurs</strong><br>
-            Un cadre qui transforme ta passion en skills utiles
+          <strong>2h par semaine</strong> • <strong>100% coop</strong> • <strong>Petit groupe</strong><br>
+          Un cadre qui transforme ta passion en skills utiles
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/notre-approche.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
-                Découvrir le concept
-            </a>
-            <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
-                Rejoindre le club
-            </a>
+          <a href="/notre-approche.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
+            Découvrir le concept
+          </a>
+          <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+            S'inscrire pour mars
+          </a>
         </div>
         
         <div class="flex flex-wrap gap-3 justify-center mt-8">
-            <span class="badge badge-lg bg-white/20 text-white border-0">10-15 ans</span>
-            <span class="badge badge-lg bg-white/20 text-white border-0">Walhain</span>
-            <span class="badge badge-lg bg-white/20 text-white border-0">Jan. 2026</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">10-15 ans</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">Walhain</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">130€ — tarif de lancement</span>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-    <!-- 3 piliers - Simplification avec DaisyUI cards -->
+    <!-- 3 piliers -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
         Notre différence en 3 points
       </h2>
       
       <div class="grid md:grid-cols-3 gap-6">
-        <!-- Pilier 1 - Card DaisyUI pure -->
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body items-center text-center">
             <div class="text-5xl mb-4">🏠</div>
@@ -141,7 +150,6 @@
           </div>
         </div>
         
-        <!-- Pilier 2 -->
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body items-center text-center">
             <div class="text-5xl mb-4">🤝</div>
@@ -150,18 +158,51 @@
           </div>
         </div>
         
-        <!-- Pilier 3 -->
         <div class="card bg-base-100 shadow-xl">
           <div class="card-body items-center text-center">
             <div class="text-5xl mb-4">📊</div>
             <h3 class="card-title text-ludus-purple">Cadre structuré</h3>
-            <p>Méthode pédagogique validée, pauses actives, développement de compétences observables.</p>
+            <p>Méthode pédagogique, pauses actives, petit groupe. On prend le temps de bien faire les choses.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pour qui - Version plus inclusive -->
+    <!-- Ce qu'on a appris sur le terrain -->
+    <section class="mb-12">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mx-auto mb-4 text-ludus-teal">
+            🎮 Ce que les premières séances nous ont appris
+          </h2>
+          <p class="mb-4">
+            Entre mi-janvier et mi-février, nous avons mené nos premières séances avec un petit groupe 
+            d'enfants à Walhain. Quelques observations concrètes, sans filtre :
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">💬</span>
+              <p><strong>Keep Talking and Nobody Explodes</strong> a été le jeu révélateur. Désamorcer 4 bombes ensemble en quelques séances, pour des débutants, c'est une vraie performance qui demande une écoute totale.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">🏃</span>
+              <p><strong>Les pauses actives ont surpris tout le monde</strong>, à commencer par nous. Quand on leur laissait le choix entre continuer à bouger ou retourner aux jeux vidéo, les enfants choisissaient de continuer à bouger.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">🌱</span>
+              <p><strong>Le petit groupe, c'est une force.</strong> Chaque enfant a sa place, la dynamique est plus facile à gérer, et les liens se créent plus vite qu'on ne le pensait.</p>
+            </li>
+          </ul>
+          <div class="mt-4">
+            <a href="/journal.html" class="btn btn-outline btn-primary btn-sm">
+              Lire le journal complet des séances →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pour qui -->
     <section class="mb-12">
       <div class="card bg-base-200">
         <div class="card-body">
@@ -186,7 +227,7 @@
               <ul class="space-y-2">
                 <li>→ Notre approche est 100% coopérative (pas de compétition)</li>
                 <li>→ Sessions limitées à 2h/semaine (cadre structuré)</li>
-                <li>→ Groupes de 8-10 jeunes (interaction sociale requise)</li>
+                <li>→ Petit groupe (interaction sociale requise)</li>
                 <li>→ Jeux adaptés PEGI ≤12 (pas de FPS ou jeux violents)</li>
                 <li>→ Club de loisir éducatif (pas un centre thérapeutique)</li>
               </ul>
@@ -206,7 +247,7 @@
       </div>
     </section>
 
-    <!-- Compétences - Utilisation de stats DaisyUI -->
+    <!-- Compétences -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
         Ce qu'on retient de chaque séance
@@ -214,40 +255,32 @@
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="stat bg-base-100 shadow rounded-box">
-          <div class="stat-figure text-primary">
-            <div class="text-4xl">💬</div>
-          </div>
+          <div class="stat-figure text-primary"><div class="text-4xl">💬</div></div>
           <div class="stat-title">Communication</div>
           <div class="stat-desc">Messages clairs et écoute active</div>
         </div>
         
         <div class="stat bg-base-100 shadow rounded-box">
-          <div class="stat-figure text-secondary">
-            <div class="text-4xl">🧘</div>
-          </div>
+          <div class="stat-figure text-secondary"><div class="text-4xl">🧘</div></div>
           <div class="stat-title">Gestion du stress</div>
           <div class="stat-desc">Calme sous pression</div>
         </div>
         
         <div class="stat bg-base-100 shadow rounded-box">
-          <div class="stat-figure text-accent">
-            <div class="text-4xl">🤝</div>
-          </div>
+          <div class="stat-figure text-accent"><div class="text-4xl">🤝</div></div>
           <div class="stat-title">Coopération</div>
           <div class="stat-desc">Entraide spontanée</div>
         </div>
         
         <div class="stat bg-base-100 shadow rounded-box">
-          <div class="stat-figure text-success">
-            <div class="text-4xl">🎯</div>
-          </div>
+          <div class="stat-figure text-success"><div class="text-4xl">🎯</div></div>
           <div class="stat-title">Stratégie</div>
           <div class="stat-desc">Planification collective</div>
         </div>
       </div>
     </section>
 
-    <!-- Témoignage - Card DaisyUI avec gradient -->
+    <!-- Citation fondateur -->
     <section class="mb-12">
       <div class="card gradient-ludus text-white">
         <div class="card-body items-center text-center">
@@ -276,20 +309,20 @@
       </div>
     </section>
 
-    <!-- Infos pratiques - Utilisation de cards simples -->
+    <!-- Infos pratiques -->
     <section class="mb-12">
       <div class="grid md:grid-cols-3 gap-6">
         <div class="card bg-base-100 shadow">
           <div class="card-body items-center text-center">
-            <h3 class="card-title text-ludus-orange">📅 Quand ?</h3>
-            <p>Mercredi après-midi<br>14h-16h ou 17h-19h</p>
+            <h3 class="card-title text-ludus-orange">📅 Prochain module</h3>
+            <p>4 mars → 22 avril 2026<br>8 mercredis</p>
           </div>
         </div>
         
         <div class="card bg-base-100 shadow">
           <div class="card-body items-center text-center">
-            <h3 class="card-title text-ludus-teal">💰 Combien ?</h3>
-            <p>230€ / module 7 semaines<br>Tout compris</p>
+            <h3 class="card-title text-ludus-teal">💰 Tarif de lancement</h3>
+            <p>130€ / module<br>Tout compris</p>
           </div>
         </div>
         
@@ -305,14 +338,14 @@
     <!-- CTA Final -->
     <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-4">
-        Prêt à transformer le gaming en opportunité éducative ?
+        Le prochain module démarre le 4 mars
       </h2>
       <p class="text-xl mb-8 opacity-95">
-        Places limitées • Ouverture janvier 2026 • Préinscriptions ouvertes
+        Places limitées • 130€ tarif de lancement • Inscriptions ouvertes
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
-          Préinscrire mon enfant
+          Inscrire mon enfant
         </a>
         <a href="/infos-pratiques.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-teal">
           J'ai des questions
@@ -320,14 +353,13 @@
       </div>
       
       <p class="text-sm opacity-75 mt-6">
-        ASBL Ludus Mentis ® • Marque déposée • Contact : info@ludusmentis.be
+        ASBL Ludus Mentis ® • Contact : info@ludusmentis.be
       </p>
     </section>
   </main>
   
   <div id="footer"></div>
   
-  <!-- Tarteaucitron pour cookies RGPD -->
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({

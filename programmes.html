@@ -4,30 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programme séances club gaming mercredi | Ludus Mentis</title>
-  <meta name="description" content="Programme structuré : 2h/semaine, modules 7 semaines, mercredi 14h-16h ou 17h-19h. Développement soft skills par gaming coopératif à Walhain.">
+  <meta name="description" content="Programme structuré : 2h/semaine, modules 8 séances, mercredi 14h-16h ou 17h-19h. Développement soft skills par gaming coopératif à Walhain.">
   
-  <!-- Canonical et indexation -->
   <link rel="canonical" href="https://ludusmentis.be/programmes.html" />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/programmes.html" />
   <meta property="og:title" content="Programme gaming éducatif mercredi | Walhain" />
   <meta property="og:description" content="Sessions structurées de 2h avec pauses actives, débriefings et progression mesurable." />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-program.jpg" />
   <meta property="og:locale" content="fr_BE" />
   
-  <!-- Structured Data Event -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Sessions Ludus Mentis",
     "description": "Club gaming éducatif pour adolescents",
-    "startDate": "2026-01-07T14:00",
-    "endDate": "2026-01-07T16:00",
+    "startDate": "2026-03-04T14:00",
+    "endDate": "2026-03-04T16:00",
     "eventSchedule": {
       "@type": "Schedule",
       "repeatFrequency": "P1W",
@@ -54,19 +50,13 @@
   }
   </script>
 
-  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
       var theme;
-      if (saved) {
-        theme = saved;
-      } else {
-        try {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
-        } catch(e) {
-          theme = 'light';
-        }
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
       }
       document.documentElement.setAttribute('data-theme', theme);
       if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
@@ -75,95 +65,54 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted',
-      'wait_for_update': 500
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
     });
   </script>
   
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
   
-  <!-- DaisyUI + Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'ludus-teal': '#17a2b8',
-            'ludus-orange': '#ff9800',
-            'ludus-purple': '#6b46c1'
-          }
-        }
-      }
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
+      }}}
     }
   </script>
-  
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
-  
   <style>
-    .gradient-ludus {
-      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
+    .badge-ludus-teal { background-color: #17a2b8; color: white; border: none; }
+    .badge-ludus-orange { background-color: #ff9800; color: white; border: none; }
+    .badge-ludus-purple { background-color: #6b46c1; color: white; border: none; }
+    .card-ludus-teal { background: linear-gradient(135deg, rgba(23, 162, 184, 0.1) 0%, rgba(23, 162, 184, 0.05) 100%); border: 2px solid #17a2b8; }
+    .card-ludus-orange { background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%); border: 2px solid #ff9800; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-    
-    /* Badges personnalisés dans le thème Ludus */
-    .badge-ludus-teal {
-      background-color: #17a2b8;
-      color: white;
-      border: none;
-    }
-    
-    .badge-ludus-orange {
-      background-color: #ff9800;
-      color: white;
-      border: none;
-    }
-    
-    .badge-ludus-purple {
-      background-color: #6b46c1;
-      color: white;
-      border: none;
-    }
-    
-    /* Cards dans le thème */
-    .card-ludus-teal {
-      background: linear-gradient(135deg, rgba(23, 162, 184, 0.1) 0%, rgba(23, 162, 184, 0.05) 100%);
-      border: 2px solid #17a2b8;
-    }
-    
-    .card-ludus-orange {
-      background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
-      border: 2px solid #ff9800;
-    }
+    .float-animation { animation: float 3s ease-in-out infinite; }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div id="header"></div>
   
   <main class="container mx-auto px-4 py-8 max-w-6xl">
-    <!-- Hero harmonisée -->
+    <!-- Hero -->
     <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
       <div class="text-center max-w-4xl mx-auto">
         <h1 class="text-4xl lg:text-5xl font-bold mb-6">
@@ -173,14 +122,14 @@
           Modules alignés sur le calendrier scolaire de la Communauté française
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
-          <div class="badge badge-lg bg-white/20 text-white border-0">7 semaines/module</div>
+          <div class="badge badge-lg bg-white/20 text-white border-0">8 séances/module</div>
           <div class="badge badge-lg bg-white/20 text-white border-0">2h/semaine</div>
-          <div class="badge badge-lg bg-white/20 text-white border-0">8-10 participants</div>
+          <div class="badge badge-lg bg-white/20 text-white border-0">Petit groupe</div>
         </div>
       </div>
     </section>
 
-    <!-- Une séance type - VERSION HARMONISÉE -->
+    <!-- Une séance type -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
         Le déroulé d'une séance (2h)
@@ -188,20 +137,18 @@
       
       <div class="max-w-4xl mx-auto">
         <div class="grid md:grid-cols-2 gap-6">
-          <!-- Première heure - Thème Ludus Teal -->
+          <!-- Première heure -->
           <div class="card card-ludus-teal">
             <div class="card-body">
               <h3 class="card-title text-ludus-teal mb-4">⏰ Première heure</h3>
-              
               <div class="space-y-3">
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-teal badge-lg">10'</div>
                   <div>
-                    <strong>Accueil & échauffement</strong>
-                    <p class="text-sm opacity-75">Check-in, exercices de préparation</p>
+                    <strong>Accueil & rituel d'entrée</strong>
+                    <p class="text-sm opacity-75">Tour de table, comment on arrive</p>
                   </div>
                 </div>
-                
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-teal badge-lg">25'</div>
                   <div>
@@ -209,23 +156,21 @@
                     <p class="text-sm opacity-75">Découverte, expérimentation</p>
                   </div>
                 </div>
-                
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-teal badge-lg">20'</div>
                   <div>
                     <strong>Débrief collectif</strong>
-                    <p class="text-sm opacity-75">Qu'est-ce qui a marché/coincé ?</p>
+                    <p class="text-sm opacity-75">Qu'est-ce qui a marché / coincé ?</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          <!-- Deuxième heure - Thème Ludus Orange -->
+          <!-- Deuxième heure -->
           <div class="card card-ludus-orange">
             <div class="card-body">
               <h3 class="card-title text-ludus-orange mb-4">⏰ Deuxième heure</h3>
-              
               <div class="space-y-3">
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-orange badge-lg">10'</div>
@@ -234,7 +179,6 @@
                     <p class="text-sm opacity-75">Plan d'action défini ensemble</p>
                   </div>
                 </div>
-                
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-orange badge-lg">25'</div>
                   <div>
@@ -242,12 +186,11 @@
                     <p class="text-sm opacity-75">Application de la stratégie</p>
                   </div>
                 </div>
-                
                 <div class="flex gap-3">
                   <div class="badge badge-ludus-purple badge-lg">20'</div>
                   <div>
                     <strong>Pause active + Cooldown</strong>
-                    <p class="text-sm opacity-75">Retour au calme, valorisation</p>
+                    <p class="text-sm opacity-75">Mouvement, retour au calme, valorisation</p>
                   </div>
                 </div>
               </div>
@@ -255,102 +198,97 @@
           </div>
         </div>
         
-        <!-- Routines spéciales -->
         <div class="mt-6">
           <div class="alert border-2 border-ludus-teal bg-teal-50 text-ludus-teal">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <div>
-              <strong>Routines systématiques :</strong> Échauffement mental et physique, pauses actives toutes les 45 min, 
-              exercices de cooldown. Une boîte à outils complète transmise aux parents pour la maison !
+              <strong>Ce qu'on a confirmé sur le terrain :</strong> Lors du premier module, les enfants ont spontanément choisi de prolonger les pauses actives plutôt que de retourner aux manettes.
+              <a href="/journal.html" class="underline ml-1">Lire le journal →</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Progression sur 7 semaines - VERSION HARMONISÉE -->
+    <!-- Progression sur 8 séances -->
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-center mb-8">
-        Les 7 semaines d'un module
+        Les 8 séances d'un module
       </h2>
       
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-7 gap-2">
-          <!-- Semaine 1 - Teal -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2">
           <div class="text-center">
             <div class="card bg-gradient-to-br from-teal-100 to-teal-50 border-2 border-ludus-teal">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-teal">S1</div>
-                <div class="text-2xl my-2">🤝</div>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-teal text-sm">S1</div>
+                <div class="text-xl my-1">🤝</div>
                 <p class="text-xs">Cohésion</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 2 - Orange -->
           <div class="text-center">
             <div class="card bg-gradient-to-br from-orange-100 to-orange-50 border-2 border-ludus-orange">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-orange">S2</div>
-                <div class="text-2xl my-2">💬</div>
-                <p class="text-xs">Communication</p>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-orange text-sm">S2</div>
+                <div class="text-xl my-1">💬</div>
+                <p class="text-xs">Communi&shy;cation</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 3 - Purple -->
           <div class="text-center">
             <div class="card bg-gradient-to-br from-purple-100 to-purple-50 border-2 border-ludus-purple">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-purple">S3</div>
-                <div class="text-2xl my-2">🎯</div>
-                <p class="text-xs">Coordination</p>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-purple text-sm">S3</div>
+                <div class="text-xl my-1">🎯</div>
+                <p class="text-xs">Coordi&shy;nation</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 4 - Teal -->
           <div class="text-center">
             <div class="card bg-gradient-to-br from-teal-100 to-teal-50 border-2 border-ludus-teal">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-teal">S4</div>
-                <div class="text-2xl my-2">🧠</div>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-teal text-sm">S4</div>
+                <div class="text-xl my-1">🧠</div>
                 <p class="text-xs">Stratégie</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 5 - Orange -->
           <div class="text-center">
             <div class="card bg-gradient-to-br from-orange-100 to-orange-50 border-2 border-ludus-orange">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-orange">S5</div>
-                <div class="text-2xl my-2">😰</div>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-orange text-sm">S5</div>
+                <div class="text-xl my-1">😰</div>
                 <p class="text-xs">Gestion stress</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 6 - Purple -->
           <div class="text-center">
             <div class="card bg-gradient-to-br from-purple-100 to-purple-50 border-2 border-ludus-purple">
-              <div class="card-body compact p-4">
-                <div class="font-bold text-ludus-purple">S6</div>
-                <div class="text-2xl my-2">👑</div>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-purple text-sm">S6</div>
+                <div class="text-xl my-1">👑</div>
                 <p class="text-xs">Leadership</p>
               </div>
             </div>
           </div>
-          
-          <!-- Semaine 7 - Gradient special -->
+          <div class="text-center">
+            <div class="card bg-gradient-to-br from-teal-100 to-teal-50 border-2 border-ludus-teal">
+              <div class="card-body compact p-3">
+                <div class="font-bold text-ludus-teal text-sm">S7</div>
+                <div class="text-xl my-1">🔄</div>
+                <p class="text-xs">Consolida&shy;tion</p>
+              </div>
+            </div>
+          </div>
           <div class="text-center">
             <div class="card gradient-ludus text-white">
-              <div class="card-body compact p-4">
-                <div class="font-bold">S7</div>
-                <div class="text-2xl my-2">🎉</div>
-                <p class="text-xs">Célébration</p>
+              <div class="card-body compact p-3">
+                <div class="font-bold text-sm">S8</div>
+                <div class="text-xl my-1">🎉</div>
+                <p class="text-xs">Bilan & suite</p>
               </div>
             </div>
           </div>
@@ -358,13 +296,13 @@
         
         <div class="mt-6 text-center">
           <p class="opacity-75">
-            Chaque semaine cible une compétence spécifique avec des jeux adaptés
+            Chaque séance cible une compétence spécifique avec des jeux adaptés
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Ce qu'on retient - VERSION HARMONISÉE -->
+    <!-- Ce qu'on retient -->
     <section class="mb-12">
       <div class="card bg-gradient-to-br from-teal-50 to-orange-50 border-2 border-ludus-teal">
         <div class="card-body">
@@ -376,32 +314,24 @@
             <div>
               <div class="text-4xl mb-3">💬</div>
               <h3 class="font-bold text-ludus-teal">Communication claire</h3>
-              <p class="text-sm opacity-75">
-                Messages courts et précis, écoute active
-              </p>
+              <p class="text-sm opacity-75">Messages courts et précis, écoute active</p>
             </div>
-            
             <div>
               <div class="text-4xl mb-3">🤝</div>
               <h3 class="font-bold text-ludus-orange">Esprit d'équipe</h3>
-              <p class="text-sm opacity-75">
-                Entraide spontanée, célébration collective
-              </p>
+              <p class="text-sm opacity-75">Entraide spontanée, célébration collective</p>
             </div>
-            
             <div>
               <div class="text-4xl mb-3">🧘</div>
               <h3 class="font-bold text-ludus-purple">Gestion émotionnelle</h3>
-              <p class="text-sm opacity-75">
-                Calme sous pression, rebond après échec
-              </p>
+              <p class="text-sm opacity-75">Calme sous pression, rebond après échec</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Protocoles santé - VERSION HARMONISÉE -->
+    <!-- Protocoles santé -->
     <section class="mb-12">
       <h2 class="text-2xl font-bold text-center mb-6">
         🏥 Notre attention santé
@@ -409,40 +339,29 @@
       
       <div class="grid md:grid-cols-4 gap-4">
         <div class="stat bg-gradient-to-br from-teal-50 to-white shadow text-center rounded-box border border-ludus-teal">
-          <div class="stat-figure text-ludus-teal">
-            <div class="text-3xl">👀</div>
-          </div>
+          <div class="stat-figure text-ludus-teal"><div class="text-3xl">👀</div></div>
           <div class="stat-title">Règle 20-20-20</div>
           <div class="stat-desc text-xs">Pause visuelle régulière</div>
         </div>
-        
         <div class="stat bg-gradient-to-br from-orange-50 to-white shadow text-center rounded-box border border-ludus-orange">
-          <div class="stat-figure text-ludus-orange">
-            <div class="text-3xl">⚡</div>
-          </div>
+          <div class="stat-figure text-ludus-orange"><div class="text-3xl">⚡</div></div>
           <div class="stat-title">Pauses actives</div>
-          <div class="stat-desc text-xs">20 min hors écran</div>
+          <div class="stat-desc text-xs">Mouvement en fin de session</div>
         </div>
-        
         <div class="stat bg-gradient-to-br from-purple-50 to-white shadow text-center rounded-box border border-ludus-purple">
-          <div class="stat-figure text-ludus-purple">
-            <div class="text-3xl">💧</div>
-          </div>
+          <div class="stat-figure text-ludus-purple"><div class="text-3xl">💧</div></div>
           <div class="stat-title">Hydratation</div>
-          <div class="stat-desc text-xs">Boissons fournies</div>
+          <div class="stat-desc text-xs">Eau disponible en permanence</div>
         </div>
-        
         <div class="stat bg-gradient-to-br from-teal-50 to-white shadow text-center rounded-box border border-ludus-teal">
-          <div class="stat-figure text-ludus-teal">
-            <div class="text-3xl">🧘</div>
-          </div>
+          <div class="stat-figure text-ludus-teal"><div class="text-3xl">🧘</div></div>
           <div class="stat-title">Respiration</div>
           <div class="stat-desc text-xs">Gestion du stress</div>
         </div>
       </div>
     </section>
 
-    <!-- CTA - Reste identique -->
+    <!-- CTA -->
     <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
       <h2 class="text-3xl lg:text-4xl font-bold mb-4">
         Un programme qui fait progresser
@@ -452,7 +371,7 @@
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
-          Préinscrire mon enfant
+          Inscrire mon enfant pour mars
         </a>
         <a href="/infos-pratiques.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
           Voir les tarifs
@@ -463,33 +382,20 @@
   
   <div id="footer"></div>
   
-  <!-- Tarteaucitron -->
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({
-      "privacyUrl": "/mentions.html#cookies",
-      "hashtag": "#tarteaucitron",
-      "cookieName": "ludusmentis_gdpr",
-      "orientation": "bottom",
-      "showAlertSmall": false,
-      "cookieslist": true,
-      "showIcon": true,
-      "iconPosition": "BottomRight",
-      "adblocker": false,
-      "AcceptAllCta": true,
-      "highPrivacy": false,
-      "handleBrowserDNTRequest": false,
-      "removeCredit": false,
-      "readmoreLink": "/mentions.html#cookies",
-      "mandatory": false,
-      "googleConsentMode": true,
-      "partnersList": false
+      "privacyUrl": "/mentions.html#cookies", "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr", "orientation": "bottom",
+      "showAlertSmall": false, "cookieslist": true, "showIcon": true,
+      "iconPosition": "BottomRight", "adblocker": false, "AcceptAllCta": true,
+      "highPrivacy": false, "handleBrowserDNTRequest": false,
+      "removeCredit": false, "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false, "googleConsentMode": true, "partnersList": false
     });
-    
     tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
     (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
   </script>
-  
   <script src="/assets/js/include.js"></script>
 </body>
 </html>
