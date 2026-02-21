@@ -17,6 +17,7 @@
         <li><a href="/programmes.html" class="font-medium hover:text-ludus-teal">Programme</a></li>
         <li><a href="/jeux.html" class="font-medium hover:text-ludus-teal">Les jeux</a></li>
         <li><a href="/infos-pratiques.html" class="font-medium hover:text-ludus-teal">Infos pratiques</a></li>
+        <li><a href="/journal.html" class="font-medium hover:text-ludus-teal">Journal</a></li>
         <li><a href="/recherche.html" class="font-medium hover:text-ludus-teal">Sources</a></li>
         <li><a href="/a-propos.html" class="font-medium hover:text-ludus-teal">À propos</a></li>
         <li><a href="/contact.html" class="font-medium hover:text-ludus-teal">Contact</a></li>
@@ -24,9 +25,9 @@
     </nav>
 
     <div class="navbar-end gap-2">
-      <!-- CTA Button Desktop - AVANT le toggle qui sera injecté -->
+      <!-- CTA Button Desktop -->
       <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
-        Inscription 2026
+        S'inscrire pour mars
       </a>
       
       <!-- Mobile menu button -->
@@ -42,13 +43,14 @@
           <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
           <li><a href="/jeux.html" class="text-base py-3">Les jeux</a></li>
           <li><a href="/infos-pratiques.html" class="text-base py-3">Infos pratiques</a></li>
+          <li><a href="/journal.html" class="text-base py-3">Journal de bord</a></li>
           <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
           <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
           <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
           
           <li class="mt-4">
             <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
-              Inscription 2026
+              S'inscrire pour mars
             </a>
           </li>
         </ul>
@@ -85,7 +87,6 @@
 </style>
 
 <script>
-  // Script pour fermer le menu mobile sur clic d'un lien
   document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.querySelector('.dropdown-end');
     const dropdownContent = dropdown?.querySelector('.dropdown-content');
@@ -94,11 +95,6 @@
       const links = dropdownContent.querySelectorAll('a');
       links.forEach(link => {
         link.addEventListener('click', () => {
-          // Force la fermeture du dropdown
-          if (dropdown.querySelector('input[type="checkbox"]')) {
-            dropdown.querySelector('input[type="checkbox"]').checked = false;
-          }
-          // Retirer le focus pour fermer le dropdown DaisyUI
           document.activeElement.blur();
         });
       });
