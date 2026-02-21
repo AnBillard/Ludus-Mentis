@@ -6,32 +6,23 @@
   <title>Mentions légales RGPD | Ludus Mentis ASBL Walhain</title>
   <meta name="description" content="Politique de confidentialité, protection des données RGPD et gestion des cookies de Ludus Mentis. Contact DPO : info@ludusmentis.be">
   
-  <!-- Canonical et indexation -->
   <link rel="canonical" href="https://ludusmentis.be/mentions.html" />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/mentions.html" />
   <meta property="og:title" content="Mentions légales & RGPD | Ludus Mentis" />
   <meta property="og:description" content="Politique de confidentialité et protection des données personnelles conformément au RGPD." />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-legal.jpg" />
   <meta property="og:locale" content="fr_BE" />
 
-  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
       var theme;
-      if (saved) {
-        theme = saved;
-      } else {
-        try {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
-        } catch(e) {
-          theme = 'light';
-        }
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
       }
       document.documentElement.setAttribute('data-theme', theme);
       if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
@@ -40,62 +31,40 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted',
-      'wait_for_update': 500
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
     });
   </script>
   
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
   
-  <!-- DaisyUI + Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'ludus-teal': '#17a2b8',
-            'ludus-orange': '#ff9800',
-            'ludus-purple': '#6b46c1'
-          }
-        }
-      }
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
+      }}}
     }
   </script>
-  
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
-  
   <style>
-    .gradient-ludus {
-      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
-    }
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
-  <!-- Skip link pour accessibilité -->
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-3 focus:py-2 focus:rounded">
     Aller au contenu principal
   </a>
@@ -103,19 +72,17 @@
   <div id="header"></div>
   
   <main id="main" class="container mx-auto px-4 py-8 max-w-4xl">
-    <!-- Hero harmonisée -->
     <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
       <div class="text-center max-w-4xl mx-auto">
         <h1 class="text-4xl lg:text-5xl font-bold mb-4">
           Mentions légales & Politique de confidentialité
         </h1>
         <p class="text-xl opacity-95">
-          Dernière mise à jour : 12 août 2025
+          Dernière mise à jour : 20 février 2026
         </p>
       </div>
     </section>
 
-    <!-- Navigation des sections -->
     <nav class="mb-8">
       <div class="card bg-base-200">
         <div class="card-body">
@@ -133,64 +100,60 @@
       </div>
     </nav>
 
-    <!-- Section 1 : Éditeur COMPLÉTÉ -->
+    <!-- Section 1 : Éditeur -->
     <section id="editeur" class="mb-12">
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4 text-ludus-teal">1. Éditeur du site</h2>
-          
           <div class="space-y-2">
-            <p><strong>Dénomination :</strong> Ludus Mentis® ASBL </p>
+            <p><strong>Dénomination :</strong> Ludus Mentis® ASBL</p>
             <p><strong>Forme juridique :</strong> Association Sans But Lucratif (ASBL)</p>
             <p><strong>Fondateur et responsable :</strong> Antoine Billard</p>
             <p><strong>Directeur de publication :</strong> Antoine Billard</p>
             <p><strong>Adresse du siège :</strong> Rue du bois de buis 43, 1457 Walhain, Belgique</p>
             <p><strong>Email :</strong> <a href="mailto:info@ludusmentis.be" class="text-ludus-teal hover:underline">info@ludusmentis.be</a></p>
-            <p><strong>N° BCE :</strong> BE1027.805.565 </p>
+            <p><strong>N° BCE :</strong> BE1027.805.565</p>
             <p><strong>Compte bancaire :</strong> BE56 9735 3499 9288</p>
           </div>
-          
+          <!-- CHANGEMENT 1 : "Ouverture prévue" → "lancée en janvier 2026" -->
           <div class="alert alert-info mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span>ASBL - Ouverture prévue janvier 2026. </span>
+            <span>ASBL lancée en janvier 2026.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2 : Hébergeur NETLIFY -->
+    <!-- Section 2 : Hébergeur -->
     <section id="hebergeur" class="mb-12">
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4 text-ludus-teal">2. Hébergeur</h2>
-          
           <div class="space-y-2">
             <p><strong>Société :</strong> Netlify, Inc.</p>
             <p><strong>Adresse :</strong> 2325 3rd Street, Suite 296, San Francisco, CA 94107, United States</p>
             <p><strong>Site web :</strong> <a href="https://www.netlify.com" target="_blank" rel="noopener" class="text-ludus-teal hover:underline">www.netlify.com</a></p>
             <p><strong>Email support :</strong> support@netlify.com</p>
             <p><strong>Politique de confidentialité :</strong> <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener" class="text-ludus-teal hover:underline">netlify.com/privacy</a></p>
-            <p><strong>DPA (Data Processing Agreement) :</strong> <a href="https://www.netlify.com/dpa/" target="_blank" rel="noopener" class="text-ludus-teal hover:underline">netlify.com/dpa</a></p>
+            <p><strong>DPA :</strong> <a href="https://www.netlify.com/dpa/" target="_blank" rel="noopener" class="text-ludus-teal hover:underline">netlify.com/dpa</a></p>
           </div>
-          
           <div class="alert alert-warning mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
-            <span>Hébergement aux États-Unis - Transfert de données hors UE encadré par les clauses contractuelles types (SCC)</span>
+            <span>Hébergement aux États-Unis — Transfert de données hors UE encadré par les clauses contractuelles types (SCC)</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 3 : Conception et maintenance du site -->
+    <!-- Section 3 : Conception -->
     <section class="mb-12">
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4 text-ludus-teal">3. Conception et maintenance du site</h2>
-          
           <div class="space-y-2">
             <p><strong>Conception :</strong> Antoine Billard</p>
             <p><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript, TailwindCSS, DaisyUI</p>
@@ -205,38 +168,34 @@
       </div>
     </section>
 
-    <!-- Section 4 : Protection des données (RGPD) AMÉLIORÉE -->
+    <!-- Section 4 : RGPD -->
     <section id="rgpd" class="mb-12">
       <div class="card bg-primary/10 border-2 border-primary">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-primary">4. Protection des données personnelles (RGPD)</h2>
           
-          <!-- Responsable du traitement -->
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">4.1 Responsable du traitement</h3>
             <p>
-              Ludus Mentis ASBL (en création), représenté par Antoine Billard<br>
+              Ludus Mentis ASBL, représenté par Antoine Billard<br>
               Contact DPO : <a href="mailto:info@ludusmentis.be" class="text-primary hover:underline">info@ludusmentis.be</a><br>
               <span class="text-sm opacity-75">En l'absence de DPO désigné, Antoine Billard assure cette fonction</span>
             </p>
           </div>
           
-          <!-- Base juridique des traitements -->
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">4.2 Base juridique des traitements</h3>
             <p class="mb-3">Conformément à l'article 6 du RGPD, nos traitements reposent sur :</p>
             <ul class="list-disc ml-6 space-y-1">
               <li><strong>Consentement (Art. 6.1.a)</strong> : Newsletter, cookies analytics</li>
-              <li><strong>Exécution précontractuelle (Art. 6.1.b)</strong> : Préinscriptions, demandes d'information</li>
+              <li><strong>Exécution précontractuelle (Art. 6.1.b)</strong> : Inscriptions, demandes d'information</li>
               <li><strong>Intérêt légitime (Art. 6.1.f)</strong> : Réponse aux questions, sécurité du site</li>
-              <li><strong>Obligation légale (Art. 6.1.c)</strong> : Conservation des données comptables (future ASBL)</li>
+              <li><strong>Obligation légale (Art. 6.1.c)</strong> : Conservation des données comptables (ASBL)</li>
             </ul>
           </div>
           
-          <!-- Données collectées - TABLEAU AMÉLIORÉ -->
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">4.3 Données collectées et finalités</h3>
-            
             <div class="overflow-x-auto">
               <table class="table table-zebra w-full">
                 <thead>
@@ -249,46 +208,32 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <strong>Formulaire de contact</strong><br>
-                      <span class="text-sm">Nom, email, message</span>
-                    </td>
+                    <td><strong>Formulaire de contact</strong><br><span class="text-sm">Nom, email, message</span></td>
                     <td>Répondre aux demandes</td>
                     <td>Intérêt légitime</td>
                     <td>3 mois après réponse</td>
                   </tr>
                   <tr>
-                    <td>
-                      <strong>Préinscription</strong><br>
-                      <span class="text-sm">Nom enfant/parent, âge, email, téléphone</span>
-                    </td>
+                    <!-- CHANGEMENT 2 : "Jusqu'à janvier 2026" → "Jusqu'à la fin du module inscrit" -->
+                    <td><strong>Inscription</strong><br><span class="text-sm">Nom enfant/parent, âge, email, téléphone</span></td>
                     <td>Gestion des inscriptions</td>
                     <td>Précontractuel</td>
-                    <td>Jusqu'à janvier 2026 ou désinscription</td>
+                    <td>Jusqu'à la fin du module inscrit</td>
                   </tr>
                   <tr>
-                    <td>
-                      <strong>Newsletter</strong><br>
-                      <span class="text-sm">Email uniquement</span>
-                    </td>
+                    <td><strong>Newsletter</strong><br><span class="text-sm">Email uniquement</span></td>
                     <td>Envoi d'informations</td>
                     <td>Consentement</td>
                     <td>Jusqu'à désinscription</td>
                   </tr>
                   <tr>
-                    <td>
-                      <strong>Données de navigation</strong><br>
-                      <span class="text-sm">IP, pages visitées, durée</span>
-                    </td>
+                    <td><strong>Données de navigation</strong><br><span class="text-sm">IP, pages visitées, durée</span></td>
                     <td>Statistiques (GA4)</td>
                     <td>Consentement</td>
                     <td>14 mois (GA4)</td>
                   </tr>
                   <tr>
-                    <td>
-                      <strong>Logs serveur</strong><br>
-                      <span class="text-sm">IP, user agent, timestamps</span>
-                    </td>
+                    <td><strong>Logs serveur</strong><br><span class="text-sm">IP, user agent, timestamps</span></td>
                     <td>Sécurité, debug</td>
                     <td>Intérêt légitime</td>
                     <td>30 jours (Netlify)</td>
@@ -298,10 +243,8 @@
             </div>
           </div>
           
-          <!-- Destinataires des données -->
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">4.4 Destinataires des données</h3>
-            
             <div class="grid md:grid-cols-2 gap-4">
               <div class="card bg-base-100">
                 <div class="card-body compact">
@@ -309,15 +252,14 @@
                   <ul class="text-sm space-y-1">
                     <li>• <strong>Netlify</strong> : Hébergement (USA)</li>
                     <li>• <strong>Formspree</strong> : Formulaires (USA)</li>
-                    <li>• <strong>Google</strong> : Analytics (USA) - après consentement</li>
+                    <li>• <strong>Google</strong> : Analytics (USA) — après consentement</li>
                     <li>• <strong>Cloudflare</strong> : CDN pour assets</li>
                   </ul>
                 </div>
               </div>
-              
               <div class="card bg-base-100">
                 <div class="card-body compact">
-                  <h4 class="font-bold text-primary mb-2">Tiers autorisés (futurs)</h4>
+                  <h4 class="font-bold text-primary mb-2">Tiers autorisés</h4>
                   <ul class="text-sm space-y-1">
                     <li>• Commune de Walhain (partenariat)</li>
                     <li>• Fédération belge d'esport (si adhésion)</li>
@@ -329,7 +271,6 @@
             </div>
           </div>
           
-          <!-- Transferts hors UE -->
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">4.5 Transferts de données hors UE</h3>
             <div class="alert alert-warning">
@@ -339,14 +280,11 @@
               <div>
                 <p><strong>Transferts vers les États-Unis :</strong></p>
                 <ul class="text-sm mt-2">
-                  <li>• Netlify (hébergement) - SCC + DPA</li>
-                  <li>• Google Analytics (si consentement) - SCC</li>
-                  <li>• Formspree (formulaires) - SCC</li>
+                  <li>• Netlify (hébergement) — SCC + DPA</li>
+                  <li>• Google Analytics (si consentement) — SCC</li>
+                  <li>• Formspree (formulaires) — SCC</li>
                 </ul>
-                <p class="text-sm mt-2">
-                  Ces transferts sont encadrés par les Clauses Contractuelles Types (SCC) de la Commission européenne 
-                  suite à l'invalidation du Privacy Shield (arrêt Schrems II).
-                </p>
+                <p class="text-sm mt-2">Ces transferts sont encadrés par les Clauses Contractuelles Types (SCC) de la Commission européenne.</p>
               </div>
             </div>
           </div>
@@ -354,17 +292,15 @@
       </div>
     </section>
 
-    <!-- Section 5 : Protection des mineurs NOUVEAU -->
+    <!-- Section 5 : Mineurs -->
     <section id="mineurs" class="mb-12">
       <div class="card bg-warning/10 border-2 border-warning">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-warning">5. Protection des mineurs</h2>
-          
           <p class="mb-4">
-            <strong>Ludus Mentis s'adresse aux adolescents de 10 à 15 ans.</strong> 
+            <strong>Ludus Mentis s'adresse aux adolescents de 10 à 15 ans.</strong>
             Nous accordons une attention particulière à la protection des données des mineurs.
           </p>
-          
           <div class="space-y-3">
             <div class="alert">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
@@ -372,7 +308,6 @@
               </svg>
               <span><strong>Consentement parental obligatoire :</strong> Toute inscription nécessite l'accord d'un parent ou tuteur légal</span>
             </div>
-            
             <h3 class="font-bold text-warning">Nos engagements :</h3>
             <ul class="list-disc ml-6 space-y-2">
               <li>Nous ne collectons que les données strictement nécessaires</li>
@@ -382,28 +317,23 @@
               <li>Communication uniquement avec les parents/tuteurs</li>
               <li>Suppression immédiate sur demande parentale</li>
             </ul>
-            
             <div class="alert alert-info mt-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>Conformément à l'article 8 du RGPD, le traitement des données des mineurs de moins de 16 ans nécessite le consentement parental</span>
+              <span>Conformément à l'article 8 du RGPD, le traitement des données des mineurs de moins de 16 ans nécessite le consentement parental.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 6 : Vos droits RGPD - Reste identique mais renuméroté -->
+    <!-- Section 6 : Droits -->
     <section id="droits" class="mb-12">
       <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-success">6. Vos droits RGPD</h2>
-          
-          <p class="mb-4">
-            Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :
-          </p>
-          
+          <p class="mb-4">Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :</p>
           <div class="grid md:grid-cols-2 gap-4">
             <div class="card bg-base-100">
               <div class="card-body compact">
@@ -416,7 +346,6 @@
                 </ul>
               </div>
             </div>
-            
             <div class="card bg-base-100">
               <div class="card-body compact">
                 <h3 class="font-bold text-success mb-2">🛡️ Droits de contrôle</h3>
@@ -429,25 +358,21 @@
               </div>
             </div>
           </div>
-          
           <div class="mt-6 text-center">
             <p class="mb-3">Pour exercer vos droits, contactez-nous avec une pièce d'identité :</p>
-            <a href="mailto:info@ludusmentis.be" class="btn btn-primary">
-              📧 Contacter notre DPO
-            </a>
+            <a href="mailto:info@ludusmentis.be" class="btn btn-primary">📧 Contacter notre DPO</a>
             <p class="text-sm mt-2 opacity-75">Réponse sous 30 jours maximum</p>
           </div>
-          
           <div class="alert alert-info mt-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <div>
-              <p><strong>Autorité de protection des données (APD) - Belgique</strong></p>
+              <p><strong>Autorité de protection des données (APD) — Belgique</strong></p>
               <p class="text-sm">Rue de la Presse 35, 1000 Bruxelles</p>
               <p class="text-sm">
-                <a href="mailto:contact@apd-gba.be" class="underline">contact@apd-gba.be</a> • 
-                +32 2 274 48 00 • 
+                <a href="mailto:contact@apd-gba.be" class="underline">contact@apd-gba.be</a> •
+                +32 2 274 48 00 •
                 <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener" class="underline">www.autoriteprotectiondonnees.be</a>
               </p>
             </div>
@@ -456,74 +381,53 @@
       </div>
     </section>
 
-    <!-- Section 7 : Cookies - AMÉLIORÉE -->
+    <!-- Section 7 : Cookies -->
     <section id="cookies" class="mb-12">
-      <div class="card bg-orange/10 border-2 border-ludus-orange">
+      <div class="card border-2 border-ludus-orange">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-ludus-orange">7. Politique de cookies</h2>
           
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">7.1 Qu'est-ce qu'un cookie ?</h3>
-            <p>
-              Un cookie est un petit fichier texte déposé sur votre appareil lors de la visite d'un site web. 
-              Il permet de mémoriser vos préférences et d'analyser l'utilisation du site.
-            </p>
+            <p>Un cookie est un petit fichier texte déposé sur votre appareil lors de la visite d'un site web. Il permet de mémoriser vos préférences et d'analyser l'utilisation du site.</p>
           </div>
           
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">7.2 Cookies utilisés</h3>
-            
             <div class="overflow-x-auto">
               <table class="table table-zebra w-full">
                 <thead>
-                  <tr>
-                    <th>Nom</th>
-                    <th>Fournisseur</th>
-                    <th>Finalité</th>
-                    <th>Durée</th>
-                    <th>Type</th>
-                  </tr>
+                  <tr><th>Nom</th><th>Fournisseur</th><th>Finalité</th><th>Durée</th><th>Type</th></tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><code>ludusmentis_gdpr</code></td>
-                    <td>Ludus Mentis</td>
-                    <td>Mémoriser vos choix cookies</td>
-                    <td>12 mois</td>
+                    <td><code>ludusmentis_gdpr</code></td><td>Ludus Mentis</td>
+                    <td>Mémoriser vos choix cookies</td><td>12 mois</td>
                     <td><span class="badge badge-success">Nécessaire</span></td>
                   </tr>
                   <tr>
-                    <td><code>theme</code></td>
-                    <td>Ludus Mentis</td>
-                    <td>Préférence dark/light mode</td>
-                    <td>12 mois</td>
+                    <td><code>theme</code></td><td>Ludus Mentis</td>
+                    <td>Préférence dark/light mode</td><td>12 mois</td>
                     <td><span class="badge badge-success">Fonctionnel</span></td>
                   </tr>
                   <tr>
-                    <td><code>_ga</code></td>
-                    <td>Google</td>
-                    <td>Distinguer les utilisateurs</td>
-                    <td>14 mois</td>
+                    <td><code>_ga</code></td><td>Google</td>
+                    <td>Distinguer les utilisateurs</td><td>14 mois</td>
                     <td><span class="badge badge-warning">Statistiques</span></td>
                   </tr>
                   <tr>
-                    <td><code>_gid</code></td>
-                    <td>Google</td>
-                    <td>Distinguer les utilisateurs</td>
-                    <td>24 heures</td>
+                    <td><code>_gid</code></td><td>Google</td>
+                    <td>Distinguer les utilisateurs</td><td>24 heures</td>
                     <td><span class="badge badge-warning">Statistiques</span></td>
                   </tr>
                   <tr>
-                    <td><code>_gat_gtag_*</code></td>
-                    <td>Google</td>
-                    <td>Limiter le taux de requêtes</td>
-                    <td>1 minute</td>
+                    <td><code>_gat_gtag_*</code></td><td>Google</td>
+                    <td>Limiter le taux de requêtes</td><td>1 minute</td>
                     <td><span class="badge badge-warning">Statistiques</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
             <div class="alert mt-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -534,20 +438,13 @@
           
           <div class="mb-6">
             <h3 class="text-xl font-bold mb-3">7.3 Gestion de vos préférences</h3>
-            
             <div class="text-center">
-              <p class="mb-4">
-                Vous pouvez modifier vos préférences cookies à tout moment :
-              </p>
-              <button onclick="if(typeof tarteaucitron !== 'undefined') tarteaucitron.userInterface.openPanel();" 
-                      class="btn btn-primary btn-lg">
-                🍪 Gérer mes cookies
-              </button>
-              
+              <p class="mb-4">Vous pouvez modifier vos préférences cookies à tout moment :</p>
+              <button onclick="if(typeof tarteaucitron !== 'undefined') tarteaucitron.userInterface.openPanel();"
+                      class="btn btn-primary btn-lg">🍪 Gérer mes cookies</button>
               <p class="text-sm mt-4 opacity-75">
                 Vous pouvez également configurer votre navigateur pour refuser les cookies.<br>
-                Instructions : 
-                <a href="https://www.allaboutcookies.org/verify-cookies/" target="_blank" rel="noopener" class="underline">www.allaboutcookies.org</a>
+                Instructions : <a href="https://www.allaboutcookies.org/verify-cookies/" target="_blank" rel="noopener" class="underline">www.allaboutcookies.org</a>
               </p>
             </div>
           </div>
@@ -555,66 +452,20 @@
       </div>
     </section>
 
-    <!-- Section 8 : Sécurité des données -->
+    <!-- Section 8 : Sécurité -->
     <section class="mb-12">
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4 text-ludus-purple">8. Sécurité des données</h2>
-          
-          <p class="mb-4">
-            Nous mettons en œuvre des mesures techniques et organisationnelles appropriées (Art. 32 RGPD) :
-          </p>
-          
+          <p class="mb-4">Nous mettons en œuvre des mesures techniques et organisationnelles appropriées (Art. 32 RGPD) :</p>
           <div class="grid md:grid-cols-2 gap-4">
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">🔒</span>
-              <div>
-                <strong>Chiffrement HTTPS/TLS</strong>
-                <p class="text-sm opacity-75">Certificat SSL Let's Encrypt</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">🛡️</span>
-              <div>
-                <strong>Accès restreint</strong>
-                <p class="text-sm opacity-75">Authentification 2FA pour l'admin</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">🔐</span>
-              <div>
-                <strong>Mots de passe sécurisés</strong>
-                <p class="text-sm opacity-75">Minimum 12 caractères + complexité</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">📊</span>
-              <div>
-                <strong>Minimisation des données</strong>
-                <p class="text-sm opacity-75">Collecte limitée au nécessaire</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">🔄</span>
-              <div>
-                <strong>Mises à jour régulières</strong>
-                <p class="text-sm opacity-75">Dépendances et sécurité</p>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-3">
-              <span class="text-green-500 text-xl">📝</span>
-              <div>
-                <strong>Journalisation</strong>
-                <p class="text-sm opacity-75">Logs d'accès et modifications</p>
-              </div>
-            </div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">🔒</span><div><strong>Chiffrement HTTPS/TLS</strong><p class="text-sm opacity-75">Certificat SSL Let's Encrypt</p></div></div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">🛡️</span><div><strong>Accès restreint</strong><p class="text-sm opacity-75">Authentification 2FA pour l'admin</p></div></div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">🔐</span><div><strong>Mots de passe sécurisés</strong><p class="text-sm opacity-75">Minimum 12 caractères + complexité</p></div></div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">📊</span><div><strong>Minimisation des données</strong><p class="text-sm opacity-75">Collecte limitée au nécessaire</p></div></div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">🔄</span><div><strong>Mises à jour régulières</strong><p class="text-sm opacity-75">Dépendances et sécurité</p></div></div>
+            <div class="flex items-start gap-3"><span class="text-green-500 text-xl">📝</span><div><strong>Journalisation</strong><p class="text-sm opacity-75">Logs d'accès et modifications</p></div></div>
           </div>
-          
           <div class="alert alert-warning mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -630,14 +481,9 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">9. Propriété intellectuelle</h2>
-          
-          <p class="mb-4">
-            L'ensemble du contenu de ce site est protégé par le droit d'auteur et les droits de propriété intellectuelle.
-          </p>
-          
+          <p class="mb-4">L'ensemble du contenu de ce site est protégé par le droit d'auteur et les droits de propriété intellectuelle.</p>
           <div class="space-y-3">
-            <p><strong>© 2025 Ludus Mentis - Tous droits réservés</strong></p>
-            
+            <p><strong>© 2025-2026 Ludus Mentis — Tous droits réservés</strong></p>
             <h3 class="font-bold">Éléments protégés :</h3>
             <ul class="list-disc ml-6 space-y-1">
               <li>Logo et identité visuelle Ludus Mentis</li>
@@ -646,14 +492,6 @@
               <li>Méthode pédagogique et programme</li>
               <li>Photos et illustrations (sauf mentions contraires)</li>
             </ul>
-            
-            <h3 class="font-bold mt-4">Utilisations autorisées :</h3>
-            <ul class="list-disc ml-6 space-y-1">
-              <li>Consultation personnelle et non commerciale</li>
-              <li>Partage des liens vers le site</li>
-              <li>Citations courtes avec mention de la source</li>
-            </ul>
-            
             <div class="alert alert-error mt-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -665,30 +503,18 @@
       </div>
     </section>
 
-    <!-- Section 10 : Responsabilité et liens externes -->
+    <!-- Section 10 : Responsabilité -->
     <section class="mb-12">
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">10. Limitation de responsabilité</h2>
-          
           <div class="space-y-3">
             <h3 class="font-bold">Contenu du site :</h3>
-            <p>
-              Les informations sont fournies à titre indicatif. Malgré nos efforts pour maintenir 
-              le site à jour, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité des informations.
-            </p>
-            
+            <p>Les informations sont fournies à titre indicatif. Malgré nos efforts pour maintenir le site à jour, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité des informations.</p>
             <h3 class="font-bold">Liens externes :</h3>
-            <p>
-              Notre site peut contenir des liens vers des sites tiers. Nous n'avons aucun contrôle 
-              sur ces sites et déclinons toute responsabilité quant à leur contenu ou leurs pratiques.
-            </p>
-            
+            <p>Notre site peut contenir des liens vers des sites tiers. Nous n'avons aucun contrôle sur ces sites et déclinons toute responsabilité quant à leur contenu ou leurs pratiques.</p>
             <h3 class="font-bold">Disponibilité du service :</h3>
-            <p>
-              Nous nous efforçons de maintenir le site accessible 24/7 mais ne garantissons pas 
-              une disponibilité ininterrompue. Des maintenances peuvent survenir.
-            </p>
+            <p>Nous nous efforçons de maintenir le site accessible 24/7 mais ne garantissons pas une disponibilité ininterrompue.</p>
           </div>
         </div>
       </div>
@@ -699,17 +525,11 @@
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">11. Modifications des mentions légales</h2>
-          
-          <p>
-            Nous nous réservons le droit de modifier ces mentions légales à tout moment. 
-            Les modifications entrent en vigueur dès leur publication sur le site.
-          </p>
-          
+          <p>Nous nous réservons le droit de modifier ces mentions légales à tout moment. Les modifications entrent en vigueur dès leur publication sur le site.</p>
           <p class="mt-3">
-            <strong>Date de dernière révision :</strong> 12 août 2025<br>
-            <strong>Version :</strong> 1.1
+            <strong>Date de dernière révision :</strong> 20 février 2026<br>
+            <strong>Version :</strong> 1.2
           </p>
-          
           <div class="alert alert-info mt-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -725,33 +545,29 @@
       <div class="card gradient-ludus text-white">
         <div class="card-body text-center">
           <h2 class="card-title text-2xl mb-4 mx-auto">12. Contact</h2>
-          
           <div class="grid md:grid-cols-2 gap-6">
             <div>
               <h3 class="font-bold mb-2">Questions générales</h3>
               <p>📧 <a href="mailto:info@ludusmentis.be" class="underline">info@ludusmentis.be</a></p>
             </div>
-            
             <div>
               <h3 class="font-bold mb-2">Protection des données (DPO)</h3>
               <p>🔒 <a href="mailto:info@ludusmentis.be" class="underline">info@ludusmentis.be</a></p>
             </div>
           </div>
-          
           <div class="divider divider-neutral my-6"></div>
-          
+          <!-- CHANGEMENT 3 : "Ouverture prévue : Janvier 2026" → "Actif depuis janvier 2026" -->
           <p class="text-sm opacity-90">
-            <strong>Ludus Mentis ASBL (en création)</strong><br>
+            <strong>Ludus Mentis ASBL</strong><br>
             Walhain, Brabant wallon, Belgique<br>
-            Ouverture prévue : Janvier 2026
+            Actif depuis janvier 2026
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Dernière mise à jour -->
     <footer class="text-center opacity-50 text-sm">
-      <p>Ces mentions légales ont été mises à jour le 12 août 2025.</p>
+      <p>Ces mentions légales ont été mises à jour le 20 février 2026.</p>
       <p>Nous nous réservons le droit de les modifier à tout moment.</p>
       <p class="mt-2">Pour toute question : <a href="mailto:info@ludusmentis.be" class="underline">info@ludusmentis.be</a></p>
     </footer>
@@ -759,34 +575,20 @@
   
   <div id="footer"></div>
   
-  <!-- CMP Tarteaucitron -->
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({
-      "privacyUrl": "/mentions.html#cookies",
-      "hashtag": "#tarteaucitron",
-      "cookieName": "ludusmentis_gdpr",
-      "orientation": "bottom",
-      "showAlertSmall": false,
-      "cookieslist": true,
-      "showIcon": true,
-      "iconPosition": "BottomRight",
-      "adblocker": false,
-      "AcceptAllCta": true,
-      "highPrivacy": false,
-      "handleBrowserDNTRequest": false,
-      "removeCredit": false,
-      "readmoreLink": "/mentions.html#cookies",
-      "mandatory": false,
-      "googleConsentMode": true,
-      "partnersList": false
+      "privacyUrl": "/mentions.html#cookies", "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr", "orientation": "bottom",
+      "showAlertSmall": false, "cookieslist": true, "showIcon": true,
+      "iconPosition": "BottomRight", "adblocker": false, "AcceptAllCta": true,
+      "highPrivacy": false, "handleBrowserDNTRequest": false,
+      "removeCredit": false, "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false, "googleConsentMode": true, "partnersList": false
     });
-    
-    // GA4
     tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
     (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
   </script>
-  
   <script src="/assets/js/include.js"></script>
 </body>
 </html>
