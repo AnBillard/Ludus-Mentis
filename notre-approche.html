@@ -6,20 +6,17 @@
   <title>Méthode pédagogique gaming éducatif | Ludus Mentis</title>
   <meta name="description" content="Notre approche scientifique : cycle de Kolb adapté au gaming, jeux 100% coopératifs, pauses actives. Alternative éducative à Fortnite pour ados 10-15 ans.">
   
-  <!-- Canonical et indexation -->
   <link rel="canonical" href="https://ludusmentis.be/notre-approche.html" />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ludus Mentis" />
   <meta property="og:url" content="https://ludusmentis.be/notre-approche.html" />
   <meta property="og:title" content="Méthode scientifique gaming éducatif | Club Walhain" />
   <meta property="og:description" content="Comment transformer le jeu vidéo en outil de développement des soft skills avec une méthode validée scientifiquement." />
-  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-method.jpg" />
   <meta property="og:locale" content="fr_BE" />
   
-  <!-- Structured Data Educational -->
+  <!-- CHANGEMENT 2 : PT7W → PT8W -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,24 +30,18 @@
     },
     "educationalLevel": "10-15 ans",
     "teaches": ["Communication", "Coopération", "Gestion du stress", "Leadership"],
-    "duration": "PT7W",
+    "duration": "PT8W",
     "timeRequired": "PT2H"
   }
   </script>
 
-  <!-- Script anti-FOUC pour dark mode -->
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
       var theme;
-      if (saved) {
-        theme = saved;
-      } else {
-        try {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
-        } catch(e) {
-          theme = 'light';
-        }
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
       }
       document.documentElement.setAttribute('data-theme', theme);
       if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
@@ -59,72 +50,49 @@
   
   <script src="/assets/js/theme-manager.js"></script>
   
-  <!-- Consent Mode v2 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
-      'functionality_storage': 'granted',
-      'personalization_storage': 'granted',
-      'security_storage': 'granted',
-      'wait_for_update': 500
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
     });
   </script>
   
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
   
-  <!-- DaisyUI + Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'ludus-teal': '#17a2b8',
-            'ludus-orange': '#ff9800',
-            'ludus-purple': '#6b46c1'
-          }
-        }
-      }
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
+      }}}
     }
   </script>
-  
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
-  
   <style>
-    .gradient-ludus {
-      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
-    }
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-    .float-animation {
-      animation: float 3s ease-in-out infinite;
-    }
+    .float-animation { animation: float 3s ease-in-out infinite; }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <div id="header"></div>
   
   <main class="container mx-auto px-4 py-8 max-w-6xl">
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
       <div class="text-center max-w-4xl mx-auto">
         <h1 class="text-4xl lg:text-5xl font-bold mb-6">
@@ -136,18 +104,11 @@
       </div>
     </section>
 
-    <!-- Les défis qu'on résout -->
+    <!-- Les défis -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8">
-        Les défis du gaming aujourd'hui
-      </h2>
-      
-      <p class="text-center opacity-75 mb-6">
-        Cliquez sur chaque carte pour voir les sources et détails
-      </p>
-      
+      <h2 class="text-3xl font-bold text-center mb-8">Les défis du gaming aujourd'hui</h2>
+      <p class="text-center opacity-75 mb-6">Cliquez sur chaque carte pour voir les sources et détails</p>
       <div class="grid md:grid-cols-4 gap-4">
-        <!-- Sédentarité -->
         <details class="card bg-base-100 shadow border-t-4 border-error cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">🏃‍♂️</div>
@@ -156,17 +117,9 @@
             <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs">
-              <strong>Source :</strong> OMS (2020) - Les adolescents passant >3h/jour devant un écran 
-              ont 48% moins d'activité physique que les recommandations (60 min/jour).
-            </p>
-            <p class="text-xs opacity-75 mt-2">
-              <em>Étude sur 1,6 million d'adolescents dans 146 pays</em>
-            </p>
+            <p class="text-xs"><strong>Source :</strong> OMS (2020) — Les adolescents passant >3h/jour devant un écran ont 48% moins d'activité physique que les recommandations.</p>
           </div>
         </details>
-        
-        <!-- Isolement -->
         <details class="card bg-base-100 shadow border-t-4 border-warning cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">😔</div>
@@ -175,17 +128,9 @@
             <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs">
-              <strong>Source :</strong> Pew Research Center (2018) - 61% des adolescents 
-              jouent principalement seuls, sans interaction sociale directe.
-            </p>
-            <p class="text-xs opacity-75 mt-2">
-              <em>Enquête sur 1,423 adolescents américains et européens</em>
-            </p>
+            <p class="text-xs"><strong>Source :</strong> Pew Research Center (2018) — 61% des adolescents jouent principalement seuls, sans interaction sociale directe.</p>
           </div>
         </details>
-        
-        <!-- Conflits familiaux -->
         <details class="card bg-base-100 shadow border-t-4 border-orange-500 cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">🏠</div>
@@ -194,17 +139,9 @@
             <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs">
-              <strong>Source :</strong> EU Kids Online (2020) - 73% des parents européens 
-              rapportent des conflits liés au temps d'écran et aux jeux vidéo.
-            </p>
-            <p class="text-xs opacity-75 mt-2">
-              <em>25,000 familles interrogées dans 19 pays européens</em>
-            </p>
+            <p class="text-xs"><strong>Source :</strong> EU Kids Online (2020) — 73% des parents européens rapportent des conflits liés au temps d'écran.</p>
           </div>
         </details>
-        
-        <!-- Usage problématique -->
         <details class="card bg-base-100 shadow border-t-4 border-secondary cursor-pointer">
           <summary class="card-body text-center">
             <div class="text-3xl mb-2">⚠️</div>
@@ -213,28 +150,18 @@
             <p class="text-xs opacity-50 mt-1">▼ Cliquez pour détails</p>
           </summary>
           <div class="px-4 pb-4">
-            <p class="text-xs">
-              <strong>Source :</strong> Mihara & Higuchi (2017) - Entre 3 et 4% des 
-              jeunes joueurs développent des symptômes de "Gaming Disorder" selon l'OMS.
-            </p>
-            <p class="text-xs opacity-75 mt-2">
-              <em>Meta-analyse de 37 études, 164,000 participants</em>
-            </p>
+            <p class="text-xs"><strong>Source :</strong> Mihara & Higuchi (2017) — Entre 3 et 4% des jeunes joueurs développent des symptômes de "Gaming Disorder".</p>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- Notre solution en 3 piliers -->
+    <!-- 3 piliers -->
     <section class="mb-12">
       <div class="card bg-base-200">
         <div class="card-body">
-          <h2 class="card-title text-3xl mx-auto mb-8 text-ludus-teal">
-            Notre solution en 3 piliers
-          </h2>
-          
+          <h2 class="card-title text-3xl mx-auto mb-8 text-ludus-teal">Notre solution en 3 piliers</h2>
           <div class="grid md:grid-cols-3 gap-6">
-            <!-- Pilier 1 -->
             <div class="card bg-base-100 shadow">
               <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation">🏠</div>
@@ -247,8 +174,6 @@
                 </ul>
               </div>
             </div>
-            
-            <!-- Pilier 2 -->
             <div class="card bg-base-100 shadow">
               <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation" style="animation-delay: 0.5s;">🎮</div>
@@ -261,8 +186,6 @@
                 </ul>
               </div>
             </div>
-            
-            <!-- Pilier 3 -->
             <div class="card bg-base-100 shadow">
               <div class="card-body text-center">
                 <div class="text-5xl mb-4 float-animation" style="animation-delay: 1s;">🔄</div>
@@ -280,48 +203,33 @@
       </div>
     </section>
 
-    <!-- Le cycle de Kolb -->
+    <!-- Cycle de Kolb -->
     <section class="mb-12">
-      <h2 class="text-3xl font-bold text-center mb-8">
-        Notre méthode : le cycle de Kolb adapté
-      </h2>
-      
+      <h2 class="text-3xl font-bold text-center mb-8">Notre méthode : le cycle de Kolb adapté</h2>
       <div class="card bg-base-100 shadow-xl">
         <div class="card-body">
           <div class="grid md:grid-cols-4 gap-4">
             <div class="text-center">
-              <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-2xl">🎮</span>
-              </div>
+              <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3"><span class="text-2xl">🎮</span></div>
               <h3 class="font-bold text-blue-700">1. Expérience</h3>
               <p class="text-sm opacity-75">On joue ensemble</p>
             </div>
-            
             <div class="text-center">
-              <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-2xl">🤔</span>
-              </div>
+              <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3"><span class="text-2xl">🤔</span></div>
               <h3 class="font-bold text-green-700">2. Observation</h3>
               <p class="text-sm opacity-75">Qu'est-ce qui s'est passé ?</p>
             </div>
-            
             <div class="text-center">
-              <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-2xl">💡</span>
-              </div>
+              <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3"><span class="text-2xl">💡</span></div>
               <h3 class="font-bold text-orange-700">3. Conceptualisation</h3>
               <p class="text-sm opacity-75">Qu'est-ce qu'on retient ?</p>
             </div>
-            
             <div class="text-center">
-              <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                <span class="text-2xl">🚀</span>
-              </div>
+              <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3"><span class="text-2xl">🚀</span></div>
               <h3 class="font-bold text-purple-700">4. Application</h3>
               <p class="text-sm opacity-75">On réessaie mieux</p>
             </div>
           </div>
-          
           <div class="alert alert-info mt-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -336,54 +244,31 @@
     <section class="mb-12">
       <div class="card gradient-ludus text-white">
         <div class="card-body">
-          <h2 class="text-3xl font-bold text-center mb-8">
-            Une approche basée sur la recherche
-          </h2>
-          
+          <h2 class="text-3xl font-bold text-center mb-8">Une approche basée sur la recherche</h2>
           <div class="grid md:grid-cols-3 gap-6 text-center">
-            <!-- Études analysées -->
             <details class="bg-white/20 rounded-lg p-6 cursor-pointer">
               <summary>
                 <div class="text-4xl mb-2">📚</div>
                 <div class="text-3xl font-bold">98</div>
                 <p>Études analysées</p>
               </summary>
-              <div class="text-sm text-left mt-4">
-                Meta-analyse de Greitemeyer & Mügge (2014) portant sur 
-                98 études indépendantes avec 36,965 participants au total.
-                <a href="/recherche.html" class="underline">Voir toutes les sources →</a>
-              </div>
+              <div class="text-sm text-left mt-4">Meta-analyse de Greitemeyer & Mügge (2014) portant sur 98 études indépendantes. <a href="/recherche.html" class="underline">Voir toutes les sources →</a></div>
             </details>
-            
-            <!-- Comportements d'entraide -->
             <details class="bg-white/20 rounded-lg p-6 cursor-pointer">
               <summary>
                 <div class="text-4xl mb-2">🤝</div>
                 <div class="text-3xl font-bold">+35%</div>
                 <p>Comportements d'entraide</p>
               </summary>
-              <div class="text-sm text-left mt-4">
-                <strong>Source :</strong> Greitemeyer & Mügge (2014) - 
-                Augmentation de 35% des comportements prosociaux observée 
-                après 20 minutes de jeu coopératif comparé aux jeux compétitifs.
-                <br><em>Meta-analyse, 98 études, 36,965 participants</em>
-              </div>
+              <div class="text-sm text-left mt-4"><strong>Source :</strong> Greitemeyer & Mügge (2014) — Augmentation de 35% des comportements prosociaux après 20 minutes de jeu coopératif.</div>
             </details>
-            
-            <!-- Impact du contexte -->
             <details class="bg-white/20 rounded-lg p-6 cursor-pointer">
               <summary>
                 <div class="text-4xl mb-2">📊</div>
                 <div class="text-3xl font-bold">Le contexte</div>
                 <p>est déterminant</p>
               </summary>
-              <div class="text-sm text-left mt-4">
-                <strong>Source :</strong> Orben & Przybylski (2019) - 
-                L'étude montre que le contexte d'usage (avec qui, où, comment) 
-                a plus d'impact que le temps de jeu lui-même. 
-                Un cadre structuré et social transforme l'expérience.
-                <br><em>Nature Human Behaviour, 355,358 adolescents</em>
-              </div>
+              <div class="text-sm text-left mt-4"><strong>Source :</strong> Orben & Przybylski (2019) — Le contexte d'usage a plus d'impact que le temps de jeu. <em>355,358 adolescents</em></div>
             </details>
           </div>
         </div>
@@ -394,17 +279,12 @@
     <section class="mb-12">
       <div class="card bg-success/10 border-2 border-success">
         <div class="card-body">
-          <h2 class="card-title text-3xl mx-auto mb-6 text-success">
-            📦 Votre boîte à outils parents complète
-          </h2>
-          
+          <h2 class="card-title text-3xl mx-auto mb-6 text-success">📦 Votre boîte à outils parents complète</h2>
           <p class="text-center text-lg mb-8">
             <strong>Des ressources concrètes et pratiques pour accompagner votre enfant</strong><br>
             Remises lors de la première séance et enrichies tout au long du module
           </p>
-          
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Guide des limites -->
             <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
               <div class="card-body compact">
                 <div class="text-3xl mb-2 text-center">📋</div>
@@ -417,8 +297,6 @@
                 </ul>
               </div>
             </div>
-            
-            <!-- Communication -->
             <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
               <div class="card-body compact">
                 <div class="text-3xl mb-2 text-center">💬</div>
@@ -431,8 +309,6 @@
                 </ul>
               </div>
             </div>
-            
-            <!-- Activités famille -->
             <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
               <div class="card-body compact">
                 <div class="text-3xl mb-2 text-center">👨‍👩‍👧‍👦</div>
@@ -445,8 +321,6 @@
                 </ul>
               </div>
             </div>
-            
-            <!-- Suivi santé -->
             <div class="card bg-base-100 shadow hover:shadow-xl transition-shadow">
               <div class="card-body compact">
                 <div class="text-3xl mb-2 text-center">🏥</div>
@@ -464,20 +338,21 @@
       </div>
     </section>
 
-    <!-- CTA Final -->
+    <!-- CTA Final — CHANGEMENTS 1 et 3 -->
     <section class="text-center gradient-ludus rounded-3xl p-8 text-white">
-      <h2 class="text-3xl font-bold mb-4">
-        Une approche transparente et documentée
-      </h2>
-      <p class="text-xl mb-6 opacity-95">
-        Toutes nos méthodes sont basées sur la recherche scientifique
-      </p>
+      <h2 class="text-3xl font-bold mb-4">Une approche transparente et documentée</h2>
+      <p class="text-xl mb-8 opacity-95">Toutes nos méthodes sont basées sur la recherche scientifique</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/recherche.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
           Voir les sources scientifiques
         </a>
+        <!-- CHANGEMENT 1 : "Préinscrire" → "Inscrire pour mars" -->
         <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
-          Préinscrire mon enfant
+          Inscrire mon enfant pour mars
+        </a>
+        <!-- CHANGEMENT 3 : ajout lien journal -->
+        <a href="/journal.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-purple">
+          Journal de bord →
         </a>
       </div>
     </section>
@@ -485,33 +360,20 @@
   
   <div id="footer"></div>
   
-  <!-- Tarteaucitron -->
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({
-      "privacyUrl": "/mentions.html#cookies",
-      "hashtag": "#tarteaucitron",
-      "cookieName": "ludusmentis_gdpr",
-      "orientation": "bottom",
-      "showAlertSmall": false,
-      "cookieslist": true,
-      "showIcon": true,
-      "iconPosition": "BottomRight",
-      "adblocker": false,
-      "AcceptAllCta": true,
-      "highPrivacy": false,
-      "handleBrowserDNTRequest": false,
-      "removeCredit": false,
-      "readmoreLink": "/mentions.html#cookies",
-      "mandatory": false,
-      "googleConsentMode": true,
-      "partnersList": false
+      "privacyUrl": "/mentions.html#cookies", "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr", "orientation": "bottom",
+      "showAlertSmall": false, "cookieslist": true, "showIcon": true,
+      "iconPosition": "BottomRight", "adblocker": false, "AcceptAllCta": true,
+      "highPrivacy": false, "handleBrowserDNTRequest": false,
+      "removeCredit": false, "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false, "googleConsentMode": true, "partnersList": false
     });
-    
     tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
     (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
   </script>
-  
   <script src="/assets/js/include.js"></script>
 </body>
 </html>
