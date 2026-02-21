@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal de bord | Ludus Mentis ® Walhain</title>
+  <meta name="description" content="Le compte-rendu honnête de nos premières séances à Walhain : ce qui a marché, ce qu'on apprend, ce qu'on garde.">
+  
+  <link rel="canonical" href="https://ludusmentis.be/journal.html" />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
+    });
+  </script>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
+      }}}
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  <style>
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
+    .gradient-subtle { background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%); }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+
+    <!-- Hero -->
+    <section class="hero gradient-subtle rounded-3xl p-8 lg:p-12 mb-12">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+          Journal de bord
+        </h1>
+        <p class="text-xl text-gray-600">
+          Ce qu'on a vécu, ce qu'on a appris.<br>
+          Sans filtre.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="mb-10">
+      <div class="card bg-base-100 shadow">
+        <div class="card-body">
+          <p class="text-lg">
+            Entre mi-janvier et mi-février 2026, nous avons mené les premières séances de Ludus Mentis 
+            à l'école communale de Walhain centre. Quatre enfants, quatre séances, un démarrage modeste 
+            et riche d'enseignements.
+          </p>
+          <p class="mt-3 opacity-75">
+            Ce journal existe parce qu'on croit que la transparence construit la confiance. 
+            Les parents qui nous confient leurs enfants méritent de savoir ce qu'il se passe vraiment, 
+            pas une version marketing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entrée 1 -->
+    <article class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="badge badge-lg gradient-ludus text-white border-0">Séances 1-2</div>
+        <span class="text-sm opacity-50">Mi-janvier 2026</span>
+      </div>
+      
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-xl text-ludus-teal mb-4">
+            Poser les bases — et découvrir qu'on en avait besoin
+          </h2>
+          
+          <p class="mb-4">
+            Les premières séances, on ne joue pas encore vraiment. On installe quelque chose 
+            de plus important : la façon dont le groupe va fonctionner.
+          </p>
+          
+          <p class="mb-4">
+            On a mis en place un rituel d'entrée : un tour de table rapide pour savoir comment 
+            chacun arrive. Fatigué ? Excité ? Stressé par autre chose ? Ça paraît simple, 
+            mais ça change tout à la qualité de ce qui suit. Un enfant qui arrive préoccupé 
+            et qui ne l'a pas dit va le manifester autrement pendant la séance.
+          </p>
+
+          <p class="mb-4">
+            Les règles de vie ont été construites avec les enfants, pas imposées. 
+            On a parlé de respect, d'écoute, du droit à l'erreur. 
+            Ces règles servent de référence pour toute la suite.
+          </p>
+
+          <div class="alert alert-info mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>
+              <strong>Ce qu'on retient :</strong> Le rituel d'accueil n'est pas du temps perdu. 
+              C'est un investissement pour la qualité de tout ce qui vient après.
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Entrée 2 -->
+    <article class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="badge badge-lg gradient-ludus text-white border-0">Séance 3</div>
+        <span class="text-sm opacity-50">Fin janvier 2026</span>
+      </div>
+      
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-xl text-ludus-orange mb-4">
+            Keep Talking and Nobody Explodes — le grand test
+          </h2>
+          
+          <p class="mb-4">
+            Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage sur papier. 
+            Ils ne voient pas la même chose. Ils doivent donc se parler — précisément, calmement, 
+            rapidement.
+          </p>
+
+          <p class="mb-4">
+            <strong>Le résultat :</strong> 4 bombes désamorcées. Pour des débutants complets, 
+            c'est une vraie performance. Ça demande une écoute totale, des descriptions précises, 
+            et la capacité de ne pas paniquer quand le compteur tourne.
+          </p>
+
+          <p class="mb-4">
+            Mais la séance a aussi montré ses limites. Entre les erreurs de traduction des manuels 
+            et quelques modules capricieux, la frustration est montée. C'est là que le rôle 
+            d'animateur prend tout son sens : transformer l'énervement en question — 
+            "qu'est-ce qu'on change pour la prochaine fois ?"
+          </p>
+
+          <div class="alert alert-warning mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <span>
+              <strong>Ce qu'on retient :</strong> La frustration est formative — à condition qu'elle 
+              soit accompagnée. Un enfant qui apprend à gérer l'échec dans un jeu apprend quelque chose 
+              d'utile bien au-delà des écrans.
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Entrée 3 -->
+    <article class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="badge badge-lg gradient-ludus text-white border-0">Séance 4</div>
+        <span class="text-sm opacity-50">Mi-février 2026</span>
+      </div>
+      
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-xl text-ludus-purple mb-4">
+            La surprise des pauses actives
+          </h2>
+          
+          <p class="mb-4">
+            On a introduit les pauses actives dès le début. L'idée de base : couper le temps d'écran, 
+            bouger, réoxygéner le cerveau. Ce qu'on n'avait pas prévu, c'est la réaction des enfants.
+          </p>
+
+          <p class="mb-4">
+            Quand on leur laissait le choix — continuer la pause active ou retourner jouer — 
+            <strong>ils choisissaient de continuer à bouger</strong>. 
+            Des ados qui préfèrent courir plutôt que retourner à la manette, 
+            ce n'est pas ce qu'on attendait.
+          </p>
+
+          <p class="mb-4">
+            Explication probable : le mouvement physique "vide" le trop-plein d'énergie mentale 
+            accumulé pendant la concentration intense du jeu. La pause n'est pas une interruption — 
+            c'est une partie du cycle.
+          </p>
+
+          <p class="mb-4">
+            On a également introduit des exercices simples de santé numérique : le palming 
+            (mains sur les yeux pour faire le noir total) et quelques exercices de respiration. 
+            Des outils concrets que les enfants peuvent utiliser à la maison.
+          </p>
+
+          <div class="alert alert-success mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>
+              <strong>Ce qu'on retient :</strong> Les pauses actives ne sont pas une contrainte 
+              qu'on impose. Ce sont un moment que les enfants apprécient, parfois plus que le jeu lui-même.
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Bilan honnête -->
+    <section class="mb-10">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">
+            Bilan honnête de ce premier batch
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold text-success mb-3">✅ Ce qui a bien fonctionné</h3>
+              <ul class="space-y-2 text-sm">
+                <li>→ Les rituels de début et fin de séance</li>
+                <li>→ Keep Talking comme outil de communication</li>
+                <li>→ Les pauses actives (au-delà de nos attentes)</li>
+                <li>→ Le format petit groupe pour la création de liens</li>
+                <li>→ La gestion des frustrations en temps réel</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-warning mb-3">🔧 Ce qu'on améliore</h3>
+              <ul class="space-y-2 text-sm">
+                <li>→ Mieux anticiper les bugs techniques des jeux</li>
+                <li>→ Maintenir le contact avec les parents entre séances</li>
+                <li>→ Varier davantage les jeux selon l'énergie du groupe</li>
+                <li>→ Structurer encore mieux les débriefings</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p>
+              Ce premier batch a été plus court que prévu (4 séances au lieu de 7-8), 
+              et le groupe plus petit que l'objectif. C'est la réalité d'un projet qui démarre. 
+              On a choisi de continuer, d'apprendre, et d'ouvrir les inscriptions pour la suite 
+              avec ce qu'on a appris.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suite -->
+    <section class="mb-10">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body text-center">
+          <h2 class="text-2xl font-bold mb-4">La suite : module 2, 4 mars → 22 avril</h2>
+          <p class="mb-6 opacity-95">
+            8 séances, même engagement, même honnêteté.<br>
+            Ce journal sera mis à jour au fil des séances.
+          </p>
+          <a href="/contact.html" class="btn bg-white text-ludus-teal border-0 hover:bg-gray-100 btn-lg">
+            S'inscrire pour le prochain module →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <div id="footer"></div>
+  
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies", "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr", "orientation": "bottom",
+      "showAlertSmall": false, "cookieslist": true, "showIcon": true,
+      "iconPosition": "BottomRight", "adblocker": false, "AcceptAllCta": true,
+      "highPrivacy": false, "handleBrowserDNTRequest": false,
+      "removeCredit": false, "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false, "googleConsentMode": true, "partnersList": false
+    });
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>
