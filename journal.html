@@ -9,6 +9,10 @@
   <link rel="canonical" href="https://ludusmentis.be/journal.html" />
   <meta name="robots" content="index, follow" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
   <script>
     (function(){
       var saved = localStorage.getItem('theme');
@@ -21,9 +25,8 @@
       if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
     })();
   </script>
-  
   <script src="/assets/js/theme-manager.js"></script>
-  
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -33,273 +36,880 @@
       'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
     });
   </script>
-  
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
-  
+
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: { colors: {
-        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
-      }}}
-    }
-  </script>
   <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+
   <style>
-    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
-    .gradient-subtle { background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%); }
+    :root {
+      --ink: #1c1917;
+      --paper: #faf8f4;
+      --teal: #17a2b8;
+      --orange: #f59e0b;
+      --purple: #7c3aed;
+      --line: #e7e0d8;
+      --muted: #78716c;
+      --card-bg: #ffffff;
+    }
+
+    [data-theme="ludus-dark"] {
+      --ink: #f5f0e8;
+      --paper: #1c1917;
+      --line: #2c2825;
+      --muted: #a8a29e;
+      --card-bg: #28231f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      background-color: var(--paper);
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Grain texture */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .display { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* ── HERO ── */
+    .hero-j {
+      padding: 80px 24px 72px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+
+    .hero-j::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--orange), var(--purple));
+    }
+
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .tag-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .tag-line::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    h1.hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      margin: 0 0 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 480px;
+      line-height: 1.75;
+      margin: 0 0 32px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .hero-meta span + span::before {
+      content: '·';
+      margin-right: 20px;
+    }
+
+    /* ── INTRO ── */
+    .intro-section {
+      padding: 48px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .intro-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* ── ENTRIES ── */
+    .entries-section {
+      padding: 80px 24px;
+    }
+
+    .entries-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Single entry */
+    .entry {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 80px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    @media (min-width: 768px) {
+      .entry { grid-template-columns: 1fr 280px; }
+      .entry.reverse { grid-template-columns: 280px 1fr; }
+      .entry.reverse .entry-img-col { order: -1; }
+    }
+
+    /* Entry card */
+    .entry-card {
+      background: var(--card-bg);
+      padding: 40px 44px;
+      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 4px 4px 0 var(--line);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .entry-card:hover {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05), 6px 6px 0 var(--line);
+      transform: translate(-1px,-1px);
+    }
+
+    /* Colored left bar */
+    .entry-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+    }
+    .c-teal::before { background: var(--teal); }
+    .c-orange::before { background: var(--orange); }
+    .c-purple::before { background: var(--purple); }
+
+    /* Big ghost number */
+    .ghost-num {
+      position: absolute;
+      top: -16px; right: 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 120px;
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--line);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .entry-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .entry-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .entry-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .entry-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .entry-body {
+      font-size: 0.975rem;
+      line-height: 1.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .entry-body p + p { margin-top: 14px; }
+
+    /* Pull quote */
+    .pull {
+      border-left: 3px solid currentColor;
+      padding: 12px 18px;
+      margin: 20px 0;
+      font-style: italic;
+      font-size: 1.05em;
+      opacity: 0.85;
+    }
+
+    /* Retenir */
+    .retenir-block {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      position: relative;
+      z-index: 1;
+    }
+
+    .retenir-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .retenir-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* Image column */
+    .entry-img-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .img-frame {
+      flex: 1;
+      min-height: 240px;
+      position: relative;
+    }
+
+    /* Placeholder — striped hatching */
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      background-color: var(--line);
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 6px,
+        rgba(0,0,0,0.03) 6px,
+        rgba(0,0,0,0.03) 12px
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-style: italic;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .img-placeholder svg { opacity: 0.35; }
+
+    /* Real images — same class, used when placeholder replaced */
+    .journal-img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Caption / marginalia */
+    .img-caption {
+      padding-left: 12px;
+      border-left: 2px solid var(--line);
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* ── BILAN ── */
+    .bilan-section {
+      background: var(--card-bg);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 72px 24px;
+    }
+
+    .bilan-inner { max-width: 900px; margin: 0 auto; }
+
+    .bilan-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .bilan-sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 48px;
+    }
+
+    .bilan-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .bilan-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .bilan-col h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin: 0 0 16px;
+    }
+
+    .bilan-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bilan-col li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .bilan-col li:last-child { border-bottom: none; }
+
+    .bilan-col li::before {
+      content: '→';
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    .bilan-note {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: var(--paper);
+      border-left: 4px solid var(--line);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--ink);
+      padding: 72px 24px;
+    }
+
+    .cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    @media (min-width: 640px) {
+      .cta-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .cta-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .cta-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .cta-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: white;
+      margin: 0 0 8px;
+      line-height: 1.15;
+    }
+
+    .cta-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .btn-primary-cta {
+      display: inline-block;
+      background: white;
+      color: var(--ink);
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      font-family: 'Source Serif 4', serif;
+      white-space: nowrap;
+    }
+
+    .btn-primary-cta:hover {
+      background: var(--teal);
+      color: white;
+    }
+
+    .btn-ghost-cta {
+      display: inline-block;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.82rem;
+      text-decoration: none;
+      text-align: center;
+      padding: 6px;
+      transition: color 0.2s;
+      font-style: italic;
+    }
+
+    .btn-ghost-cta:hover { color: white; }
+
+    /* Fade in */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.55s ease both;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
   </style>
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
+
   <div id="header"></div>
-  
-  <main class="container mx-auto px-4 py-8 max-w-3xl">
 
-    <!-- Hero -->
-    <section class="hero gradient-subtle rounded-3xl p-8 lg:p-12 mb-12">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
-          Journal de bord
-        </h1>
-        <p class="text-xl text-gray-600">
-          Ce qu'on a vécu, ce qu'on a appris.<br>
-          Sans filtre.
+  <main>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="hero-j" style="background: var(--paper);">
+      <div class="hero-inner">
+        <div class="tag-line fade-up delay-1">Mi-janvier → mi-février 2026</div>
+        <h1 class="hero-title display fade-up delay-2">Journal<br><em style="font-style:italic; font-weight:700;">de bord</em></h1>
+        <p class="hero-sub fade-up delay-3">
+          Ce qu'on a vécu, ce qu'on a appris.<br>Quatre mercredis, quatre enfants. Sans filtre.
         </p>
-      </div>
-    </section>
-
-    <!-- Intro -->
-    <section class="mb-10">
-      <div class="card bg-base-100 shadow">
-        <div class="card-body">
-          <p class="text-lg">
-            Entre mi-janvier et mi-février 2026, nous avons mené les premières séances de Ludus Mentis 
-            à l'école communale de Walhain centre. Quatre enfants, quatre séances, un démarrage modeste 
-            et riche d'enseignements.
-          </p>
-          <p class="mt-3 opacity-75">
-            Ce journal existe parce qu'on croit que la transparence construit la confiance. 
-            Les parents qui nous confient leurs enfants méritent de savoir ce qu'il se passe vraiment, 
-            pas une version marketing.
-          </p>
+        <div class="hero-meta fade-up delay-3">
+          <span>4 séances</span>
+          <span>Walhain, Brabant wallon</span>
+          <span>Module de lancement</span>
         </div>
       </div>
     </section>
 
-    <!-- Entrée 1 -->
-    <article class="mb-10">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="badge badge-lg gradient-ludus text-white border-0">Séances 1-2</div>
-        <span class="text-sm opacity-50">Mi-janvier 2026</span>
+    <!-- ══════════════════ INTRO ══════════════════ -->
+    <section class="intro-section" style="background: var(--card-bg);">
+      <div class="intro-inner">
+        Entre mi-janvier et mi-février 2026, on a fait tourner les premières séances 
+        à l'école communale de Walhain. Petit démarrage voulu, beaucoup appris. 
+        Ce journal existe pour les parents qui veulent savoir ce qu'il se passe 
+        vraiment : pas la version officielle, la version terrain.
       </div>
-      
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title text-xl text-ludus-teal mb-4">
-            Poser les bases et découvrir qu'on en avait besoin
-          </h2>
-          
-          <p class="mb-4">
-            Les premières séances, on ne joue pas encore vraiment. On installe quelque chose 
-            de plus important : la façon dont le groupe va fonctionner.
-          </p>
-          
-          <p class="mb-4">
-            On a mis en place un rituel d'entrée : un tour de table rapide pour savoir comment 
-            chacun arrive. Fatigué ? Excité ? Stressé par autre chose ? Ça paraît simple, 
-            mais ça change tout à la qualité de ce qui suit. Un enfant qui arrive préoccupé 
-            et qui ne l'a pas dit va le manifester autrement pendant la séance.
-          </p>
+    </section>
 
-          <p class="mb-4">
-            Les règles de vie ont été construites avec les enfants, pas imposées. 
-            On a parlé de respect, d'écoute, du droit à l'erreur. 
-            Ces règles servent de référence pour toute la suite.
-          </p>
+    <!-- ══════════════════ ENTRIES ══════════════════ -->
+    <section class="entries-section">
+      <div class="entries-inner">
 
-          <div class="alert alert-info mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>
-              <strong>Ce qu'on retient :</strong> Le rituel d'accueil n'est pas du temps perdu. 
-              C'est un investissement pour la qualité de tout ce qui vient après.
-            </span>
-          </div>
-        </div>
-      </div>
-    </article>
+        <!-- ─── ENTRY 1 ─── -->
+        <article class="entry">
+          <div class="entry-card c-teal">
+            <span class="ghost-num">1</span>
 
-    <!-- Entrée 2 -->
-    <article class="mb-10">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="badge badge-lg gradient-ludus text-white border-0">Séance 3</div>
-        <span class="text-sm opacity-50">Fin janvier 2026</span>
-      </div>
-      
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title text-xl text-ludus-orange mb-4">
-            Keep Talking and Nobody Explodes : le grand test
-          </h2>
-          
-          <p class="mb-4">
-            Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage sur papier. 
-            Ils ne voient pas la même chose. Ils doivent donc se parler précisément, calmement, 
-            rapidement.
-          </p>
-
-          <p class="mb-4">
-            <strong>Le résultat :</strong> 4 bombes désamorcées. Pour des débutants complets, 
-            c'est une vraie performance. Ça demande une écoute totale, des descriptions précises, 
-            et la capacité de ne pas paniquer quand le compteur tourne.
-          </p>
-
-          <p class="mb-4">
-            Mais la séance a aussi montré ses limites. Entre les erreurs de traduction des manuels 
-            et quelques modules capricieux, la frustration est montée. C'est là que le rôle 
-            d'animateur prend tout son sens : transformer l'énervement en question 
-            "qu'est-ce qu'on change pour la prochaine fois ?"
-          </p>
-
-          <div class="alert alert-warning mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-            <span>
-              <strong>Ce qu'on retient :</strong> La frustration est formative à condition qu'elle 
-              soit accompagnée. Un enfant qui apprend à gérer l'échec dans un jeu apprend quelque chose 
-              d'utile bien au-delà des écrans.
-            </span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Entrée 3 -->
-    <article class="mb-10">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="badge badge-lg gradient-ludus text-white border-0">Séance 4</div>
-        <span class="text-sm opacity-50">Mi-février 2026</span>
-      </div>
-      
-      <div class="card bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="card-title text-xl text-ludus-purple mb-4">
-            La surprise des pauses actives
-          </h2>
-          
-          <p class="mb-4">
-            On a introduit les pauses actives dès le début. L'idée de base : couper le temps d'écran, 
-            bouger, réoxygéner le cerveau. Ce qu'on n'avait pas prévu, c'est la réaction des enfants.
-          </p>
-
-          <p class="mb-4">
-            Quand on leur laissait le choix entre continuer la pause active ou retourner jouer,  
-            <strong>ils choisissaient de continuer à bouger</strong>. 
-            Des ados qui préfèrent courir plutôt que retourner à la manette, 
-            ce n'est pas ce qu'on attendait.
-          </p>
-
-          <p class="mb-4">
-            Explication probable : le mouvement physique "vide" le trop-plein d'énergie mentale 
-            accumulé pendant la concentration intense du jeu. La pause n'est pas une interruption — 
-            c'est une partie du cycle.
-          </p>
-
-          <p class="mb-4">
-            On a également introduit des exercices simples de santé numérique : le palming 
-            (mains sur les yeux pour faire le noir total) et quelques exercices de respiration. 
-            Des outils concrets que les enfants peuvent utiliser à la maison.
-          </p>
-
-          <div class="alert alert-success mt-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span>
-              <strong>Ce qu'on retient :</strong> Les pauses actives ne sont pas une contrainte 
-              qu'on impose. Ce sont un moment que les enfants apprécient, parfois plus que le jeu lui-même.
-            </span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Bilan honnête -->
-    <section class="mb-10">
-      <div class="card bg-base-200">
-        <div class="card-body">
-          <h2 class="text-2xl font-bold mb-4 text-ludus-teal">
-            Bilan honnête de ce premier batch
-          </h2>
-          
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 class="font-bold text-success mb-3">✅ Ce qui a bien fonctionné</h3>
-              <ul class="space-y-2 text-sm">
-                <li>→ Les rituels de début et fin de séance</li>
-                <li>→ Keep Talking comme outil de communication</li>
-                <li>→ Les pauses actives (au-delà de nos attentes)</li>
-                <li>→ Le format petit groupe pour la création de liens</li>
-                <li>→ La gestion des frustrations en temps réel</li>
-              </ul>
+            <div class="entry-header">
+              <span class="entry-label" style="color: var(--teal);">Séances 1 &amp; 2</span>
+              <span class="entry-date">Mi-janvier 2026</span>
             </div>
-            
-            <div>
-              <h3 class="font-bold text-warning mb-3">🔧 Ce qu'on améliore</h3>
-              <ul class="space-y-2 text-sm">
-                <li>→ Mieux anticiper les bugs techniques des jeux</li>
-                <li>→ Maintenir le contact avec les parents entre séances</li>
-                <li>→ Varier davantage les jeux selon l'énergie du groupe</li>
-                <li>→ Structurer encore mieux les débriefings</li>
-              </ul>
+
+            <h2 class="entry-title">
+              Poser les bases — et découvrir qu'on en avait besoin
+            </h2>
+
+            <div class="entry-body">
+              <p>
+                Les premières séances, on ne joue pas encore vraiment. On installe quelque 
+                chose de plus important : la façon dont le groupe va fonctionner.
+              </p>
+
+              <p>
+                On met en place un rituel d'entrée — un tour de table rapide. Comment chacun 
+                arrive : fatigué, excité, préoccupé par autre chose ? Ça paraît anecdotique. 
+                En pratique, un enfant qui n'a pas eu l'occasion de déposer ce qu'il porte 
+                va le manifester autrement pendant la séance.
+              </p>
+
+              <div class="pull" style="color: var(--teal);">
+                Les règles ont été construites avec les enfants, pas imposées. 
+                Ce détail change tout à leur appropriation.
+              </div>
+
+              <p>
+                On a parlé de respect, d'écoute, du droit à l'erreur. Ces règles 
+                servent de référence pour toute la suite du module.
+              </p>
+            </div>
+
+            <div class="retenir-block">
+              <div class="retenir-label" style="color: var(--teal);">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>
+                </svg>
+                Ce qu'on retient
+              </div>
+              <p class="retenir-text">
+                Le tour de table du début prend 5 minutes. Il détermine la qualité 
+                de tout ce qui suit.
+              </p>
             </div>
           </div>
 
-          <div class="alert mt-6">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <p>
-              Ce premier batch a été plus court que prévu (4 séances au lieu de 7-8), 
-              et le groupe plus petit que l'objectif. C'est la réalité d'un projet qui démarre. 
-              On a choisi de continuer, d'apprendre, et d'ouvrir les inscriptions pour la suite 
-              avec ce qu'on a appris.
+          <!-- Image col -->
+          <div class="entry-img-col">
+            <div class="img-frame">
+              <div class="/assets/images/PXL_20260121_154537669.MP.jpg"
+                 alt="La salle installée avant l'arrivée des enfants"
+                     class="journal-img">>
+                <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span>La salle installée<br>avant l'arrivée des enfants</span>
+              </div>
+            </div>
+            <p class="img-caption">
+              Walhain, école communale. Les premières séances, on installe avant tout 
+              un cadre, pas encore un jeu.
             </p>
           </div>
+        </article>
+
+        <!-- ─── ENTRY 2 ─── -->
+        <article class="entry reverse">
+          <div class="entry-card c-orange">
+            <span class="ghost-num">2</span>
+
+            <div class="entry-header">
+              <span class="entry-label" style="color: var(--orange);">Séance 3</span>
+              <span class="entry-date">Fin janvier 2026</span>
+            </div>
+
+            <h2 class="entry-title">
+              Keep Talking and Nobody Explodes — le grand test
+            </h2>
+
+            <div class="entry-body">
+              <p>
+                Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage 
+                sur papier. Personne ne voit la même chose. Ils doivent se parler — 
+                précisément, calmement, vite.
+              </p>
+
+              <p>
+                Résultat : <strong>4 bombes désamorcées</strong>. Pour des débutants complets, 
+                c'est une vraie performance. Le jeu récompense une écoute totale et des 
+                descriptions exactes. Pas d'approximation possible.
+              </p>
+
+              <div class="pull" style="color: var(--orange);">
+                La frustration est montée. C'est là que le rôle d'animateur prend tout 
+                son sens : transformer l'énervement en question.
+              </div>
+
+              <p>
+                La bonne question à poser : <em>"Qu'est-ce qu'on change pour la prochaine fois ?"</em> 
+                Pas <em>"pourquoi ça n'a pas marché."</em>
+              </p>
+            </div>
+
+            <div class="retenir-block">
+              <div class="retenir-label" style="color: var(--orange);">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>
+                </svg>
+                Ce qu'on retient
+              </div>
+              <p class="retenir-text">
+                La frustration, bien accompagnée, est utile. Apprendre à rater sans 
+                s'effondrer — c'est concret, et ça se transfert.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image col -->
+          <div class="entry-img-col">
+            <div class="img-frame">
+              <!--
+                IMAGE #2 — Remplacer par :
+                <img src="/assets/images/journal/seance-3-manuel.jpg"
+                     alt="Le manuel de désamorçage ouvert sur la table"
+                     class="journal-img">
+                
+                Idéal : le manuel papier ouvert sur la table, ou l'écran du jeu
+                avec le timer qui tourne. Très photogénique, pas de visage.
+                Format : paysage ou carré.
+              -->
+              <div class="img-placeholder">
+                <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span>Le manuel papier<br>ou l'écran du jeu</span>
+              </div>
+            </div>
+            <p class="img-caption">
+              Keep Talking and Nobody Explodes — le jeu qui oblige à vraiment s'écouter.
+            </p>
+          </div>
+        </article>
+
+        <!-- ─── ENTRY 3 ─── -->
+        <article class="entry">
+          <div class="entry-card c-purple">
+            <span class="ghost-num">3</span>
+
+            <div class="entry-header">
+              <span class="entry-label" style="color: var(--purple);">Séance 4</span>
+              <span class="entry-date">Mi-février 2026</span>
+            </div>
+
+            <h2 class="entry-title">
+              La surprise des pauses actives
+            </h2>
+
+            <div class="entry-body">
+              <p>
+                Les pauses actives sont dans le programme depuis le début. L'idée de base : 
+                couper le temps d'écran, bouger, laisser le cerveau souffler. 
+                Ce qu'on n'avait pas anticipé, c'est la réaction des enfants.
+              </p>
+
+              <div class="pull" style="color: var(--purple);">
+                Quand on leur laissait le choix — continuer à bouger ou retourner jouer — 
+                ils choisissaient de continuer à bouger.
+              </div>
+
+              <p>
+                Des ados qui préfèrent courir plutôt que retourner à la manette. 
+                Explication probable : le mouvement vide le trop-plein d'énergie mentale 
+                accumulé pendant la concentration intense. La pause n'est pas une 
+                interruption — c'est une partie du cycle.
+              </p>
+
+              <p>
+                On a aussi introduit deux outils simples : le <em>palming</em> (mains sur 
+                les yeux, 30 secondes dans le noir total) et quelques exercices de respiration. 
+                Des gestes que les enfants peuvent réutiliser à la maison.
+              </p>
+            </div>
+
+            <div class="retenir-block">
+              <div class="retenir-label" style="color: var(--purple);">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>
+                </svg>
+                Ce qu'on retient
+              </div>
+              <p class="retenir-text">
+                La pause active n'est pas un compromis pédagogique. C'est une partie 
+                intégrante du cycle — et les enfants le sentent d'eux-mêmes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Image col -->
+          <div class="entry-img-col">
+            <div class="img-frame">
+              <!--
+                IMAGE #3 — Remplacer par :
+                <img src="/assets/images/journal/seance-4-pause.jpg"
+                     alt="Pause active en fin de séance"
+                     class="journal-img">
+                
+                Idéal : enfants de dos en mouvement, ou silhouettes en action floue.
+                C'est l'entrée la plus humaine — si tu as des photos sans visages 
+                reconnaissables, c'est ici qu'elles vont.
+                Format : portrait ou carré.
+              -->
+              <div class="img-placeholder">
+                <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="18" height="18" rx="1.5"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span>Enfants de dos<br>pendant la pause active</span>
+              </div>
+            </div>
+            <p class="img-caption">
+              L'entrée la plus inattendue du module. On ne s'y attendait vraiment pas.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ BILAN ══════════════════ -->
+    <section class="bilan-section">
+      <div class="bilan-inner">
+        <h2 class="bilan-title display">Bilan honnête</h2>
+        <p class="bilan-sub">Premier module terminé — ce qu'on emporte pour mars</p>
+
+        <div class="bilan-grid">
+          <div class="bilan-col">
+            <h3 style="color: var(--teal);">Ce qui a bien fonctionné</h3>
+            <ul>
+              <li>Les rituels d'entrée et de sortie</li>
+              <li>Keep Talking comme outil de communication</li>
+              <li>Les pauses actives (au-delà des attentes)</li>
+              <li>Le format petit groupe pour la qualité des liens</li>
+              <li>Accompagner la frustration en temps réel</li>
+            </ul>
+          </div>
+
+          <div class="bilan-col">
+            <h3 style="color: var(--orange);">Ce qu'on améliore pour mars</h3>
+            <ul>
+              <li>Mieux anticiper les bugs techniques des jeux</li>
+              <li>Maintenir le lien avec les parents entre séances</li>
+              <li>Adapter les jeux à l'énergie du groupe le jour J</li>
+              <li>Structurer encore mieux les temps de débrief</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bilan-note">
+          Ce premier batch a été plus court que prévu : 4 séances au lieu de 6, 
+          et un groupe plus petit que l'objectif. C'est la réalité d'un projet qui démarre. 
+          On a choisi de continuer, d'apprendre, et d'ouvrir les inscriptions pour mars 
+          avec ce qu'on a appris sur le terrain.
         </div>
       </div>
     </section>
 
-    <!-- Suite -->
-    <section class="mb-10">
-      <div class="card gradient-ludus text-white">
-        <div class="card-body text-center">
-          <h2 class="text-2xl font-bold mb-4">La suite : module 2, 4 mars → 22 avril</h2>
-          <p class="mb-6 opacity-95">
+    <!-- ══════════════════ CTA ══════════════════ -->
+    <section class="cta-section">
+      <div class="cta-inner">
+        <div>
+          <div class="cta-label">La suite</div>
+          <h2 class="cta-title display">Module 2<br>4 mars → 22 avril 2026</h2>
+          <p class="cta-desc">
             8 séances, même engagement, même honnêteté.<br>
             Ce journal sera mis à jour au fil des séances.
           </p>
-          <a href="/contact.html" class="btn bg-white text-ludus-teal border-0 hover:bg-gray-100 btn-lg">
-            S'inscrire pour le prochain module →
+        </div>
+
+        <div class="cta-buttons">
+          <a href="/contact.html" class="btn-primary-cta">
+            S'inscrire pour le module de mars →
+          </a>
+          <a href="/infos-pratiques.html" class="btn-ghost-cta">
+            Voir les tarifs et le planning
           </a>
         </div>
       </div>
     </section>
 
   </main>
-  
+
   <div id="footer"></div>
-  
+
   <script src="/tarteaucitron.js/tarteaucitron.js"></script>
   <script>
     tarteaucitron.init({
