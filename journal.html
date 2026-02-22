@@ -54,28 +54,7 @@
     .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
     .gradient-subtle { background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%); }
 
-    /* Timeline */
-    .timeline-line {
-      position: absolute;
-      left: 1.25rem;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, #17a2b8, #ff9800, #6b46c1);
-    }
-    .timeline-dot {
-      position: absolute;
-      left: 0.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #17a2b8, #ff9800);
-      border: 3px solid white;
-      box-shadow: 0 0 0 2px #17a2b8;
-      z-index: 10;
-    }
-
-    /* Image placeholder — à remplacer par de vraies <img> */
+    /* Image placeholder */
     .img-placeholder {
       background: linear-gradient(135deg, #e0f7fa 0%, #fff8e1 100%);
       border: 2px dashed #17a2b8;
@@ -93,7 +72,6 @@
     .img-placeholder .icon { font-size: 2rem; opacity: 0.4; }
     .img-placeholder p { opacity: 0.65; font-style: italic; font-size: 0.85rem; }
 
-    /* Style image réelle quand elle remplace le placeholder */
     .journal-img {
       border-radius: 1rem;
       width: 100%;
@@ -101,7 +79,6 @@
       min-height: 200px;
     }
 
-    /* Encadré "Ce qu'on retient" — sobre, pas d'icône répétée */
     .retenir {
       border-left: 4px solid;
       padding: 0.75rem 1rem;
@@ -109,7 +86,7 @@
       margin-top: 1.25rem;
       font-size: 0.9rem;
     }
-    .retenir-teal  { border-color: #17a2b8; background: #f0f9ff; color: #0e7490; }
+    .retenir-teal   { border-color: #17a2b8; background: #f0f9ff; color: #0e7490; }
     .retenir-orange { border-color: #ff9800; background: #fff8e1; color: #b45309; }
     .retenir-purple { border-color: #6b46c1; background: #f5f3ff; color: #5b21b6; }
   </style>
@@ -143,147 +120,137 @@
       </p>
     </section>
 
-    <!-- Timeline -->
-    <div class="relative pl-10">
-      <div class="timeline-line"></div>
+    <!-- Entrées -->
+    <div>
 
       <!-- ── Entrée 1 ── -->
-      <article class="relative mb-16">
-        <div class="timeline-dot" style="top: 0.3rem;"></div>
-        <div class="ml-2">
+      <article class="mb-16">
 
-          <div class="flex items-center gap-3 mb-5">
-            <span class="badge badge-lg gradient-ludus text-white border-0">Séances 1–2</span>
-            <span class="text-sm opacity-50">Mi-janvier 2026</span>
-          </div>
-
-          <h2 class="text-xl font-bold text-ludus-teal mb-4">
-            Poser les bases — et découvrir qu'on en avait besoin
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
-            <div class="space-y-3 text-gray-700">
-              <p>
-                Les premières séances, on ne joue pas encore vraiment. On installe quelque chose 
-                de plus important : la façon dont le groupe va fonctionner.
-              </p>
-              <p>
-                On a mis en place un rituel d'entrée — un tour de table rapide pour savoir comment 
-                chacun arrive. Fatigué ? Excité ? Stressé par autre chose ? Un enfant qui arrive 
-                préoccupé et qui ne l'a pas dit va le manifester autrement pendant la séance.
-              </p>
-              <p>
-                Les règles de vie ont été construites avec les enfants, pas imposées. 
-                Elles servent de référence pour toute la suite.
-              </p>
-            </div>
-
-            <img 
-              src="assets/images/PXL_20260121_154537669.MP.jpg" 
-              alt="La salle installée avant l'arrivée des enfants" 
-              class="journal-img"
-              loading="lazy"
-            >
-
-          <div class="retenir retenir-teal">
-            <strong>Ce qu'on retient :</strong> Le tour de table du début prend 5 minutes et change tout à la qualité de ce qui suit.
-          </div>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séances 1–2</span>
+          <span class="text-sm opacity-50">Mi-janvier 2026</span>
         </div>
+
+        <h2 class="text-xl font-bold text-ludus-teal mb-4">
+          Poser les bases — et découvrir qu'on en avait besoin
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Les premières séances, on ne joue pas encore vraiment. On installe quelque chose 
+              de plus important : la façon dont le groupe va fonctionner.
+            </p>
+            <p>
+              On a mis en place un rituel d'entrée — un tour de table rapide pour savoir comment 
+              chacun arrive. Fatigué ? Excité ? Stressé par autre chose ? Un enfant qui arrive 
+              préoccupé et qui ne l'a pas dit va le manifester autrement pendant la séance.
+            </p>
+            <p>
+              Les règles de vie ont été construites avec les enfants, pas imposées. 
+              Elles servent de référence pour toute la suite.
+            </p>
+          </div>
+
+          <img 
+            src="assets/images/PXL_20260121_154537669.MP.jpg" 
+            alt="La salle installée avant l'arrivée des enfants" 
+            class="journal-img"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="retenir retenir-teal">
+          <strong>Ce qu'on retient :</strong> Le tour de table du début prend 5 minutes et change tout à la qualité de ce qui suit.
+        </div>
+
       </article>
 
       <!-- ── Entrée 2 ── -->
-      <article class="relative mb-16">
-        <div class="timeline-dot" style="top: 0.3rem;"></div>
-        <div class="ml-2">
+      <article class="mb-16">
 
-          <div class="flex items-center gap-3 mb-5">
-            <span class="badge badge-lg gradient-ludus text-white border-0">Séance 3</span>
-            <span class="text-sm opacity-50">Fin janvier 2026</span>
-          </div>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séance 3</span>
+          <span class="text-sm opacity-50">Fin janvier 2026</span>
+        </div>
 
-          <h2 class="text-xl font-bold text-ludus-orange mb-4">
-            Keep Talking and Nobody Explodes — le grand test
-          </h2>
+        <h2 class="text-xl font-bold text-ludus-orange mb-4">
+          Keep Talking and Nobody Explodes — le grand test
+        </h2>
 
-          <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <img 
+            src="assets/images/screenshot4_manualNEEDSUPDATE-1024x576.jpg" 
+            alt="Manuel de désamorçage" 
+            class="journal-img"
+            loading="lazy"
+          >
 
-           
-            <img 
-              src="assets/images/screenshot4_manualNEEDSUPDATE-1024x576.jpg" 
-              alt="Manuel de désarmorçage" 
-              class="journal-img"
-              loading="lazy"
-            >
-
-            <div class="space-y-3 text-gray-700">
-              <p>
-                Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage sur papier. 
-                Ils ne voient pas la même chose, ils doivent se parler : précisément, calmement, rapidement.
-              </p>
-              <p>
-                4 bombes désamorcées. Pour des débutants complets, c'est une vraie performance.
-              </p>
-              <p>
-                Entre les erreurs de traduction et quelques modules capricieux, la frustration est montée. 
-                C'est là que le rôle d'animateur prend tout son sens : transformer l'énervement en question — 
-                <em>qu'est-ce qu'on change pour la prochaine fois ?</em>
-              </p>
-            </div>
-          </div>
-
-          <div class="retenir retenir-orange">
-            <strong>Ce qu'on retient :</strong> La frustration, bien accompagnée, c'est utile. Un enfant qui apprend à rater sans s'effondrer, c'est concret.
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage sur papier. 
+              Ils ne voient pas la même chose, ils doivent se parler : précisément, calmement, rapidement.
+            </p>
+            <p>
+              4 bombes désamorcées. Pour des débutants complets, c'est une vraie performance.
+            </p>
+            <p>
+              Entre les erreurs de traduction et quelques modules capricieux, la frustration est montée. 
+              C'est là que le rôle d'animateur prend tout son sens : transformer l'énervement en question — 
+              <em>qu'est-ce qu'on change pour la prochaine fois ?</em>
+            </p>
           </div>
         </div>
+
+        <div class="retenir retenir-orange">
+          <strong>Ce qu'on retient :</strong> La frustration, bien accompagnée, c'est utile. Un enfant qui apprend à rater sans s'effondrer, c'est concret.
+        </div>
+
       </article>
 
       <!-- ── Entrée 3 ── -->
-      <article class="relative mb-16">
-        <div class="timeline-dot" style="top: 0.3rem;"></div>
-        <div class="ml-2">
+      <article class="mb-16">
 
-          <div class="flex items-center gap-3 mb-5">
-            <span class="badge badge-lg gradient-ludus text-white border-0">Séance 4</span>
-            <span class="text-sm opacity-50">Mi-février 2026</span>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séance 4</span>
+          <span class="text-sm opacity-50">Mi-février 2026</span>
+        </div>
+
+        <h2 class="text-xl font-bold text-ludus-purple mb-4">
+          La surprise des pauses actives
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Quand on leur laissait le choix : continuer la pause active ou retourner jouer,
+              <strong>ils choisissaient de continuer à bouger</strong>.
+            </p>
+            <p>
+              Le mouvement physique "vide" le trop-plein d'énergie mentale accumulé pendant la 
+              concentration intense du jeu. La pause n'est pas une interruption, c'est une partie du cycle.
+            </p>
+            <p>
+              On a aussi introduit le palming et quelques exercices de respiration : des outils 
+              concrets que les enfants peuvent réutiliser à la maison.
+            </p>
           </div>
 
-          <h2 class="text-xl font-bold text-ludus-purple mb-4">
-            La surprise des pauses actives
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
-            <div class="space-y-3 text-gray-700">
-              <p>
-                Quand on leur laissait le choix : continuer la pause active ou retourner jouer,
-                <strong>ils choisissaient de continuer à bouger</strong>.
-              </p>
-              <p>
-                Le mouvement physique "vide" le trop-plein d'énergie mentale accumulé pendant la 
-                concentration intense du jeu. La pause n'est pas une interruption, c'est une partie du cycle.
-              </p>
-              <p>
-                On a aussi introduit le palming et quelques exercices de respiration : des outils 
-                concrets que les enfants peuvent réutiliser à la maison.
-              </p>
-            </div>
-
-            <!-- 📷 IMAGE 3 — remplacer par : <img src="/assets/images/journal/seance4-pause.jpg" alt="Enfants en mouvement pendant la pause active" class="journal-img"> -->
-            <div class="img-placeholder">
-              <span class="icon">📷</span>
-              <strong>Photo à ajouter</strong>
-              <p>Enfants de dos ou en mouvement<br>pendant la pause active</p>
-              <code class="text-xs opacity-50">assets/images/journal/seance4-pause.jpg</code>
-            </div>
-          </div>
-
-          <div class="retenir retenir-purple">
-            <strong>Ce qu'on retient :</strong> Des ados qui préfèrent courir plutôt que retourner à la manette, on ne s'y attendait pas.
+          <div class="img-placeholder">
+            <span class="icon">📷</span>
+            <strong>Photo à ajouter</strong>
+            <p>Enfants de dos ou en mouvement<br>pendant la pause active</p>
+            <code class="text-xs opacity-50">assets/images/journal/seance4-pause.jpg</code>
           </div>
         </div>
+
+        <div class="retenir retenir-purple">
+          <strong>Ce qu'on retient :</strong> Des ados qui préfèrent courir plutôt que retourner à la manette, on ne s'y attendait pas.
+        </div>
+
       </article>
 
     </div>
-    <!-- fin timeline -->
 
     <!-- Bilan honnête -->
     <section class="mb-10">
