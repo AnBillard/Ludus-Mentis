@@ -25,11 +25,20 @@
     </nav>
 
     <div class="navbar-end gap-2">
+
+      <!-- Toggle dark/light — AVANT le CTA -->
+      <button id="theme-toggle"
+              type="button"
+              class="btn btn-ghost btn-circle btn-sm"
+              aria-label="Changer le thème">
+        🌙
+      </button>
+
       <!-- CTA Button Desktop -->
       <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
         S'inscrire pour mars
       </a>
-      
+
       <!-- Mobile menu button -->
       <div class="dropdown dropdown-end xl:hidden">
         <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
@@ -47,7 +56,7 @@
           <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
           <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
           <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
-          
+
           <li class="mt-4">
             <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
               S'inscrire pour mars
@@ -63,38 +72,51 @@
   .navbar a:hover {
     color: #17a2b8;
   }
-  
+
   .btn[style*="background-color: #059669"]:hover {
     background-color: #047857 !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
   }
-  
+
   /* Dark mode fixes */
-  [data-theme="ludus-dark"] .dropdown-content {
+  [data-theme="dark"] .dropdown-content {
     background-color: hsl(220 13% 18%);
     border-color: rgba(255, 255, 255, 0.1);
   }
-  
-  [data-theme="ludus-dark"] .dropdown-content a {
+
+  [data-theme="dark"] .dropdown-content a {
     color: #e5e7eb;
   }
-  
-  [data-theme="ludus-dark"] .dropdown-content a:hover {
+
+  [data-theme="dark"] .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #4dd0e1;
   }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const dropdown = document.querySelector('.dropdown-end');
-    const dropdownContent = dropdown?.querySelector('.dropdown-content');
-    
+  // Initialiser l'icône du bouton au chargement du header
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var theme = document.documentElement.getAttribute('data-theme') || 'light';
+    btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  })();
+
+  // Fermer le menu mobile au clic sur un lien
+  document.addEventListener('DOMContentLoaded', function () {
+    var dropdown = document.querySelector('.dropdown-end');
+    var dropdownContent = dropdown && dropdown.querySelector('.dropdown-content');
     if (dropdownContent) {
-      const links = dropdownContent.querySelectorAll('a');
-      links.forEach(link => {
-        link.addEventListener('click', () => {
+      dropdownContent.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
           document.activeElement.blur();
         });
       });
