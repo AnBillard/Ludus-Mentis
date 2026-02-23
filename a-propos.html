@@ -45,23 +45,7 @@
   </script>
 
   <!-- Script anti-FOUC pour dark mode -->
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      var theme;
-      if (saved) {
-        theme = saved;
-      } else {
-        try {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
-        } catch(e) {
-          theme = 'light';
-        }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
   
   <script src="/assets/js/theme-manager.js"></script>
   
@@ -222,7 +206,7 @@
       </h2>
       
       <div class="grid md:grid-cols-3 gap-4">
-        <div class="card bg-blue-50 text-center">
+        <div class="card bg-info/10 text-center">
           <div class="card-body compact">
             <div class="text-3xl mb-2">🎼</div>
             <h3 class="font-bold text-blue-700">Académie de musique</h3>
@@ -232,7 +216,7 @@
           </div>
         </div>
         
-        <div class="card bg-green-50 text-center">
+        <div class="card bg-success/10 text-center">
           <div class="card-body compact">
             <div class="text-3xl mb-2">⛺</div>
             <h3 class="font-bold text-green-700">Mouvement scout</h3>
@@ -242,7 +226,7 @@
           </div>
         </div>
         
-        <div class="card bg-orange-50 text-center">
+        <div class="card bg-warning/10 text-center">
           <div class="card-body compact">
             <div class="text-3xl mb-2">🎮</div>
             <h3 class="font-bold text-orange-700">Esport moderne</h3>

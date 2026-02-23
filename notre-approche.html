@@ -35,18 +35,7 @@
   }
   </script>
 
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      var theme;
-      if (saved) { theme = saved; } else {
-        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
-        catch(e) { theme = 'light'; }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
   
   <script src="/assets/js/theme-manager.js"></script>
   

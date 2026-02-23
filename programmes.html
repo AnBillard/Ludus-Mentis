@@ -50,18 +50,7 @@
   }
   </script>
 
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      var theme;
-      if (saved) { theme = saved; } else {
-        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
-        catch(e) { theme = 'light'; }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
   
   <script src="/assets/js/theme-manager.js"></script>
   
@@ -199,7 +188,7 @@
         </div>
         
         <div class="mt-6">
-          <div class="alert border-2 border-ludus-teal bg-teal-50 text-ludus-teal">
+          <div class="alert border-2 border-ludus-teal bg-primary/10">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>

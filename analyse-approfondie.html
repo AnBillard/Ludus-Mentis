@@ -11,23 +11,7 @@
   <meta name="robots" content="index, follow" />
   
   <!-- Script anti-FOUC pour dark mode -->
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      var theme;
-      if (saved) {
-        theme = saved;
-      } else {
-        try {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
-        } catch(e) {
-          theme = 'light';
-        }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
   
   <script src="/assets/js/theme-manager.js"></script>
   
@@ -306,7 +290,7 @@
       </h2>
       
       <div class="grid gap-6">
-        <div class="card bg-gradient-to-r from-purple-50 to-pink-50">
+        <div class="card bg-base-200">
           <div class="card-body">
             <h3 class="font-bold text-xl mb-3 text-purple-700">
               Impact générationnel
@@ -324,7 +308,7 @@
           </div>
         </div>
         
-        <div class="card bg-gradient-to-r from-blue-50 to-cyan-50">
+        <div class="card bg-base-200">
           <div class="card-body">
             <h3 class="font-bold text-xl mb-3 text-blue-700">
               Neurodiversité et gaming
@@ -342,7 +326,7 @@
           </div>
         </div>
         
-        <div class="card bg-gradient-to-r from-green-50 to-emerald-50">
+        <div class="card bg-base-200">
           <div class="card-body">
             <h3 class="font-bold text-xl mb-3 text-green-700">
               Effets de substitution

@@ -59,18 +59,7 @@
   </script>
 
   <!-- Anti-FOUC dark mode -->
-  <script>
-    (function(){
-      var saved = localStorage.getItem('theme');
-      var theme;
-      if (saved) { theme = saved; } else {
-        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
-        catch(e) { theme = 'light'; }
-      }
-      document.documentElement.setAttribute('data-theme', theme);
-      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <script>(function(){var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='dark'||t==='light'?t:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));})();</script>
   
   <script src="/assets/js/theme-manager.js"></script>
   
@@ -223,14 +212,14 @@
             <h3 class="card-title text-ludus-teal">Créneaux disponibles</h3>
             <p class="text-sm opacity-70 mb-4">Chaque mercredi, deux créneaux au choix :</p>
             <div class="space-y-3">
-              <div class="flex items-center justify-between p-3 bg-teal-50 rounded-lg border border-teal-200">
+              <div class="flex items-center justify-between p-3 bg-success/10 rounded-lg border border-success/30">
                 <div>
                   <p class="font-bold">Créneau A</p>
                   <p class="text-sm opacity-70">Mercredi 14h00 → 16h00</p>
                 </div>
                 <span class="badge badge-success">Disponible</span>
               </div>
-              <div class="flex items-center justify-between p-3 bg-orange-50 rounded-lg border border-orange-200">
+              <div class="flex items-center justify-between p-3 bg-warning/10 rounded-lg border border-warning/30">
                 <div>
                   <p class="font-bold">Créneau B</p>
                   <p class="text-sm opacity-70">Mercredi 17h00 → 19h00</p>
@@ -546,17 +535,17 @@
             <h3 class="card-title text-ludus-purple mb-4">Code de vie du club</h3>
             <p class="text-sm mb-4 opacity-70">Les règles sont construites <strong>avec les enfants</strong> lors de la première séance. Quelques principes non négociables :</p>
             <div class="grid md:grid-cols-3 gap-4 text-center">
-              <div class="p-4 bg-purple-50 rounded-lg">
+              <div class="p-4 bg-secondary/10 rounded-lg">
                 <div class="text-3xl mb-2">🤝</div>
                 <p class="font-bold text-sm">Respect mutuel</p>
                 <p class="text-xs opacity-70 mt-1">Aucune moquerie, aucune exclusion</p>
               </div>
-              <div class="p-4 bg-teal-50 rounded-lg">
+              <div class="p-4 bg-primary/10 rounded-lg">
                 <div class="text-3xl mb-2">🗣️</div>
                 <p class="font-bold text-sm">Communication bienveillante</p>
                 <p class="text-xs opacity-70 mt-1">On critique les décisions, pas les personnes</p>
               </div>
-              <div class="p-4 bg-orange-50 rounded-lg">
+              <div class="p-4 bg-warning/10 rounded-lg">
                 <div class="text-3xl mb-2">🔄</div>
                 <p class="font-bold text-sm">Droit à l'erreur</p>
                 <p class="text-xs opacity-70 mt-1">Rater fait partie de l'apprentissage</p>
