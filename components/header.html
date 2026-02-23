@@ -1,6 +1,7 @@
 <!-- components/header.html -->
-<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200">
-  <div class="container mx-auto px-4">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200 px-4">
+
+    <!-- Logo -->
     <div class="navbar-start">
       <a href="/" class="btn btn-ghost p-0" aria-label="Accueil Ludus Mentis">
         <img src="/assets/images/Ludus-Mentis-transparent.png"
@@ -24,102 +25,90 @@
       </ul>
     </nav>
 
-    <div class="navbar-end gap-2 flex-nowrap items-center">
+    <!-- Droite : toggle + CTA + burger -->
+    <div class="navbar-end">
+      <div style="display:flex;flex-direction:row;align-items:center;gap:4px;flex-wrap:nowrap;">
 
-      <!-- Toggle dark/light — AVANT le CTA -->
-      <button id="theme-toggle"
-              type="button"
-              class="btn btn-ghost btn-circle btn-sm"
-              aria-label="Changer le thème">
-        🌙
-      </button>
+        <!-- Toggle dark/light -->
+        <button id="theme-toggle"
+                type="button"
+                class="btn btn-ghost btn-circle btn-sm"
+                aria-label="Changer le thème">🌙</button>
 
-      <!-- CTA Button Desktop -->
-      <a href="/contact.html" class="btn btn-sm hidden xl:flex text-white" style="background-color: #059669; border: none;">
-        S'inscrire pour mars
-      </a>
+        <!-- CTA Desktop uniquement -->
+        <a href="/contact.html"
+           class="hidden xl:inline-flex btn btn-sm text-white"
+           style="background-color:#059669;border:none;font-size:0.72rem;padding:0 10px;white-space:nowrap;">
+          S'inscrire — mars
+        </a>
 
-      <!-- Mobile menu button -->
-      <div class="dropdown dropdown-end xl:hidden">
-        <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-gray-200 right-0">
-          <li><a href="/" class="text-base py-3 font-medium">Accueil</a></li>
-          <li><a href="/notre-approche.html" class="text-base py-3">Notre approche</a></li>
-          <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
-          <li><a href="/jeux.html" class="text-base py-3">Les jeux</a></li>
-          <li><a href="/infos-pratiques.html" class="text-base py-3">Infos pratiques</a></li>
-          <li><a href="/journal.html" class="text-base py-3">Journal de bord</a></li>
-          <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
-          <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
-          <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
+        <!-- Burger mobile -->
+        <div class="dropdown dropdown-end xl:hidden">
+          <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-4 shadow-2xl bg-base-100 rounded-xl w-72 border-2 border-gray-200 right-0">
+            <li><a href="/" class="text-base py-3 font-medium">Accueil</a></li>
+            <li><a href="/notre-approche.html" class="text-base py-3">Notre approche</a></li>
+            <li><a href="/programmes.html" class="text-base py-3">Programme</a></li>
+            <li><a href="/jeux.html" class="text-base py-3">Les jeux</a></li>
+            <li><a href="/infos-pratiques.html" class="text-base py-3">Infos pratiques</a></li>
+            <li><a href="/journal.html" class="text-base py-3">Journal de bord</a></li>
+            <li><a href="/recherche.html" class="text-base py-3">Sources scientifiques</a></li>
+            <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
+            <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
+            <li class="mt-4">
+              <a href="/contact.html" class="btn btn-block text-white" style="background-color:#059669;border:none;">
+                S'inscrire pour mars
+              </a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="mt-4">
-            <a href="/contact.html" class="btn btn-block text-white" style="background-color: #059669; border: none;">
-              S'inscrire pour mars
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
-  </div>
+
 </header>
 
 <style>
-  .navbar a:hover {
-    color: #17a2b8;
-  }
-
-  .btn[style*="background-color: #059669"]:hover {
-    background-color: #047857 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
-  }
-
-  /* Dark mode fixes */
   [data-theme="dark"] .dropdown-content {
     background-color: hsl(220 13% 18%);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255,255,255,0.1);
   }
-
-  [data-theme="dark"] .dropdown-content a {
-    color: #e5e7eb;
-  }
-
+  [data-theme="dark"] .dropdown-content a { color: #e5e7eb; }
   [data-theme="dark"] .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #4dd0e1;
+    background-color: rgba(255,255,255,0.08);
+    color: #5eead4;
   }
 </style>
 
 <script>
-  // Initialiser l'icône du bouton au chargement du header
+  // Ce script s'exécute après l'injection du fragment HTML par include.js
   (function () {
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
-    var theme = document.documentElement.getAttribute('data-theme') || 'light';
-    btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+
+    // Sync icône avec le thème déjà appliqué par l'anti-FOUC
+    function syncIcon() {
+      btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+    }
+    syncIcon();
+
     btn.addEventListener('click', function () {
       var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? '☀️' : '🌙';
+      syncIcon();
     });
-  })();
 
-  // Fermer le menu mobile au clic sur un lien
-  document.addEventListener('DOMContentLoaded', function () {
-    var dropdown = document.querySelector('.dropdown-end');
-    var dropdownContent = dropdown && dropdown.querySelector('.dropdown-content');
+    // Fermer le menu mobile au clic
+    var dropdownContent = document.querySelector('.dropdown-end .dropdown-content');
     if (dropdownContent) {
       dropdownContent.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          document.activeElement.blur();
-        });
+        link.addEventListener('click', function () { document.activeElement.blur(); });
       });
     }
-  });
+  })();
 </script>
