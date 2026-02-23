@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Antoine Billard fondateur | Ludus Mentis ® Walhain</title>
+  <meta name="description" content="Découvrez l'histoire d'Antoine Billard, fondateur de Ludus Mentis ®. 20 ans de gaming transformés en projet éducatif innovant à Walhain, Brabant wallon.">
+  
+  <!-- Canonical et indexation -->
+  <link rel="canonical" href="https://ludusmentis.be/a-propos.html" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis" />
+  <meta property="og:url" content="https://ludusmentis.be/a-propos.html" />
+  <meta property="og:title" content="À propos du fondateur | Club gaming éducatif Walhain" />
+  <meta property="og:description" content="Antoine Billard : chef de projet IT et manager esport créé le premier club gaming 100% coopératif de Belgique." />
+  <meta property="og:image" content="https://ludusmentis.be/assets/images/og-about.jpg" />
+  <meta property="og:locale" content="fr_BE" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="À propos | Ludus Mentis ® - Club gaming éducatif" />
+  <meta name="twitter:description" content="Le projet d'Antoine Billard : transformer le gaming en opportunité éducative." />
+  <meta name="twitter:image" content="https://ludusmentis.be/assets/images/og-about.jpg" />
+  
+  <!-- Structured Data Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Antoine Billard",
+      "jobTitle": "Fondateur de Ludus Mentis ®",
+      "description": "Chef de projet IT et manager esport, fondateur du premier club gaming coopératif de Belgique",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ludus Mentis ®",
+        "url": "https://ludusmentis.be"
+      }
+    }
+  }
+  </script>
+
+  <!-- Script anti-FOUC pour dark mode -->
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <!-- Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  
+  <style>
+    .gradient-ludus {
+      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8 max-w-4xl">
+    <!-- Hero avec photo -->
+    <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
+  <div class="text-center max-w-4xl mx-auto">
+    <div class="avatar placeholder mb-6">
+      <div class="bg-white/20 backdrop-blur text-white rounded-full w-32 h-32 border-2 border-white/30">
+        <span class="text-4xl font-bold">AB</span>
+      </div>
+    </div>
+    
+    <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+      Antoine Billard
+    </h1>
+    <p class="text-xl opacity-95">
+      Fondateur de Ludus Mentis®<br>
+      <span class="opacity-90">Chef de projet IT • Gamer depuis 20 ans • Manager esport Dota 2</span>
+    </p>
+  </div>
+</section>
+
+    <!-- Mon histoire personnelle -->
+    <section class="mb-12">
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-6 mx-auto">
+            Mon parcours : entre passion cachée et conviction affirmée
+          </h2>
+          
+          <div class="prose max-w-none">
+            <p class="text-lg mb-4">
+              <strong>Je m'appelle Antoine Billard, et Ludus Mentis® est le projet qui rassemble toutes mes passions.</strong>
+            </p>
+            
+            <p class="mb-4">
+              Enfant, mon parcours a été un grand mélange : les valeurs de partage et de nature des <strong>scouts</strong>, 
+              la rigueur et la créativité de l'<strong>académie de musique</strong>, et l'esprit d'équipe du <strong>football</strong>. 
+              Et au milieu de tout ça, une constante : le jeu vidéo. Pour moi, le jeu a toujours été un espace de défi, 
+              de logique et d'amitié, un fil rouge qui m'a suivi tout au long de mon parcours.
+            </p>
+            
+            <p class="mb-4">
+              Mes études d'<strong>ingénieur de gestion</strong>, puis ma carrière de <strong>chef de projet informatique</strong>, 
+              m'ont appris l'importance de la structure, de la collaboration et de la résolution de problèmes. 
+              Des compétences que, paradoxalement, je développais aussi lors de mes parties en ligne.
+            </p>
+            
+            <p class="mb-4">
+              En parallèle de mon travail, je suis aussi <strong>manager bénévole de l'équipe nationale belge de Dota 2</strong>. 
+              Je vois de près ce qui fait la différence au plus haut niveau : non pas la technique seule, 
+              mais la communication, la gestion du stress et la cohésion du groupe. 
+              C'est exactement ce qui manque dans l'approche grand public du jeu vidéo.
+            </p>
+            
+            <p class="mb-4">
+              Je suis convaincu que les jeux vidéo, si souvent diabolisés, sont en réalité un formidable outil 
+              de développement personnel. La recherche scientifique, notamment en psychologie du sport appliquée 
+              à l'esport, confirme aujourd'hui cette vision. Bien encadrée, la pratique du jeu vidéo permet 
+              de cultiver des compétences essentielles comme la résilience, la communication et la résolution 
+              de problèmes - des atouts pour s'épanouir à l'écran comme dans la vie.
+            </p>
+            
+            <p class="mb-4">
+              <strong>Ludus Mentis® est né de cette certitude</strong> : créer le cadre qui n'existait pas pour moi. 
+              Un lieu qui s'inspire de la rigueur d'une académie de musique, de la bienveillance d'un mouvement 
+              de jeunesse et de la passion de l'esport. Un espace pour prouver que l'on peut passer des heures 
+              à jouer, et en ressortir plus grand.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ma vision -->
+    <section class="mb-12">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body text-center">
+          <h2 class="card-title text-3xl mb-6 mx-auto">
+            Ma conviction profonde
+          </h2>
+          
+          <p class="text-xl mb-6 opacity-95 max-w-3xl mx-auto">
+            "Le jeu vidéo n'est ni bon ni mauvais en soi. C'est le contexte qui fait tout. 
+            J'ai créé Ludus Mentis® pour offrir le cadre structuré et bienveillant 
+            qui transforme une passion souvent incomprise en véritable école de vie."
+          </p>
+          
+          <p class="opacity-90">
+            Un lieu où parents et enfants se réconclient autour du gaming.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Les 3 inspirations -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        Ludus Mentis® : la synthèse de 3 mondes
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card bg-blue-50 text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">🎼</div>
+            <h3 class="font-bold text-blue-700">Académie de musique</h3>
+            <p class="text-sm opacity-75">
+              Rigueur, progression structurée, évaluation bienveillante
+            </p>
+          </div>
+        </div>
+        
+        <div class="card bg-green-50 text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">⛺</div>
+            <h3 class="font-bold text-green-700">Mouvement scout</h3>
+            <p class="text-sm opacity-75">
+              Valeurs humaines, entraide, apprentissage par l'action
+            </p>
+          </div>
+        </div>
+        
+        <div class="card bg-orange-50 text-center">
+          <div class="card-body compact">
+            <div class="text-3xl mb-2">🎮</div>
+            <h3 class="font-bold text-orange-700">Esport moderne</h3>
+            <p class="text-sm opacity-75">
+              Passion gaming, performance collective, analyse stratégique
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact direct -->
+    <section class="text-center">
+      <h2 class="text-2xl font-bold mb-4">
+        Envie d'en savoir plus ou de rejoindre l'aventure ?
+      </h2>
+      <p class="text-lg mb-6 opacity-75">
+        Contactez-moi sans hésiter. Ensemble, nous pouvons faire du jeu vidéo une véritable école de vie.
+      </p>
+      <a href="mailto:info@ludusmentis.be" class="btn btn-primary btn-lg">
+        📧 info@ludusmentis.be
+      </a>
+      
+      <div class="mt-6 text-sm opacity-50">
+        Basé à Walhain, Brabant wallon
+      </div>
+    </section>
+  </main>
+  
+  <div id="footer"></div>
+  
+  <!-- Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": false,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>

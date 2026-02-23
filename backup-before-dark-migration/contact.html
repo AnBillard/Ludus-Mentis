@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription module mars-avril | Ludus Mentis ® Walhain</title>
+  <meta name="description" content="Inscrivez votre enfant au club gaming éducatif Ludus Mentis à Walhain. Module 2 : 4 mars - 22 avril 2026. 130€ tarif de lancement. Contact : info@ludusmentis.be">
+  
+  <link rel="canonical" href="https://ludusmentis.be/contact.html" />
+  <meta name="robots" content="index, follow" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Ludus Mentis",
+    "description": "Club de jeu vidéo éducatif pour adolescents",
+    "url": "https://ludusmentis.be",
+    "email": "info@ludusmentis.be",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Walhain",
+      "addressRegion": "Brabant wallon",
+      "addressCountry": "BE"
+    },
+    "priceRange": "130€/module",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "14:00",
+      "closes": "16:00"
+    },{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "17:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+
+  <!-- Anti-FOUC dark mode -->
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <!-- Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8',
+        'ludus-orange': '#ff9800',
+        'ludus-purple': '#6b46c1'
+      }}}
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  <style>
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
+    @keyframes slideInDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .success-message { animation: slideInDown 0.3s ease-out; }
+  </style>
+</head>
+<body>
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ── Skip link accessibilité ── -->
+  <a href="#main"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-ludus-teal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
+    Aller au contenu principal
+  </a>
+
+  <!-- ── Header injecté par include.js ── -->
+  <div id="header"></div>
+  
+  <main id="main" class="container mx-auto px-4 py-8 max-w-5xl">
+
+    <!-- Notification succès (accessible) -->
+    <div id="successMessage"
+         class="hidden fixed top-20 left-1/2 -translate-x-1/2 z-50 success-message w-full max-w-lg px-4"
+         role="alert"
+         aria-live="assertive"
+         aria-atomic="true">
+      <div class="alert alert-success shadow-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span>Votre inscription a bien été envoyée ! Nous vous recontacterons rapidement.</span>
+      </div>
+    </div>
+
+    <!-- Notification erreur (accessible) -->
+    <div id="errorMessage"
+         class="hidden"
+         role="alert"
+         aria-live="assertive"
+         aria-atomic="true">
+      <div class="alert alert-error mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <span id="errorText">Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.</span>
+      </div>
+    </div>
+    
+    <!-- Hero -->
+    <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+          Module 2 : Inscriptions ouvertes
+        </h1>
+        <p class="text-xl mb-6 opacity-95">
+          4 mars → 22 avril 2026 &bull; 8 mercredis &bull; Places limitées
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <span class="badge badge-lg bg-white/20 text-white border-0">10-15 ans</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">130€ tarif de lancement</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">Walhain-Centre</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
+      <!-- ── Formulaire ── -->
+      <section aria-labelledby="form-title">
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 id="form-title" class="card-title text-2xl text-ludus-teal mb-6">
+              Formulaire d'inscription
+            </h2>
+            
+            <form id="contactForm" novalidate class="space-y-6">
+
+              <!-- Enfant -->
+              <fieldset class="border-2 border-teal-200 rounded-lg p-4">
+                <legend class="font-bold px-2 text-ludus-teal">Votre enfant</legend>
+                <div class="grid md:grid-cols-2 gap-4 mt-3">
+                  <div class="form-control">
+                    <label class="label" for="youth_firstname">
+                      <span class="label-text font-semibold">Prénom <span aria-label="obligatoire">*</span></span>
+                    </label>
+                    <input type="text"
+                           id="youth_firstname"
+                           name="youth_firstname"
+                           required
+                           autocomplete="given-name"
+                           class="input input-bordered"
+                           aria-required="true" />
+                  </div>
+                  <div class="form-control">
+                    <label class="label" for="youth_age">
+                      <span class="label-text font-semibold">Âge <span aria-label="obligatoire">*</span></span>
+                    </label>
+                    <select id="youth_age"
+                            name="youth_age"
+                            required
+                            class="select select-bordered"
+                            aria-required="true">
+                      <option value="">Sélectionnez</option>
+                      <option value="10">10 ans</option>
+                      <option value="11">11 ans</option>
+                      <option value="12">12 ans</option>
+                      <option value="13">13 ans</option>
+                      <option value="14">14 ans</option>
+                      <option value="15">15 ans</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Responsable légal -->
+              <fieldset class="border-2 border-orange-200 rounded-lg p-4">
+                <legend class="font-bold px-2 text-ludus-orange">Responsable légal</legend>
+                <div class="grid md:grid-cols-2 gap-4 mt-3">
+                  <div class="form-control">
+                    <label class="label" for="parent_name">
+                      <span class="label-text font-semibold">Nom complet <span aria-label="obligatoire">*</span></span>
+                    </label>
+                    <input type="text"
+                           id="parent_name"
+                           name="parent_name"
+                           required
+                           autocomplete="name"
+                           class="input input-bordered"
+                           aria-required="true" />
+                  </div>
+                  <div class="form-control">
+                    <label class="label" for="parent_email">
+                      <span class="label-text font-semibold">Email <span aria-label="obligatoire">*</span></span>
+                    </label>
+                    <input type="email"
+                           id="parent_email"
+                           name="parent_email"
+                           required
+                           autocomplete="email"
+                           class="input input-bordered"
+                           aria-required="true" />
+                  </div>
+                </div>
+                <div class="form-control mt-4">
+                  <label class="label" for="parent_phone">
+                    <span class="label-text font-semibold">Téléphone</span>
+                    <span class="label-text-alt opacity-60">Optionnel</span>
+                  </label>
+                  <input type="tel"
+                         id="parent_phone"
+                         name="parent_phone"
+                         autocomplete="tel"
+                         class="input input-bordered"
+                         placeholder="+32 4xx xx xx xx" />
+                </div>
+              </fieldset>
+
+              <!-- Créneau -->
+              <fieldset>
+                <legend class="font-semibold mb-3">Créneau préféré</legend>
+                <div class="space-y-2" role="radiogroup" aria-label="Créneau horaire souhaité">
+                  <label class="label cursor-pointer justify-start gap-3">
+                    <input type="radio" name="schedule" value="14h" class="radio radio-primary" />
+                    <span class="label-text">Mercredi 14h00–16h00</span>
+                  </label>
+                  <label class="label cursor-pointer justify-start gap-3">
+                    <input type="radio" name="schedule" value="17h" class="radio radio-primary" />
+                    <span class="label-text">Mercredi 17h00–19h00</span>
+                  </label>
+                  <label class="label cursor-pointer justify-start gap-3">
+                    <input type="radio" name="schedule" value="flexible" checked class="radio radio-primary" />
+                    <span class="label-text">Les deux conviennent</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Message -->
+              <div class="form-control">
+                <label class="label" for="message">
+                  <span class="label-text font-semibold">Message</span>
+                  <span class="label-text-alt opacity-60">Optionnel</span>
+                </label>
+                <textarea id="message"
+                          name="message"
+                          rows="3"
+                          class="textarea textarea-bordered"
+                          placeholder="Questions, informations médicales à communiquer, particularités de votre enfant…"></textarea>
+              </div>
+
+              <!-- Champ caché module -->
+              <input type="hidden" name="module" value="Module 2 : 4 mars au 22 avril 2026" />
+
+              <!-- Consentement RGPD -->
+              <div class="alert alert-info">
+                <label class="cursor-pointer flex items-start gap-3">
+                  <input type="checkbox"
+                         id="rgpd_consent"
+                         name="rgpd_consent"
+                         value="oui"
+                         required
+                         class="checkbox checkbox-primary mt-1"
+                         aria-required="true" />
+                  <span class="text-sm" id="rgpd-label">
+                    J'accepte que mes données soient traitées pour cette inscription
+                    (conservation jusqu'à la fin du module).
+                    <a href="/mentions.html#rgpd" class="underline">En savoir plus →</a>
+                    <span aria-label="obligatoire">*</span>
+                  </span>
+                </label>
+              </div>
+
+              <!-- Bouton submit -->
+              <button type="submit"
+                      id="submitBtn"
+                      class="btn btn-primary btn-lg w-full"
+                      aria-describedby="submit-hint">
+                <span id="submitText">Envoyer l'inscription</span>
+                <span id="submitLoader" class="hidden loading loading-spinner" aria-hidden="true"></span>
+              </button>
+              <p id="submit-hint" class="text-xs opacity-50 text-center">
+                Nous vous recontactons sous 48h pour confirmer la place.
+              </p>
+
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ── Informations complémentaires ── -->
+      <aside>
+        <div class="space-y-6">
+
+          <!-- Résumé module -->
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h2 class="card-title text-ludus-teal mb-4">Module 2 en bref</h2>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">📅</span>
+                  <div>
+                    <strong>4 mars → 22 avril 2026</strong>
+                    <p class="text-sm opacity-75">8 mercredis consécutifs (hors congés)</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">💰</span>
+                  <div>
+                    <strong>130€ : tarif de lancement</strong>
+                    <p class="text-sm opacity-75">Tout compris · Paiement par virement</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">📍</span>
+                  <div>
+                    <strong>École de Walhain-Centre</strong>
+                    <p class="text-sm opacity-75">Brabant wallon · Parking gratuit</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">🤝</span>
+                  <div>
+                    <strong>100% coopératif</strong>
+                    <p class="text-sm opacity-75">On gagne ensemble ou on perd ensemble</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">🎮</span>
+                  <div>
+                    <strong>Matériel fourni</strong>
+                    <p class="text-sm opacity-75">Nintendo Switch, jeux, journal de bord</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-2xl" aria-hidden="true">🎒</span>
+                  <div>
+                    <strong>À apporter</strong>
+                    <p class="text-sm opacity-75">Une bouteille d'eau et une tenue confortable</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ce qu'on a appris -->
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="font-bold mb-3 text-ludus-orange">🌱 Ce que le module 1 nous a appris</h3>
+              <p class="text-sm mb-3">
+                Nos premières séances ont confirmé l'essentiel : le petit groupe, 
+                les pauses actives et les jeux coopératifs créent quelque chose de vraiment différent.
+              </p>
+              <a href="/journal.html" class="btn btn-sm btn-outline btn-primary">
+                Lire le journal de bord →
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact direct -->
+          <div class="card bg-base-100 shadow">
+            <div class="card-body text-center">
+              <h3 class="card-title mx-auto mb-3">Une question d'abord ?</h3>
+              <p class="text-sm opacity-70 mb-4">
+                N'hésitez pas à nous écrire avant de vous inscrire. 
+                Antoine répond généralement sous 24h.
+              </p>
+              <a href="mailto:info@ludusmentis.be"
+                 class="btn btn-outline btn-primary"
+                 aria-label="Envoyer un email à info@ludusmentis.be">
+                📧 info@ludusmentis.be
+              </a>
+              <p class="text-sm opacity-50 mt-4">
+                Antoine Billard, fondateur<br>
+                Walhain, Brabant wallon
+              </p>
+            </div>
+          </div>
+
+          <!-- Infos pratiques -->
+          <div class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="font-bold mb-3 text-ludus-teal">📋 Avant de vous inscrire</h3>
+              <p class="text-sm opacity-70 mb-3">
+                Consultez la page infos pratiques pour connaître les tarifs détaillés, 
+                les réductions et toutes les questions fréquentes.
+              </p>
+              <a href="/infos-pratiques.html" class="btn btn-sm btn-outline">
+                Voir les infos pratiques →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+  </main>
+  
+  <div id="footer"></div>
+
+  <!-- Script formulaire -->
+  <script>
+    const form     = document.getElementById('contactForm');
+    const submitBtn    = document.getElementById('submitBtn');
+    const submitText   = document.getElementById('submitText');
+    const submitLoader = document.getElementById('submitLoader');
+    const errorDiv     = document.getElementById('errorMessage');
+    const errorText    = document.getElementById('errorText');
+    const successDiv   = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Reset UI
+      errorDiv.classList.add('hidden');
+      successDiv.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitText.classList.add('hidden');
+      submitLoader.classList.remove('hidden');
+
+      const formData = new FormData(this);
+
+      try {
+        const response = await fetch('https://formspree.io/f/mdkdwzoy', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          // Analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+              event_category: 'Inscription',
+              event_label: 'Module 2',
+              value: 1
+            });
+          }
+          // Succès
+          successDiv.classList.remove('hidden');
+          successDiv.focus(); // Focus pour lecteurs d'écran
+          form.reset();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          setTimeout(() => successDiv.classList.add('hidden'), 10000);
+        } else {
+          throw new Error('Réponse serveur non OK');
+        }
+      } catch (err) {
+        errorText.textContent = 'Une erreur est survenue. Veuillez nous contacter directement à info@ludusmentis.be';
+        errorDiv.classList.remove('hidden');
+        errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        submitText.classList.remove('hidden');
+        submitLoader.classList.add('hidden');
+      }
+    });
+  </script>
+
+  <!-- Tarteaucitron -->
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": false,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+
+  <!-- Include header/footer -->
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>

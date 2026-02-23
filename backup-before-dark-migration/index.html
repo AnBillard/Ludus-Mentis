@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludus Mentis ® | Club de jeu vidéo coopératif à Walhain</title>
+  <meta name="description" content="Club gaming pour ados 10-15 ans. Sessions encadrées de 2h/semaine, jeux coopératifs uniquement. Développez des compétences sociales en jouant !">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ludus Mentis ®" />
+  <meta property="og:url" content="https://ludusmentis.be/" />
+  <meta property="og:title" content="Ludus Mentis ® | Club de jeu vidéo coopératif" />
+  <meta property="og:description" content="Un cadre sain pour la passion gaming de votre enfant. Sessions hebdomadaires encadrées à Walhain." />
+
+  <!-- Script anti-FOUC pour dark mode -->
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) {
+        theme = saved;
+      } else {
+        try {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light';
+        } catch(e) {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <!-- Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <!-- DaisyUI + Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ludus-teal': '#17a2b8',
+            'ludus-orange': '#ff9800',
+            'ludus-purple': '#6b46c1'
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  
+  <style>
+    .gradient-ludus {
+      background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8">
+
+    <!-- Bandeau "on a démarré" -->
+    <div class="alert alert-success mb-6 max-w-4xl mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>
+        <strong>Premières séances terminées !</strong> Le prochain module démarre le <strong>mercredi 4 mars 2026</strong>.
+        <a href="/infos-pratiques.html" class="underline ml-1">Voir les détails →</a>
+      </span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero gradient-ludus rounded-3xl p-8 lg:p-12 mb-12 text-white">
+      <div class="text-center max-w-4xl mx-auto">
+        <img src="/assets/images/Ludus-Mentis-transparent.png" alt="Ludus Mentis ®" class="w-32 h-32 mx-auto mb-6">
+        
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Le club où les gamers<br>deviennent une vraie team
+        </h1>
+        
+        <p class="text-xl lg:text-2xl mb-8 opacity-95">
+          <strong>2h par semaine</strong> • <strong>100% coop</strong> • <strong>Petit groupe</strong><br>
+          Un cadre qui transforme ta passion en skills utiles
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/notre-approche.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
+            Découvrir le concept
+          </a>
+          <a href="/contact.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-orange">
+            S'inscrire pour mars
+          </a>
+        </div>
+        
+        <div class="flex flex-wrap gap-3 justify-center mt-8">
+          <span class="badge badge-lg bg-white/20 text-white border-0">10-15 ans</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">Walhain</span>
+          <span class="badge badge-lg bg-white/20 text-white border-0">130€ — tarif de lancement</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 piliers -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Notre différence en 3 points
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">🏠</div>
+            <h3 class="card-title text-ludus-teal">Hors de la chambre</h3>
+            <p>Le gaming devient une activité sociale en présentiel. Fini l'isolement, place aux vraies rencontres.</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">🤝</div>
+            <h3 class="card-title text-ludus-orange">100% coopératif</h3>
+            <p>Uniquement des jeux où l'on gagne ensemble. L'entraide remplace la compétition.</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">📊</div>
+            <h3 class="card-title text-ludus-purple">Cadre structuré</h3>
+            <p>Méthode pédagogique, pauses actives, petit groupe. On prend le temps de bien faire les choses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ce qu'on a appris sur le terrain -->
+    <section class="mb-12">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mx-auto mb-4 text-ludus-teal">
+            🎮 Ce que les premières séances nous ont appris
+          </h2>
+          <p class="mb-4">
+            Entre mi-janvier et mi-février, nous avons mené nos premières séances avec un petit groupe 
+            d'enfants à Walhain. Quelques observations concrètes, sans filtre :
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">💬</span>
+              <p><strong>Keep Talking and Nobody Explodes</strong> a été le jeu révélateur. Désamorcer 4 bombes ensemble en quelques séances, pour des débutants, c'est une vraie performance qui demande une écoute totale.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">🏃</span>
+              <p><strong>Les pauses actives ont surpris tout le monde</strong>, à commencer par nous. Quand on leur laissait le choix entre continuer à bouger ou retourner aux jeux vidéo, les enfants choisissaient de continuer à bouger.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-2xl">🌱</span>
+              <p><strong>Le petit groupe, c'est une force.</strong> Chaque enfant a sa place, la dynamique est plus facile à gérer, et les liens se créent plus vite qu'on ne le pensait.</p>
+            </li>
+          </ul>
+          <div class="mt-4">
+            <a href="/journal.html" class="btn btn-outline btn-primary btn-sm">
+              Lire le journal complet des séances →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pour qui -->
+    <section class="mb-12">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-3xl mx-auto mb-8">
+            Qui peut rejoindre Ludus Mentis ® ?
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-success">✨ Profils qui s'épanouissent particulièrement</h3>
+              <ul class="space-y-2">
+                <li>→ Les passionnés de jeux vidéo cherchant un cadre social</li>
+                <li>→ Les jeunes timides qui préfèrent les petits groupes</li>
+                <li>→ Les créatifs qui aiment résoudre des problèmes ensemble</li>
+                <li>→ Les adolescents en quête de nouvelles amitiés</li>
+                <li>→ Ceux qui apprécient la coopération plus que la compétition</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold mb-4 text-info">💡 Bon à savoir avant de s'inscrire</h3>
+              <ul class="space-y-2">
+                <li>→ Notre approche est 100% coopérative (pas de compétition)</li>
+                <li>→ Sessions limitées à 2h/semaine (cadre structuré)</li>
+                <li>→ Petit groupe (interaction sociale requise)</li>
+                <li>→ Jeux adaptés PEGI ≤12 (pas de FPS ou jeux violents)</li>
+                <li>→ Club de loisir éducatif (pas un centre thérapeutique)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>
+              <strong>Notre philosophie :</strong> Chaque enfant a sa place s'il est prêt à jouer en équipe et respecter les autres.
+              Niveau de jeu, timidité ou expérience sociale ne sont pas des obstacles !
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Ce qu'on retient de chaque séance
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="stat bg-base-100 shadow rounded-box">
+          <div class="stat-figure text-primary"><div class="text-4xl">💬</div></div>
+          <div class="stat-title">Communication</div>
+          <div class="stat-desc">Messages clairs et écoute active</div>
+        </div>
+        
+        <div class="stat bg-base-100 shadow rounded-box">
+          <div class="stat-figure text-secondary"><div class="text-4xl">🧘</div></div>
+          <div class="stat-title">Gestion du stress</div>
+          <div class="stat-desc">Calme sous pression</div>
+        </div>
+        
+        <div class="stat bg-base-100 shadow rounded-box">
+          <div class="stat-figure text-accent"><div class="text-4xl">🤝</div></div>
+          <div class="stat-title">Coopération</div>
+          <div class="stat-desc">Entraide spontanée</div>
+        </div>
+        
+        <div class="stat bg-base-100 shadow rounded-box">
+          <div class="stat-figure text-success"><div class="text-4xl">🎯</div></div>
+          <div class="stat-title">Stratégie</div>
+          <div class="stat-desc">Planification collective</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citation fondateur -->
+    <section class="mb-12">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body items-center text-center">
+          <h2 class="card-title text-3xl mb-6">
+            Pourquoi j'ai créé Ludus Mentis ®
+          </h2>
+          
+          <blockquote class="text-xl max-w-3xl opacity-95">
+            "Le jeu vidéo n'est ni bon ni mauvais en soi. C'est le contexte qui fait tout. 
+            J'ai créé Ludus Mentis ® pour offrir le cadre qui n'existait pas quand j'étais ado : 
+            un lieu où le gaming devient social, structuré et valorisé."
+          </blockquote>
+          
+          <div class="flex items-center gap-4 mt-6">
+            <div class="avatar placeholder">
+              <div class="bg-neutral text-neutral-content rounded-full w-16">
+                <span class="text-xl">AB</span>
+              </div>
+            </div>
+            <div class="text-left">
+              <p class="font-bold">Antoine Billard</p>
+              <p class="text-sm opacity-90">Fondateur, passionné de gaming depuis 20 ans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="mb-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-base-100 shadow">
+          <div class="card-body items-center text-center">
+            <h3 class="card-title text-ludus-orange">📅 Prochain module</h3>
+            <p>4 mars → 22 avril 2026<br>8 mercredis</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow">
+          <div class="card-body items-center text-center">
+            <h3 class="card-title text-ludus-teal">💰 Tarif de lancement</h3>
+            <p>130€ / module<br>Tout compris</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-100 shadow">
+          <div class="card-body items-center text-center">
+            <h3 class="card-title text-ludus-purple">📍 Où ?</h3>
+            <p>Walhain<br>Brabant wallon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="gradient-ludus rounded-3xl p-8 lg:p-12 text-white text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+        Le prochain module démarre le 4 mars
+      </h2>
+      <p class="text-xl mb-8 opacity-95">
+        Places limitées • 130€ tarif de lancement • Inscriptions ouvertes
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact.html" class="btn btn-lg bg-white text-ludus-teal border-0 hover:bg-gray-100">
+          Inscrire mon enfant
+        </a>
+        <a href="/infos-pratiques.html" class="btn btn-lg btn-outline border-2 border-white text-white hover:bg-white hover:text-ludus-teal">
+          J'ai des questions
+        </a>
+      </div>
+      
+      <p class="text-sm opacity-75 mt-6">
+        ASBL Ludus Mentis ® • Contact : info@ludusmentis.be
+      </p>
+    </section>
+  </main>
+  
+  <div id="footer"></div>
+  
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies",
+      "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr",
+      "orientation": "bottom",
+      "showAlertSmall": false,
+      "cookieslist": true,
+      "showIcon": true,
+      "iconPosition": "BottomRight",
+      "adblocker": false,
+      "AcceptAllCta": true,
+      "highPrivacy": false,
+      "handleBrowserDNTRequest": false,
+      "removeCredit": false,
+      "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false,
+      "googleConsentMode": true,
+      "partnersList": false
+    });
+    
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>

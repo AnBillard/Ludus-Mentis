@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal de bord | Ludus Mentis ® Walhain</title>
+  <meta name="description" content="Le compte-rendu honnête de nos premières séances à Walhain : ce qui a marché, ce qu'on apprend, ce qu'on garde.">
+  
+  <link rel="canonical" href="https://ludusmentis.be/journal.html" />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      var theme;
+      if (saved) { theme = saved; } else {
+        try { theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ludus-dark' : 'light'; }
+        catch(e) { theme = 'light'; }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'ludus-dark') document.documentElement.classList.add('dark');
+    })();
+  </script>
+  
+  <script src="/assets/js/theme-manager.js"></script>
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+      'analytics_storage': 'denied', 'functionality_storage': 'granted',
+      'personalization_storage': 'granted', 'security_storage': 'granted', 'wait_for_update': 500
+    });
+  </script>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMCMP74V');</script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        'ludus-teal': '#17a2b8', 'ludus-orange': '#ff9800', 'ludus-purple': '#6b46c1'
+      }}}
+    }
+  </script>
+  <link rel="icon" type="image/png" href="/assets/images/Ludus-Mentis-transparent.png">
+  <style>
+    .gradient-ludus { background: linear-gradient(135deg, #17a2b8 0%, #ff9800 100%); }
+    .gradient-subtle { background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%); }
+
+    /* Image placeholder */
+    .img-placeholder {
+      background: linear-gradient(135deg, #e0f7fa 0%, #fff8e1 100%);
+      border: 2px dashed #17a2b8;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      color: #17a2b8;
+      text-align: center;
+      padding: 1.5rem;
+      gap: 0.5rem;
+    }
+    .img-placeholder .icon { font-size: 2rem; opacity: 0.4; }
+    .img-placeholder p { opacity: 0.65; font-style: italic; font-size: 0.85rem; }
+
+    .journal-img {
+      border-radius: 1rem;
+      width: 100%;
+      object-fit: cover;
+      min-height: 200px;
+    }
+
+    .retenir {
+      border-left: 4px solid;
+      padding: 0.75rem 1rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+    }
+    .retenir-teal   { border-color: #17a2b8; background: #f0f9ff; color: #0e7490; }
+    .retenir-orange { border-color: #ff9800; background: #fff8e1; color: #b45309; }
+    .retenir-purple { border-color: #6b46c1; background: #f5f3ff; color: #5b21b6; }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMCMP74V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <div id="header"></div>
+  
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+
+    <!-- Hero -->
+    <section class="hero gradient-subtle rounded-3xl p-8 lg:p-12 mb-12">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
+          Journal de bord
+        </h1>
+        <p class="text-xl text-gray-600">
+          Ce qu'on a vécu, ce qu'on a appris.<br>Sans filtre.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="mb-12">
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Entre mi-janvier et mi-février 2026, on a fait tourner les premières séances à l'école communale de Walhain. 
+        Quatre enfants, quatre mercredis. Petit démarrage, beaucoup appris.
+        Ce journal, c'est pour les parents qui veulent savoir ce qu'il se passe vraiment.
+      </p>
+    </section>
+
+    <!-- Entrées -->
+    <div>
+
+      <!-- ── Entrée 1 ── -->
+      <article class="mb-16">
+
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séances 1–2</span>
+          <span class="text-sm opacity-50">Mi-janvier 2026</span>
+        </div>
+
+        <h2 class="text-xl font-bold text-ludus-teal mb-4">
+          Poser les bases et découvrir qu'on en avait besoin
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Les premières séances, on ne joue pas encore vraiment. On installe quelque chose 
+              de plus important : la façon dont le groupe va fonctionner.
+            </p>
+            <p>
+              On a mis en place un rituel d'entrée : un tour de table rapide pour savoir comment 
+              chacun arrive. Fatigué ? Excité ? Stressé par autre chose ? Un enfant qui arrive 
+              préoccupé et qui ne l'a pas dit va le manifester autrement pendant la séance.
+            </p>
+            <p>
+              Les règles de vie ont été construites avec les enfants, pas imposées. 
+              Elles servent de référence pour toute la suite.
+            </p>
+          </div>
+
+          <img 
+            src="assets/images/PXL_20260121_154537669.MP.jpg" 
+            alt="La salle installée avant l'arrivée des enfants" 
+            class="journal-img"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="retenir retenir-teal">
+          <strong>Ce qu'on retient :</strong> Le tour de table du début prend 5 minutes et change tout à la qualité de ce qui suit.
+        </div>
+
+      </article>
+
+      <!-- ── Entrée 2 ── -->
+      <article class="mb-16">
+
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séance 3</span>
+          <span class="text-sm opacity-50">Fin janvier 2026</span>
+        </div>
+
+        <h2 class="text-xl font-bold text-ludus-orange mb-4">
+          Keep Talking and Nobody Explodes : le grand test
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <img 
+            src="assets/images/screenshot4_manualNEEDSUPDATE-1024x576.jpg" 
+            alt="Manuel de désamorçage" 
+            class="journal-img"
+            loading="lazy"
+          >
+
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Un joueur voit une bombe à l'écran. Les autres ont le manuel de désamorçage sur papier. 
+              Ils ne voient pas la même chose, ils doivent se parler : précisément, calmement, rapidement.
+            </p>
+            <p>
+              4 bombes désamorcées. Pour des débutants complets, c'est une vraie performance.
+            </p>
+            <p>
+              Entre les erreurs de traduction et quelques modules capricieux, la frustration est montée. 
+              C'est là que le rôle d'animateur prend tout son sens : transformer l'énervement en question 
+              <em>qu'est-ce qu'on change pour la prochaine fois ?</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="retenir retenir-orange">
+          <strong>Ce qu'on retient :</strong> La frustration, bien accompagnée, c'est utile. Un enfant qui apprend à rater sans s'effondrer, c'est concret.
+        </div>
+
+      </article>
+
+      <!-- ── Entrée 3 ── -->
+      <article class="mb-16">
+
+        <div class="flex items-center gap-3 mb-5">
+          <span class="badge badge-lg gradient-ludus text-white border-0">Séance 4</span>
+          <span class="text-sm opacity-50">Mi-février 2026</span>
+        </div>
+
+        <h2 class="text-xl font-bold text-ludus-purple mb-4">
+          La surprise des pauses actives
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4 items-start">
+          <div class="space-y-3 text-gray-700">
+            <p>
+              Quand on leur laissait le choix : continuer la pause active ou retourner jouer,
+              <strong>ils choisissaient de continuer à bouger</strong>.
+            </p>
+            <p>
+              Le mouvement physique "vide" le trop-plein d'énergie mentale accumulé pendant la 
+              concentration intense du jeu. La pause n'est pas une interruption, c'est une partie du cycle.
+            </p>
+            <p>
+              On a aussi introduit le palming et quelques exercices de respiration : des outils 
+              concrets que les enfants peuvent réutiliser à la maison.
+            </p>
+          </div>
+
+          <div class="img-placeholder">
+            <span class="icon">📷</span>
+            <strong>Photo à ajouter</strong>
+            <p>Enfants de dos ou en mouvement<br>pendant la pause active</p>
+            <code class="text-xs opacity-50">assets/images/journal/seance4-pause.jpg</code>
+          </div>
+        </div>
+
+        <div class="retenir retenir-purple">
+          <strong>Ce qu'on retient :</strong> Des ados qui préfèrent courir plutôt que retourner à la manette, on ne s'y attendait pas.
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Bilan honnête -->
+    <section class="mb-10">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="text-2xl font-bold mb-6 text-ludus-teal">
+            Bilan honnête de ce premier batch
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold text-success mb-3">✅ Ce qui a bien fonctionné</h3>
+              <ul class="space-y-2 text-sm">
+                <li>→ Les rituels de début et fin de séance</li>
+                <li>→ Keep Talking comme outil de communication</li>
+                <li>→ Les pauses actives (au-delà de nos attentes)</li>
+                <li>→ Le format petit groupe pour la création de liens</li>
+                <li>→ La gestion des frustrations en temps réel</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-warning mb-3">🔧 Ce qu'on améliore</h3>
+              <ul class="space-y-2 text-sm">
+                <li>→ Mieux anticiper les bugs techniques des jeux</li>
+                <li>→ Maintenir le contact avec les parents entre séances</li>
+                <li>→ Varier davantage les jeux selon l'énergie du groupe</li>
+                <li>→ Structurer encore mieux les débriefings</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-6 text-sm opacity-60 border-t pt-4">
+            Ce premier batch a été plus court que prévu (4 séances au lieu de 8), 
+            et le groupe plus petit que l'objectif. C'est la réalité d'un projet qui démarre. 
+            On a choisi de continuer, d'apprendre, et d'ouvrir les inscriptions pour la suite 
+            avec ce qu'on a appris.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suite -->
+    <section class="mb-10">
+      <div class="card gradient-ludus text-white">
+        <div class="card-body text-center">
+          <h2 class="text-2xl font-bold mb-4">La suite : module 2, 4 mars → 22 avril</h2>
+          <p class="mb-6 opacity-95">
+            8 séances, même engagement, même honnêteté.<br>
+            Ce journal sera mis à jour au fil des séances.
+          </p>
+          <a href="/contact.html" class="btn bg-white text-ludus-teal border-0 hover:bg-gray-100 btn-lg">
+            S'inscrire pour le prochain module →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <div id="footer"></div>
+  
+  <script src="/tarteaucitron.js/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "/mentions.html#cookies", "hashtag": "#tarteaucitron",
+      "cookieName": "ludusmentis_gdpr", "orientation": "bottom",
+      "showAlertSmall": false, "cookieslist": true, "showIcon": true,
+      "iconPosition": "BottomRight", "adblocker": false, "AcceptAllCta": true,
+      "highPrivacy": false, "handleBrowserDNTRequest": false,
+      "removeCredit": false, "readmoreLink": "/mentions.html#cookies",
+      "mandatory": false, "googleConsentMode": true, "partnersList": false
+    });
+    tarteaucitron.user.gtagUa = 'G-075RK8EJ9K';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  <script src="/assets/js/include.js"></script>
+</body>
+</html>
