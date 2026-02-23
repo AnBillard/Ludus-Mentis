@@ -1,8 +1,7 @@
-<!-- components/header.html -->
-<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200 px-4">
-
-    <!-- Logo -->
-    <div class="navbar-start">
+<header class="navbar bg-base-100 shadow-md sticky top-0 z-50 border-b border-gray-200">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    
+    <div class="navbar-start w-auto">
       <a href="/" class="btn btn-ghost p-0" aria-label="Accueil Ludus Mentis">
         <img src="/assets/images/Ludus-Mentis-transparent.png"
              alt="Logo Ludus Mentis"
@@ -10,7 +9,6 @@
       </a>
     </div>
 
-    <!-- Desktop Navigation -->
     <nav class="navbar-center hidden xl:flex" role="navigation" aria-label="Navigation principale">
       <ul class="menu menu-horizontal px-1 gap-1">
         <li><a href="/" class="font-medium hover:text-ludus-teal">Accueil</a></li>
@@ -25,24 +23,20 @@
       </ul>
     </nav>
 
-    <!-- Droite : toggle + CTA + burger -->
-    <div class="navbar-end">
-      <div style="display:flex;flex-direction:row;align-items:center;gap:4px;flex-wrap:nowrap;">
+    <div class="navbar-end w-auto">
+      <div class="flex items-center gap-2 flex-nowrap">
 
-        <!-- Toggle dark/light -->
         <button id="theme-toggle"
                 type="button"
                 class="btn btn-ghost btn-circle btn-sm"
                 aria-label="Changer le thème">🌙</button>
 
-        <!-- CTA Desktop uniquement -->
         <a href="/contact.html"
            class="hidden xl:inline-flex btn btn-sm text-white"
-           style="background-color:#059669;border:none;font-size:0.72rem;padding:0 10px;white-space:nowrap;">
+           style="background-color:#059669; border:none; font-size:0.75rem; padding:0 12px; white-space:nowrap;">
           S'inscrire — mars
         </a>
 
-        <!-- Burger mobile -->
         <div class="dropdown dropdown-end xl:hidden">
           <label tabindex="0" class="btn btn-square btn-ghost" aria-label="Menu navigation mobile">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,19 +54,27 @@
             <li><a href="/a-propos.html" class="text-base py-3">À propos</a></li>
             <li><a href="/contact.html" class="text-base py-3 font-medium">Contact</a></li>
             <li class="mt-4">
-              <a href="/contact.html" class="btn btn-block text-white" style="background-color:#059669;border:none;">
+              <a href="/contact.html" class="btn btn-block text-white" style="background-color:#059669; border:none;">
                 S'inscrire pour mars
               </a>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
-
+  </div>
 </header>
 
 <style>
+  /* On garde tes styles personnalisés */
+  .navbar a:hover { color: #17a2b8; }
+  
+  .btn[style*="background-color:#059669"]:hover {
+    background-color: #047857 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+  }
+
   [data-theme="dark"] .dropdown-content {
     background-color: hsl(220 13% 18%);
     border-color: rgba(255,255,255,0.1);
@@ -85,26 +87,23 @@
 </style>
 
 <script>
-  // Ce script s'exécute après l'injection du fragment HTML par include.js
   (function () {
-    var btn = document.getElementById('theme-toggle');
+    const btn = document.getElementById('theme-toggle');
     if (!btn) return;
 
-    // Sync icône avec le thème déjà appliqué par l'anti-FOUC
     function syncIcon() {
       btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
     }
     syncIcon();
 
     btn.addEventListener('click', function () {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
       syncIcon();
     });
 
-    // Fermer le menu mobile au clic
-    var dropdownContent = document.querySelector('.dropdown-end .dropdown-content');
+    const dropdownContent = document.querySelector('.dropdown-end .dropdown-content');
     if (dropdownContent) {
       dropdownContent.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () { document.activeElement.blur(); });
